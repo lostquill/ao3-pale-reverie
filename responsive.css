@@ -1,9 +1,9 @@
 /* =============================================================================
-   AO3 PASTEL SKIN — responsive.css
-   Author: LostQuill
-   Media: only screen and (max-width: 62em)
-   Role: Parent skin (responsive overrides)
-   ============================================================================= */
+	AO3 PASTEL SKIN — responsive.css
+	Author: LostQuill
+	Media: only screen and (max-width: 62em)
+	Role: Parent skin (responsive overrides)
+	============================================================================= */
 
 /* Background fix for outer wrapper on mobile */
 #outer,
@@ -17,7 +17,7 @@
   border-image: none;
   border-image-outset: 0;
   border-image-width: 0;
-}
+}	
 
 /* Remove news illustrations on mobile */
 .splash .news.index.group > li:nth-of-type(odd) blockquote.userstuff > p:first-child,
@@ -44,7 +44,7 @@
 }
 
 /* Remove text-shadow and border from bold tags on small screens
-   (legibility and rendering performance) */
+	(legibility and rendering performance) */
 .rating .tag,
 .warning .tag,
 .warnings .tag,
