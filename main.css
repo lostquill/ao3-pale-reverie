@@ -75,12 +75,7 @@ body {
 
 /* Navigation bar */
 #header .primary {
-  background: linear-gradient(45deg,
-    var(--color-mauve-mid),
-    var(--color-mauve-mid),
-    var(--color-slate-mid),
-    var(--color-slate-mid)
-  );
+  background: linear-gradient(45deg, #cdb3b3, #cdb3b3, #b3cbcd, #b3cbcd); /* mauve-mid → slate-mid */
   box-shadow: none;
 }
 
@@ -384,12 +379,7 @@ li.relationships a.tag,
   color: var(--color-white);
   font-weight: bold;
   text-shadow: 1px 1px 1px var(--color-grey-dark);
-  background: linear-gradient(-45deg,
-    var(--color-mauve-mid),
-    var(--color-mauve-mid),
-    var(--color-slate-mid),
-    var(--color-slate-mid)
-  );
+  background: linear-gradient(-45deg, #cdb3b3, #cdb3b3, #b3cbcd, #b3cbcd); /* mauve-mid → slate-mid */
   border: 1px dashed var(--color-white);
   border-radius: 5px;
 }
@@ -501,12 +491,7 @@ h2.heading a.tag:hover {
   color: var(--color-white);
   font-weight: bold;
   text-shadow: 1px 1px 1px var(--color-grey-dark);
-  background: linear-gradient(-45deg,
-    var(--color-mauve-mid),
-    var(--color-mauve-mid),
-    var(--color-slate-mid),
-    var(--color-slate-mid)
-  );
+  background: linear-gradient(-45deg, #cdb3b3, #cdb3b3, #b3cbcd, #b3cbcd); /* mauve-mid → slate-mid */
   border: 1px dashed var(--color-white);
   border-radius: 5px;
 }
@@ -1041,10 +1026,5 @@ dl.statistics.meta.group {
 #footer {
   font-family: Arial;
   font-size: .9em;
-  background: linear-gradient(45deg,
-    var(--color-mauve-mid),
-    var(--color-mauve-mid),
-    var(--color-slate-mid),
-    var(--color-slate-mid)
-  );
+  background: linear-gradient(45deg, #cdb3b3, #cdb3b3, #b3cbcd, #b3cbcd); /* mauve-mid → slate-mid */
 }
