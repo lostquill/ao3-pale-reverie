@@ -693,7 +693,7 @@ ul.work.navigation.actions {
 /* Decorative border on chapter meta */
 .chapters-show.region .meta {
   border: 80px solid transparent;
-  border-image: url(https://zupimages.net/up/26/14/bp6n.png) 35% round;
+  border-image: url(https://raw.githubusercontent.com/lostquill/ao3-pastel-skin/v1/assets/border-constellation.png) 35% round;
   border-image-outset: 10px;
   border-image-width: 200px;
 }
