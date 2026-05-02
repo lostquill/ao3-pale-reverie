@@ -1,88 +1,88 @@
 /* =============================================================================
-   AO3 PASTEL SKIN — main.css
-   Author: LostQuill
-   Role: Parent skin (base styles)
-   ============================================================================= */
+	 AO3 PASTEL SKIN — main.css
+	 Author: LostQuill
+	 Role: Parent skin (base styles)
+	 ============================================================================= */
 
 /* -----------------------------------------------------------------------------
-   VARIABLES
-   ----------------------------------------------------------------------------- */
+	 VARIABLES
+	 ----------------------------------------------------------------------------- */
 
 :root {
-  /* Background & surfaces */
-  --color-bg:           #f3f3f3;
-  --color-surface:      #f6f6f6;
-  --color-white:        #ffffff;
+	/* Background & surfaces */
+	--color-bg:           #f3f3f3;
+	--color-surface:      #f6f6f6;
+	--color-white:        #ffffff;
 
-  /* Neutral grays */
-  --color-grey-light:   #dfdfdf;
-  --color-grey-mid:     #e6e6e6;   /* nearly-white */
-  --color-grey-dark:    #474747;   /* nearly-black */
+	/* Neutral grays */
+	--color-grey-light:   #dfdfdf;
+	--color-grey-mid:     #e6e6e6;   /* nearly-white */
+	--color-grey-dark:    #474747;   /* nearly-black */
 
-  /* Accent (old rose / vieux rose) */
-  --color-accent:       #8f6565;   /* main interactive color */
-  --color-accent-soft:  #cdb2b2;   /* neutral hover base */
-  --color-purple:       #9d2d69;   /* secondary hover */
+	/* Accent (old rose / vieux rose) */
+	--color-accent:       #8f6565;   /* main interactive color */
+	--color-accent-soft:  #cdb2b2;   /* neutral hover base */
+	--color-purple:       #9d2d69;   /* secondary hover */
 
-  /* Mauve palette (warm rose tones) */
-  --color-mauve-light:  #f6e8eb;
-  --color-mauve-mid:    #cdb3b3;
-  --color-mauve-dark:   #664646;
+	/* Mauve palette (warm rose tones) */
+	--color-mauve-light:  #f6e8eb;
+	--color-mauve-mid:    #cdb3b3;
+	--color-mauve-dark:   #664646;
 
-  /* Slate palette (cool blue-grey tones) */
-  --color-slate-light:  #e3edee;
-  --color-slate-mid:    #b3cbcd;
-  --color-slate-dark:   #3a5f66;
+	/* Slate palette (cool blue-grey tones) */
+	--color-slate-light:  #e3edee;
+	--color-slate-mid:    #b3cbcd;
+	--color-slate-dark:   #3a5f66;
 
-  /* Semantic aliases */
-  --color-visited:      #F7E1BD;
+	/* Semantic aliases */
+	--color-visited:      #F7E1BD;
 }
 
 
 /* =============================================================================
-   GLOBAL
-   ============================================================================= */
+	 GLOBAL
+	 ============================================================================= */
 
 body {
-  background: var(--color-bg);
+	background: var(--color-bg);
 }
 
 
 /* =============================================================================
-   HEADER
-   ============================================================================= */
+	 HEADER
+	 ============================================================================= */
 
 #header {
-  margin: 0;
-  padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 /* Logo filter: desaturated warm tint */
 #header .logo {
-  filter: hue-rotate(50deg) brightness(2.4) saturate(0.3);
+	filter: hue-rotate(50deg) brightness(2.4) saturate(0.3);
 }
 
 /* Heading links */
 #header h1.heading a,
 #header .heading a {
-  color: var(--color-accent);
+	color: var(--color-accent);
 }
 
 /* Collections banner */
 #header h2.collections {
-  background: var(--color-accent);
+	background: var(--color-accent);
 }
 
 /* Navigation bar */
 #header .primary {
-  background: linear-gradient(45deg, #cdb3b3, #cdb3b3, #b3cbcd, #b3cbcd); /* mauve-mid → slate-mid */
-  box-shadow: none;
+	background: linear-gradient(45deg, #cdb3b3, #cdb3b3, #b3cbcd, #b3cbcd); /* mauve-mid → slate-mid */
+	box-shadow: none;
 }
 
 #header .primary > li > a {
-  color: var(--color-white);
-  text-transform: uppercase;
-  letter-spacing: 1px;
+	color: var(--color-white);
+	text-transform: uppercase;
+	letter-spacing: 1px;
 }
 
 /* Nav link colors */
@@ -92,188 +92,188 @@ body {
 #header .primary .dropdown:hover a,
 #header .primary .dropdown a:focus,
 #dashboard a {
-  color: var(--color-slate-dark);
+	color: var(--color-slate-dark);
 }
 
 #header a:hover,
 #header .primary .dropdown a:hover {
-  color: var(--color-purple);
+	color: var(--color-purple);
 }
 
 #header .dropdown .menu a:hover,
 #header .dropdown .menu a:focus,
 #header .user a:focus {
-  color: var(--color-accent);
+	color: var(--color-accent);
 }
 
 #header .user a:hover,
 #header .user a:focus {
-  color: var(--color-purple);
-  border-radius: 0.25em;
+	color: var(--color-purple);
+	border-radius: 0.25em;
 }
 
 #header .actions a:hover,
 #header .actions a:focus,
 #header .dropdown:hover a,
 #header .open a {
-  background: #ddd;
+	background: #ddd;
 }
 
 #header .dropdown .menu a:hover,
 #header .dropdown .menu a:focus {
-  background: rgba(255, 255, 255, 0.25);
+	background: rgba(255, 255, 255, 0.25);
 }
 
 /* User greeting area */
 #login,
 #greeting {
-  display: flex;
-  align-items: stretch;
-  justify-content: center;
-  flex-direction: row-reverse;
-  padding: 0.375em;
-  margin: 0;
+	display: flex;
+	align-items: stretch;
+	justify-content: center;
+	flex-direction: row-reverse;
+	padding: 0.375em;
+	margin: 0;
 }
 
 #header .user {
-  padding: 0;
-  display: flex;
+	padding: 0;
+	display: flex;
 }
 
 #header .user a,
 #small_login .action {
-  padding: 0 0.75em;
+	padding: 0 0.75em;
 }
 
 #greeting .user > li {
-  margin: 0 0.125em;
+	margin: 0 0.125em;
 }
 
 #greeting .user > li > a {
-  display: flex;
-  align-items: center;
-  height: 100%;
-  box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	height: 100%;
+	box-sizing: border-box;
 }
 
 /* User avatar (greeting) */
 #greeting p.icon {
-  float: none;
-  padding: 0;
+	float: none;
+	padding: 0;
 }
 
 #greeting img.icon {
-  height: 2.5em;
-  width: 2.5em;
-  border: 2px solid var(--color-accent);
-  border-radius: 50%;
-  filter: contrast(60%) sepia(5%) saturate(90%) brightness(1.3);
-  transition: 200ms ease-in-out;
+	height: 2.5em;
+	width: 2.5em;
+	border: 2px solid var(--color-accent);
+	border-radius: 50%;
+	filter: contrast(60%) sepia(5%) saturate(90%) brightness(1.3);
+	transition: 200ms ease-in-out;
 }
 
 #greeting img.icon:hover {
-  filter: none;
+	filter: none;
 }
 
 
 /* =============================================================================
-   ICONS (avatars, skin icons)
-   ============================================================================= */
+	 ICONS (avatars, skin icons)
+	 ============================================================================= */
 
 /* Round avatars globally */
 .primary .icon,
 .blurb .header img,
 .comment .icon {
-  border-radius: 50%;
+	border-radius: 50%;
 }
 
 .comment .icon,
 .skins p.icon,
 .blurb .header img {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 .primary .icon {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 /* Nav & comment icons: desaturated with accent border */
 .primary .icon img,
 .comment .icon .icon {
-  border: 5px solid var(--color-accent);
-  filter: contrast(60%) sepia(5%) saturate(90%) brightness(1.3);
-  transition: 200ms ease-in-out;
+	border: 5px solid var(--color-accent);
+	filter: contrast(60%) sepia(5%) saturate(90%) brightness(1.3);
+	transition: 200ms ease-in-out;
 }
 
 .primary .icon img:hover,
 .comment .icon .icon:hover {
-  filter: none;
+	filter: none;
 }
 
 /* Header profile icons */
 .header .icon img.icon,
 .skins .primary .icon:has(a .icon),
 .skins p.icon {
-  border: 4px solid var(--color-accent);
-  filter: contrast(60%) sepia(5%) saturate(90%) brightness(1.3);
-  transition: 200ms ease-in-out;
+	border: 4px solid var(--color-accent);
+	filter: contrast(60%) sepia(5%) saturate(90%) brightness(1.3);
+	transition: 200ms ease-in-out;
 }
 
 .header .icon img.icon:hover,
 .skins p.icon:hover {
-  filter: none;
+	filter: none;
 }
 
 /* Skin icons without avatar: CSS file illustration placeholder */
 .skins .primary .icon:not(:has(a .icon)),
 .index .skins .icon:not(:has(a .icon)) {
-  border: none;
-  background: url(https://i.ibb.co/4Zdy0dyd/css.png);
-  background-size: cover;
+	border: none;
+	background: url(https://i.ibb.co/4Zdy0dyd/css.png);
+	background-size: cover;
 }
 
 .index .skins .icon {
-  border-radius: 50%;
+	border-radius: 50%;
 }
 
 /* Vertical positioning tweaks */
 .picture .icon img,
 .index .picture .icon {
-  top: -.2em;
+	top: -.2em;
 }
 
 .profile .header .icon img.icon {
-  top: -.9em;
+	top: -.9em;
 }
 
 
 /* =============================================================================
-   LINKS & ACTIONS
-   ============================================================================= */
+	 LINKS & ACTIONS
+	 ============================================================================= */
 
 a,
 a:link,
 .splash .module h3,
 .blurb h4 a:link,
 .blurb h4 img {
-  color: var(--color-accent);
+	color: var(--color-accent);
 }
 
 a,
 a:link,
 a:visited:hover {
-  border: none;
+	border: none;
 }
 
 /* Visited links & listbox headings share pill styling */
 a.tag,
 .listbox > .heading,
 a:visited {
-  line-height: 2;
-  border-radius: 10px;
-  padding: 0 6px;
-  font-weight: normal;
-  color: var(--color-accent);
+	line-height: 2;
+	border-radius: 10px;
+	padding: 0 6px;
+	font-weight: normal;
+	color: var(--color-accent);
 }
 
 /* Action hover state */
@@ -287,9 +287,9 @@ label.action:hover,
 .action:hover,
 .action:focus,
 .actions:focus {
-  color: var(--color-accent);
-  border-top: 1px solid #999;
-  border-left: 1px solid #999;
+	color: var(--color-accent);
+	border-top: 1px solid #999;
+	border-left: 1px solid #999;
 }
 
 /* Pointer cursor for interactive elements */
@@ -301,36 +301,36 @@ button,
 input[type="submit"],
 a.check_all,
 a.check_none {
-  cursor: pointer;
+	cursor: pointer;
 }
 
 
 /* =============================================================================
-   TAGS
-   Layered cascade — read in order, each level overrides the previous:
+	 TAGS
+	 Layered cascade — read in order, each level overrides the previous:
 
-     1. Base          all a.tag → accent background
-     2. Types         warnings, rating, category, fandom, relationships,
-                      characters, freeforms → each get their own style
-     3. Collection    .collection a.tag → all neutral (mauve-mid), no bold
-     4. Bookmark      .collection .bookmark warnings/relationships → restore
-                      bold/colored style + accent hover (same as global)
-   ============================================================================= */
+		 1. Base          all a.tag → accent background
+		 2. Types         warnings, rating, category, fandom, relationships,
+											characters, freeforms → each get their own style
+		 3. Collection    .collection a.tag → all neutral (mauve-mid), no bold
+		 4. Bookmark      .collection .bookmark warnings/relationships → restore
+											bold/colored style + accent hover (same as global)
+	 ============================================================================= */
 
 /* --- 1. Base tag style --- */
 
 a.tag,
 .listbox .heading a.tag:visited:hover,
 .listbox .heading a.tag:visited: a.tag:visited:hover {
-  background: var(--color-accent);
+	background: var(--color-accent);
 }
 
 /* Base tag hover */
 a.tag:hover,
 .work a.tag:hover {
-  background: var(--color-accent);
-  text-shadow: 1px 1px 1px var(--color-grey-dark);
-  color: var(--color-white);
+	background: var(--color-accent);
+	text-shadow: 1px 1px 1px var(--color-grey-dark);
+	color: var(--color-white);
 }
 
 /* --- 2. Tag types (global) --- */
@@ -342,114 +342,114 @@ a.tag:hover,
 .category .tag,
 .fandom .tag,
 .fandoms .tag {
-  color: var(--color-white);
-  border-radius: 5px;
-  background: var(--color-accent-soft);
-  border: 1px dashed var(--color-mauve-light);
-  text-shadow: 1px 1px 1px var(--color-grey-dark);
-  font-weight: bold;
+	color: var(--color-white);
+	border-radius: 5px;
+	background: var(--color-accent-soft);
+	border: 1px dashed var(--color-mauve-light);
+	text-shadow: 1px 1px 1px var(--color-grey-dark);
+	font-weight: bold;
 }
 
 /* Rating: stronger accent background */
 .rating .tag {
-  background: var(--color-accent);
-  border: 1px dashed var(--color-mauve-light);
+	background: var(--color-accent);
+	border: 1px dashed var(--color-mauve-light);
 }
 
 /* Warnings: same as above, explicit for clarity */
 .warnings .tag,
 .warning .tag {
-  color: var(--color-white);
-  font-weight: bold;
-  border: 1px dashed var(--color-mauve-light);
+	color: var(--color-white);
+	font-weight: bold;
+	border: 1px dashed var(--color-mauve-light);
 }
 
 /* Fandom tags added by user (not canonical): reset to plain link */
 .fandom .tag.added {
-  color: inherit;
-  background: none;
-  border: none;
-  text-shadow: none;
-  font-weight: normal;
+	color: inherit;
+	background: none;
+	border: none;
+	text-shadow: none;
+	font-weight: normal;
 }
 
 /* Relationship tags: gradient pill */
 li.relationships a.tag,
 .relationship a.tag {
-  color: var(--color-white);
-  font-weight: bold;
-  text-shadow: 1px 1px 1px var(--color-grey-dark);
-  background: linear-gradient(-45deg, #cdb3b3, #cdb3b3, #b3cbcd, #b3cbcd); /* mauve-mid → slate-mid */
-  border: 1px dashed var(--color-white);
-  border-radius: 5px;
+	color: var(--color-white);
+	font-weight: bold;
+	text-shadow: 1px 1px 1px var(--color-grey-dark);
+	background: linear-gradient(-45deg, #cdb3b3, #cdb3b3, #b3cbcd, #b3cbcd); /* mauve-mid → slate-mid */
+	border: 1px dashed var(--color-white);
+	border-radius: 5px;
 }
 
 /* Heart icon after relationship tags */
 ul.tags li.relationships::after {
-  content: "";
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  margin-left: 4px;
-  background-image: url(https://i.ibb.co/C3R2LMK1/serce.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  vertical-align: middle;
+	content: "";
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	margin-left: 4px;
+	background-image: url(https://i.ibb.co/C3R2LMK1/serce.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	vertical-align: middle;
 }
 
 /* Character tags: warm mauve tint */
 li.characters a.tag,
 .character a.tag {
-  color: var(--color-mauve-dark);
-  text-shadow: 1px 1px 1px var(--color-grey-mid);
-  background: var(--color-mauve-light);
-  box-shadow: 3px 3px var(--color-grey-light);
+	color: var(--color-mauve-dark);
+	text-shadow: 1px 1px 1px var(--color-grey-mid);
+	background: var(--color-mauve-light);
+	box-shadow: 3px 3px var(--color-grey-light);
 }
 
 li.characters a.tag:hover,
 .character a.tag:hover {
-  color: var(--color-white);
-  background: var(--color-mauve-dark);
-  text-shadow: none;
+	color: var(--color-white);
+	background: var(--color-mauve-dark);
+	text-shadow: none;
 }
 
 /* Freeform tags: cool slate tint */
 li.freeforms a.tag,
 .freeform a.tag {
-  color: var(--color-slate-dark);
-  text-shadow: 1px 1px 1px var(--color-grey-mid);
-  background: var(--color-slate-light);
-  box-shadow: 3px 3px var(--color-grey-light);
+	color: var(--color-slate-dark);
+	text-shadow: 1px 1px 1px var(--color-grey-mid);
+	background: var(--color-slate-light);
+	box-shadow: 3px 3px var(--color-grey-light);
 }
 
 li.freeforms a.tag:hover,
 .freeform a.tag:hover {
-  color: var(--color-white);
-  background: var(--color-slate-dark);
-  text-shadow: none;
+	color: var(--color-white);
+	background: var(--color-slate-dark);
+	text-shadow: none;
 }
 
 /* Fandom tags in work/chapter header: plain text, no pill */
 .header .fandoms a.tag,
 .header .fandoms a.tag:hover,
 .header .fandoms a.tag:visited:hover {
-  background: none;
-  color: var(--color-mauve-dark);
-  text-shadow: none;
-  font-family: Arial;
-  border: none;
+	background: none;
+	color: var(--color-mauve-dark);
+	text-shadow: none;
+	font-family: Arial;
+	border: none;
 }
 
 .header .fandoms a.tag:hover,
 .header .fandoms a.tag:visited:hover {
-  color: var(--color-slate-dark);
+	color: var(--color-slate-dark);
 }
 
 /* Tag section heading background */
 h5.tags.heading {
-  background: var(--color-white) !important;
-  padding: 5px;
-  border-radius: 10px;
+	background: var(--color-white) !important;
+	padding: 5px;
+	border-radius: 10px;
 }
 
 /* --- 3. Collection context: all tags → neutral --- */
@@ -457,19 +457,19 @@ h5.tags.heading {
 /* Outside of bookmarks, all collection tags are plain mauve-mid links */
 .collection a.tag,
 h2.heading a.tag {
-  color: var(--color-mauve-mid);
-  background: none;
-  font-weight: normal;
-  text-shadow: none;
-  border: none;
-  box-shadow: none;
+	color: var(--color-mauve-mid);
+	background: none;
+	font-weight: normal;
+	text-shadow: none;
+	border: none;
+	box-shadow: none;
 }
 
 .collection a.tag:hover,
 h2.heading a.tag:hover {
-  color: var(--color-slate-mid);
-  background: none;
-  text-shadow: none;
+	color: var(--color-slate-mid);
+	background: none;
+	text-shadow: none;
 }
 
 /* --- 4. Bookmark exception: restore bold/colored style --- */
@@ -477,23 +477,23 @@ h2.heading a.tag:hover {
 /* Warning tags inside bookmarks: same as global */
 .collection .bookmark .warnings a.tag,
 .collection .bookmark .warning a.tag {
-  color: var(--color-white);
-  font-weight: bold;
-  background: var(--color-accent-soft);
-  border: 1px dashed var(--color-mauve-light);
-  text-shadow: 1px 1px 1px var(--color-grey-dark);
-  border-radius: 5px;
+	color: var(--color-white);
+	font-weight: bold;
+	background: var(--color-accent-soft);
+	border: 1px dashed var(--color-mauve-light);
+	text-shadow: 1px 1px 1px var(--color-grey-dark);
+	border-radius: 5px;
 }
 
 /* Relationship tags inside bookmarks: same as global */
 .collection .bookmark li.relationships a.tag,
 .collection .bookmark .relationship a.tag {
-  color: var(--color-white);
-  font-weight: bold;
-  text-shadow: 1px 1px 1px var(--color-grey-dark);
-  background: linear-gradient(-45deg, #cdb3b3, #cdb3b3, #b3cbcd, #b3cbcd); /* mauve-mid → slate-mid */
-  border: 1px dashed var(--color-white);
-  border-radius: 5px;
+	color: var(--color-white);
+	font-weight: bold;
+	text-shadow: 1px 1px 1px var(--color-grey-dark);
+	background: linear-gradient(-45deg, #cdb3b3, #cdb3b3, #b3cbcd, #b3cbcd); /* mauve-mid → slate-mid */
+	border: 1px dashed var(--color-white);
+	border-radius: 5px;
 }
 
 /* Hover for bookmark exceptions: accent style */
@@ -501,110 +501,110 @@ h2.heading a.tag:hover {
 .collection .bookmark .warning a.tag:hover,
 .collection .bookmark li.relationships a.tag:hover,
 .collection .bookmark .relationship a.tag:hover {
-  background: var(--color-accent);
-  color: var(--color-white);
-  text-shadow: 1px 1px 1px var(--color-grey-dark);
+	background: var(--color-accent);
+	color: var(--color-white);
+	text-shadow: 1px 1px 1px var(--color-grey-dark);
 }
 
 
 /* =============================================================================
-   DASHBOARD
-   ============================================================================= */
+	 DASHBOARD
+	 ============================================================================= */
 
 #dashboard .current:before {
-  display: inline-block;
-  margin-right: 2px;
-  content: "\00a0✦";
+	display: inline-block;
+	margin-right: 2px;
+	content: "\00a0✦";
 }
 
 #dashboard.own {
-  border-top: none;
-  border-bottom: none;
+	border-top: none;
+	border-bottom: none;
 }
 
 #dashboard a:hover {
-  background: #ddd;
-  color: var(--color-accent);
+	background: #ddd;
+	color: var(--color-accent);
 }
 
 #dashboard span {
-  color: var(--color-mauve-dark);
+	color: var(--color-mauve-dark);
 }
 
 
 /* =============================================================================
-   HOMEPAGE / SPLASH
-   ============================================================================= */
+	 HOMEPAGE / SPLASH
+	 ============================================================================= */
 
 .home .header h2::before {
-  display: inline-block;
-  margin-right: 2px;
-  content: "\00a0✦";
+	display: inline-block;
+	margin-right: 2px;
+	content: "\00a0✦";
 }
 
 .home .header h2 {
-  border-bottom: 2px solid gray;
+	border-bottom: 2px solid gray;
 }
 
 .splash>.module h3::before {
-  display: inline-block;
-  margin-right: 2px;
-  content: "\00a0✦";
+	display: inline-block;
+	margin-right: 2px;
+	content: "\00a0✦";
 }
 
 /* Two-column layout on desktop */
 .splash {
-  margin: auto;
-  max-width: 78em;
-  display: block !important;
-  column-count: 2;
-  column-gap: 2%;
+	margin: auto;
+	max-width: 78em;
+	display: block !important;
+	column-count: 2;
+	column-gap: 2%;
 }
 
 .logged-in .splash > div,
 .logged-in .splash > .module {
-  display: inline-block;
-  width: 100%;
-  margin-bottom: 1.6em;
-  float: none !important;
-  box-sizing: border-box;
+	display: inline-block;
+	width: 100%;
+	margin-bottom: 1.6em;
+	float: none !important;
+	box-sizing: border-box;
 }
 
 .splash .news li:last-of-type {
-  border: 1px solid #ddd;
+	border: 1px solid #ddd;
 }
 
 .splash .favorite li:nth-of-type(odd) a:hover,
 .splash .favorite li:nth-of-type(odd) a:focus {
-  background: var(--color-accent);
+	background: var(--color-accent);
 }
 
 div.latest.news.module .userstuff p {
-  min-height: 100px;
+	min-height: 100px;
 }
 
 /* Decorative border on docs pages */
 .docs .browse ul,
 .docs .favorite ul {
-  border: 50px solid transparent;
-  border-image: url(https://raw.githubusercontent.com/lostquill/ao3-pastel-skin/v1/assets/border-constellation.png) 35% round;
-  border-image-outset: 10px;
-  border-image-width: 200px;
+	border: 50px solid transparent;
+	border-image: url(https://raw.githubusercontent.com/lostquill/ao3-pastel-skin/v1/assets/border-constellation.png) 35% round;
+	border-image-outset: 10px;
+	border-image-width: 200px;
 }
 
 
 /* =============================================================================
-   HEADINGS
-   ============================================================================= */
+	 HEADINGS
+	 ============================================================================= */
 
 h2.heading {
-  color: var(--color-slate-dark);
+	color: var(--color-slate-dark);
 }
 
 
 /* =============================================================================
-   BLURBS & CONTENT SECTIONS
-   ============================================================================= */
+	 BLURBS & CONTENT SECTIONS
+	 ============================================================================= */
 
 li.blurb,
 .work.index.group .own.work.blurb.group,
@@ -617,342 +617,343 @@ dl.work.meta.group,
 li.own.collection.picture.blurb.group,
 ol.work.index.group li,
 dl.meta {
-  background: var(--color-surface);
+	background: var(--color-surface);
 }
 
 /* Blockquotes: white card inside blurbs, surface inside CSS pages */
 .blurb blockquote:not(li.collection .userstuff.summary, ol.bookmark .userstuff.notes) {
-  background: var(--color-white);
-  padding: 5px;
+	background: var(--color-white);
+	padding: 5px;
 }
 
 .css blockquote {
-  background: var(--color-surface);
-  padding: 10px;
-  border: 1px solid #ddd;
+	background: var(--color-surface);
+	padding: 10px;
+	border: 1px solid #ddd;
 }
 
 /* Notes & news posts */
 .browse .note,
 .latest.news .post,
 .social .note {
-  padding: 0 10px;
-  border: 1px solid #ddd;
+	padding: 0 10px;
+	border: 1px solid #ddd;
 }
 
 /* Required tags icons: desaturated */
 .blurb ul.required-tags li span {
-  border-radius: 50%;
-  filter: contrast(60%) sepia(5%) saturate(90%) brightness(1.3);
+	border-radius: 50%;
+	filter: contrast(60%) sepia(5%) saturate(90%) brightness(1.3);
 }
 
 /* Listbox index */
 .listbox .index {
-  background: var(--color-surface);
-  box-shadow: inset 1px 1px 3px #bbb;
+	background: var(--color-surface);
+	box-shadow: inset 1px 1px 3px #bbb;
 }
 
 
 /* =============================================================================
-   WORK PAGE
-   ============================================================================= */
+	 WORK PAGE
+	 ============================================================================= */
 
 /* Work navigation actions: no float */
 ul.work.navigation.actions {
-  float: none;
+	float: none;
 }
 
 /* Work skin wrapper */
 #workskin {
-  margin: auto;
-  margin-top: 1em;
-  padding: 0 20px;
-  background: var(--color-surface);
-  border: 1px solid #ddd;
+	margin: auto;
+	margin-top: 1em;
+	padding: 0 20px;
+	background: var(--color-surface);
+	border: 1px solid #ddd;
 }
 
 /* Decorative border on chapter meta */
 .chapters-show.region .meta {
-  border: 80px solid transparent;
-  border-image: url(https://raw.githubusercontent.com/lostquill/ao3-pastel-skin/v1/assets/border-constellation.png) 35% round;
-  border-image-outset: 10px;
-  border-image-width: 200px;
+	border: 80px solid transparent;
+	border-image: url(https://raw.githubusercontent.com/lostquill/ao3-pastel-skin/v1/assets/border-constellation.png) 35% round;
+	border-image-outset: 10px;
+	border-image-width: 200px;
 }
 
 /* Chapter stats badge */
 .chapter .ao3-chapter-stats-default,
 h4.viewed.heading {
-  display: inline-block;
-  width: auto;
-  background: var(--color-slate-light);
-  color: black;
-  text-shadow: 1px 1px var(--color-white);
-  box-shadow: 5px 5px #cdcdcd;
-  font-size: 11px;
-  font-style: normal;
-  font-family: Arial;
-  padding-left: 2px;
-  padding-right: 2px;
-  height: 18px;
-  line-height: 20px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  border-radius: 2px;
+	display: inline-block;
+	width: auto;
+	background: var(--color-slate-light);
+	color: black;
+	text-shadow: 1px 1px var(--color-white);
+	box-shadow: 5px 5px #cdcdcd;
+	font-size: 11px;
+	font-style: normal;
+	font-family: Arial;
+	padding-left: 2px;
+	padding-right: 2px;
+	height: 18px;
+	line-height: 20px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	border-radius: 2px;
 }
 
 h4.viewed.heading {
-  display: inline;
-  font-size: 9px;
-  height: auto;
-  line-height: 1.5em;
+	display: inline;
+	font-size: 9px;
+	height: auto;
+	line-height: 1.5em;
 }
 
 h4.viewed.heading span {
-  font-weight: bold;
+	font-weight: bold;
 }
 
 /* Kudos paragraph: heart illustration */
 p.kudos {
-  background: url(https://i.ibb.co/hxS4xbPr/Projekt-bez-nazwy-1.png) no-repeat left top;
-  background-size: 60px 60px;
-  padding-left: 60px;
+	min-height: 30px;
+	background: url(https://raw.githubusercontent.com/lostquill/ao3-pastel-skin/v1/assets/kudo.png) no-repeat left top;
+	background-size: 50px 40px;
+	padding-left: 60px;
 }
 
 /* Feedback form: column layout */
 #feedback {
-  display: flex;
-  flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 
 
 /* =============================================================================
-   COMMENTS
-   ============================================================================= */
+	 COMMENTS
+	 ============================================================================= */
 
 li.comment {
-  overflow: hidden;
-  border-top-left-radius: 50px;
+	overflow: hidden;
+	border-top-left-radius: 50px;
 }
 
 
 /* =============================================================================
-   BOOKMARKS
-   ============================================================================= */
+	 BOOKMARKS
+	 ============================================================================= */
 
 .bookmark .own.user {
-  background: #ededed;
+	background: #ededed;
 }
 
 .bookmark p.status {
-  filter: brightness(1) saturate(100%) sepia(23%) saturate(1) hue-rotate(28deg) brightness(98%) contrast(87%);
+	filter: brightness(1) saturate(100%) sepia(23%) saturate(1) hue-rotate(28deg) brightness(98%) contrast(87%);
 }
 
 .bookmark h4.heading a:visited {
-  color: #111;
+	color: #111;
 }
 
 
 /* =============================================================================
-   READING HISTORY
-   ============================================================================= */
+	 READING HISTORY
+	 ============================================================================= */
 
 ol.reading .user {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
 .readings ul.actions input {
-  white-space: nowrap;
+	white-space: nowrap;
 }
 
 
 /* =============================================================================
-   STATISTICS — icon-based display
-   Stats labels (dt) are hidden; icons are injected via ::before pseudo-elements.
-   Tooltips showing the label text appear on hover via ::after.
-   ============================================================================= */
+	 STATISTICS — icon-based display
+	 Stats labels (dt) are hidden; icons are injected via ::before pseudo-elements.
+	 Tooltips showing the label text appear on hover via ::after.
+	 ============================================================================= */
 
 /* Layout */
 dl.stats dd,
 dl.stats dt,
 .meta .stats dl dd {
-  margin: 0;
-  padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 dl.stats {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: right;
-  column-gap: 0.9em;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: right;
+	column-gap: 0.9em;
 }
 
 .meta dl.stats {
-  justify-content: left;
+	justify-content: left;
 }
 
 dl.meta.statistics dd {
-  padding-left: 5px;
+	padding-left: 5px;
 }
 
 dl.stats dd,
 dl.statistics dt {
-  display: flex;
-  align-items: baseline;
+	display: flex;
+	align-items: baseline;
 }
 
 /* Hide text labels */
 .stats:not(.skins .stats) dt {
-  display: none;
+	display: none;
 }
 
 /* Icon base styles */
 .stats:not(.skins .stats) dd::before,
 dl.statistics dt::before {
-  display: inline-block;
-  width: 1em;
-  height: 1em;
-  margin-right: 5px;
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  content: "";
-  transform: translate(0, 1px);
-  filter: brightness(0) saturate(100%) invert(31%) sepia(23%) saturate(756%) hue-rotate(319deg) brightness(98%) contrast(87%);
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	margin-right: 5px;
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	content: "";
+	transform: translate(0, 1px);
+	filter: brightness(0) saturate(100%) invert(31%) sepia(23%) saturate(756%) hue-rotate(319deg) brightness(98%) contrast(87%);
 }
 
 /* Stat icons */
 .stats dd.language::before {
-  background-image: url("https://wolfbatcat.github.io/ao3-rose-pine/assets/zerafina-stats-icon-language-01.png");
+	background-image: url("https://wolfbatcat.github.io/ao3-rose-pine/assets/zerafina-stats-icon-language-01.png");
 }
 
 .stats dd.words::before,
 dl.statistics dt.words::before {
-  background-image: url("https://wolfbatcat.github.io/ao3-rose-pine/assets/zerafina-stats-icon-words-01.png");
+	background-image: url("https://wolfbatcat.github.io/ao3-rose-pine/assets/zerafina-stats-icon-words-01.png");
 }
 
 .stats dd.works::before,
 .stats dd:has(a[href$=works])::before {
-  background-image: url("https://wolfbatcat.github.io/ao3-rose-pine/assets/zerafina-stats-icon-works-01.png");
+	background-image: url("https://wolfbatcat.github.io/ao3-rose-pine/assets/zerafina-stats-icon-works-01.png");
 }
 
 .stats dd.chapters::before {
-  background-image: url("https://wolfbatcat.github.io/ao3-rose-pine/assets/zerafina-stats-icon-chapters-01.png");
+	background-image: url("https://wolfbatcat.github.io/ao3-rose-pine/assets/zerafina-stats-icon-chapters-01.png");
 }
 
 .stats dd.comments::before {
-  background-image: url("https://wolfbatcat.github.io/ao3-rose-pine/assets/zerafina-stats-icon-comments-01.png");
+	background-image: url("https://wolfbatcat.github.io/ao3-rose-pine/assets/zerafina-stats-icon-comments-01.png");
 }
 
 .stats dd.kudos::before,
 dl.statistics dt.kudos::before {
-  background-image: url("https://wolfbatcat.github.io/ao3-rose-pine/assets/zerafina-stats-icon-kudos-01.png");
+	background-image: url("https://wolfbatcat.github.io/ao3-rose-pine/assets/zerafina-stats-icon-kudos-01.png");
 }
 
 .stats dd.bookmarks::before,
 dl.statistics dt.bookmarks::before {
-  background-image: url("https://wolfbatcat.github.io/ao3-rose-pine/assets/zerafina-stats-icon-bookmarks-02.png");
+	background-image: url("https://wolfbatcat.github.io/ao3-rose-pine/assets/zerafina-stats-icon-bookmarks-02.png");
 }
 
 .stats dd.inspired::before {
-  background-image: url("https://wolfbatcat.github.io/ao3-rose-pine/assets/zerafina-stats-icon-related-works-01.png");
+	background-image: url("https://wolfbatcat.github.io/ao3-rose-pine/assets/zerafina-stats-icon-related-works-01.png");
 }
 
 .stats dd.hits::before,
 dl.statistics dt.hits::before {
-  background-image: url("https://wolfbatcat.github.io/ao3-rose-pine/assets/zerafina-stats-icon-hits-01.png");
+	background-image: url("https://wolfbatcat.github.io/ao3-rose-pine/assets/zerafina-stats-icon-hits-01.png");
 }
 
 .stats dd.collections::before,
 .stats dd:has(a[href$=collections])::before {
-  background-image: url("https://wolfbatcat.github.io/ao3-rose-pine/assets/zerafina-stats-icon-collection-01.png");
+	background-image: url("https://wolfbatcat.github.io/ao3-rose-pine/assets/zerafina-stats-icon-collection-01.png");
 }
 
 .stats dd.published::before {
-  background-image: url("https://wolfbatcat.github.io/ao3-rose-pine/assets/zerafina-stats-icon-published-01.png");
+	background-image: url("https://wolfbatcat.github.io/ao3-rose-pine/assets/zerafina-stats-icon-published-01.png");
 }
 
 .stats dd.status::before {
-  background-image: url("https://wolfbatcat.github.io/ao3-rose-pine/assets/zerafina-stats-icon-updated-01.png");
+	background-image: url("https://wolfbatcat.github.io/ao3-rose-pine/assets/zerafina-stats-icon-updated-01.png");
 }
 
 .series.meta.group .stats dd:nth-of-type(3)::before {
-  background-image: url("https://wolfbatcat.github.io/ao3-rose-pine/assets/zerafina-stats-icon-complete-01.png");
+	background-image: url("https://wolfbatcat.github.io/ao3-rose-pine/assets/zerafina-stats-icon-complete-01.png");
 }
 
 .stats dd.subscriptions::before,
 dl.statistics dt.subscriptions::before {
-  background-image: url("https://wolfbatcat.github.io/ao3-rose-pine/assets/zerafina-stats-icon-subscriptions-01.png");
+	background-image: url("https://wolfbatcat.github.io/ao3-rose-pine/assets/zerafina-stats-icon-subscriptions-01.png");
 }
 
 .statistics .stats dd.comments::before,
 dl.statistics dt.comment::before {
-  background-image: url("https://wolfbatcat.github.io/ao3-rose-pine/assets/zerafina-stats-icon-comment-threads-01.png");
+	background-image: url("https://wolfbatcat.github.io/ao3-rose-pine/assets/zerafina-stats-icon-comment-threads-01.png");
 }
 
 .stats dd:has(a[href$=fandoms])::before,
 .tagset .stats dd:nth-of-type(1)::before {
-  background-image: url("https://wolfbatcat.github.io/ao3-rose-pine/assets/zerafina-stats-icon-fandoms-01.png");
+	background-image: url("https://wolfbatcat.github.io/ao3-rose-pine/assets/zerafina-stats-icon-fandoms-01.png");
 }
 
 .collection.blurb .stats dd:has(a[href$=bookmarks])::before {
-  background-image: url("https://wolfbatcat.github.io/ao3-rose-pine/assets/zerafina-stats-icon-bookmarked-items-01.png");
+	background-image: url("https://wolfbatcat.github.io/ao3-rose-pine/assets/zerafina-stats-icon-bookmarked-items-01.png");
 }
 
 .stats dd:has(a[href$=requests])::before {
-  background-image: url("https://wolfbatcat.github.io/ao3-rose-pine/assets/zerafina-stats-icon-promts-01.png");
+	background-image: url("https://wolfbatcat.github.io/ao3-rose-pine/assets/zerafina-stats-icon-promts-01.png");
 }
 
 .tagset .stats dd:nth-of-type(2)::before {
-  background-image: url("https://wolfbatcat.github.io/ao3-rose-pine/assets/zerafina-stats-icon-characters-01.png");
+	background-image: url("https://wolfbatcat.github.io/ao3-rose-pine/assets/zerafina-stats-icon-characters-01.png");
 }
 
 .tagset .stats dd:nth-of-type(3)::before {
-  background-image: url("https://wolfbatcat.github.io/ao3-rose-pine/assets/zerafina-stats-icon-relationships-01.png");
+	background-image: url("https://wolfbatcat.github.io/ao3-rose-pine/assets/zerafina-stats-icon-relationships-01.png");
 }
 
 .tagset .stats dd:nth-of-type(4)::before {
-  background-image: url("https://wolfbatcat.github.io/ao3-rose-pine/assets/zerafina-stats-icon-tags-additional-01.png");
+	background-image: url("https://wolfbatcat.github.io/ao3-rose-pine/assets/zerafina-stats-icon-tags-additional-01.png");
 }
 
 .tagset .meta .stats dd:nth-of-type(4)::before {
-  background-image: url("https://wolfbatcat.github.io/ao3-rose-pine/assets/zerafina-stats-icon-tags-freeform-01.png");
+	background-image: url("https://wolfbatcat.github.io/ao3-rose-pine/assets/zerafina-stats-icon-tags-freeform-01.png");
 }
 
 /* Stat value color & positioning */
 dl.stats dd {
-  justify-content: center;
-  position: relative;
-  color: var(--color-accent);
+	justify-content: center;
+	position: relative;
+	color: var(--color-accent);
 }
 
 /* Stat links */
 .stats a,
 .stats a:visited {
-  border: none;
-  color: var(--color-accent);
-  border-bottom: 1px dashed var(--color-accent);
+	border: none;
+	color: var(--color-accent);
+	border-bottom: 1px dashed var(--color-accent);
 }
 
 /* Tooltip base (hidden by default) */
 .stats dd::after {
-  display: none;
-  position: absolute;
-  top: 2em;
-  z-index: 99999;
-  padding: 0.3em;
-  border: 1px solid #ddd;
-  border-radius: 2px;
-  background: var(--color-grey-mid);
-  font-size: 0.8em;
-  line-height: 1;
-  text-align: center;
-  color: var(--color-grey-dark);
+	display: none;
+	position: absolute;
+	top: 2em;
+	z-index: 99999;
+	padding: 0.3em;
+	border: 1px solid #ddd;
+	border-radius: 2px;
+	background: var(--color-grey-mid);
+	font-size: 0.8em;
+	line-height: 1;
+	text-align: center;
+	color: var(--color-grey-dark);
 }
 
 .stats dd:hover::after {
-  display: inline-block;
+	display: inline-block;
 }
 
 /* Right-align tooltips at end of row */
@@ -960,7 +961,7 @@ dl.stats dd {
 .index .stats dd:last-of-type:has(a[href$=bookmarks])::after,
 .stats dd.inspired::after,
 .tagset .index .stats dd:last-of-type::after {
-  right: 0;
+	right: 0;
 }
 
 /* Tooltip labels */
@@ -993,19 +994,19 @@ dl.stats dd {
 
 /* Statistics page: decorative illustration (top right) */
 dl.statistics.meta.group {
-  background-image: url("https://i.ibb.co/m5mWWpyV/Projekt-bez-nazwy-1.png");
-  background-position: right center;
-  background-size: 15%;
-  background-repeat: no-repeat;
+	background-image: url("https://i.ibb.co/m5mWWpyV/Projekt-bez-nazwy-1.png");
+	background-position: right center;
+	background-size: 15%;
+	background-repeat: no-repeat;
 }
 
 
 /* =============================================================================
-   FOOTER
-   ============================================================================= */
+	 FOOTER
+	 ============================================================================= */
 
 #footer {
-  font-family: Arial;
-  font-size: .9em;
-  background: linear-gradient(45deg, #cdb3b3, #cdb3b3, #b3cbcd, #b3cbcd); /* mauve-mid → slate-mid */
+	font-family: Arial;
+	font-size: .9em;
+	background: linear-gradient(45deg, #cdb3b3, #cdb3b3, #b3cbcd, #b3cbcd); /* mauve-mid → slate-mid */
 }
