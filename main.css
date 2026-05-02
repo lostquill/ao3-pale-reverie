@@ -1,12 +1,17 @@
 /* =============================================================================
-	 AO3 PASTEL SKIN — main.css
-	 Author: LostQuill
-	 Role: Parent skin (base styles)
+	AO3 PASTEL SKIN — main.css
+	Author: LostQuill
+	Role: Parent skin (base styles)
+
+	Credits:
+	Stats icons & hover text system by ZerafinaCSS
+		AO3: https://archiveofourown.org/works/55604875
+		GitHub: https://github.com/ZerafinaCSS/AO3-Stats-Icons-with-Hover-Text
 	 ============================================================================= */
 
 /* -----------------------------------------------------------------------------
-	 VARIABLES
-	 ----------------------------------------------------------------------------- */
+	VARIABLES
+	----------------------------------------------------------------------------- */
 
 :root {
 	/* Background & surfaces */
@@ -40,8 +45,8 @@
 
 
 /* =============================================================================
-	 GLOBAL
-	 ============================================================================= */
+	GLOBAL
+	============================================================================= */
 
 body {
 	background: var(--color-bg);
@@ -49,8 +54,8 @@ body {
 
 
 /* =============================================================================
-	 HEADER
-	 ============================================================================= */
+	HEADER
+	============================================================================= */
 
 #header {
 	margin: 0;
@@ -177,8 +182,8 @@ body {
 
 
 /* =============================================================================
-	 ICONS (avatars, skin icons)
-	 ============================================================================= */
+	ICONS (avatars, skin icons)
+	============================================================================= */
 
 /* Round avatars globally */
 .primary .icon,
@@ -248,8 +253,8 @@ body {
 
 
 /* =============================================================================
-	 LINKS & ACTIONS
-	 ============================================================================= */
+	LINKS & ACTIONS
+	============================================================================= */
 
 a,
 a:link,
@@ -306,15 +311,13 @@ a.check_none {
 
 
 /* =============================================================================
-	 TAGS
-	 Layered cascade — read in order, each level overrides the previous:
+	TAGS
+	Layered cascade — read in order, each level overrides the previous:
 
-			 1. Base          all a.tag → accent background
-			 2. Types         warnings, rating, category, fandom, relationships,
-																					characters, freeforms → each get their own style
-			 3. Collection    .collection a.tag → all neutral (mauve-mid), no bold
-			 4. Bookmark      .collection .bookmark warnings/relationships → restore
-																					bold/colored style + accent hover (same as global)
+			1. Base          all a.tag → accent background
+			2. Types         warnings, rating, category, fandom, relationships, characters, freeforms → each get their own style
+			3. Collection    .collection a.tag → all neutral (mauve-mid), no bold
+			4. Bookmark      .collection .bookmark warnings/relationships → restore bold/colored style + accent hover (same as global)
 	 ============================================================================= */
 
 /* --- 1. Base tag style --- */
@@ -508,8 +511,8 @@ h2.heading a.tag:hover {
 
 
 /* =============================================================================
-	 DASHBOARD
-	 ============================================================================= */
+	DASHBOARD
+	============================================================================= */
 
 #dashboard .current:before {
 	display: inline-block;
@@ -533,8 +536,8 @@ h2.heading a.tag:hover {
 
 
 /* =============================================================================
-	 HOMEPAGE / SPLASH
-	 ============================================================================= */
+	HOMEPAGE / SPLASH
+	============================================================================= */
 
 .home .header h2::before {
 	display: inline-block;
@@ -594,8 +597,8 @@ div.latest.news.module .userstuff p {
 
 
 /* =============================================================================
-	 HEADINGS
-	 ============================================================================= */
+	HEADINGS
+	============================================================================= */
 
 h2.heading {
 	color: var(--color-slate-dark);
@@ -603,8 +606,8 @@ h2.heading {
 
 
 /* =============================================================================
-	 BLURBS & CONTENT SECTIONS
-	 ============================================================================= */
+	BLURBS & CONTENT SECTIONS
+	============================================================================= */
 
 li.blurb,
 .work.index.group .own.work.blurb.group,
@@ -654,8 +657,8 @@ dl.meta {
 
 
 /* =============================================================================
-	 WORK PAGE
-	 ============================================================================= */
+	WORK PAGE
+	============================================================================= */
 
 /* Work navigation actions: no float */
 ul.work.navigation.actions {
@@ -727,8 +730,8 @@ p.kudos {
 
 
 /* =============================================================================
-	 COMMENTS
-	 ============================================================================= */
+	COMMENTS
+	============================================================================= */
 
 li.comment {
 	overflow: hidden;
@@ -737,8 +740,8 @@ li.comment {
 
 
 /* =============================================================================
-	 BOOKMARKS
-	 ============================================================================= */
+	BOOKMARKS
+	============================================================================= */
 
 .bookmark .own.user {
 	background: #ededed;
@@ -754,8 +757,8 @@ li.comment {
 
 
 /* =============================================================================
-	 READING HISTORY
-	 ============================================================================= */
+	READING HISTORY
+	============================================================================= */
 
 ol.reading .user {
 	display: flex;
@@ -769,10 +772,10 @@ ol.reading .user {
 
 
 /* =============================================================================
-	 STATISTICS — icon-based display
-	 Stats labels (dt) are hidden; icons are injected via ::before pseudo-elements.
-	 Tooltips showing the label text appear on hover via ::after.
-	 ============================================================================= */
+	STATISTICS — icon-based display
+	Stats labels (dt) are hidden; icons are injected via ::before pseudo-elements.
+	Tooltips showing the label text appear on hover via ::after.
+	============================================================================= */
 
 /* Layout */
 dl.stats dd,
@@ -1002,8 +1005,8 @@ dl.statistics.meta.group {
 
 
 /* =============================================================================
-	 FOOTER
-	 ============================================================================= */
+	FOOTER
+	============================================================================= */
 
 #footer {
 	font-family: Arial;
