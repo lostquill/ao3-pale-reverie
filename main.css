@@ -281,8 +281,16 @@ a:visited {
 	color: var(--color-accent);
 }
 
+h4.heading a:hover {
+  color: var(--color-slate-dark);
+}
+
 h4.heading a:visited {
   color: var(--color-slate-dark);
+}
+
+h4.heading a:visited:hover {
+  color: var(--color-accent);
 }
 
 /* Action hover state */
