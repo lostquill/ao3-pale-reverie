@@ -233,7 +233,7 @@ body {
 .skins .primary .icon:not(:has(a .icon)),
 .index .skins .icon:not(:has(a .icon)) {
 	border: none;
-	background: url(https://i.ibb.co/4Zdy0dyd/css.png);
+	background: url(https://raw.githubusercontent.com/lostquill/ao3-pastel-skin/v1/assets/css.png);
 	background-size: cover;
 }
 
@@ -389,14 +389,8 @@ li.relationships a.tag,
 
 /* Heart icon after relationship tags */
 ul.tags li.relationships::after {
-	content: "";
-	display: inline-block;
-	width: 16px;
-	height: 16px;
-	margin-left: 4px;
-	background-image: url(https://i.ibb.co/C3R2LMK1/serce.png);
-	background-size: contain;
-	background-repeat: no-repeat;
+	content: " ♥";
+	color: var(--color-mauve-mid);
 	vertical-align: middle;
 }
 
@@ -994,14 +988,6 @@ dl.stats dd {
 .stats dd:has(a[href$=requests])::after                { content: "Prompts"; }
 .collections-index .stats dd:has(a[href$=collections])::after { content: "Challenges/Subcollections"; }
 .collection.blurb .stats dd:has(a[href$=bookmarks])::after    { content: "Bookmarked Items"; }
-
-/* Statistics page: decorative illustration (top right) */
-dl.statistics.meta.group {
-	background-image: url("https://i.ibb.co/m5mWWpyV/Projekt-bez-nazwy-1.png");
-	background-position: right center;
-	background-size: 15%;
-	background-repeat: no-repeat;
-}
 
 
 /* =============================================================================
