@@ -579,25 +579,6 @@ h2.heading a.tag:hover {
   background: var(--color-accent);
 }
 
-/* News post alternating illustrations */
-.splash .news.index.group > li:nth-of-type(odd) blockquote.userstuff > p:first-child {
-  padding-left: 105px;
-  background: linear-gradient(rgba(246, 246, 246, 0.3), rgba(246, 246, 246, 0.3)),
-              url(https://i.ibb.co/tPstLMLZ/Bez-nazwy-kopia-kopia.png);
-  background-size: 100px 80px;
-  background-repeat: no-repeat;
-  background-position: left top;
-}
-
-.splash .news.index.group > li:nth-of-type(even) blockquote.userstuff > p:first-child {
-  padding-left: 105px;
-  background: linear-gradient(rgba(246, 246, 246, 0.3), rgba(246, 246, 246, 0.3)),
-              url(https://i.ibb.co/QFLRnTyW/Bez-nazwy-kopia-kopia-1.png);
-  background-size: 100px 80px;
-  background-repeat: no-repeat;
-  background-position: left top;
-}
-
 div.latest.news.module .userstuff p {
   min-height: 100px;
 }
@@ -606,7 +587,7 @@ div.latest.news.module .userstuff p {
 .docs .browse ul,
 .docs .favorite ul {
   border: 50px solid transparent;
-  border-image: url(https://zupimages.net/up/26/14/bp6n.png) 35% round;
+  border-image: url(https://raw.githubusercontent.com/lostquill/ao3-pastel-skin/v1/assets/border-constellation.png) 35% round;
   border-image-outset: 10px;
   border-image-width: 200px;
 }
