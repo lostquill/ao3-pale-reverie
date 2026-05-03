@@ -40,7 +40,7 @@ See the [AO3 work](#) for full installation instructions.
 
 ## Credits
 
-- Stats icons & hover text system by [ZerafinaCSS](https://archiveofourown.org/works/55604875)
+- Stats icons & hover text system by ZerafinaCSS
   - AO3: [Stats Icons with Hover Text](https://archiveofourown.org/works/55604875)
   - GitHub: [ZerafinaCSS/AO3-Stats-Icons-with-Hover-Text](https://github.com/ZerafinaCSS/AO3-Stats-Icons-with-Hover-Text)
 - Constellation border image, kudos illustration, and CSS placeholder icon generated with Google Gemini
