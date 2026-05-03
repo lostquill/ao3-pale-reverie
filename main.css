@@ -273,7 +273,7 @@ body {
 .skins .primary .icon:not(:has(a .icon)),
 .index .skins .icon:not(:has(a .icon)) {
 	border: none;
-	background: url(https://raw.githubusercontent.com/lostquill/ao3-pastel-skin/main/assets/css.png);
+	background: url(https://raw.githubusercontent.com/lostquill/ao3-pale-reverie/main/assets/css.png);
 	background-size: cover;
 }
 
@@ -628,7 +628,7 @@ div.latest.news.module .userstuff p {
 .docs .browse ul,
 .docs .favorite ul {
 	border: 50px solid transparent;
-	border-image: url(https://raw.githubusercontent.com/lostquill/ao3-pastel-skin/main/assets/border-constellation.png) 35% round;
+	border-image: url(https://raw.githubusercontent.com/lostquill/ao3-pale-reverie/main/assets/border-constellation.png) 35% round;
 	border-image-outset: 10px;
 	border-image-width: 200px;
 }
@@ -715,7 +715,7 @@ ul.work.navigation.actions {
 /* Decorative border on chapter meta */
 .chapters-show.region .meta {
 	border: 80px solid transparent;
-	border-image: url(https://raw.githubusercontent.com/lostquill/ao3-pastel-skin/main/assets/border-constellation.png) 35% round;
+	border-image: url(https://raw.githubusercontent.com/lostquill/ao3-pale-reverie/main/assets/border-constellation.png) 35% round;
 	border-image-outset: 10px;
 	border-image-width: 200px;
 }
@@ -755,7 +755,7 @@ h4.viewed.heading span {
 /* Kudos paragraph: heart illustration */
 p.kudos {
 	min-height: 30px;
-	background: url(https://raw.githubusercontent.com/lostquill/ao3-pastel-skin/main/assets/kudo.png) no-repeat left top;
+	background: url(https://raw.githubusercontent.com/lostquill/ao3-pale-reverie/main/assets/kudo.png) no-repeat left top;
 	background-size: 50px 40px;
 	padding-left: 60px;
 }
@@ -862,100 +862,100 @@ dl.statistics dt::before {
 
 /* Stat icons */
 .stats dd.language::before {
-	background-image: url("https://raw.githubusercontent.com/lostquill/ao3-pastel-skin/main/assets/zerafina-stats-icon-language-01.png");
+	background-image: url("https://raw.githubusercontent.com/lostquill/ao3-pale-reverie/main/assets/zerafina-stats-icon-language-01.png");
 }
 
 .stats dd.words::before,
 dl.statistics dt.words::before {
-	background-image: url("https://raw.githubusercontent.com/lostquill/ao3-pastel-skin/main/assets/zerafina-stats-icon-words-01.png");
+	background-image: url("https://raw.githubusercontent.com/lostquill/ao3-pale-reverie/main/assets/zerafina-stats-icon-words-01.png");
 }
 
 .stats dd.works::before,
 .stats dd:has(a[href$=works])::before {
-	background-image: url("https://raw.githubusercontent.com/lostquill/ao3-pastel-skin/main/assets/zerafina-stats-icon-works-01.png");
+	background-image: url("https://raw.githubusercontent.com/lostquill/ao3-pale-reverie/main/assets/zerafina-stats-icon-works-01.png");
 }
 
 .stats dd.chapters::before {
-	background-image: url("https://raw.githubusercontent.com/lostquill/ao3-pastel-skin/main/assets/zerafina-stats-icon-chapters-01.png");
+	background-image: url("https://raw.githubusercontent.com/lostquill/ao3-pale-reverie/main/assets/zerafina-stats-icon-chapters-01.png");
 }
 
 .stats dd.comments::before {
-	background-image: url("https://raw.githubusercontent.com/lostquill/ao3-pastel-skin/main/assets/zerafina-stats-icon-comments-01.png");
+	background-image: url("https://raw.githubusercontent.com/lostquill/ao3-pale-reverie/main/assets/zerafina-stats-icon-comments-01.png");
 }
 
 .stats dd.kudos::before,
 dl.statistics dt.kudos::before {
-	background-image: url("https://raw.githubusercontent.com/lostquill/ao3-pastel-skin/main/assets/zerafina-stats-icon-kudos-01.png");
+	background-image: url("https://raw.githubusercontent.com/lostquill/ao3-pale-reverie/main/assets/zerafina-stats-icon-kudos-01.png");
 }
 
 .stats dd.bookmarks::before,
 dl.statistics dt.bookmarks::before {
-	background-image: url("https://raw.githubusercontent.com/lostquill/ao3-pastel-skin/main/assets/zerafina-stats-icon-bookmarks-02.png");
+	background-image: url("https://raw.githubusercontent.com/lostquill/ao3-pale-reverie/main/assets/zerafina-stats-icon-bookmarks-02.png");
 }
 
 .stats dd.inspired::before {
-	background-image: url("https://raw.githubusercontent.com/lostquill/ao3-pastel-skin/main/assets/zerafina-stats-icon-related-works-01.png");
+	background-image: url("https://raw.githubusercontent.com/lostquill/ao3-pale-reverie/main/assets/zerafina-stats-icon-related-works-01.png");
 }
 
 .stats dd.hits::before,
 dl.statistics dt.hits::before {
-	background-image: url("https://raw.githubusercontent.com/lostquill/ao3-pastel-skin/main/assets/zerafina-stats-icon-hits-01.png");
+	background-image: url("https://raw.githubusercontent.com/lostquill/ao3-pale-reverie/main/assets/zerafina-stats-icon-hits-01.png");
 }
 
 .stats dd.collections::before,
 .stats dd:has(a[href$=collections])::before {
-	background-image: url("https://raw.githubusercontent.com/lostquill/ao3-pastel-skin/main/assets/zerafina-stats-icon-collection-01.png");
+	background-image: url("https://raw.githubusercontent.com/lostquill/ao3-pale-reverie/main/assets/zerafina-stats-icon-collection-01.png");
 }
 
 .stats dd.published::before {
-	background-image: url("https://raw.githubusercontent.com/lostquill/ao3-pastel-skin/main/assets/zerafina-stats-icon-published-01.png");
+	background-image: url("https://raw.githubusercontent.com/lostquill/ao3-pale-reverie/main/assets/zerafina-stats-icon-published-01.png");
 }
 
 .stats dd.status::before {
-	background-image: url("https://raw.githubusercontent.com/lostquill/ao3-pastel-skin/main/assets/zerafina-stats-icon-updated-01.png");
+	background-image: url("https://raw.githubusercontent.com/lostquill/ao3-pale-reverie/main/assets/zerafina-stats-icon-updated-01.png");
 }
 
 .series.meta.group .stats dd:nth-of-type(3)::before {
-	background-image: url("https://raw.githubusercontent.com/lostquill/ao3-pastel-skin/main/assets/zerafina-stats-icon-complete-01.png");
+	background-image: url("https://raw.githubusercontent.com/lostquill/ao3-pale-reverie/main/assets/zerafina-stats-icon-complete-01.png");
 }
 
 .stats dd.subscriptions::before,
 dl.statistics dt.subscriptions::before {
-	background-image: url("https://raw.githubusercontent.com/lostquill/ao3-pastel-skin/main/assets/zerafina-stats-icon-subscriptions-01.png");
+	background-image: url("https://raw.githubusercontent.com/lostquill/ao3-pale-reverie/main/assets/zerafina-stats-icon-subscriptions-01.png");
 }
 
 .statistics .stats dd.comments::before,
 dl.statistics dt.comment::before {
-	background-image: url("https://raw.githubusercontent.com/lostquill/ao3-pastel-skin/main/assets/zerafina-stats-icon-comment-threads-01.png");
+	background-image: url("https://raw.githubusercontent.com/lostquill/ao3-pale-reverie/main/assets/zerafina-stats-icon-comment-threads-01.png");
 }
 
 .stats dd:has(a[href$=fandoms])::before,
 .tagset .stats dd:nth-of-type(1)::before {
-	background-image: url("https://raw.githubusercontent.com/lostquill/ao3-pastel-skin/main/assets/zerafina-stats-icon-fandoms-01.png");
+	background-image: url("https://raw.githubusercontent.com/lostquill/ao3-pale-reverie/main/assets/zerafina-stats-icon-fandoms-01.png");
 }
 
 .collection.blurb .stats dd:has(a[href$=bookmarks])::before {
-	background-image: url("https://raw.githubusercontent.com/lostquill/ao3-pastel-skin/main/assets/zerafina-stats-icon-bookmarked-items-01.png");
+	background-image: url("https://raw.githubusercontent.com/lostquill/ao3-pale-reverie/main/assets/zerafina-stats-icon-bookmarked-items-01.png");
 }
 
 .stats dd:has(a[href$=requests])::before {
-	background-image: url("https://raw.githubusercontent.com/lostquill/ao3-pastel-skin/main/assets/zerafina-stats-icon-promts-01.png");
+	background-image: url("https://raw.githubusercontent.com/lostquill/ao3-pale-reverie/main/assets/zerafina-stats-icon-promts-01.png");
 }
 
 .tagset .stats dd:nth-of-type(2)::before {
-	background-image: url("https://raw.githubusercontent.com/lostquill/ao3-pastel-skin/main/assets/zerafina-stats-icon-characters-01.png");
+	background-image: url("https://raw.githubusercontent.com/lostquill/ao3-pale-reverie/main/assets/zerafina-stats-icon-characters-01.png");
 }
 
 .tagset .stats dd:nth-of-type(3)::before {
-	background-image: url("https://raw.githubusercontent.com/lostquill/ao3-pastel-skin/main/assets/zerafina-stats-icon-relationships-01.png");
+	background-image: url("https://raw.githubusercontent.com/lostquill/ao3-pale-reverie/main/assets/zerafina-stats-icon-relationships-01.png");
 }
 
 .tagset .stats dd:nth-of-type(4)::before {
-	background-image: url("https://raw.githubusercontent.com/lostquill/ao3-pastel-skin/main/assets/zerafina-stats-icon-tags-additional-01.png");
+	background-image: url("https://raw.githubusercontent.com/lostquill/ao3-pale-reverie/main/assets/zerafina-stats-icon-tags-additional-01.png");
 }
 
 .tagset .meta .stats dd:nth-of-type(4)::before {
-	background-image: url("https://raw.githubusercontent.com/lostquill/ao3-pastel-skin/main/assets/zerafina-stats-icon-tags-freeform-01.png");
+	background-image: url("https://raw.githubusercontent.com/lostquill/ao3-pale-reverie/main/assets/zerafina-stats-icon-tags-freeform-01.png");
 }
 
 /* Stat value color & positioning */
