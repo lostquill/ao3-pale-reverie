@@ -55,9 +55,3 @@ li.relationships a.tag,
 	text-shadow: none;
 	border: none;
 }
-
-/* Remove profile picture radius for lisibility on small screens */
-li.comment {
-	overflow: visible;
-	border-top-left-radius: none;
-}
