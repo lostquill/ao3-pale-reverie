@@ -13,7 +13,7 @@
 
 /* Remove decorative border-image on chapter meta (too heavy on small screens) */
 .chapters-show.region .meta {
-	border: 1px solid #ddd;
+	border: 1px solid var(--color-border-subtle);
 	border-image: none;
 	border-image-outset: 0;
 	border-image-width: 0;
