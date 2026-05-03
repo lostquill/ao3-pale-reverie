@@ -44,8 +44,8 @@
 	   ----------------------------------------------------------------- */
 
 	/* Color gradient (navbar background, footer background, relationship tag) */
-	--grad-first:                var(--color-mauve-mid);
-	--grad-sec:                  var(--color-slate-mid);
+	--color-first:               var(--color-mauve-mid);
+	--color-sec:                 var(--color-slate-mid);
 
 	/* Navigation & UI links */
 	--color-link-nav:            var(--color-slate-dark);   /* header links, dashboard links */
@@ -124,7 +124,7 @@ body {
 
 /* Navigation bar */
 #header .primary {
-	background: linear-gradient(45deg, var(--grad-first), var(--grad-first), var(--grad-sec), var(--grad-sec)); /* mauve-mid → slate-mid */
+	background: linear-gradient(45deg, var(--color-first), var(--color-first), var(--color-sec), var(--color-sec)); /* mauve-mid → slate-mid */
 	box-shadow: none;
 }
 
@@ -440,7 +440,7 @@ li.relationships a.tag,
 	color: var(--color-white);
 	font-weight: bold;
 	text-shadow: 1px 1px 1px var(--color-grey-dark);
-  	background: linear-gradient(-45deg, var(--grad-first), var(--grad-first), var(--grad-sec), var(--grad-sec)); /* mauve-mid → slate-mid */
+  	background: linear-gradient(-45deg, var(--color-first), var(--color-first), var(--color-sec), var(--color-sec)); /* mauve-mid → slate-mid */
 	border: 1px dashed var(--color-white);
 	border-radius: 5px;
 }
@@ -546,7 +546,7 @@ h2.heading a.tag:hover {
 	color: var(--color-white);
 	font-weight: bold;
 	text-shadow: 1px 1px 1px var(--color-grey-dark);
-	background: linear-gradient(-45deg, var(--grad-first), var(--grad-first), var(--grad-sec), var(--grad-sec)); /* mauve-mid → slate-mid */
+	background: linear-gradient(-45deg, var(--color-first), var(--color-first), var(--color-sec), var(--color-sec)); /* mauve-mid → slate-mid */
 	border: 1px dashed var(--color-white);
 	border-radius: 5px;
 }
@@ -1044,5 +1044,5 @@ dl.stats dd {
 #footer {
 	font-family: Arial;
 	font-size: .9em;
-	background: linear-gradient(45deg, var(--grad-first), var(--grad-first), var(--grad-sec), var(--grad-sec)); /* mauve-mid → slate-mid */
+	background: linear-gradient(45deg, var(--color-first), var(--color-first), var(--color-sec), var(--color-sec)); /* mauve-mid → slate-mid */
 }
