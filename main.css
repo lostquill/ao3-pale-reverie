@@ -15,29 +15,72 @@
 
 :root {
 	/* Background & surfaces */
-	--color-bg:           #f3f3f3;
-	--color-surface:      #f6f6f6;
-	--color-white:        #ffffff;
+	--color-bg:                  #f3f3f3;
+	--color-surface:             #f6f6f6;
+	--color-white:               #ffffff;
 
 	/* Neutral grays */
-	--color-grey-light:   #dfdfdf;
-	--color-grey-mid:     #e6e6e6;   /* nearly-white */
-	--color-grey-dark:    #474747;   /* nearly-black */
+	--color-grey-light:          #dfdfdf;
+	--color-grey-mid:            #e6e6e6;
+	--color-grey-dark:           #474747;
 
 	/* Accent (old rose / vieux rose) */
-	--color-accent:       #8f6565;   /* main interactive color */
-	--color-accent-soft:  #cdb2b2;   /* neutral hover base */
-	--color-purple:       #9d2d69;   /* secondary hover */
+	--color-accent:              #8f6565;   /* main interactive color */
+	--color-accent-soft:         #cdb2b2;   /* muted accent */
+	--color-purple:              #9d2d69;   /* secondary hover */
 
 	/* Mauve palette (warm rose tones) */
-	--color-mauve-light:  #f6e8eb;
-	--color-mauve-mid:    #cdb3b3;
-	--color-mauve-dark:   #664646;
+	--color-mauve-light:         #f6e8eb;
+	--color-mauve-mid:           #cdb3b3;
+	--color-mauve-dark:          #664646;
 
 	/* Slate palette (cool blue-grey tones) */
-	--color-slate-light:  #e3edee;
-	--color-slate-mid:    #b3cbcd;
-	--color-slate-dark:   #3a5f66;
+	--color-slate-light:         #e3edee;
+	--color-slate-mid:           #b3cbcd;
+	--color-slate-dark:          #3a5f66;
+
+	/* -----------------------------------------------------------------
+	   Semantic aliases — change these to retheme without touching rules
+	   ----------------------------------------------------------------- */
+
+	/* Navigation & UI links */
+	--color-link-nav:            var(--color-slate-dark);   /* header links, dashboard links */
+	--color-link-nav-hover:      var(--color-purple);       /* header links on hover */
+	--color-link-nav-active:     var(--color-accent);       /* dropdown menu hover, user focus */
+
+	/* Content links */
+	--color-link-visited:        var(--color-slate-dark);   /* h4 headings visited */
+	--color-link-visited-hover:  var(--color-accent);       /* h4 headings visited:hover */
+
+	/* Headings */
+	--color-heading:             var(--color-slate-dark);   /* h2.heading */
+
+	/* Tags — characters */
+	--color-tag-character:       var(--color-mauve-dark);   /* character tag text */
+	--color-tag-character-bg:    var(--color-mauve-light);  /* character tag background */
+	--color-tag-character-hover: var(--color-mauve-dark);   /* character tag hover bg */
+
+	/* Tags — freeforms */
+	--color-tag-freeform:        var(--color-slate-dark);   /* freeform tag text */
+	--color-tag-freeform-bg:     var(--color-slate-light);  /* freeform tag background */
+	--color-tag-freeform-hover:  var(--color-slate-dark);   /* freeform tag hover bg */
+
+	/* Tags — fandoms in header */
+	--color-link-fandom:         var(--color-mauve-dark);   /* fandom tag text in header */
+	--color-link-fandom-hover:   var(--color-slate-dark);   /* fandom tag hover in header */
+
+	/* Tags — collection neutral */
+	--color-tag-collection:      var(--color-mauve-mid);    /* collection tags at rest */
+	--color-tag-collection-hover: var(--color-slate-mid);   /* collection tags on hover */
+
+	/* Dashboard */
+	--color-text-dashboard:      var(--color-mauve-dark);   /* dashboard span labels */
+
+	/* Borders, shadows & surfaces */
+	--color-border-subtle:       #ddd;     /* light borders, action hover bg */
+	--color-border-mid:          #808080;  /* home header bottom border */
+	--color-shadow-badge:        #cdcdcd;  /* chapter stats badge shadow */
+	--color-bg-bookmark-own:     #ededed;  /* own bookmark user area */
 }
 
 
@@ -94,23 +137,23 @@ body {
 #header .primary .dropdown:hover a,
 #header .primary .dropdown a:focus,
 #dashboard a {
-	color: var(--color-slate-dark);
+	color: var(--color-link-nav);
 }
 
 #header a:hover,
 #header .primary .dropdown a:hover {
-	color: var(--color-purple);
+	color: var(--color-link-nav-hover);
 }
 
 #header .dropdown .menu a:hover,
 #header .dropdown .menu a:focus,
 #header .user a:focus {
-	color: var(--color-accent);
+	color: var(--color-link-nav-active);
 }
 
 #header .user a:hover,
 #header .user a:focus {
-	color: var(--color-purple);
+	color: var(--color-link-nav-hover);
 	border-radius: 0.25em;
 }
 
@@ -118,7 +161,7 @@ body {
 #header .actions a:focus,
 #header .dropdown:hover a,
 #header .open a {
-	background: #ddd;
+	background: var(--color-border-subtle);
 }
 
 #header .dropdown .menu a:hover,
@@ -278,16 +321,17 @@ a:visited {
 	color: var(--color-accent);
 }
 
+/* Work title visited state */
 h4.heading a:hover {
-  color: var(--color-slate-dark);
+	color: var(--color-link-visited);
 }
 
 h4.heading a:visited {
-  color: var(--color-slate-dark);
+	color: var(--color-link-visited);
 }
 
 h4.heading a:visited:hover {
-  color: var(--color-accent);
+	color: var(--color-link-visited-hover);
 }
 
 /* Action hover state */
@@ -323,11 +367,13 @@ a.check_none {
 	TAGS
 	Layered cascade — read in order, each level overrides the previous:
 
-			1. Base          all a.tag → accent background
-			2. Types         warnings, rating, category, fandom, relationships, characters, freeforms → each get their own style
-			3. Collection    .collection a.tag → all neutral (mauve-mid), no bold
-			4. Bookmark      .collection .bookmark warnings/relationships → restore bold/colored style + accent hover (same as global)
-	 ============================================================================= */
+		1. Base       all a.tag → accent background
+		2. Types      warnings, rating, category, fandom, relationships,
+		              characters, freeforms → each get their own style
+		3. Collection .collection a.tag → all neutral (mauve-mid), no bold
+		4. Bookmark   .collection .bookmark warnings/relationships → restore
+		              bold/colored style + accent hover (same as global)
+	============================================================================= */
 
 /* --- 1. Base tag style --- */
 
@@ -339,7 +385,13 @@ a.tag,
 
 /* Base tag hover */
 a.tag:hover,
-.work a.tag:hover {
+.work a.tag:hover,
+li.relationships a.tag:hover,
+.relationship a.tag:hover,
+.collection .bookmark .warnings a.tag:hover,
+.collection .bookmark .warning a.tag:hover,
+.collection .bookmark li.relationships a.tag:hover,
+.collection .bookmark .relationship a.tag:hover {
 	background: var(--color-accent);
 	text-shadow: 1px 1px 1px var(--color-grey-dark);
 	color: var(--color-white);
@@ -396,7 +448,7 @@ li.relationships a.tag,
 	border-radius: 5px;
 }
 
-/* Heart icon after relationship tags */
+/* Heart symbol after relationship tags */
 ul.tags li.relationships::after {
 	content: " ♥";
 	color: var(--color-mauve-mid);
@@ -406,32 +458,32 @@ ul.tags li.relationships::after {
 /* Character tags: warm mauve tint */
 li.characters a.tag,
 .character a.tag {
-	color: var(--color-mauve-dark);
+	color: var(--color-tag-character);
 	text-shadow: 1px 1px 1px var(--color-grey-mid);
-	background: var(--color-mauve-light);
+	background: var(--color-tag-character-bg);
 	box-shadow: 3px 3px var(--color-grey-light);
 }
 
 li.characters a.tag:hover,
 .character a.tag:hover {
 	color: var(--color-white);
-	background: var(--color-mauve-dark);
+	background: var(--color-tag-character-hover);
 	text-shadow: none;
 }
 
 /* Freeform tags: cool slate tint */
 li.freeforms a.tag,
 .freeform a.tag {
-	color: var(--color-slate-dark);
+	color: var(--color-tag-freeform);
 	text-shadow: 1px 1px 1px var(--color-grey-mid);
-	background: var(--color-slate-light);
+	background: var(--color-tag-freeform-bg);
 	box-shadow: 3px 3px var(--color-grey-light);
 }
 
 li.freeforms a.tag:hover,
 .freeform a.tag:hover {
 	color: var(--color-white);
-	background: var(--color-slate-dark);
+	background: var(--color-tag-freeform-hover);
 	text-shadow: none;
 }
 
@@ -440,7 +492,7 @@ li.freeforms a.tag:hover,
 .header .fandoms a.tag:hover,
 .header .fandoms a.tag:visited:hover {
 	background: none;
-	color: var(--color-mauve-dark);
+	color: var(--color-link-fandom);
 	text-shadow: none;
 	font-family: Arial;
 	border: none;
@@ -448,7 +500,7 @@ li.freeforms a.tag:hover,
 
 .header .fandoms a.tag:hover,
 .header .fandoms a.tag:visited:hover {
-	color: var(--color-slate-dark);
+	color: var(--color-link-fandom-hover);
 }
 
 /* Tag section heading background */
@@ -463,7 +515,7 @@ h5.tags.heading {
 /* Outside of bookmarks, all collection tags are plain mauve-mid links */
 .collection a.tag,
 h2.heading a.tag {
-	color: var(--color-mauve-mid);
+	color: var(--color-tag-collection);
 	background: none;
 	font-weight: normal;
 	text-shadow: none;
@@ -473,7 +525,7 @@ h2.heading a.tag {
 
 .collection a.tag:hover,
 h2.heading a.tag:hover {
-	color: var(--color-slate-mid);
+	color: var(--color-tag-collection-hover);
 	background: none;
 	text-shadow: none;
 }
@@ -502,16 +554,6 @@ h2.heading a.tag:hover {
 	border-radius: 5px;
 }
 
-/* Hover for bookmark exceptions: accent style */
-.collection .bookmark .warnings a.tag:hover,
-.collection .bookmark .warning a.tag:hover,
-.collection .bookmark li.relationships a.tag:hover,
-.collection .bookmark .relationship a.tag:hover {
-	background: var(--color-accent);
-	color: var(--color-white);
-	text-shadow: 1px 1px 1px var(--color-grey-dark);
-}
-
 
 /* =============================================================================
 	DASHBOARD
@@ -529,12 +571,12 @@ h2.heading a.tag:hover {
 }
 
 #dashboard a:hover {
-	background: #ddd;
+	background: var(--color-border-subtle);
 	color: var(--color-accent);
 }
 
 #dashboard span {
-	color: var(--color-mauve-dark);
+	color: var(--color-text-dashboard);
 }
 
 
@@ -549,7 +591,7 @@ h2.heading a.tag:hover {
 }
 
 .home .header h2 {
-	border-bottom: 2px solid gray;
+	border-bottom: 2px solid var(--color-border-mid);
 }
 
 .splash>.module h3::before {
@@ -577,7 +619,7 @@ h2.heading a.tag:hover {
 }
 
 .splash .news li:last-of-type {
-	border: 1px solid #ddd;
+	border: 1px solid var(--color-border-subtle);
 }
 
 .splash .favorite li:nth-of-type(odd) a:hover,
@@ -604,7 +646,7 @@ div.latest.news.module .userstuff p {
 	============================================================================= */
 
 h2.heading {
-	color: var(--color-slate-dark);
+	color: var(--color-heading);
 }
 
 
@@ -635,7 +677,7 @@ dl.meta {
 .css blockquote {
 	background: var(--color-surface);
 	padding: 10px;
-	border: 1px solid #ddd;
+	border: 1px solid var(--color-border-subtle);
 }
 
 /* Notes & news posts */
@@ -643,7 +685,7 @@ dl.meta {
 .latest.news .post,
 .social .note {
 	padding: 0 10px;
-	border: 1px solid #ddd;
+	border: 1px solid var(--color-border-subtle);
 }
 
 /* Required tags icons: desaturated */
@@ -674,7 +716,7 @@ ul.work.navigation.actions {
 	margin-top: 1em;
 	padding: 0 20px;
 	background: var(--color-surface);
-	border: 1px solid #ddd;
+	border: 1px solid var(--color-border-subtle);
 }
 
 /* Decorative border on chapter meta */
@@ -693,7 +735,7 @@ h4.viewed.heading {
 	background: var(--color-slate-light);
 	color: black;
 	text-shadow: 1px 1px var(--color-white);
-	box-shadow: 5px 5px #cdcdcd;
+	box-shadow: 5px 5px var(--color-shadow-badge);
 	font-size: 11px;
 	font-style: normal;
 	font-family: Arial;
@@ -747,7 +789,7 @@ li.comment {
 	============================================================================= */
 
 .bookmark .own.user {
-	background: #ededed;
+	background: var(--color-bg-bookmark-own);
 }
 
 .bookmark p.status {
@@ -945,7 +987,7 @@ dl.stats dd {
 	top: 2em;
 	z-index: 99999;
 	padding: 0.3em;
-	border: 1px solid #ddd;
+	border: 1px solid var(--color-border-subtle);
 	border-radius: 2px;
 	background: var(--color-grey-mid);
 	font-size: 0.8em;
