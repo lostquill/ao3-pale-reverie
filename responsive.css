@@ -17,13 +17,6 @@
 	border-image: none;
 	border-image-outset: 0;
 	border-image-width: 0;
-}	
-
-/* Remove news illustrations on mobile */
-.splash .news.index.group > li:nth-of-type(odd) blockquote.userstuff > p:first-child,
-.splash .news.index.group > li:nth-of-type(even) blockquote.userstuff > p:first-child {
-	padding-left: 0;
-	background: none;
 }
 
 /* Splash: single column on mobile, two columns on tablet */
