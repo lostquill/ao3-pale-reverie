@@ -1,7 +1,5 @@
 # Pale Reverie — AO3 Site Skin
 
-A soft, muted site skin for AO3 that I made for myself, so I thought I'd share.
-
 **Pale Reverie** layers a dusty rose and cool slate palette over the default AO3 layout, with color-coded tags and a constellation border framing work metadata. The overall aesthetic is desaturated and quiet.
 
 A dark mode version may come in the future.
@@ -14,17 +12,6 @@ A dark mode version may come in the future.
 - Gradient header in muted rose and slate tones
 - Responsive layout for tablet and mobile
 - All colors defined as CSS variables for easy customization
-
-## Preview
-
-### Desktop
-
-![Home — desktop](assets/screenshots/home.jpg)
-![Dashboard — desktop](assets/screenshots/dashboard.jpg)
-
-### Mobile
-
-<img src="assets/screenshots/home-mobile-top.jpg" alt="Home — mobile"> <img src="assets/screenshots/dashboard-mobile.jpg" alt="Dashboard — mobile">
 
 ## Installation
 
