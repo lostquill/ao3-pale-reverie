@@ -1,6 +1,6 @@
 # Pale Reverie — AO3 Site Skin
 
-A soft, muted site skin for AO3 with a dark academia edge.
+A soft, muted site skin for AO3 that I made for myself, so I thought I'd share.
 
 **Pale Reverie** layers a dusty rose and cool slate palette over the default AO3 layout, with color-coded tags and a constellation border framing work metadata. The overall aesthetic is desaturated and quiet.
 
