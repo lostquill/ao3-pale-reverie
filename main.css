@@ -713,7 +713,9 @@ ul.work.navigation.actions {
 }
 
 /* Decorative border on chapter meta */
-.chapters-show.region .meta, .works-show.region .meta {
+.chapters-show.region .meta,
+.works-show.region .meta,
+.draft.work .meta {
 	border: 80px solid transparent;
 	border-image: url(https://raw.githubusercontent.com/lostquill/ao3-pale-reverie/main/assets/border-constellation.png) 35% round;
 	border-image-outset: 10px;
