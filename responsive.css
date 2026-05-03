@@ -56,7 +56,8 @@ li.relationships a.tag,
 	border: none;
 }
 
-/* Slightly smaller border-radius on comments on mobile */
+/* Remove profile picture radius for lisibility on small screens */
 li.comment {
-	border-top-left-radius: 40px;
+	overflow: visible;
+	border-top-left-radius: none;
 }
