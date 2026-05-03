@@ -2,7 +2,7 @@
 
 A soft, muted site skin for AO3 with a dark academia edge.
 
-**Pale Reverie** layers a dusty rose and cool slate palette over the default AO3 layout, with color-coded tags, icon-based statistics with hover tooltips, and a constellation border framing work metadata. The overall aesthetic is desaturated and quiet — like reading by candlelight.
+**Pale Reverie** layers a dusty rose and cool slate palette over the default AO3 layout, with color-coded tags and a constellation border framing work metadata. The overall aesthetic is desaturated and quiet.
 
 A dark mode version may come in the future.
 
@@ -24,12 +24,11 @@ A dark mode version may come in the future.
 
 ### Mobile
 
-<img src="assets/screenshots/home-mobile-top.jpg" alt="Home — mobile">
-<img src="assets/screenshots/dashboard-mobile.jpg" alt="Dashboard — mobile">
+<img src="assets/screenshots/home-mobile-top.jpg" alt="Home — mobile"> <img src="assets/screenshots/dashboard-mobile.jpg" alt="Dashboard — mobile">
 
 ## Installation
 
-See the [AO3 work](#) for full installation instructions.
+See the [AO3 work](https://archiveofourown.org/works/84166896) for full installation instructions.
 
 ## Files
 
@@ -43,8 +42,8 @@ See the [AO3 work](#) for full installation instructions.
 - Stats icons & hover text system by ZerafinaCSS
   - AO3: [Stats Icons with Hover Text](https://archiveofourown.org/works/55604875)
   - GitHub: [ZerafinaCSS/AO3-Stats-Icons-with-Hover-Text](https://github.com/ZerafinaCSS/AO3-Stats-Icons-with-Hover-Text)
-- Constellation border image, kudos illustration, and CSS placeholder icon generated with Google Gemini
+- Constellation border image, kudos illustration, and CSS placeholder icon generated with Gemini
 
 ## License
 
-You are welcome to use, edit, or build upon this CSS however you like. Please credit me by linking to the [AO3 work](#) or this repository.
+You are welcome to use, edit, or build upon this CSS however you like. Please credit me by linking to the [AO3 work](https://archiveofourown.org/works/84166896) or this repository.
