@@ -365,14 +365,7 @@ a.check_none {
 
 /* =============================================================================
 	TAGS
-	Layered cascade — read in order, each level overrides the previous:
-
-		1. Base       all a.tag → accent background
-		2. Types      warnings, rating, category, fandom, relationships,
-		              characters, freeforms → each get their own style
-		3. Collection .collection a.tag → all neutral (mauve-mid), no bold
-		4. Bookmark   .collection .bookmark warnings/relationships → restore
-		              bold/colored style + accent hover (same as global)
+	Layered cascade — read in order, each level overrides the previous
 	============================================================================= */
 
 /* --- 1. Base tag style --- */
