@@ -722,6 +722,7 @@ ul.work.navigation.actions {
 
 /* Chapter stats badge */
 .chapter .ao3-chapter-stats-default,
+.work .ao3-chapter-stats-default,
 h4.viewed.heading {
 	display: inline-block;
 	width: auto;
