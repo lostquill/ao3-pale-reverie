@@ -1,0 +1,67 @@
+/* =============================================================================
+	AO3 PALE REVERIE — responsive.css
+	Author: LostQuill
+	Media: only screen and (max-width: 62em)
+	Role: Parent skin (responsive overrides)
+	============================================================================= */
+
+/* Background fix for outer wrapper on mobile */
+#outer,
+.javascript {
+	background: var(--color-bg);
+}
+
+/* Remove decorative border-image on chapter meta (too heavy on small screens) */
+.chapters-show.region .meta {
+	border: 1px solid #ddd;
+	border-image: none;
+	border-image-outset: 0;
+	border-image-width: 0;
+}	
+
+/* Remove news illustrations on mobile */
+.splash .news.index.group > li:nth-of-type(odd) blockquote.userstuff > p:first-child,
+.splash .news.index.group > li:nth-of-type(even) blockquote.userstuff > p:first-child {
+	padding-left: 0;
+	background: none;
+}
+
+/* Splash: single column on mobile, two columns on tablet */
+.splash {
+	margin: auto;
+	max-width: 78em;
+	display: inline !important;
+	column-count: 1;
+	column-gap: 0;
+}
+
+.logged-in .splash > div,
+.logged-in .splash > .module {
+	display: inline;
+	margin: 0 1% 1.571em 1%;
+	width: 48%;
+	float: left !important;
+}
+
+/* Remove text-shadow and border from bold tags on small screens
+	(legibility and rendering performance) */
+.rating .tag,
+.warning .tag,
+.warnings .tag,
+.category .tag,
+.fandom .tag,
+.fandoms .tag {
+	text-shadow: none;
+	border: none;
+}
+
+li.relationships a.tag,
+.relationship a.tag {
+	text-shadow: none;
+	border: none;
+}
+
+/* Slightly smaller border-radius on comments on mobile */
+li.comment {
+	border-top-left-radius: 40px;
+}
