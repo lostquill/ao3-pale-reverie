@@ -33,4 +33,4 @@ See the [AO3 work](https://archiveofourown.org/works/84166896) for full installa
 
 ## License
 
-You are welcome to use, edit, or build upon this CSS however you like. Please credit me by linking to the [AO3 work](https://archiveofourown.org/works/84166896) or this repository.
+You are welcome to use, edit, or build upon this CSS however you like. Please credit me by linking to the [AO3 work](https://archiveofourown.org/works/84166896).
