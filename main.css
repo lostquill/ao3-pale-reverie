@@ -172,7 +172,7 @@
 	/* Work statistics */
 	--color-stats:                    var(--color-accent);         /* main color for stats text/value */
 	--color-stats-border:             var(--color-accent);         /* border color for stat links underline */
-	--color-stats-icon:               var(--color-grey-220);       /* icon/text color inside stat tooltip */
+	--color-stats-tooltip:            var(--color-grey-220);       /* text color inside stat tooltip */
 	--color-stats-bg-tooltip:         var(--color-grey-50);        /* background color for stat tooltip/icon area */
 }
 
@@ -1093,7 +1093,7 @@ dl.stats dd {
 	font-size: 0.8em;
 	line-height: 1;
 	text-align: center;
-	color: var(--color-stats-icon);
+	color: var(--color-stats-tooltip);
 }
 
 .stats dd:hover::after {
