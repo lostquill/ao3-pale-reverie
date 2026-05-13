@@ -710,12 +710,9 @@ h2.heading a.tag:hover {
 	border: 1px solid var(--color-border-subtle);
 }
 
+.splash .favorite li:nth-of-type(even) a,
 .splash .favorite li:nth-of-type(odd) a {
-	background: var(--color-tag-default-bg);
-}
-
-.splash .favorite li:nth-of-type(even) a {
-	background: var(--color-link-default);
+	background: var(--color-tag-default-bg-hover);
 }
 
 .splash .favorite li a:hover,
