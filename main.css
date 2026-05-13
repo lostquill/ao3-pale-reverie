@@ -1043,7 +1043,7 @@ dl.statistics dt.comment::before {
 dl.stats dd {
 	justify-content: center;
 	position: relative;
-	color: var(--color-stat);
+	color: var(--color-stats);
 }
 
 /* Stat links */
