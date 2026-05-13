@@ -415,6 +415,7 @@ a:visited {
 }
 
 /* Work title visited state */
+a:visited:hover,
 h4.heading a:hover,
 h4.heading a:visited,
 .listbox .heading a:visited {
