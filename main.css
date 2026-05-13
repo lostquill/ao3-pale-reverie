@@ -887,7 +887,8 @@ p.kudos {
 	BOOKMARKS
 	============================================================================= */
 
-.bookmark .own.user {
+.bookmark .own.user,
+.bookmark .user {
 	background: var(--color-bg-bookmark-own);
 }
 
