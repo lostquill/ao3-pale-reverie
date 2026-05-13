@@ -77,14 +77,14 @@
 	--color-overlay-light:            rgba(255,255,255,0.25);
 	
 	/* Palette 1 */
-	--color-light-first:              var(--color-mauve-light);
-	--color-mid-first:                var(--color-mauve-mid);
-	--color-dark-first:               var(--color-mauve-dark);
+	--color-light-primary:            var(--color-mauve-light);
+	--color-mid-primary:              var(--color-mauve-mid);
+	--color-dark-primary:             var(--color-mauve-dark);
 	
 	/* Palette 2 */
-	--color-light-sec:                var(--color-slate-light);
-	--color-mid-sec:                  var(--color-slate-mid);
-	--color-dark-sec:                 var(--color-slate-dark);
+	--color-light-secondary:          var(--color-slate-light);
+	--color-mid-secondary:            var(--color-slate-mid);
+	--color-dark-secondary:           var(--color-slate-dark);
 
 	/* Accent colors */
 	--color-accent:                   var(--color-rose-brown);
@@ -96,84 +96,84 @@
 	   ----------------------------------------------------------------- */
 
 	/* Color gradient (navbar background, footer background, relationship tag) */
-	--color-first:                    var(--color-mid-first);
-	--color-sec:                      var(--color-mid-sec);
+	--color-first:                    var(--color-mid-primary);
+	--color-sec:                      var(--color-mid-secondary);
 
 	/* Backgrounds, borders, shadows & surfaces */
-	--color-bg-body:                  var(--color-grey-20);      /* body background */
-	--color-border-rounded-pic:       var(--color-accent);       /* border around profile pic */
-	--color-bg-blurb:                 var(--color-neutral-main); /* white card inside blurbs */
-	--color-bg-bookmark-own:          var(--color-grey-40);      /* own bookmark user area */
-	--color-surface:                  var(--color-grey-10);      /* blockquote surfaces */
-	--color-border-subtle:            var(--color-grey-70);      /* light borders, action hover bg */
-	--color-border-mid:               var(--color-grey-170);     /* home header bottom border */
-	--color-shadow-inset:             var(--color-grey-110);     /* inset shadow */
+	--color-bg-body:                  var(--color-grey-20);        /* body background */
+	--color-border-rounded-pic:       var(--color-accent);         /* border around profile pic */
+	--color-bg-blurb:                 var(--color-neutral-main);   /* white card inside blurbs */
+	--color-bg-bookmark-own:          var(--color-grey-40);        /* own bookmark user area */
+	--color-surface:                  var(--color-grey-10);        /* blockquote surfaces */
+	--color-border-subtle:            var(--color-grey-70);        /* light borders, action hover bg */
+	--color-border-mid:               var(--color-grey-170);       /* home header bottom border */
+	--color-shadow-inset:             var(--color-grey-110);       /* inset shadow */
 
 	/* Navigation & UI links */
-	--color-link-default:             var(--color-accent);       /* default link color */
-	--color-link-nav:                 var(--color-dark-sec);     /* header links, dashboard links */
-	--color-link-menu:                var(--color-neutral-main); /* left header links (fandoms, browse, search...) */
-	--color-link-nav-hover:           var(--color-accent-pop);   /* header links on hover */
-	--color-link-nav-active:          var(--color-accent);       /* dropdown menu hover, user focus */
-	--color-border-action-hover:      var(--color-grey-140);     /* border color on hover for interactive elements (buttons, links, actions) */
+	--color-link-default:             var(--color-accent);         /* default link color */
+	--color-link-nav:                 var(--color-dark-secondary); /* header links, dashboard links */
+	--color-link-menu:                var(--color-neutral-main);   /* left header links (fandoms, browse, search...) */
+	--color-link-nav-hover:           var(--color-accent-pop);     /* header links on hover */
+	--color-link-nav-active:          var(--color-accent);         /* dropdown menu hover, user focus */
+	--color-border-action-hover:      var(--color-grey-140);       /* border color on hover for interactive elements (buttons, links, actions) */
 
 	/* Content links */
-	--color-link-visited:             var(--color-dark-sec);     /* h4 headings visited */
-	--color-link-visited-hover:       var(--color-accent);       /* h4 headings visited:hover */
+	--color-link-visited:             var(--color-dark-secondary); /* h4 headings visited */
+	--color-link-visited-hover:       var(--color-accent);         /* h4 headings visited:hover */
 
 	/* Headings */
-	--color-heading:                  var(--color-dark-sec);     /* h2.heading */
-	--color-bg-heading:               var(--color-accent);       /* h2.collections */
-	--color-bg-heading-5:             var(--color-neutral-main); /* h5.tags.heading */
+	--color-heading:                  var(--color-dark-secondary); /* h2.heading */
+	--color-bg-heading:               var(--color-accent);         /* h2.collections */
+	--color-bg-heading-5:             var(--color-neutral-main);   /* h5.tags.heading */
 
 	/* Dashboard */
-	--color-text-dashboard:           var(--color-dark-first);   /* dashboard span labels */
+	--color-text-dashboard:           var(--color-dark-primary);   /* dashboard span labels */
 
 	/* Tags — global */
-	--color-tag-default:              var(--color-neutral-main); /* default tag text color */
-	--color-tag-default-bg:           var(--color-accent-soft);  /* default tag background */
-	--color-tag-default-bg-hover:     var(--color-accent);       /* default tag background hover */
-	--color-tag-default-border:       var(--color-light-first);  /* default tag border */
-	--color-tag-shadow-dark:          var(--color-grey-220);     /* default tag shadow light */
-	--color-tag-shadow-dark-txt:      var(--color-grey-50);      /* default tag shadow dark */
+	--color-tag-default:              var(--color-neutral-main);   /* default tag text color */
+	--color-tag-default-bg:           var(--color-accent-soft);    /* default tag background */
+	--color-tag-default-bg-hover:     var(--color-accent);         /* default tag background hover */
+	--color-tag-default-border:       var(--color-light-primary);  /* default tag border */
+	--color-tag-shadow-dark:          var(--color-grey-220);       /* default tag shadow light */
+	--color-tag-shadow-dark-txt:      var(--color-grey-50);        /* default tag shadow dark */
 
 	/* Tags — ratings */
-	--color-tag-rating-bg:            var(--color-accent);       /* rating tag background */
+	--color-tag-rating-bg:            var(--color-accent);         /* rating tag background */
 
 	/* Tags — relationships */
-	--color-tag-relation-border:      var(--color-neutral-main); /* relationships tag border */
-	--color-heart-relationship:       var(--color-mid-first);    /* Heart symbol after tags */
+	--color-tag-relation-border:      var(--color-neutral-main);   /* relationships tag border */
+	--color-heart-relationship:       var(--color-mid-primary);    /* Heart symbol after tags */
 
 	/* Tags — characters */
-	--color-tag-character:            var(--color-dark-first);   /* character tag text color */
-	--color-tag-character-bg:         var(--color-light-first);  /* character tag background */
-	--color-tag-character-hover:      var(--color-dark-first);   /* character tag hover bg */
-	--color-tag-character-shadow:     var(--color-grey-60);      /* character tag shadow */
+	--color-tag-character:            var(--color-dark-primary);   /* character tag text color */
+	--color-tag-character-bg:         var(--color-light-primary);  /* character tag background */
+	--color-tag-character-hover:      var(--color-dark-primary);   /* character tag hover bg */
+	--color-tag-character-shadow:     var(--color-grey-60);        /* character tag shadow */
 
 	/* Tags — freeforms */
-	--color-tag-freeform:             var(--color-dark-sec);     /* freeform tag text color */
-	--color-tag-freeform-bg:          var(--color-light-sec);    /* freeform tag background */
-	--color-tag-freeform-hover:       var(--color-dark-sec);     /* freeform tag hover bg */
-	--color-tag-freeform-shadow:      var(--color-grey-60);      /* character tag shadow */
+	--color-tag-freeform:             var(--color-dark-secondary); /* freeform tag text color */
+	--color-tag-freeform-bg:          var(--color-light-secondary);/* freeform tag background */
+	--color-tag-freeform-hover:       var(--color-dark-secondary); /* freeform tag hover bg */
+	--color-tag-freeform-shadow:      var(--color-grey-60);        /* character tag shadow */
 
 	/* Tags — fandoms in header */
-	--color-link-fandom:              var(--color-dark-first);   /* fandom tag text in header */
-	--color-link-fandom-hover:        var(--color-dark-sec);     /* fandom tag hover in header */
+	--color-link-fandom:              var(--color-dark-primary);   /* fandom tag text in header */
+	--color-link-fandom-hover:        var(--color-dark-secondary); /* fandom tag hover in header */
 
 	/* Tags — collection neutral */
-	--color-tag-collection:           var(--color-mid-first);    /* collection tags at rest */
-	--color-tag-collection-hover:     var(--color-mid-sec);      /* collection tags on hover */
+	--color-tag-collection:           var(--color-mid-primary);    /* collection tags at rest */
+	--color-tag-collection-hover:     var(--color-mid-secondary);  /* collection tags on hover */
 
 	/* USERSCRIPT: 'Reading Time & Quality Score' badge (reading time, word count) */
-	--color-bg-badge:                 var(--color-light-sec);    /* badge background */
-	--color-shadow-badge:             var(--color-grey-90);      /* badge box shadow */
-	--color-shadow-txt-badge:         var(--color-neutral-main); /* badge text shadow */
+	--color-bg-badge:                 var(--color-light-secondary);/* badge background */
+	--color-shadow-badge:             var(--color-grey-90);        /* badge box shadow */
+	--color-shadow-txt-badge:         var(--color-neutral-main);   /* badge text shadow */
 
 	/* Work statistics */
-	--color-stats:                    var(--color-accent);       /* main color for stats text/value */
-	--color-stats-border:             var(--color-accent);       /* border color for stat links underline */
-	--color-stats-icon:               var(--color-grey-220);     /* icon/text color inside stat tooltip */
-	--color-stats-bg-tooltip:         var(--color-grey-50);      /* background color for stat tooltip/icon area */
+	--color-stats:                    var(--color-accent);         /* main color for stats text/value */
+	--color-stats-border:             var(--color-accent);         /* border color for stat links underline */
+	--color-stats-icon:               var(--color-grey-220);       /* icon/text color inside stat tooltip */
+	--color-stats-bg-tooltip:         var(--color-grey-50);        /* background color for stat tooltip/icon area */
 }
 
 
