@@ -415,11 +415,9 @@ a:visited {
 }
 
 /* Work title visited state */
-h4.heading a:hover {
-	color: var(--color-link-visited);
-}
-
-h4.heading a:visited {
+h4.heading a:hover,
+h4.heading a:visited,
+.listbox .heading a:visited {
 	color: var(--color-link-visited);
 }
 
