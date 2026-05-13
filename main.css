@@ -104,11 +104,11 @@
 	--color-surface:                  var(--color-grey-50);      /* blockquote surfaces */
 	--color-border-subtle:            var(--color-grey-500);     /* light borders, action hover bg */
 	--color-border-mid:               var(--color-grey-700);     /* home header bottom border */
-	--color-shadow-badge:             var(--color-grey-600);     /* chapter stats badge shadow */
 
 	/* Navigation & UI links */
 	--color-link-default:             var(--color-accent);       /* default link color */
 	--color-link-nav:                 var(--color-dark-sec);     /* header links, dashboard links */
+	--color-link-menu:                var(--color-neutral-main); /* left header links (fandoms, browse, search...) */
 	--color-link-nav-hover:           var(--color-accent-pop);   /* header links on hover */
 	--color-link-nav-active:          var(--color-accent);       /* dropdown menu hover, user focus */
 
@@ -118,6 +118,8 @@
 
 	/* Headings */
 	--color-heading:                  var(--color-dark-sec);     /* h2.heading */
+	--color-bg-heading                var(--color-accent);       /* h2.collections */
+	--color-bg-heading-5              var(--color-neutral-main); /* h5.tags.heading */
 
 	/* Dashboard */
 	--color-text-dashboard:           var(--color-dark-first);   /* dashboard span labels */
@@ -156,6 +158,17 @@
 	/* Tags — collection neutral */
 	--color-tag-collection:           var(--color-mid-first);    /* collection tags at rest */
 	--color-tag-collection-hover:     var(--color-mid-sec);      /* collection tags on hover */
+
+	/* USERSCRIPT: 'Reading Time & Quality Score' badge (reading time, word count) */
+	--color-bg-badge:                 var(--color-light-sec);    /* badge background */
+	--color-shadow-badge:             var(--color-grey-600);     /* badge box shadow */
+	--color-shadow-txt-badge:         var(--color-neutral-main); /* badge text shadow */
+
+	/* Work statistics */
+	--color-stats:                    var(--color-accent);       /* main color for stats text/value */
+	--color-stats-border:             var(--color-accent);       /* border color for stat links underline */
+	--color-stats-icon:               var(--color-grey-900);     /* icon/text color inside stat tooltip */
+	--color-stats-bg-icon:            var(--color-grey-400);     /* background color for stat tooltip/icon area */
 }
 
 
@@ -164,7 +177,7 @@
 	============================================================================= */
 
 body {
-	background: var(--color-bg);
+	background: var(--color-bg-body);
 }
 
 
@@ -185,12 +198,12 @@ body {
 /* Heading links */
 #header h1.heading a,
 #header .heading a {
-	color: var(--color-accent);
+	color: var(--color-link-default);
 }
 
 /* Collections banner */
 #header h2.collections {
-	background: var(--color-accent);
+	background: var(--color-bg-heading);
 }
 
 /* Navigation bar */
@@ -200,7 +213,7 @@ body {
 }
 
 #header .primary > li > a {
-	color: var(--color-white);
+	color: var(--color-link-menu);
 	text-transform: uppercase;
 	letter-spacing: 1px;
 }
@@ -285,7 +298,7 @@ body {
 #greeting img.icon {
 	height: 2.5em;
 	width: 2.5em;
-	border: 2px solid var(--color-accent);
+	border: 2px solid var(--color-border-rounded-pic);
 	border-radius: 50%;
 	filter: contrast(60%) sepia(5%) saturate(90%) brightness(1.3);
 	transition: 200ms ease-in-out;
@@ -320,7 +333,7 @@ body {
 /* Nav & comment icons: desaturated with accent border */
 .primary .icon img,
 .comment .icon .icon {
-	border: 5px solid var(--color-accent);
+	border: 5px solid var(--color-border-rounded-pic);
 	filter: contrast(60%) sepia(5%) saturate(90%) brightness(1.3);
 	transition: 200ms ease-in-out;
 }
@@ -334,7 +347,7 @@ body {
 .header .icon img.icon,
 .skins .primary .icon:has(a .icon),
 .skins p.icon {
-	border: 4px solid var(--color-accent);
+	border: 4px solid var(--color-border-rounded-pic);
 	filter: contrast(60%) sepia(5%) saturate(90%) brightness(1.3);
 	transition: 200ms ease-in-out;
 }
@@ -376,7 +389,7 @@ a:link,
 .splash .module h3,
 .blurb h4 a:link,
 .blurb h4 img {
-	color: var(--color-accent);
+	color: var(--color-link-default);
 }
 
 a,
@@ -393,7 +406,7 @@ a:visited {
 	border-radius: 10px;
 	padding: 0 6px;
 	font-weight: normal;
-	color: var(--color-accent);
+	color: var(--color-link-default);
 }
 
 /* Work title visited state */
@@ -420,7 +433,7 @@ label.action:hover,
 .action:hover,
 .action:focus,
 .actions:focus {
-	color: var(--color-accent);
+	color: var(--color-link-default);
 	border-top: 1px solid #999;
 	border-left: 1px solid #999;
 }
@@ -448,7 +461,7 @@ a.check_none {
 a.tag,
 .listbox .heading a.tag:visited:hover,
 .listbox .heading a.tag:visited: a.tag:visited:hover {
-	background: var(--color-accent);
+	background: var(--color-link-default);
 }
 
 /* Base tag hover */
@@ -460,9 +473,9 @@ li.relationships a.tag:hover,
 .collection .bookmark .warning a.tag:hover,
 .collection .bookmark li.relationships a.tag:hover,
 .collection .bookmark .relationship a.tag:hover {
-	background: var(--color-accent);
-	text-shadow: 1px 1px 1px var(--color-grey-dark);
-	color: var(--color-white);
+	background: var(--color-tag-default-bg-hover);
+	text-shadow: 1px 1px 1px var(--color-tag-default-shadow);
+	color: var(--color-tag-default);
 }
 
 /* --- 2. Tag types (global) --- */
@@ -474,26 +487,26 @@ li.relationships a.tag:hover,
 .category .tag,
 .fandom .tag,
 .fandoms .tag {
-	color: var(--color-white);
+	color: var(--color-tag-default);
 	border-radius: 5px;
-	background: var(--color-accent-soft);
-	border: 1px dashed var(--color-mauve-light);
-	text-shadow: 1px 1px 1px var(--color-grey-dark);
+	background: var(--color-tag-default-bg);
+	border: 1px dashed var(--color-tag-default-border);
+	text-shadow: 1px 1px 1px var(--color-tag-default-shadow);
 	font-weight: bold;
 }
 
 /* Rating: stronger accent background */
 .rating .tag {
-	background: var(--color-accent);
-	border: 1px dashed var(--color-mauve-light);
+	background: var(--color-tag-default-bg-hover);
+	border: 1px dashed var(--color-tag-default-border);
 }
 
 /* Warnings: same as above, explicit for clarity */
 .warnings .tag,
 .warning .tag {
-	color: var(--color-white);
+	color: var(--color-tag-default);
 	font-weight: bold;
-	border: 1px dashed var(--color-mauve-light);
+	border: 1px dashed var(--color-tag-default-border);
 }
 
 /* Fandom tags added by user (not canonical): reset to plain link */
@@ -508,18 +521,18 @@ li.relationships a.tag:hover,
 /* Relationship tags: gradient pill */
 li.relationships a.tag,
 .relationship a.tag {
-	color: var(--color-white);
+	color: var(--color-tag-default);
 	font-weight: bold;
-	text-shadow: 1px 1px 1px var(--color-grey-dark);
+	text-shadow: 1px 1px 1px var(--color-tag-default-shadow);
   	background: linear-gradient(-45deg, var(--color-first), var(--color-first), var(--color-sec), var(--color-sec)); /* mauve-mid → slate-mid */
-	border: 1px dashed var(--color-white);
+	border: 1px dashed var(--color-tag-relation-border);
 	border-radius: 5px;
 }
 
 /* Heart symbol after relationship tags */
 ul.tags li.relationships::after {
 	content: " ♥";
-	color: var(--color-mauve-mid);
+	color: var(--color-heart-relationship);
 	vertical-align: middle;
 }
 
@@ -527,14 +540,14 @@ ul.tags li.relationships::after {
 li.characters a.tag,
 .character a.tag {
 	color: var(--color-tag-character);
-	text-shadow: 1px 1px 1px var(--color-grey-mid);
+	text-shadow: 1px 1px 1px var(--color-tag-default-shadow-txt);
 	background: var(--color-tag-character-bg);
-	box-shadow: 3px 3px var(--color-grey-light);
+	box-shadow: 3px 3px var(--color-tag-character-shadow);
 }
 
 li.characters a.tag:hover,
 .character a.tag:hover {
-	color: var(--color-white);
+	color: var(--color-tag-character);
 	background: var(--color-tag-character-hover);
 	text-shadow: none;
 }
@@ -543,14 +556,14 @@ li.characters a.tag:hover,
 li.freeforms a.tag,
 .freeform a.tag {
 	color: var(--color-tag-freeform);
-	text-shadow: 1px 1px 1px var(--color-grey-mid);
+	text-shadow: 1px 1px 1px var(--color-tag-default-shadow-txt);
 	background: var(--color-tag-freeform-bg);
-	box-shadow: 3px 3px var(--color-grey-light);
+	box-shadow: 3px 3px var(--color-tag-freeform-shadow);
 }
 
 li.freeforms a.tag:hover,
 .freeform a.tag:hover {
-	color: var(--color-white);
+	color: var(--color-tag-default);
 	background: var(--color-tag-freeform-hover);
 	text-shadow: none;
 }
@@ -573,7 +586,7 @@ li.freeforms a.tag:hover,
 
 /* Tag section heading background */
 h5.tags.heading {
-	background: var(--color-white) !important;
+	background: var(--color-bg-heading-5) !important;
 	padding: 5px;
 	border-radius: 10px;
 }
@@ -603,22 +616,22 @@ h2.heading a.tag:hover {
 /* Warning tags inside bookmarks: same as global */
 .collection .bookmark .warnings a.tag,
 .collection .bookmark .warning a.tag {
-	color: var(--color-white);
+	color: var(--color-tag-default);
 	font-weight: bold;
-	background: var(--color-accent-soft);
-	border: 1px dashed var(--color-mauve-light);
-	text-shadow: 1px 1px 1px var(--color-grey-dark);
+	background: var(--color-tag-default-bg);
+	border: 1px dashed var(--color-tag-default-border);
+	text-shadow: 1px 1px 1px var(--color-tag-default-shadow);
 	border-radius: 5px;
 }
 
 /* Relationship tags inside bookmarks: same as global */
 .collection .bookmark li.relationships a.tag,
 .collection .bookmark .relationship a.tag {
-	color: var(--color-white);
+	color: var(--color-tag-default);
 	font-weight: bold;
-	text-shadow: 1px 1px 1px var(--color-grey-dark);
+	text-shadow: 1px 1px 1px var(--color-tag-default-shadow);
 	background: linear-gradient(-45deg, var(--color-first), var(--color-first), var(--color-sec), var(--color-sec)); /* mauve-mid → slate-mid */
-	border: 1px dashed var(--color-white);
+	border: 1px dashed var(--color-tag-relation-border);
 	border-radius: 5px;
 }
 
@@ -640,7 +653,7 @@ h2.heading a.tag:hover {
 
 #dashboard a:hover {
 	background: var(--color-border-subtle);
-	color: var(--color-accent);
+	color: var(--color-link-default);
 }
 
 #dashboard span {
@@ -692,7 +705,7 @@ h2.heading a.tag:hover {
 
 .splash .favorite li:nth-of-type(odd) a:hover,
 .splash .favorite li:nth-of-type(odd) a:focus {
-	background: var(--color-accent);
+	background: var(--color-link-default);
 }
 
 div.latest.news.module .userstuff p {
@@ -738,7 +751,7 @@ dl.meta {
 
 /* Blockquotes: white card inside blurbs, surface inside CSS pages */
 .blurb blockquote:not(li.collection .userstuff.summary, ol.bookmark .userstuff.notes) {
-	background: var(--color-white);
+	background: var(--color-bg-blurb);
 	padding: 5px;
 }
 
@@ -797,15 +810,15 @@ ul.work.navigation.actions {
 	border-image-width: 200px;
 }
 
-/* Chapter stats badge */
+/* USERSCRIPT: 'Reading Time & Quality Score' badge (reading time, word count) */
 .chapter .ao3-chapter-stats-default,
 .work .ao3-chapter-stats-default,
 h4.viewed.heading {
 	display: inline-block;
 	width: auto;
-	background: var(--color-slate-light);
+	background: var(--color-bg-badge);
 	color: black;
-	text-shadow: 1px 1px var(--color-white);
+	text-shadow: 1px 1px var(--color-shadow-txt-badge);
 	box-shadow: 5px 5px var(--color-shadow-badge);
 	font-size: 11px;
 	font-style: normal;
@@ -1030,15 +1043,15 @@ dl.statistics dt.comment::before {
 dl.stats dd {
 	justify-content: center;
 	position: relative;
-	color: var(--color-accent);
+	color: var(--color-stat);
 }
 
 /* Stat links */
 .stats a,
 .stats a:visited {
 	border: none;
-	color: var(--color-accent);
-	border-bottom: 1px dashed var(--color-accent);
+	color: var(--color-link-default);
+	border-bottom: 1px dashed var(--color-stats-border);
 }
 
 /* Tooltip base (hidden by default) */
@@ -1050,11 +1063,11 @@ dl.stats dd {
 	padding: 0.3em;
 	border: 1px solid var(--color-border-subtle);
 	border-radius: 2px;
-	background: var(--color-grey-mid);
+	background: var(--color-stats-bg-icon);
 	font-size: 0.8em;
 	line-height: 1;
 	text-align: center;
-	color: var(--color-grey-dark);
+	color: var(--color-stats-icon);
 }
 
 .stats dd:hover::after {
