@@ -415,6 +415,7 @@ a:visited {
 }
 
 /* Work title visited state */
+a:link:hover,
 a:visited:hover,
 h4.heading a:hover,
 h4.heading a:visited,
@@ -466,6 +467,7 @@ a.check_none {
 a.tag,
 .listbox .heading a.tag:visited:hover,
 a.tag:visited:hover {
+	color: var(--color-tag-default);
 	background: var(--color-link-default);
 }
 
