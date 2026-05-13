@@ -50,15 +50,17 @@
 	   ----------------------------------------------------------------- */	
 
 	--color-white:               #ffffff;
-	--color-grey-50:             #f6f6f6;
-	--color-grey-100:            #f3f3f3;
-	--color-grey-200:            #ededed;
-	--color-grey-300:            #e6e6e6;
-	--color-grey-400:            #dfdfdf;
-	--color-grey-500:            #dddddd;
-	--color-grey-600:            #cdcdcd;
-	--color-grey-700:            #808080;
-	--color-grey-900:            #474747;
+	--color-grey-10:             #f6f6f6;
+	--color-grey-20:             #f3f3f3;
+	--color-grey-40:             #ededed;
+	--color-grey-10:             #e6e6e6;
+	--color-grey-60:             #dfdfdf;
+	--color-grey-70:             #dddddd;
+	--color-grey-90:             #cdcdcd;
+	--color-grey-110:            #bbbbbb;
+	--color-grey-140:            #999999;
+	--color-grey-170:            #808080;
+	--color-grey-220:            #474747;
 
 	
 	/* =================================================================
@@ -72,6 +74,7 @@
 
 	/* Neutrals */
 	--color-neutral-main:             var(--color-white);
+	--color-overlay-light:            rgba(255,255,255,0.25);
 	
 	/* Palette 1 */
 	--color-light-first:              var(--color-mauve-light);
@@ -97,13 +100,14 @@
 	--color-sec:                      var(--color-mid-sec);
 
 	/* Backgrounds, borders, shadows & surfaces */
-	--color-bg-body:                  var(--color-grey-100);     /* body background */
+	--color-bg-body:                  var(--color-grey-20);      /* body background */
 	--color-border-rounded-pic:       var(--color-accent);       /* border around profile pic */
 	--color-bg-blurb:                 var(--color-neutral-main); /* white card inside blurbs */
-	--color-bg-bookmark-own:          var(--color-grey-200);     /* own bookmark user area */
-	--color-surface:                  var(--color-grey-50);      /* blockquote surfaces */
-	--color-border-subtle:            var(--color-grey-500);     /* light borders, action hover bg */
-	--color-border-mid:               var(--color-grey-700);     /* home header bottom border */
+	--color-bg-bookmark-own:          var(--color-grey-40);      /* own bookmark user area */
+	--color-surface:                  var(--color-grey-10);      /* blockquote surfaces */
+	--color-border-subtle:            var(--color-grey-70);      /* light borders, action hover bg */
+	--color-border-mid:               var(--color-grey-170);     /* home header bottom border */
+	--color-shadow-inset:             var(--color-grey-110);     /* inset shadow */
 
 	/* Navigation & UI links */
 	--color-link-default:             var(--color-accent);       /* default link color */
@@ -111,6 +115,7 @@
 	--color-link-menu:                var(--color-neutral-main); /* left header links (fandoms, browse, search...) */
 	--color-link-nav-hover:           var(--color-accent-pop);   /* header links on hover */
 	--color-link-nav-active:          var(--color-accent);       /* dropdown menu hover, user focus */
+	--color-border-action-hover:      var(--color-grey-140);     /* border color on hover for interactive elements (buttons, links, actions) */
 
 	/* Content links */
 	--color-link-visited:             var(--color-dark-sec);     /* h4 headings visited */
@@ -129,8 +134,8 @@
 	--color-tag-default-bg:           var(--color-accent-soft);  /* default tag background */
 	--color-tag-default-bg-hover:     var(--color-accent);       /* default tag background hover */
 	--color-tag-default-border:       var(--color-light-first);  /* default tag border */
-	--color-tag-default-shadow:       var(--color-grey-900);     /* default tag shadow box (sometimes text) */
-	--color-tag-default-shadow-txt:   var(--color-grey-300);     /* default tag shadow text */
+	--color-tag-default-shadow:       var(--color-grey-220);     /* default tag shadow box (sometimes text) */
+	--color-tag-default-shadow-txt:   var(--color-grey-10);      /* default tag shadow text */
 
 	/* Tags — ratings */
 	--color-tag-rating-bg:            var(--color-accent);       /* rating tag background */
@@ -143,13 +148,13 @@
 	--color-tag-character:            var(--color-dark-first);   /* character tag text color */
 	--color-tag-character-bg:         var(--color-light-first);  /* character tag background */
 	--color-tag-character-hover:      var(--color-dark-first);   /* character tag hover bg */
-	--color-tag-character-shadow:     var(--color-grey-400);     /* character tag shadow */
+	--color-tag-character-shadow:     var(--color-grey-60);      /* character tag shadow */
 
 	/* Tags — freeforms */
 	--color-tag-freeform:             var(--color-dark-sec);     /* freeform tag text color */
 	--color-tag-freeform-bg:          var(--color-light-sec);    /* freeform tag background */
 	--color-tag-freeform-hover:       var(--color-dark-sec);     /* freeform tag hover bg */
-	--color-tag-freeform-shadow:      var(--color-grey-400);     /* character tag shadow */
+	--color-tag-freeform-shadow:      var(--color-grey-60);      /* character tag shadow */
 
 	/* Tags — fandoms in header */
 	--color-link-fandom:              var(--color-dark-first);   /* fandom tag text in header */
@@ -161,14 +166,14 @@
 
 	/* USERSCRIPT: 'Reading Time & Quality Score' badge (reading time, word count) */
 	--color-bg-badge:                 var(--color-light-sec);    /* badge background */
-	--color-shadow-badge:             var(--color-grey-600);     /* badge box shadow */
+	--color-shadow-badge:             var(--color-grey-90);      /* badge box shadow */
 	--color-shadow-txt-badge:         var(--color-neutral-main); /* badge text shadow */
 
 	/* Work statistics */
 	--color-stats:                    var(--color-accent);       /* main color for stats text/value */
 	--color-stats-border:             var(--color-accent);       /* border color for stat links underline */
-	--color-stats-icon:               var(--color-grey-900);     /* icon/text color inside stat tooltip */
-	--color-stats-bg-icon:            var(--color-grey-400);     /* background color for stat tooltip/icon area */
+	--color-stats-icon:               var(--color-grey-220);     /* icon/text color inside stat tooltip */
+	--color-stats-bg-icon:            var(--color-grey-60);      /* background color for stat tooltip/icon area */
 }
 
 
@@ -434,8 +439,8 @@ label.action:hover,
 .action:focus,
 .actions:focus {
 	color: var(--color-link-default);
-	border-top: 1px solid #999;
-	border-left: 1px solid #999;
+	border-top: 1px solid var(--color-border-action-hover);
+	border-left: 1px solid var(--color-border-action-hover);
 }
 
 /* Pointer cursor for interactive elements */
