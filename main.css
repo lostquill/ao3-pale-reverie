@@ -71,10 +71,6 @@
 	/* -----------------------------------------------------------------
 	   PALETTE MAPPINGS
 	   ----------------------------------------------------------------- */
-
-	/* Neutrals */
-	--color-neutral-main:             var(--color-white);
-	--color-overlay-light:            rgba(255,255,255,0.25);
 	
 	/* Palette 1 */
 	--color-light-primary:            var(--color-mauve-light);
@@ -90,6 +86,10 @@
 	--color-accent:                   var(--color-rose-brown);
 	--color-accent-soft:              var(--color-dusty-pink);
 	--color-accent-pop:               var(--color-purple);
+
+	/* Neutrals */
+	--color-neutral-main:             var(--color-white);
+	--color-overlay-light:            rgba(255,255,255,0.25);
 
 	/* -----------------------------------------------------------------
 	   UI LAYER
