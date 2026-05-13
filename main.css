@@ -161,8 +161,8 @@
 	--color-link-fandom-hover:        var(--color-dark-secondary); /* fandom tag hover in header */
 
 	/* Tags — collection neutral */
-	--color-tag-collection:           var(--color-mid-primary);    /* collection tags at rest */
-	--color-tag-collection-hover:     var(--color-mid-secondary);  /* collection tags on hover */
+	--color-tag-collection:           var(--color-dark-primary);   /* collection tags at rest */
+	--color-tag-collection-hover:     var(--color-darj-secondary); /* collection tags on hover */
 
 	/* USERSCRIPT: 'Reading Time & Quality Score' badge (reading time, word count) */
 	--color-bg-badge:                 var(--color-light-secondary);/* badge background */
