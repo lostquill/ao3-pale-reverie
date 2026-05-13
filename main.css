@@ -719,8 +719,10 @@ h2.heading a.tag:hover {
 }
 
 .splash .favorite li a:hover,
-.splash .favorite li a:focus {
-	background: var(--color-tag-freeform-hover);
+.splash .favorite li a:focus,
+.splash .favorite li:nth-of-type(odd) a:hover,
+.splash .favorite li:nth-of-type(odd) a:focus {
+    background: var(--color-accent-pop);
 }
 
 div.latest.news.module .userstuff p {
