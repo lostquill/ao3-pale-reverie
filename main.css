@@ -162,7 +162,7 @@
 
 	/* Tags — collection neutral */
 	--color-tag-collection:           var(--color-dark-primary);   /* collection tags at rest */
-	--color-tag-collection-hover:     var(--color-darj-secondary); /* collection tags on hover */
+	--color-tag-collection-hover:     var(--color-dark-secondary); /* collection tags on hover */
 
 	/* USERSCRIPT: 'Reading Time & Quality Score' badge (reading time, word count) */
 	--color-bg-badge:                 var(--color-light-secondary);/* badge background */
