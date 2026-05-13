@@ -552,7 +552,7 @@ li.characters a.tag,
 
 li.characters a.tag:hover,
 .character a.tag:hover {
-	color: var(--color-tag-character);
+	color: var(--color-tag-default);
 	background: var(--color-tag-character-hover);
 	text-shadow: none;
 }
