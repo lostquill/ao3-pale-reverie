@@ -710,16 +710,27 @@ h2.heading a.tag:hover {
 	border: 1px solid var(--color-border-subtle);
 }
 
+.splash .favorite li a {
+    margin: .5em auto;
+}
+
 .splash .favorite li:nth-of-type(even) a,
 .splash .favorite li:nth-of-type(odd) a {
-	background: var(--color-tag-default-bg-hover);
+    background: var(--color-tag-default-bg);
+    color: var(--color-dark-primary);
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 1px var(--color-neutral-main);
 }
 
 .splash .favorite li a:hover,
 .splash .favorite li a:focus,
 .splash .favorite li:nth-of-type(odd) a:hover,
 .splash .favorite li:nth-of-type(odd) a:focus {
-    background: var(--color-accent-pop);
+    background: var(--color-tag-default-bg-hover);
+    color: var(--color-dark-primary);
+    text-shadow: 1px 1px 1px black;
 }
 
 div.latest.news.module .userstuff p {
