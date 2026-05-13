@@ -729,8 +729,8 @@ h2.heading a.tag:hover {
 .splash .favorite li:nth-of-type(odd) a:hover,
 .splash .favorite li:nth-of-type(odd) a:focus {
     background: var(--color-tag-default-bg-hover);
-    color: var(--color-dark-primary);
-    text-shadow: 1px 1px 1px black;
+    color: var(--color-neutral-main);
+    text-shadow: 1px 1px 1px var(--color-dark-primary);
 }
 
 div.latest.news.module .userstuff p {
