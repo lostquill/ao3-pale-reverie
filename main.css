@@ -119,6 +119,9 @@
 	/* Headings */
 	--color-heading:                  var(--color-dark-sec);     /* h2.heading */
 
+	/* Dashboard */
+	--color-text-dashboard:           var(--color-dark-first);   /* dashboard span labels */
+
 	/* Tags — global */
 	--color-tag-default:              var(--color-neutral-main); /* default tag text color */
 	--color-tag-default-bg:           var(--color-accent-soft);  /* default tag background */
@@ -132,6 +135,7 @@
 
 	/* Tags — relationships */
 	--color-tag-relation-border:      var(--color-neutral-main); /* relationships tag border */
+	--color-heart-relationship:       var(--color-mid-first);    /* Heart symbol after tags */
 
 	/* Tags — characters */
 	--color-tag-character:            var(--color-dark-first);   /* character tag text color */
@@ -152,12 +156,6 @@
 	/* Tags — collection neutral */
 	--color-tag-collection:           var(--color-mid-first);    /* collection tags at rest */
 	--color-tag-collection-hover:     var(--color-mid-sec);      /* collection tags on hover */
-
-	/* Dashboard */
-	--color-text-dashboard:           var(--color-dark-first);   /* dashboard span labels */
-
-	/* Symbols */
-	--color-heart-relationship:       var(--color-mid-first);    /* Heart symbol after relationship tags */
 }
 
 
