@@ -14,77 +14,150 @@
 	----------------------------------------------------------------------------- */
 
 :root {
-	/* Background & surfaces */
-	--color-bg:                  #f3f3f3;
-	--color-surface:             #f6f6f6;
-	--color-white:               #ffffff;
+	
+	/* =================================================================
+	   THEME
+       - If you modify or add to these variables, make sure to update the
+         corresponding semantic mappings below.
+	   ================================================================= */
+	
+	/* -----------------------------------------------------------------
+	   PALETTES
+	   Base color scales (do not use directly in css rules)
+	   ----------------------------------------------------------------- */
 
-	/* Neutral grays */
-	--color-grey-light:          #dfdfdf;
-	--color-grey-mid:            #e6e6e6;
-	--color-grey-dark:           #474747;
-
-	/* Accent (old rose / vieux rose) */
-	--color-accent:              #8f6565;   /* main interactive color */
-	--color-accent-soft:         #cdb2b2;   /* muted accent */
-	--color-purple:              #9d2d69;   /* secondary hover */
-
-	/* Mauve palette (warm rose tones) */
+	/* COLOR PALETTE 1 - Mauve palette (warm rose tones) */
 	--color-mauve-light:         #f6e8eb;
 	--color-mauve-mid:           #cdb3b3;
 	--color-mauve-dark:          #664646;
 
-	/* Slate palette (cool blue-grey tones) */
+	/* COLOR PALETTE 2 - Slate palette (cool blue-grey tones) */
 	--color-slate-light:         #e3edee;
 	--color-slate-mid:           #b3cbcd;
 	--color-slate-dark:          #3a5f66;
+	
+	/* -----------------------------------------------------------------
+	   ACCENT COLORS
+	   Highlight / interactive emphasis colors
+	   ----------------------------------------------------------------- */
+
+	--color-rose-brown:          #8f6565;
+	--color-dusty-pink:          #cdb2b2;
+	--color-purple:              #9d2d69;
+	
+	/* -----------------------------------------------------------------
+	   NEUTRAL COLORS
+	   ----------------------------------------------------------------- */	
+
+	--color-white:               #ffffff;
+	--color-grey-50:             #f6f6f6;
+	--color-grey-100:            #f3f3f3;
+	--color-grey-200:            #ededed;
+	--color-grey-300:            #e6e6e6;
+	--color-grey-400:            #dfdfdf;
+	--color-grey-500:            #dddddd;
+	--color-grey-600:            #cdcdcd;
+	--color-grey-700:            #808080;
+	--color-grey-900:            #474747;
+
+	
+	/* =================================================================
+	   SEMANTIC ALIASES
+       - Change these to retheme without touching css rules.
+	   ================================================================= */
+	
+	/* -----------------------------------------------------------------
+	   PALETTE MAPPINGS
+	   ----------------------------------------------------------------- */
+
+	/* Neutrals */
+	--color-neutral-main:             var(--color-white);
+	
+	/* Palette 1 */
+	--color-light-first:              var(--color-mauve-light);
+	--color-mid-first:                var(--color-mauve-mid);
+	--color-dark-first:               var(--color-mauve-dark);
+	
+	/* Palette 2 */
+	--color-light-sec:                var(--color-slate-light);
+	--color-mid-sec:                  var(--color-slate-mid);
+	--color-dark-sec:                 var(--color-slate-dark);
+
+	/* Accent colors */
+	--color-accent:                   var(--color-rose-brown);
+	--color-accent-soft:              var(--color-dusty-pink);
+	--color-accent-pop:               var(--color-purple);
 
 	/* -----------------------------------------------------------------
-	   Semantic aliases — change these to retheme without touching rules
+	   UI LAYER
 	   ----------------------------------------------------------------- */
 
 	/* Color gradient (navbar background, footer background, relationship tag) */
-	--color-first:               var(--color-mauve-mid);
-	--color-sec:                 var(--color-slate-mid);
+	--color-first:                    var(--color-mid-first);
+	--color-sec:                      var(--color-mid-sec);
+
+	/* Backgrounds, borders, shadows & surfaces */
+	--color-bg-body:                  var(--color-grey-100);     /* body background */
+	--color-border-rounded-pic:       var(--color-accent);       /* border around profile pic */
+	--color-bg-blurb:                 var(--color-neutral-main); /* white card inside blurbs */
+	--color-bg-bookmark-own:          var(--color-grey-200);     /* own bookmark user area */
+	--color-surface:                  var(--color-grey-50);      /* blockquote surfaces */
+	--color-border-subtle:            var(--color-grey-500);     /* light borders, action hover bg */
+	--color-border-mid:               var(--color-grey-700);     /* home header bottom border */
+	--color-shadow-badge:             var(--color-grey-600);     /* chapter stats badge shadow */
 
 	/* Navigation & UI links */
-	--color-link-nav:            var(--color-slate-dark);   /* header links, dashboard links */
-	--color-link-nav-hover:      var(--color-purple);       /* header links on hover */
-	--color-link-nav-active:     var(--color-accent);       /* dropdown menu hover, user focus */
+	--color-link-default:             var(--color-accent);       /* default link color */
+	--color-link-nav:                 var(--color-dark-sec);     /* header links, dashboard links */
+	--color-link-nav-hover:           var(--color-accent-pop);   /* header links on hover */
+	--color-link-nav-active:          var(--color-accent);       /* dropdown menu hover, user focus */
 
 	/* Content links */
-	--color-link-visited:        var(--color-slate-dark);   /* h4 headings visited */
-	--color-link-visited-hover:  var(--color-accent);       /* h4 headings visited:hover */
+	--color-link-visited:             var(--color-dark-sec);     /* h4 headings visited */
+	--color-link-visited-hover:       var(--color-accent);       /* h4 headings visited:hover */
 
 	/* Headings */
-	--color-heading:             var(--color-slate-dark);   /* h2.heading */
+	--color-heading:                  var(--color-dark-sec);     /* h2.heading */
+
+	/* Tags — global */
+	--color-tag-default:              var(--color-neutral-main); /* default tag text color */
+	--color-tag-default-bg:           var(--color-accent-soft);  /* default tag background */
+	--color-tag-default-bg-hover:     var(--color-accent);       /* default tag background hover */
+	--color-tag-default-border:       var(--color-light-first);  /* default tag border */
+	--color-tag-default-shadow:       var(--color-grey-900);     /* default tag shadow box (sometimes text) */
+	--color-tag-default-shadow-txt:   var(--color-grey-300);     /* default tag shadow text */
+
+	/* Tags — ratings */
+	--color-tag-rating-bg:            var(--color-accent);       /* rating tag background */
+
+	/* Tags — relationships */
+	--color-tag-relation-border:      var(--color-neutral-main); /* relationships tag border */
 
 	/* Tags — characters */
-	--color-tag-character:       var(--color-mauve-dark);   /* character tag text */
-	--color-tag-character-bg:    var(--color-mauve-light);  /* character tag background */
-	--color-tag-character-hover: var(--color-mauve-dark);   /* character tag hover bg */
+	--color-tag-character:            var(--color-dark-first);   /* character tag text color */
+	--color-tag-character-bg:         var(--color-light-first);  /* character tag background */
+	--color-tag-character-hover:      var(--color-dark-first);   /* character tag hover bg */
+	--color-tag-character-shadow:     var(--color-grey-400);     /* character tag shadow */
 
 	/* Tags — freeforms */
-	--color-tag-freeform:        var(--color-slate-dark);   /* freeform tag text */
-	--color-tag-freeform-bg:     var(--color-slate-light);  /* freeform tag background */
-	--color-tag-freeform-hover:  var(--color-slate-dark);   /* freeform tag hover bg */
+	--color-tag-freeform:             var(--color-dark-sec);     /* freeform tag text color */
+	--color-tag-freeform-bg:          var(--color-light-sec);    /* freeform tag background */
+	--color-tag-freeform-hover:       var(--color-dark-sec);     /* freeform tag hover bg */
+	--color-tag-freeform-shadow:      var(--color-grey-400);     /* character tag shadow */
 
 	/* Tags — fandoms in header */
-	--color-link-fandom:         var(--color-mauve-dark);   /* fandom tag text in header */
-	--color-link-fandom-hover:   var(--color-slate-dark);   /* fandom tag hover in header */
+	--color-link-fandom:              var(--color-dark-first);   /* fandom tag text in header */
+	--color-link-fandom-hover:        var(--color-dark-sec);     /* fandom tag hover in header */
 
 	/* Tags — collection neutral */
-	--color-tag-collection:      var(--color-mauve-mid);    /* collection tags at rest */
-	--color-tag-collection-hover: var(--color-slate-mid);   /* collection tags on hover */
+	--color-tag-collection:           var(--color-mid-first);    /* collection tags at rest */
+	--color-tag-collection-hover:     var(--color-mid-sec);      /* collection tags on hover */
 
 	/* Dashboard */
-	--color-text-dashboard:      var(--color-mauve-dark);   /* dashboard span labels */
+	--color-text-dashboard:           var(--color-dark-first);   /* dashboard span labels */
 
-	/* Borders, shadows & surfaces */
-	--color-border-subtle:       #ddd;     /* light borders, action hover bg */
-	--color-border-mid:          #808080;  /* home header bottom border */
-	--color-shadow-badge:        #cdcdcd;  /* chapter stats badge shadow */
-	--color-bg-bookmark-own:     #ededed;  /* own bookmark user area */
+	/* Symbols */
+	--color-heart-relationship:       var(--color-mid-first);    /* Heart symbol after relationship tags */
 }
 
 
