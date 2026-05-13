@@ -53,7 +53,7 @@
 	--color-grey-10:             #f6f6f6;
 	--color-grey-20:             #f3f3f3;
 	--color-grey-40:             #ededed;
-	--color-grey-10:             #e6e6e6;
+	--color-grey-50:             #e6e6e6;
 	--color-grey-60:             #dfdfdf;
 	--color-grey-70:             #dddddd;
 	--color-grey-90:             #cdcdcd;
@@ -123,8 +123,8 @@
 
 	/* Headings */
 	--color-heading:                  var(--color-dark-sec);     /* h2.heading */
-	--color-bg-heading                var(--color-accent);       /* h2.collections */
-	--color-bg-heading-5              var(--color-neutral-main); /* h5.tags.heading */
+	--color-bg-heading:               var(--color-accent);       /* h2.collections */
+	--color-bg-heading-5:             var(--color-neutral-main); /* h5.tags.heading */
 
 	/* Dashboard */
 	--color-text-dashboard:           var(--color-dark-first);   /* dashboard span labels */
@@ -134,8 +134,8 @@
 	--color-tag-default-bg:           var(--color-accent-soft);  /* default tag background */
 	--color-tag-default-bg-hover:     var(--color-accent);       /* default tag background hover */
 	--color-tag-default-border:       var(--color-light-first);  /* default tag border */
-	--color-tag-default-shadow:       var(--color-grey-220);     /* default tag shadow box (sometimes text) */
-	--color-tag-default-shadow-txt:   var(--color-grey-10);      /* default tag shadow text */
+	--color-tag-shadow-dark:          var(--color-grey-220);     /* default tag shadow light */
+	--color-tag-shadow-dark-txt:      var(--color-grey-50);      /* default tag shadow dark */
 
 	/* Tags — ratings */
 	--color-tag-rating-bg:            var(--color-accent);       /* rating tag background */
@@ -173,7 +173,7 @@
 	--color-stats:                    var(--color-accent);       /* main color for stats text/value */
 	--color-stats-border:             var(--color-accent);       /* border color for stat links underline */
 	--color-stats-icon:               var(--color-grey-220);     /* icon/text color inside stat tooltip */
-	--color-stats-bg-icon:            var(--color-grey-60);      /* background color for stat tooltip/icon area */
+	--color-stats-bg-tooltip:         var(--color-grey-50);      /* background color for stat tooltip/icon area */
 }
 
 
@@ -465,7 +465,7 @@ a.check_none {
 
 a.tag,
 .listbox .heading a.tag:visited:hover,
-.listbox .heading a.tag:visited: a.tag:visited:hover {
+a.tag:visited:hover {
 	background: var(--color-link-default);
 }
 
@@ -479,7 +479,7 @@ li.relationships a.tag:hover,
 .collection .bookmark li.relationships a.tag:hover,
 .collection .bookmark .relationship a.tag:hover {
 	background: var(--color-tag-default-bg-hover);
-	text-shadow: 1px 1px 1px var(--color-tag-default-shadow);
+	text-shadow: 1px 1px 1px var(--color-tag-shadow-dark);
 	color: var(--color-tag-default);
 }
 
@@ -496,7 +496,7 @@ li.relationships a.tag:hover,
 	border-radius: 5px;
 	background: var(--color-tag-default-bg);
 	border: 1px dashed var(--color-tag-default-border);
-	text-shadow: 1px 1px 1px var(--color-tag-default-shadow);
+	text-shadow: 1px 1px 1px var(--color-tag-shadow-dark);
 	font-weight: bold;
 }
 
@@ -528,7 +528,7 @@ li.relationships a.tag,
 .relationship a.tag {
 	color: var(--color-tag-default);
 	font-weight: bold;
-	text-shadow: 1px 1px 1px var(--color-tag-default-shadow);
+	text-shadow: 1px 1px 1px var(--color-tag-shadow-dark);
   	background: linear-gradient(-45deg, var(--color-first), var(--color-first), var(--color-sec), var(--color-sec)); /* mauve-mid → slate-mid */
 	border: 1px dashed var(--color-tag-relation-border);
 	border-radius: 5px;
@@ -545,7 +545,7 @@ ul.tags li.relationships::after {
 li.characters a.tag,
 .character a.tag {
 	color: var(--color-tag-character);
-	text-shadow: 1px 1px 1px var(--color-tag-default-shadow-txt);
+	text-shadow: 1px 1px 1px var(--color-tag-shadow-dark-txt);
 	background: var(--color-tag-character-bg);
 	box-shadow: 3px 3px var(--color-tag-character-shadow);
 }
@@ -561,7 +561,7 @@ li.characters a.tag:hover,
 li.freeforms a.tag,
 .freeform a.tag {
 	color: var(--color-tag-freeform);
-	text-shadow: 1px 1px 1px var(--color-tag-default-shadow-txt);
+	text-shadow: 1px 1px 1px var(--color-tag-shadow-dark-txt);
 	background: var(--color-tag-freeform-bg);
 	box-shadow: 3px 3px var(--color-tag-freeform-shadow);
 }
@@ -625,7 +625,7 @@ h2.heading a.tag:hover {
 	font-weight: bold;
 	background: var(--color-tag-default-bg);
 	border: 1px dashed var(--color-tag-default-border);
-	text-shadow: 1px 1px 1px var(--color-tag-default-shadow);
+	text-shadow: 1px 1px 1px var(--color-tag-shadow-dark);
 	border-radius: 5px;
 }
 
@@ -634,7 +634,7 @@ h2.heading a.tag:hover {
 .collection .bookmark .relationship a.tag {
 	color: var(--color-tag-default);
 	font-weight: bold;
-	text-shadow: 1px 1px 1px var(--color-tag-default-shadow);
+	text-shadow: 1px 1px 1px var(--color-tag-shadow-dark);
 	background: linear-gradient(-45deg, var(--color-first), var(--color-first), var(--color-sec), var(--color-sec)); /* mauve-mid → slate-mid */
 	border: 1px dashed var(--color-tag-relation-border);
 	border-radius: 5px;
@@ -783,7 +783,7 @@ dl.meta {
 /* Listbox index */
 .listbox .index {
 	background: var(--color-surface);
-	box-shadow: inset 1px 1px 3px #bbb;
+	box-shadow: inset 1px 1px 3px var(--color-grey-70);
 }
 
 
@@ -1068,7 +1068,7 @@ dl.stats dd {
 	padding: 0.3em;
 	border: 1px solid var(--color-border-subtle);
 	border-radius: 2px;
-	background: var(--color-stats-bg-icon);
+	background: var(--color-stats-bg-tooltip);
 	font-size: 0.8em;
 	line-height: 1;
 	text-align: center;
