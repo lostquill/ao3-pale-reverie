@@ -422,7 +422,8 @@ h4.heading a:visited,
 	color: var(--color-link-visited);
 }
 
-h4.heading a:visited:hover {
+h4.heading a:visited:hover,
+.listbox .heading a:visited:hover {
 	color: var(--color-link-visited-hover);
 }
 
