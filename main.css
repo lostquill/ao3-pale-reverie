@@ -510,7 +510,7 @@ h5.tags.heading {
 /* --- 3. Collection context: all tags → neutral --- */
 
 /* Outside of bookmarks, all collection tags are plain mauve-mid links */
-.collection a.tag,
+li.collection a.tag,
 h2.heading a.tag {
 	color: var(--color-tag-collection);
 	background: none;
@@ -520,7 +520,7 @@ h2.heading a.tag {
 	box-shadow: none;
 }
 
-.collection a.tag:hover,
+li.collection a.tag:hover,
 h2.heading a.tag:hover {
 	color: var(--color-tag-collection-hover);
 	background: none;
