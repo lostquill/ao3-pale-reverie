@@ -191,6 +191,11 @@ body {
     color: var(--color-neutral-main);
 }
 
+input, textarea, select {
+    font-size: 100%;
+    font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Helvetica, sans-serif, 'GNU Unifont';
+}
+
 
 /* =============================================================================
 	HEADER
@@ -411,6 +416,7 @@ a:visited:hover {
 
 /* Visited links & listbox headings share pill styling */
 a.tag,
+.filters .added.tag,
 .listbox > .heading,
 a:visited {
 	line-height: 2;
