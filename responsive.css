@@ -49,8 +49,6 @@ position: static;
 
 form.filters,
 .region:has(ol.pagination.actions) form.filters {
-    position: static;
-    width: auto;
     max-height: none;
     overflow-y: visible;
     margin-bottom: 1em !important;
