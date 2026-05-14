@@ -56,6 +56,22 @@ li.relationships a.tag,
   border: none;
 }
 
+:is(.rating .tag,
+.warning .tag,
+.warnings .tag,
+.category .tag,
+li.relationships a.tag,
+.relationship a.tag,
+.fandom .tag:not(.fandom .tag.added),
+.fandoms .tag,
+.collection .bookmark .warnings a.tag,
+.collection .bookmark .warning a.tag,
+.collection .bookmark li.relationships a.tag,
+.collection .bookmark .relationship a.tag):hover {
+  text-shadow: none;
+  border: none;
+}
+
 /* Thinner border on commenter profile pics */
 .primary .icon img,
 .comment .icon .icon {
