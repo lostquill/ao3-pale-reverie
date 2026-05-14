@@ -28,7 +28,9 @@ See the [AO3 work](https://archiveofourown.org/works/84166896) for full installa
 
 - Stats icons & hover text system by ZerafinaCSS
   - AO3: [Stats Icons with Hover Text](https://archiveofourown.org/works/55604875)
-  - GitHub: [ZerafinaCSS/AO3-Stats-Icons-with-Hover-Text](https://github.com/ZerafinaCSS/AO3-Stats-Icons-with-Hover-Text)
+- Sticky dashboard + search/filter structure inspired by: 
+  - Rosé Pine Site Skin by BlackBatCat → [AO3 Work](https://archiveofourown.org/works/69993411)  
+  - Neos Skin by ZerafinaCSS → [AO3 Work](https://archiveofourown.org/works/65849527)
 - Constellation border image, kudos illustration, and CSS placeholder icon generated with Gemini
 
 ## License
