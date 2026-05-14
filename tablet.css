@@ -75,6 +75,11 @@ li.relationships a.tag,
 .collection .bookmark .relationship a.tag {
   text-shadow: none;
   border: none;
+  box-shadow: 3px 3px var(--color-tag-character-shadow);
+}
+
+.fandoms .tag {
+	box-shadow: none;
 }
 
 :is(.rating .tag,
