@@ -1,0 +1,11 @@
+/* =============================================================================
+	AO3 PALE REVERIE — mobile.css
+	Author: LostQuill
+	Media: only screen and (max-width: 42em)
+	Role: Parent skin (mobile overrides)
+	============================================================================= */
+
+form.filters,
+.region:has(ol.pagination.actions) form.filters {
+  position: absolute;
+}
