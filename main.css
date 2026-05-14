@@ -185,6 +185,11 @@ body {
 	background: var(--color-bg-body);
 }
 
+*::selection {
+    background-color: var(--color-accent-pop);
+    color: var(--color-neutral-main);
+}
+
 
 /* =============================================================================
 	HEADER
@@ -1142,7 +1147,29 @@ dl.stats dd {
 	============================================================================= */
 
 #footer {
+	color: var(--color-neutral-main);
 	font-family: Arial, sans-serif;
 	font-size: .9em;
 	background: linear-gradient(45deg, var(--color-first), var(--color-first), var(--color-sec), var(--color-sec)); /* mauve-mid → slate-mid */
+}
+
+#footer .heading {
+    font-weight: bold;
+    color: var(--color-accent);
+    text-shadow: 1px 1px 1px var(--color-light-secondary);
+    margin-block: 0 1em;
+}
+
+#footer a, #footer button {
+    text-decoration: none;
+    color: var(--color-neutral-main);
+    text-shadow: 1px 1px 1px var(--color-dark-secondary);
+    font-weight: bold;
+}
+
+#footer a:hover,
+#footer a:focus,
+#footer button:hover,
+#footer button:focus {
+    text-decoration: underline;
 }
