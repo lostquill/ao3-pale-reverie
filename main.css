@@ -186,7 +186,7 @@ body {
 }
 
 *::selection {
-    background-color: var(--color-accent-pop);
+    background-color: var(--color-accent);
     color: var(--color-neutral-main);
 }
 
@@ -1163,7 +1163,7 @@ dl.stats dd {
 #footer a, #footer button {
     text-decoration: none;
     color: var(--color-neutral-main);
-    text-shadow: 1px 1px 1px var(--color-dark-secondary);
+    text-shadow: 1px 1px 1px var(--color-grey-170);
     font-weight: bold;
 }
 
