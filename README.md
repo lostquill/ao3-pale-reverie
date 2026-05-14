@@ -21,8 +21,9 @@ See the [AO3 work](https://archiveofourown.org/works/84166896) for full installa
 
 | File | Description |
 |------|-------------|
-| `main.css` | Base styles — colors, tags, layout, stats icons |
-| `responsive.css` | Responsive overrides for tablet and mobile |
+| `main.css` | Base styles — colors, tags, layout, and stats icons |
+| `tablet.css` | **Tablet skin** — Layout adjustments for tablets (max-width: 62em) |
+| `mobile.css` | **Mobile skin** — Minor resets for smaller screens (max-width: 42em) |
 
 ## Credits
 
