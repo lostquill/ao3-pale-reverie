@@ -70,5 +70,11 @@ li.relationships a.tag,
 }
 
 #footer .module {
+    max-width: 90%;
+    text-align: center;
     border-radius: 20px;
+}
+
+#footer .module .menu li {
+    text-align: center;
 }
