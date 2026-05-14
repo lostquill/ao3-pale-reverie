@@ -6,7 +6,10 @@
 	Credits:
 	Stats icons & hover text system by ZerafinaCSS
 		AO3: https://archiveofourown.org/works/55604875
-		GitHub: https://github.com/ZerafinaCSS/AO3-Stats-Icons-with-Hover-Text
+
+	Sticky dashboard + search/filter structure inspired by: 
+		- Rosé Pine Site Skin by BlackBatCat → https://archiveofourown.org/works/69993411
+		- Neos Skin by ZerafinaCSS → https://archiveofourown.org/works/65849527
 	 ============================================================================= */
 
 /* -----------------------------------------------------------------------------
@@ -660,23 +663,217 @@ h2.heading a.tag:hover {
 	============================================================================= */
 
 #dashboard .current:before {
-	display: inline-block;
-	margin-right: 2px;
-	content: "\00a0✦";
+  display: inline-block;
+  margin-right: 2px;
+  content: "\00a0✦";
 }
 
-#dashboard.own {
-	border-top: none;
-	border-bottom: none;
+#dashboard, #dashboard.own {
+    border-top: none;
+    border-bottom: none;
+    position: sticky;
+    top: 0;
+    max-height: 96vh;
+    overflow-x: visible;
+    overflow-y: auto;
+    scrollbar-color: transparent transparent;
 }
 
-#dashboard a:hover {
-	background: var(--color-border-subtle);
-	color: var(--color-link-default);
+#dashboard ul {
+    position: relative;
+    padding-top: 0.429em;
+    padding-bottom: 0.429em;
+}
+
+#dashboard a, #dashboard span {
+    line-height: 1.850;
 }
 
 #dashboard span {
-	color: var(--color-text-dashboard);
+  color: var(--color-text-dashboard);
+}
+
+#dashboard a:hover {
+  background: var(--color-border-subtle);
+  color: var(--color-link-default);
+}
+
+
+/* =============================================================================
+	SEARCH / FILTER INTERFACE
+	============================================================================= */
+
+.filtered .index:not(:has(+ form.filters)) {
+  width: 100%;
+}
+
+li.search fieldset {
+  padding: 0 0.429em;
+  font-size: 1em;
+}
+
+form.filters {
+  position: sticky;
+  top: 2vh;
+  overflow-x: visible;
+  overflow-y: scroll;
+  overflow-wrap: anywhere;
+  box-sizing: border-box;
+  width: 25%;
+  max-height: 96vh;
+  margin-block: 0.643em !important;
+  padding: 0 0.643em 0 2%;
+}
+
+form.filters:not(:hover) {
+  scrollbar-color: transparent transparent;
+}
+
+.region:has(ol.pagination.actions) form.filters {
+  margin-bottom: 4.5em !important;
+}
+
+.filters fieldset {
+  overflow: visible;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+}
+
+.filters fieldset li {
+  margin: 0;
+  padding: 0;
+}
+
+.filters fieldset,
+fieldset>dl {
+  box-shadow: none !important;
+}
+
+.filters dt.heading {
+  margin-block: 1.5em 0.5em !important;
+  position: relative;
+}
+
+.filters dt.more.heading {
+  margin-bottom: 0 !important;
+}
+
+form.filters dl,
+form.filters dt,
+form.filters dl dl {
+  overflow: visible;
+  margin: 0;
+  border: none;
+}
+
+.filters dd.expandable ul,
+#inbox-filters dd ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.filters dd .expandable,
+#inbox-filters dd ul {
+  padding: 0 0 0.429em 1em;
+  box-sizing: border-box;
+}
+
+.filters ul li>label {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  padding: 5px 0;
+  border-bottom: 1px dotted var(--color-grey-110);
+}
+
+.filters .submit,
+.filters .group {
+  width: 100%;
+  text-align: unset;
+}
+
+.filters .submit:first-of-type:not(:only-of-type) input {
+  margin-top: 0;
+}
+
+.filters .autocomplete input,
+.filters select {
+  min-width: unset;
+}
+
+.filters dt:has(+ dd input:checked) .expander,
+.filters dt.words:has(+ dd input[value]) .expander,
+.filters dt.dates:has(+ dd input[value]) .expander {
+  font-weight: bold;
+}
+
+.filters .expander,
+.filters .expanded .expander {
+  padding-left: 1em;
+  box-shadow: none;
+  background-image: none;
+}
+
+.filters .expander::before {
+  position: absolute;
+  top: 0.6em;
+  left: 0.2em;
+  border-block: 0.3em solid transparent;
+  border-left: 0.5em solid;
+  content: "";
+  transition: transform 150ms;
+}
+
+.filters .expanded .expander::before {
+  transform: rotate(90deg);
+}
+
+.filters .group dt.search,
+.filters .group dt.bookmarker,
+.filters dd {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.filters dt:not(.filter-toggle,
+.filters .range dt),
+.filters .more dt.search,
+.filters dt.autocomplete.search {
+  margin-block: 1em 0.25em;
+  position: relative;
+}
+
+.filters .warning {
+  font-weight: 400;
+}
+
+.filters ul li>label {
+  padding-block: 0.25em !important;
+}
+
+span.question {
+  box-shadow: none;
+  background-color: var(--color-accent-pop);
+  font-size: 10px;
+}
+
+.filters span.question {
+  position: absolute;
+  right: 0;
+}
+
+span.symbol {
+  display: inline-flex;
+  width: 16px;
+  height: 16px;
+  border: none;
+  border-radius: 100%;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-neutral-main);
 }
 
 
