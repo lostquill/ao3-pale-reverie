@@ -56,6 +56,7 @@ li.relationships a.tag,
 	border: none;
 }
 
+/* Thinner border on commenter profile pics */
 .primary .icon img,
 .comment .icon .icon {
     border: 4px solid var(--color-border-rounded-pic);
