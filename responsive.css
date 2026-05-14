@@ -50,6 +50,12 @@
 	border: none;
 }
 
+.collection .bookmark .warnings a.tag,
+.collection .bookmark .warning a.tag {
+	text-shadow: none;
+	border: none;
+}
+
 li.relationships a.tag,
 .relationship a.tag {
 	text-shadow: none;
