@@ -1160,7 +1160,6 @@ dl.stats dd {
 }
 
 #footer .module {
-    max-width: 90%;
     background: var(--color-overlay-light);
     padding: 2em;
     border-radius: 50px;
