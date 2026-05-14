@@ -696,10 +696,11 @@ h2.heading a.tag:hover {
 /* Two-column layout on desktop */
 .splash {
 	margin: auto;
-	max-width: 78em;
+    max-width: unset;
 	display: block !important;
 	column-count: 2;
 	column-gap: 2%;
+    box-sizing: border-box;
 }
 
 .logged-in .splash > div,
