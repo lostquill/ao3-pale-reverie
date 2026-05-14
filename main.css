@@ -689,10 +689,6 @@ h2.heading a.tag:hover {
     line-height: 1.850;
 }
 
-#dashboard span {
-  color: var(--color-text-dashboard);
-}
-
 #dashboard a:hover {
   background: var(--color-border-subtle);
   color: var(--color-link-default);
