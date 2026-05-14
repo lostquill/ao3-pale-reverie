@@ -365,7 +365,6 @@ body {
 /* Skin icons without avatar: CSS file illustration placeholder */
 .skins .primary .icon:not(:has(a .icon)),
 .index .skins .icon:not(:has(a .icon)) {
-	border: none;
 	background: url(https://raw.githubusercontent.com/lostquill/ao3-pale-reverie/main/assets/css.png);
 	background-size: cover;
 }
