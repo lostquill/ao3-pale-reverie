@@ -142,7 +142,7 @@
 
 	/* Tags — relationships */
 	--color-tag-relation-border:      var(--color-neutral-main);   /* relationships tag border */
-	--color-heart-relationship:       var(--color-mid-primary);    /* Heart symbol after tags */
+	--color-heart-relationship:       var(--color-accent-pop);     /* Heart symbol after tags */
 
 	/* Tags — characters */
 	--color-tag-character:            var(--color-dark-primary);   /* character tag text color */
@@ -543,7 +543,7 @@ li.relationships a.tag,
 
 /* Heart symbol after relationship tags */
 ul.tags li.relationships::after {
-	content: " ♥";
+	content: " ♥\FE0E";
 	color: var(--color-heart-relationship);
 	vertical-align: middle;
 }
