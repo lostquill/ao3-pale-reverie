@@ -61,6 +61,7 @@
 	--color-grey-140:            #999999;
 	--color-grey-170:            #808080;
 	--color-grey-220:            #474747;
+	--color-nearly-black:        #141414;
 
 	
 	/* =================================================================
@@ -736,11 +737,17 @@ h2.heading a.tag:hover {
 .splash .favorite li:nth-of-type(odd) a:focus {
     background: var(--color-tag-default-bg-hover);
     color: var(--color-neutral-main);
-    text-shadow: 1px 1px 1px var(--color-dark-primary);
+    text-shadow: 1px 1px 1px var(--color-nearly-black);
 }
 
 div.latest.news.module .userstuff p {
 	min-height: 100px;
+}
+
+.splash .readings li .user.module.module:last-of-type {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1em;
 }
 
 /* Decorative border on docs pages */
