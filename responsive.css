@@ -38,12 +38,25 @@
 	float: left !important;
 }
 
-/* Disable sticky behavior for dashboard, search, and filters */
+/* Disable sticky behavior for dashboard, search and filters */
 #dashboard,
 #dashboard.own {
 position: static;
     max-height: none;
     overflow-y: visible; 
+    scrollbar-color: auto;
+}
+
+form.filters,
+.region:has(ol.pagination.actions) form.filters {
+    position: static;
+    width: auto;
+    max-height: none;
+    overflow-y: visible;
+    margin-bottom: 1em !important;
+}
+
+form.filters:not(:hover) {
     scrollbar-color: auto;
 }
 
