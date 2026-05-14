@@ -55,3 +55,8 @@ li.relationships a.tag,
 	text-shadow: none;
 	border: none;
 }
+
+.primary .icon img,
+.comment .icon .icon {
+    border: 3px solid var(--color-border-rounded-pic);
+}
