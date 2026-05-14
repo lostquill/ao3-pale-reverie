@@ -38,6 +38,15 @@
 	float: left !important;
 }
 
+/* Disable sticky behavior for dashboard, search, and filters */
+#dashboard,
+#dashboard.own {
+position: static;
+    max-height: none;
+    overflow-y: visible; 
+    scrollbar-color: auto;
+}
+
 /* Remove text-shadow and border from bold tags on small screens
 	(legibility and rendering performance) */
 .rating .tag,
