@@ -775,9 +775,11 @@ fieldset.comments,
 .comment .userstuff,
 dl.work.meta.group,
 li.own.collection.picture.blurb.group,
+li.series.blurb.group,
+li.skins.blurb,
 ol.work.index.group li,
 dl.meta {
-	background: var(--color-surface);
+  background: var(--color-surface);
 }
 
 /* Blockquotes: white card inside blurbs, surface inside CSS pages */
