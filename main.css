@@ -17,6 +17,11 @@
 	GLOBAL
 	============================================================================= */
 
+*::selection {
+    background-color: var(--color-accent);
+    color: var(--color-neutral-main);
+}
+
 body {
 	line-height: 1.125;
 	font-size: 100%;
@@ -25,11 +30,6 @@ body {
 body, #outer,
 .javascript {
 	background: var(--color-bg-body);
-}
-
-*::selection {
-    background-color: var(--color-accent);
-    color: var(--color-neutral-main);
 }
 
 input, textarea, select {
