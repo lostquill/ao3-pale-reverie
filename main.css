@@ -119,7 +119,8 @@
 	--color-shadow-inset:             var(--color-grey-110);             /* inset shadow */
 	--color-border-filter-label:      var(--color-grey-110);             /* bottom border on filter labels */
 	--color-border-rounded-pic:       var(--color-accent);               /* border around profile pic */
-	--color-bg-question:              var(--color-accent-pop);           /* ? symbol */
+	--color-bg-question:              var(--color-accent-pop);           /* help symbol background */
+	--color-shadow-fave-hover:        var(--color-nearly-black);         /* shadow text on fave tags homepage on hover */
 
 	/* Image and icon filters */
 	--filter-logo:                    hue-rotate(50deg) brightness(2.4) saturate(0.3);                                        /* AO3 logo */
@@ -147,6 +148,9 @@
 
 	/* Dashboard */
 	--color-text-dashboard:           var(--color-dark-primary);         /* dashboard span labels */
+	--color-bg-link-dashboard-hover:  var(--color-border-subtle);        /* dashboard link background hover */
+	--color-bg-dashboard-current:     var(--color-grey-90);              /* dashboard link background current */
+	--color-border-section-dashboard: var(--color-border-subtle);        /* dashboard border above section */
 
 	/* Tags — global */
 	--color-tag-default:              var(--color-neutral-main);         /* default tag text color */
@@ -703,10 +707,18 @@ h2.heading a.tag:hover {
 	DASHBOARD
 	============================================================================= */
 
+#dashboard span {
+    color: var(--color-text-dashboard);
+}
+
 #dashboard .current:before {
   display: inline-block;
   margin-right: 2px;
   content: "\00a0✦";
+}
+
+#dashboard .current {
+    background: var(--color-bg-dashboard-current);
 }
 
 #dashboard, #dashboard.own {
@@ -724,6 +736,7 @@ h2.heading a.tag:hover {
     position: relative;
     padding-top: 0.429em;
     padding-bottom: 0.429em;
+    border-top: 2px solid var(--color-border-section-dashboard);
 }
 
 #dashboard a, #dashboard span {
@@ -731,7 +744,7 @@ h2.heading a.tag:hover {
 }
 
 #dashboard a:hover {
-  background: var(--color-border-subtle);
+  background: var(--color-bg-link-dashboard-hover);
   color: var(--color-link-default);
 }
 
@@ -977,7 +990,7 @@ span.symbol {
 .splash .favorite li:nth-of-type(odd) a:focus {
     background: var(--color-tag-default-bg-hover);
     color: var(--color-neutral-main);
-    text-shadow: 1px 1px 1px var(--color-nearly-black);
+    text-shadow: 1px 1px 1px var(--color-shadow-fave-hover);
 }
 
 div.latest.news.module .userstuff p {
@@ -1019,6 +1032,11 @@ li.skins.blurb,
 ol.work.index.group li,
 dl.meta {
   background: var(--color-surface);
+}
+
+/* blurb border */
+li.blurb {
+	border: 1px solid var(--color-border-subtle);
 }
 
 /* Blockquotes: white card inside blurbs, surface inside CSS pages */
