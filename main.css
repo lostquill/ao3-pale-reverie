@@ -59,7 +59,7 @@ input, textarea, select {
 
 /* Navigation bar */
 #header .primary {
-	background: linear-gradient(45deg, var(--color-first), var(--color-first), var(--color-sec), var(--color-sec)); /* mauve-mid → slate-mid */
+	background: var(--color-bg-nav);
 	box-shadow: none;
 }
 
@@ -382,7 +382,7 @@ li.relationships a.tag,
 	color: var(--color-tag-default);
 	font-weight: bold;
 	text-shadow: 1px 1px 1px var(--color-tag-shadow-dark);
-  	background: linear-gradient(-45deg, var(--color-first), var(--color-first), var(--color-sec), var(--color-sec)); /* mauve-mid → slate-mid */
+  	background: var(--color-tag-relation-bg);
 	border: 1px dashed var(--color-tag-relation-border);
 	border-radius: 5px;
 }
@@ -488,7 +488,7 @@ h2.heading a.tag:hover {
 	color: var(--color-tag-default);
 	font-weight: bold;
 	text-shadow: 1px 1px 1px var(--color-tag-shadow-dark);
-	background: linear-gradient(-45deg, var(--color-first), var(--color-first), var(--color-sec), var(--color-sec)); /* mauve-mid → slate-mid */
+	background: var(--color-tag-relation-bg);
 	border: 1px dashed var(--color-tag-relation-border);
 	border-radius: 5px;
 }
@@ -1197,7 +1197,7 @@ dl.stats dd {
 	color: var(--color-neutral-main);
 	font-family: Arial, sans-serif;
 	font-size: .9em;
-	background: linear-gradient(45deg, var(--color-first), var(--color-first), var(--color-sec), var(--color-sec)); /* mauve-mid → slate-mid */
+	background: var(--color-bg-nav);
 }
 
 #footer .navigation {
