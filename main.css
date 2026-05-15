@@ -110,7 +110,7 @@
 	/* Backgrounds, borders, shadows & surfaces */
 	--color-bg-selection:             var(--color-accent);               /* mouse selection background */
 	--color-bg-body:                  var(--color-grey-20);              /* body background */
-	--color-bg-nav:                   var(--grad-right);                 /* footer background */
+	--color-bg-nav:                   var(--grad-right);                 /* navbar + footer background */
 	--color-surface:                  var(--color-grey-10);              /* blockquote surfaces */
 	--color-bg-blurb:                 var(--color-neutral-main);         /* white card inside blurbs */
 	--color-bg-bookmark:              var(--color-grey-40);              /* bookmark user area */
@@ -160,7 +160,7 @@
 	--color-tag-rating-bg:            var(--color-accent);               /* rating tag background */
 
 	/* Tags — relationships */
-	--color-tag-relation-bg:          var(--grad-left);     /* relationship tag background */
+	--color-tag-relation-bg:          var(--grad-left);                  /* relationship tag background */
 	--color-tag-relation-border:      var(--color-neutral-main);         /* relationships tag border */
 	--color-heart-relationship:       var(--color-accent-pop);           /* Heart symbol after tags */
 
