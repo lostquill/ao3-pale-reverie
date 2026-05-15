@@ -34,6 +34,19 @@ input, textarea, select {
     font-family: var(--font-textarea);
 }
 
+h1, h2, h3, h4, h5, h6, .heading {
+    font-family: var(--font-headings);
+    font-weight: 400;
+}
+
+h2.heading {
+	color: var(--color-heading);
+}
+
+blockquote, pre, address {
+    font-family: var(--font-blockquote);
+}
+
 
 /* =============================================================================
 	HEADER
@@ -66,7 +79,8 @@ input, textarea, select {
 	box-shadow: none;
 }
 
-#header .primary > li > a {
+#header .primary > li a {
+	font-family: var(--font-nav-menu);
 	color: var(--color-link-menu);
 	text-transform: uppercase;
 	letter-spacing: 1px;
@@ -133,6 +147,7 @@ input, textarea, select {
 }
 
 #greeting .user > li {
+	font-family: var(--font-nav-greeting);
 	margin: 0 0.125em;
 }
 
@@ -141,6 +156,7 @@ input, textarea, select {
 	align-items: center;
 	height: 100%;
 	box-sizing: border-box;
+	font-family: var(--font-nav-greeting);
 }
 
 /* User avatar (greeting) */
@@ -252,7 +268,7 @@ a:visited:hover {
 	border: none;
 }
 
-/* Visited links & listbox headings share pill styling */
+/* Tag links and listbox headings visited links share basic styling */
 a.tag,
 .added.tag,
 .listbox > .heading,
@@ -317,6 +333,10 @@ a.check_none {
 	============================================================================= */
 
 /* --- 1. Base tag style --- */
+
+a.tag {
+	font-family: var(--font-tag);
+}
 
 a.tag,
 .listbox .heading a.tag:visited:hover,
@@ -795,15 +815,6 @@ div.latest.news.module .userstuff p {
 	border-image: url(https://raw.githubusercontent.com/lostquill/ao3-pale-reverie/main/assets/border-constellation.png) 35% round;
 	border-image-outset: 10px;
 	border-image-width: 200px;
-}
-
-
-/* =============================================================================
-	HEADINGS
-	============================================================================= */
-
-h2.heading {
-	color: var(--color-heading);
 }
 
 
