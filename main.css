@@ -1414,6 +1414,7 @@ dl.stats dd {
 	color: var(--color-footer-heading);
 	font-size: .9em;
 	background: var(--color-bg-nav);
+    border-color: transparent;
 }
 
 #footer .navigation {
