@@ -1394,7 +1394,7 @@ dl.stats dd {
 .stats dd.subscriptions::after     { content: "Subscriptions"; }
 
 .series.meta.group .stats dd:nth-of-type(3)::after     { content: "Complete"; }
-.statistics .stats dd.comments::after                   { content: "Comment Threads"; }
+.statistics .stats dd.comments::after                  { content: "Comment Threads"; }
 .stats dd:has(a[href$=fandoms])::after,
 .tagset .stats dd:nth-of-type(1)::after                { content: "Fandoms"; }
 .tagset .stats dd:nth-of-type(2)::after                { content: "Characters"; }
