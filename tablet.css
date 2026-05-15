@@ -5,12 +5,6 @@
 	Role: Parent skin (tablet overrides)
 	============================================================================= */
 
-/* Background fix for outer wrapper on mobile */
-#outer,
-.javascript {
-	background: var(--color-bg-body);
-}
-
 /* Remove decorative border-image on chapter meta (too heavy on small screens) */
 .chapters-show.region .meta,
 .works-show.region .meta,
