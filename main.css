@@ -178,6 +178,13 @@
 	--color-stats-border:             var(--color-accent);         /* border color for stat links underline */
 	--color-stats-tooltip:            var(--color-grey-220);       /* text color inside stat tooltip */
 	--color-stats-bg-tooltip:         var(--color-grey-50);        /* background color for stat tooltip/icon area */
+
+	/* Image and icon filters */
+	--filter-logo:                    hue-rotate(50deg) brightness(2.4) saturate(0.3);                                        /* AO3 logo */
+	--filter-img-icon:                contrast(60%) sepia(5%) saturate(90%) brightness(1.3);                                  /* profile pic, collection illustrations */
+	--filter-required-tags-icon:      contrast(60%) sepia(5%) saturate(90%) brightness(1.3);                                  /* required tags icons */
+	--filter-bookmark-status:         sepia(23%) hue-rotate(28deg) brightness(98%) contrast(87%);                             /* bookmark status icons */
+	--filter-stat-icon:               invert(35%) sepia(8%) saturate(1985%) hue-rotate(319deg) brightness(93%) contrast(92%); /* work stats icons */
 }
 
 
@@ -211,7 +218,7 @@ input, textarea, select {
 
 /* Logo filter: desaturated warm tint */
 #header .logo {
-	filter: hue-rotate(50deg) brightness(2.4) saturate(0.3);
+	filter: var(--filter-logo);
 }
 
 /* Heading links */
@@ -319,7 +326,7 @@ input, textarea, select {
 	width: 2.5em;
 	border: 2px solid var(--color-border-rounded-pic);
 	border-radius: 50%;
-	filter: contrast(60%) sepia(5%) saturate(90%) brightness(1.3);
+	filter: var(--filter-img-icon);
 	transition: 200ms ease-in-out;
 }
 
@@ -353,7 +360,7 @@ input, textarea, select {
 .primary .icon img,
 .comment .icon .icon {
 	border: 5px solid var(--color-border-rounded-pic);
-	filter: contrast(60%) sepia(5%) saturate(90%) brightness(1.3);
+	filter: var(--filter-img-icon);
 	transition: 200ms ease-in-out;
 }
 
@@ -367,7 +374,7 @@ input, textarea, select {
 .skins .primary .icon:has(a .icon),
 .skins p.icon {
 	border: 4px solid var(--color-border-rounded-pic);
-	filter: contrast(60%) sepia(5%) saturate(90%) brightness(1.3);
+	filter: var(--filter-img-icon);
 	transition: 200ms ease-in-out;
 }
 
@@ -1017,7 +1024,7 @@ dl.meta {
 /* Required tags icons: desaturated */
 .blurb ul.required-tags li span {
 	border-radius: 50%;
-	filter: contrast(60%) sepia(5%) saturate(90%) brightness(1.3);
+	filter: var(--filter-required-tags-icon);
 }
 
 /* Listbox index */
@@ -1113,7 +1120,7 @@ p.kudos {
 }
 
 .bookmark p.status {
-	filter: brightness(1) saturate(100%) sepia(23%) saturate(1) hue-rotate(28deg) brightness(98%) contrast(87%);
+	filter: var(--filter-bookmark-status);
 }
 
 
@@ -1184,7 +1191,7 @@ dl.statistics dt::before {
 	background-repeat: no-repeat;
 	content: "";
 	transform: translate(0, 1px);
-	filter: brightness(0) saturate(100%) invert(31%) sepia(23%) saturate(756%) hue-rotate(319deg) brightness(98%) contrast(87%);
+	filter: var(--filter-stat-icon);
 }
 
 /* Stat icons */
