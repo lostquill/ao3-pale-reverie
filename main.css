@@ -65,7 +65,7 @@
 	--color-grey-140:            #999999;
 	--color-grey-170:            #808080;
 	--color-grey-220:            #474747;
-	--color-nearly-black:        #141414;
+	--color-nearly-black:        #111111;
 	--color-black:               #000000;
 
 	
@@ -147,8 +147,8 @@
 	--color-bg-heading-5:             var(--color-neutral-main);         /* h5.tags.heading */
 
 	/* Dashboard */
-	--color-text-dashboard:           var(--color-dark-primary);         /* dashboard span labels */
 	--color-bg-link-dashboard-hover:  var(--color-border-subtle);        /* dashboard link background hover */
+	--color-text-dashboard:           var(--color-dark-primary);         /* dashboard span label for current page */
 	--color-bg-dashboard-current:     var(--color-grey-90);              /* dashboard link background current */
 	--color-border-section-dashboard: var(--color-border-subtle);        /* dashboard border above section */
 
