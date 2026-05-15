@@ -1,7 +1,7 @@
 /* =============================================================================
-	AO3 PALE REVERIE — light.css
+	AO3 PALE REVERIE — dark.css
 	Author: LostQuill
-	Role: Parent skin (light theme)
+	Role: Parent skin (dark theme)
 	============================================================================ */
 
 /* -----------------------------------------------------------------------------
@@ -191,15 +191,12 @@
 	
 /* -----------------------------------------------------------------
 	FONTS
-	- Font rules can be modified here.
-	- For any other structural or layout modifications, please 
-	  edit the main CSS files.
+	- The font-family property can be modified here.
+	- For any other modification, please edit the existing class in the main CSS file.
    ----------------------------------------------------------------- */	
 
 body {
-	font-size: 100%;
-	line-height: 1.125;
-	font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Helvetica, sans-serif, 'GNU Unifont'
+	font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Helvetica, sans-serif, 'GNU Unifont';
 }
 
 input, textarea, select {
@@ -209,7 +206,6 @@ input, textarea, select {
 /* Headings */
 h1, h2, h3, h4, h5, h6, .heading {
 	font-family: Georgia, serif;
-	font-weight: 400;
 }
 
 blockquote, pre, address {
