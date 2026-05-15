@@ -202,10 +202,10 @@
 	--color-stats-bg-tooltip:         var(--color-grey-50);              /* background color for stat tooltip/icon area */
 
 	/* Footer */
-	--color-footer-heading:           var(--color-accent);               /* footer heading text color */
+	--color-footer-heading:           var(--color-dark-primary);         /* footer heading text color */
 	--color-footer-heading-shadow:    var(--color-light-secondary);      /* footer heading text shadow */
-	--color-footer-link:              var(--color-neutral-main);         /* footer link text color */
-	--color-shadow-footer-link:       var(--color-grey-170);             /* footer link text shadow */
+	--color-footer-link:              var(--color-accent);               /* footer link text color */
+	--color-shadow-footer-link:       var(--color-grey-10);              /* footer link text shadow */
 }
 
 
@@ -1411,7 +1411,7 @@ dl.stats dd {
 
 #footer {
 	font-family: Arial, sans-serif;
-	color: var(--color-footer-link);
+	color: var(--color-footer-heading);
 	font-size: .9em;
 	background: var(--color-bg-nav);
 }
