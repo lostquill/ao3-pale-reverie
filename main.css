@@ -1007,6 +1007,7 @@ dl.meta {
 
 /* Notes & news posts */
 .browse .note,
+.readings .note,
 .latest.news .post,
 .social .note {
 	padding: 0 10px;
