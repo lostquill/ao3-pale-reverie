@@ -101,7 +101,7 @@
 
 	/* Backgrounds, borders, shadows & surfaces */
 	--color-bg-body:                  var(--color-grey-20);              /* body background */
-	--color-bg-nav:                   var(--grad-right);     /* footer background */
+	--color-bg-nav:                   var(--grad-right);                 /* footer background */
 	--color-surface:                  var(--color-grey-10);              /* blockquote surfaces */
 	--color-bg-blurb:                 var(--color-neutral-main);         /* white card inside blurbs */
 	--color-bg-bookmark:              var(--color-grey-40);              /* bookmark user area */
