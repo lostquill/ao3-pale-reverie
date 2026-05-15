@@ -105,7 +105,7 @@ input, textarea, select {
 
 #header .dropdown .menu a:hover,
 #header .dropdown .menu a:focus {
-	background: rgba(255, 255, 255, 0.25);
+	background: var(--color-overlay-light);
 }
 
 /* User greeting area */
@@ -398,7 +398,7 @@ ul.tags li.relationships::after {
 li.characters a.tag,
 .character a.tag {
 	color: var(--color-tag-character);
-	text-shadow: 1px 1px 1px var(--color-tag-shadow-dark-txt);
+	text-shadow: 1px 1px 1px var(--color-tag-shadow-light);
 	background: var(--color-tag-character-bg);
 	box-shadow: 3px 3px var(--color-tag-character-shadow);
 }
@@ -414,7 +414,7 @@ li.characters a.tag:hover,
 li.freeforms a.tag,
 .freeform a.tag {
 	color: var(--color-tag-freeform);
-	text-shadow: 1px 1px 1px var(--color-tag-shadow-dark-txt);
+	text-shadow: 1px 1px 1px var(--color-tag-shadow-light);
 	background: var(--color-tag-freeform-bg);
 	box-shadow: 3px 3px var(--color-tag-freeform-shadow);
 }
@@ -617,7 +617,7 @@ form.filters dl dl {
   justify-content: start;
   align-items: start;
   padding: 5px 0;
-  border-bottom: 1px dotted var(--color-grey-110);
+  border-bottom: 1px dotted var(--color-border-filter-label);
 }
 
 .filters .submit,
@@ -855,7 +855,7 @@ dl.meta {
 /* Listbox index */
 .listbox .index {
 	background: var(--color-surface);
-	box-shadow: inset 1px 1px 3px var(--color-grey-70);
+	box-shadow: inset 1px 1px 3px var(--color-border-subtle);
 }
 
 
@@ -894,7 +894,7 @@ h4.viewed.heading {
 	display: inline-block;
 	width: auto;
 	background: var(--color-bg-badge);
-	color: black;
+	color: var(--color-badge);
 	text-shadow: 1px 1px var(--color-shadow-txt-badge);
 	box-shadow: 5px 5px var(--color-shadow-badge);
 	font-size: 11px;
@@ -941,7 +941,7 @@ p.kudos {
 
 .bookmark .own.user,
 .bookmark .user {
-	background: var(--color-bg-bookmark-own);
+	background: var(--color-bg-bookmark);
 }
 
 .bookmark p.status {
@@ -1229,7 +1229,7 @@ dl.stats dd {
 #footer a, #footer button {
     text-decoration: none;
     color: var(--color-neutral-main);
-    text-shadow: 1px 1px 1px var(--color-grey-170);
+    text-shadow: 1px 1px 1px var(--color-shadow-footer-link);
     font-weight: bold;
 }
 
