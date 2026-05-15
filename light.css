@@ -194,7 +194,8 @@
 	--color-tag-collection:           var(--color-dark-primary);         /* collection tags at rest */
 	--color-tag-collection-hover:     var(--color-dark-secondary);       /* collection tags on hover */
 
-	/* USERSCRIPT: 'Reading Time & Quality Score' badge (reading time, word count) */
+	/* Stats in 'marked for later' works on homepage
+	   + USERSCRIPT: 'Reading Time & Quality Score' badge (reading time, word count) */
 	--color-badge:                    var(--color-black);                /* badge text color */
 	--color-bg-badge:                 var(--color-light-secondary);      /* badge background */
 	--color-shadow-badge:             var(--color-grey-90);              /* badge box shadow */
