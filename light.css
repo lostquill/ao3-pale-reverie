@@ -66,7 +66,8 @@
 	   ----------------------------------------------------------------- */	
 
 	--font-main:           'Lucida Grande', 'Lucida Sans Unicode', Verdana, Helvetica, sans-serif, 'GNU Unifont';
-	--font-arial:          Arial, Verdana, Helvetica, sans-serif;
+	--font-arial:          Arial, sans-serif;
+	--font-georgia:        Georgia, serif;
 
 	
 	/* =================================================================
@@ -103,7 +104,12 @@
 
 	/* Fonts */
 	--font-body:                      var(--font-main);                   /* body */
+	--font-nav-greeting:              var(--font-main);                   /* username, post, logout */
+	--font-nav-menu:                  var(--font-main);                   /* left navbar */
+	--font-headings:                  var(--font-georgia);                /* headings */
 	--font-textarea:                  var(--font-main);                   /* input, textarea, select */
+	--font-blockquote:                var(--font-main);                   /* blockquote, pre, addres */
+	--font-tag:                       var(--font-main);                   /* tags */
 	--font-fandoms:                   var(--font-arial);                  /* Fandom tags in work/chapter header: plain text, no pill */
 	--font-reading-badge:             var(--font-arial);                  /* Stats in 'marked for later' works on homepage + USERSCRIPT: 'Reading Time & Quality Score' badge (reading time, word count) */
 	--font-footer:                    var(--font-arial);                  /* Footer links */
