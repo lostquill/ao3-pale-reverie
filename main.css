@@ -578,11 +578,15 @@ li.relationships a.tag:hover,
 
 /* Fandom tags added by user (not canonical): reset to plain link */
 .fandom .tag.added {
-	color: inherit;
 	background: none;
 	border: none;
 	text-shadow: none;
 	font-weight: normal;
+}
+
+/* close added tag x */
+.delete a, span.delete {
+  box-shadow: none;
 }
 
 /* Relationship tags: gradient pill */
