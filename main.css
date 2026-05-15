@@ -850,6 +850,7 @@ form.filters dl dl {
 
 .filters .autocomplete input,
 .filters select {
+  height: 1.7em;
   min-width: unset;
 }
 
