@@ -72,7 +72,7 @@ h2.heading {
 	box-shadow: none;
 }
 
-#header .primary > li a {
+#header .primary > li > a {
 	color: var(--color-link-menu);
 	text-transform: uppercase;
 	letter-spacing: 1px;
