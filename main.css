@@ -10,7 +10,8 @@
 	Sticky dashboard + search/filter structure inspired by: 
 		- Rosé Pine Site Skin by BlackBatCat → https://archiveofourown.org/works/69993411
 		- Neos Skin by ZerafinaCSS → https://archiveofourown.org/works/65849527
-	 ============================================================================= */
+	============================================================================= */
+
 
 /* -----------------------------------------------------------------------------
 	VARIABLES
@@ -19,14 +20,14 @@
 :root {
 	
 	/* =================================================================
-	   THEME
-       - If you modify or add to these variables, make sure to update the
-         corresponding semantic mappings below.
+		THEME
+		 - If you modify or add to these variables, make sure to update the
+		   corresponding semantic mappings below.
 	   ================================================================= */
 	
 	/* -----------------------------------------------------------------
-	   PALETTES
-	   Base color scales (do not use directly in css rules)
+		PALETTES
+		Base color scales (do not use directly in css rules)
 	   ----------------------------------------------------------------- */
 
 	/* COLOR PALETTE 1 - Mauve palette (warm rose tones) */
@@ -40,8 +41,8 @@
 	--color-slate-dark:          #3a5f66;
 	
 	/* -----------------------------------------------------------------
-	   ACCENT COLORS
-	   Highlight / interactive emphasis colors
+		ACCENT COLORS
+		Highlight / interactive emphasis colors
 	   ----------------------------------------------------------------- */
 
 	--color-rose-brown:          #8f6565;
@@ -49,7 +50,7 @@
 	--color-purple:              #9d2d69;
 	
 	/* -----------------------------------------------------------------
-	   NEUTRAL COLORS
+		NEUTRAL COLORS
 	   ----------------------------------------------------------------- */	
 
 	--color-white:               #ffffff;
@@ -65,11 +66,12 @@
 	--color-grey-170:            #808080;
 	--color-grey-220:            #474747;
 	--color-nearly-black:        #141414;
+	--color-black:               #000000;
 
 	
 	/* =================================================================
-	   SEMANTIC ALIASES
-       - Change these to retheme without touching css rules.
+		SEMANTIC ALIASES
+		- Change these to retheme without touching css rules.
 	   ================================================================= */
 	
 	/* -----------------------------------------------------------------
@@ -94,90 +96,29 @@
 	/* Neutrals */
 	--color-neutral-main:             var(--color-white);
 	--color-overlay-light:            rgba(255,255,255,0.25);
-
+	
 	/* -----------------------------------------------------------------
-	   UI LAYER
+		UI LAYER
 	   ----------------------------------------------------------------- */
 
 	/* Color gradient (navbar background, footer background, relationship tag) */
 	--color-first:                    var(--color-mid-primary);
 	--color-sec:                      var(--color-mid-secondary);
+	--grad-right:                     linear-gradient(45deg, var(--color-first), var(--color-first), var(--color-sec), var(--color-sec));
+	--grad-left:                      linear-gradient(-45deg, var(--color-first), var(--color-first), var(--color-sec), var(--color-sec));
 
 	/* Backgrounds, borders, shadows & surfaces */
-	--color-bg-body:                  var(--color-grey-20);        /* body background */
-	--color-border-rounded-pic:       var(--color-accent);         /* border around profile pic */
-	--color-bg-blurb:                 var(--color-neutral-main);   /* white card inside blurbs */
-	--color-bg-bookmark-own:          var(--color-grey-40);        /* own bookmark user area */
-	--color-surface:                  var(--color-grey-10);        /* blockquote surfaces */
-	--color-border-subtle:            var(--color-grey-70);        /* light borders, action hover bg */
-	--color-border-mid:               var(--color-grey-170);       /* home header bottom border */
-	--color-shadow-inset:             var(--color-grey-110);       /* inset shadow */
-
-	/* Navigation & UI links */
-	--color-link-default:             var(--color-accent);         /* default link color */
-	--color-link-nav:                 var(--color-dark-secondary); /* header links, dashboard links */
-	--color-link-menu:                var(--color-neutral-main);   /* left header links (fandoms, browse, search...) */
-	--color-link-nav-hover:           var(--color-accent-pop);     /* header links on hover */
-	--color-link-nav-active:          var(--color-accent);         /* dropdown menu hover, user focus */
-	--color-border-action-hover:      var(--color-grey-140);       /* border color on hover for interactive elements (buttons, links, actions) */
-
-	/* Content links */
-	--color-link-visited:             var(--color-dark-secondary); /* h4 headings visited */
-	--color-link-visited-hover:       var(--color-accent);         /* h4 headings visited:hover */
-
-	/* Headings */
-	--color-heading:                  var(--color-dark-secondary); /* h2.heading */
-	--color-bg-heading:               var(--color-accent);         /* h2.collections */
-	--color-bg-heading-5:             var(--color-neutral-main);   /* h5.tags.heading */
-
-	/* Dashboard */
-	--color-text-dashboard:           var(--color-dark-primary);   /* dashboard span labels */
-
-	/* Tags — global */
-	--color-tag-default:              var(--color-neutral-main);   /* default tag text color */
-	--color-tag-default-bg:           var(--color-accent-soft);    /* default tag background */
-	--color-tag-default-bg-hover:     var(--color-accent);         /* default tag background hover */
-	--color-tag-default-border:       var(--color-light-primary);  /* default tag border */
-	--color-tag-shadow-light:         var(--color-grey-50);        /* default tag shadow light */
-	--color-tag-shadow-dark:          var(--color-grey-220);       /* default tag shadow dark */
-
-	/* Tags — ratings */
-	--color-tag-rating-bg:            var(--color-accent);         /* rating tag background */
-
-	/* Tags — relationships */
-	--color-tag-relation-border:      var(--color-neutral-main);   /* relationships tag border */
-	--color-heart-relationship:       var(--color-accent-pop);     /* Heart symbol after tags */
-
-	/* Tags — characters */
-	--color-tag-character:            var(--color-dark-primary);   /* character tag text color */
-	--color-tag-character-bg:         var(--color-light-primary);  /* character tag background */
-	--color-tag-character-hover:      var(--color-dark-primary);   /* character tag hover bg */
-	--color-tag-character-shadow:     var(--color-grey-60);        /* character tag shadow */
-
-	/* Tags — freeforms */
-	--color-tag-freeform:             var(--color-dark-secondary); /* freeform tag text color */
-	--color-tag-freeform-bg:          var(--color-light-secondary);/* freeform tag background */
-	--color-tag-freeform-hover:       var(--color-dark-secondary); /* freeform tag hover bg */
-	--color-tag-freeform-shadow:      var(--color-grey-60);        /* freeform tag shadow */
-
-	/* Tags — fandoms in header */
-	--color-link-fandom:              var(--color-dark-primary);   /* fandom tag text in header */
-	--color-link-fandom-hover:        var(--color-dark-secondary); /* fandom tag hover in header */
-
-	/* Tags — collection neutral */
-	--color-tag-collection:           var(--color-dark-primary);   /* collection tags at rest */
-	--color-tag-collection-hover:     var(--color-dark-secondary); /* collection tags on hover */
-
-	/* USERSCRIPT: 'Reading Time & Quality Score' badge (reading time, word count) */
-	--color-bg-badge:                 var(--color-light-secondary);/* badge background */
-	--color-shadow-badge:             var(--color-grey-90);        /* badge box shadow */
-	--color-shadow-txt-badge:         var(--color-neutral-main);   /* badge text shadow */
-
-	/* Work statistics */
-	--color-stats:                    var(--color-accent);         /* main color for stats text/value */
-	--color-stats-border:             var(--color-accent);         /* border color for stat links underline */
-	--color-stats-tooltip:            var(--color-grey-220);       /* text color inside stat tooltip */
-	--color-stats-bg-tooltip:         var(--color-grey-50);        /* background color for stat tooltip/icon area */
+	--color-bg-body:                  var(--color-grey-20);              /* body background */
+	--color-bg-nav:                   var(--grad-right);                 /* footer background */
+	--color-surface:                  var(--color-grey-10);              /* blockquote surfaces */
+	--color-bg-blurb:                 var(--color-neutral-main);         /* white card inside blurbs */
+	--color-bg-bookmark:              var(--color-grey-40);              /* bookmark user area */
+	--color-border-subtle:            var(--color-grey-70);              /* light borders, action hover bg */
+	--color-border-mid:               var(--color-grey-170);             /* home header bottom border */
+	--color-shadow-inset:             var(--color-grey-110);             /* inset shadow */
+	--color-border-filter-label:      var(--color-grey-110);             /* bottom border on filter labels */
+	--color-shadow-footer-link:       var(--color-grey-170);             /* footer link shadow */
+	--color-border-rounded-pic:       var(--color-accent);               /* border around profile pic */
 
 	/* Image and icon filters */
 	--filter-logo:                    hue-rotate(50deg) brightness(2.4) saturate(0.3);                                        /* AO3 logo */
@@ -185,6 +126,75 @@
 	--filter-required-tags-icon:      contrast(60%) sepia(5%) saturate(90%) brightness(1.3);                                  /* required tags icons */
 	--filter-bookmark-status:         sepia(23%) hue-rotate(28deg) brightness(98%) contrast(87%);                             /* bookmark status icons */
 	--filter-stat-icon:               invert(35%) sepia(8%) saturate(1985%) hue-rotate(319deg) brightness(93%) contrast(92%); /* work stats icons */
+
+	/* Navigation & UI links */
+	--color-link-default:             var(--color-accent);               /* default link color */
+	--color-link-nav:                 var(--color-dark-secondary);       /* header links, dashboard links */
+	--color-link-menu:                var(--color-neutral-main);         /* left header links (fandoms, browse, search...) */
+	--color-link-nav-hover:           var(--color-accent-pop);           /* header links on hover */
+	--color-link-nav-active:          var(--color-accent);               /* dropdown menu hover, user focus */
+	--color-border-action-hover:      var(--color-grey-140);             /* border color on hover for interactive elements (buttons, links, actions) */
+
+	/* Content links */
+	--color-link-visited:             var(--color-dark-secondary);       /* h4 headings visited */
+	--color-link-visited-hover:       var(--color-accent);               /* h4 headings visited:hover */
+
+	/* Headings */
+	--color-heading:                  var(--color-dark-secondary);       /* h2.heading */
+	--color-bg-heading:               var(--color-accent);               /* h2.collections */
+	--color-bg-heading-5:             var(--color-neutral-main);         /* h5.tags.heading */
+
+	/* Dashboard */
+	--color-text-dashboard:           var(--color-dark-primary);         /* dashboard span labels */
+
+	/* Tags — global */
+	--color-tag-default:              var(--color-neutral-main);         /* default tag text color */
+	--color-tag-default-bg:           var(--color-accent-soft);          /* default tag background */
+	--color-tag-default-bg-hover:     var(--color-accent);               /* default tag background hover */
+	--color-tag-default-border:       var(--color-light-primary);        /* default tag border */
+	--color-tag-shadow-light:         var(--color-grey-50);              /* default tag shadow light */
+	--color-tag-shadow-dark:          var(--color-grey-220);             /* default tag shadow dark */
+
+	/* Tags — ratings */
+	--color-tag-rating-bg:            var(--color-accent);               /* rating tag background */
+
+	/* Tags — relationships */
+	--color-tag-relation-bg:          var(--grad-left);     /* relationship tag background */
+	--color-tag-relation-border:      var(--color-neutral-main);         /* relationships tag border */
+	--color-heart-relationship:       var(--color-accent-pop);           /* Heart symbol after tags */
+
+	/* Tags — characters */
+	--color-tag-character:            var(--color-dark-primary);         /* character tag text color */
+	--color-tag-character-bg:         var(--color-light-primary);        /* character tag background */
+	--color-tag-character-hover:      var(--color-dark-primary);         /* character tag hover bg */
+	--color-tag-character-shadow:     var(--color-grey-60);              /* character tag shadow */
+
+	/* Tags — freeforms */
+	--color-tag-freeform:             var(--color-dark-secondary);       /* freeform tag text color */
+	--color-tag-freeform-bg:          var(--color-light-secondary);      /* freeform tag background */
+	--color-tag-freeform-hover:       var(--color-dark-secondary);       /* freeform tag hover bg */
+	--color-tag-freeform-shadow:      var(--color-grey-60);              /* freeform tag shadow */
+
+	/* Tags — fandoms in header */
+	--color-link-fandom:              var(--color-dark-primary);         /* fandom tag text in header */
+	--color-link-fandom-hover:        var(--color-dark-secondary);       /* fandom tag hover in header */
+
+	/* Tags — collection neutral */
+	--color-tag-collection:           var(--color-dark-primary);         /* collection tags at rest */
+	--color-tag-collection-hover:     var(--color-dark-secondary);       /* collection tags on hover */
+
+	/* Stats in 'marked for later' works on homepage
+	   + USERSCRIPT: 'Reading Time & Quality Score' badge (reading time, word count) */
+	--color-badge:                    var(--color-black);                /* badge text color */
+	--color-bg-badge:                 var(--color-light-secondary);      /* badge background */
+	--color-shadow-badge:             var(--color-grey-90);              /* badge box shadow */
+	--color-shadow-txt-badge:         var(--color-neutral-main);         /* badge text shadow */
+
+	/* Work statistics */
+	--color-stats:                    var(--color-accent);               /* main color for stats text/value */
+	--color-stats-border:             var(--color-accent);               /* border color for stat links underline */
+	--color-stats-tooltip:            var(--color-grey-220);             /* text color inside stat tooltip */
+	--color-stats-bg-tooltip:         var(--color-grey-50);              /* background color for stat tooltip/icon area */
 }
 
 
@@ -192,18 +202,31 @@
 	GLOBAL
 	============================================================================= */
 
-body {
-	background: var(--color-bg-body);
-}
-
 *::selection {
     background-color: var(--color-accent);
     color: var(--color-neutral-main);
 }
 
+body {
+	line-height: 1.125;
+	font-size: 100%;
+}
+
+body, #outer,
+.javascript {
+	background: var(--color-bg-body);
+}
+
 input, textarea, select {
     font-size: 100%;
-    font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Helvetica, sans-serif, 'GNU Unifont';
+}
+
+h1, h2, h3, h4, h5, h6, .heading {
+    font-weight: 400;
+}
+
+h2.heading {
+	color: var(--color-heading);
 }
 
 
@@ -234,7 +257,7 @@ input, textarea, select {
 
 /* Navigation bar */
 #header .primary {
-	background: linear-gradient(45deg, var(--color-first), var(--color-first), var(--color-sec), var(--color-sec)); /* mauve-mid → slate-mid */
+	background: var(--color-bg-nav);
 	box-shadow: none;
 }
 
@@ -280,7 +303,7 @@ input, textarea, select {
 
 #header .dropdown .menu a:hover,
 #header .dropdown .menu a:focus {
-	background: rgba(255, 255, 255, 0.25);
+	background: var(--color-overlay-light);
 }
 
 /* User greeting area */
@@ -424,7 +447,7 @@ a:visited:hover {
 	border: none;
 }
 
-/* Visited links & listbox headings share pill styling */
+/* Tag links and listbox headings visited links share basic styling */
 a.tag,
 .added.tag,
 .listbox > .heading,
@@ -530,7 +553,7 @@ li.relationships a.tag:hover,
 
 /* Rating: stronger accent background */
 .rating .tag {
-	background: var(--color-tag-rating-bg);
+	background: var(--color-tag-default-bg-hover);
 	border: 1px dashed var(--color-tag-default-border);
 }
 
@@ -557,7 +580,7 @@ li.relationships a.tag,
 	color: var(--color-tag-default);
 	font-weight: bold;
 	text-shadow: 1px 1px 1px var(--color-tag-shadow-dark);
-  	background: linear-gradient(-45deg, var(--color-first), var(--color-first), var(--color-sec), var(--color-sec)); /* mauve-mid → slate-mid */
+  	background: var(--color-tag-relation-bg);
 	border: 1px dashed var(--color-tag-relation-border);
 	border-radius: 5px;
 }
@@ -607,8 +630,8 @@ li.freeforms a.tag:hover,
 .header .fandoms a.tag:visited:hover {
 	background: none;
 	color: var(--color-link-fandom);
+    font-family: Arial, sans-serif;
 	text-shadow: none;
-	font-family: Arial, sans-serif;
 	border: none;
 }
 
@@ -663,7 +686,7 @@ h2.heading a.tag:hover {
 	color: var(--color-tag-default);
 	font-weight: bold;
 	text-shadow: 1px 1px 1px var(--color-tag-shadow-dark);
-	background: linear-gradient(-45deg, var(--color-first), var(--color-first), var(--color-sec), var(--color-sec)); /* mauve-mid → slate-mid */
+	background: var(--color-tag-relation-bg);
 	border: 1px dashed var(--color-tag-relation-border);
 	border-radius: 5px;
 }
@@ -792,7 +815,7 @@ form.filters dl dl {
   justify-content: start;
   align-items: start;
   padding: 5px 0;
-  border-bottom: 1px dotted var(--color-grey-110);
+  border-bottom: 1px dotted var(--color-border-filter-label);
 }
 
 .filters .submit,
@@ -971,15 +994,6 @@ div.latest.news.module .userstuff p {
 
 
 /* =============================================================================
-	HEADINGS
-	============================================================================= */
-
-h2.heading {
-	color: var(--color-heading);
-}
-
-
-/* =============================================================================
 	BLURBS & CONTENT SECTIONS
 	============================================================================= */
 
@@ -1030,7 +1044,7 @@ dl.meta {
 /* Listbox index */
 .listbox .index {
 	background: var(--color-surface);
-	box-shadow: inset 1px 1px 3px var(--color-grey-70);
+	box-shadow: inset 1px 1px 3px var(--color-border-subtle);
 }
 
 
@@ -1062,22 +1076,23 @@ ul.work.navigation.actions {
 	border-image-width: 200px;
 }
 
-/* USERSCRIPT: 'Reading Time & Quality Score' badge (reading time, word count) */
+/* Stats in 'marked for later' works on homepage 
+   + USERSCRIPT: 'Reading Time & Quality Score' badge (reading time, word count) */
 .chapter .ao3-chapter-stats-default,
 .work .ao3-chapter-stats-default,
 h4.viewed.heading {
 	display: inline-block;
 	width: auto;
 	background: var(--color-bg-badge);
-	color: black;
+	color: var(--color-badge);
 	text-shadow: 1px 1px var(--color-shadow-txt-badge);
 	box-shadow: 5px 5px var(--color-shadow-badge);
 	font-size: 11px;
 	font-style: normal;
-	font-family: Arial, sans-serif;
 	padding-left: 2px;
 	padding-right: 2px;
 	height: 18px;
+	font-family: Arial, sans-serif;
 	line-height: 20px;
 	text-transform: uppercase;
 	letter-spacing: 1px;
@@ -1116,7 +1131,7 @@ p.kudos {
 
 .bookmark .own.user,
 .bookmark .user {
-	background: var(--color-bg-bookmark-own);
+	background: var(--color-bg-bookmark);
 }
 
 .bookmark p.status {
@@ -1369,10 +1384,10 @@ dl.stats dd {
 	============================================================================= */
 
 #footer {
-	color: var(--color-neutral-main);
 	font-family: Arial, sans-serif;
+	color: var(--color-neutral-main);
 	font-size: .9em;
-	background: linear-gradient(45deg, var(--color-first), var(--color-first), var(--color-sec), var(--color-sec)); /* mauve-mid → slate-mid */
+	background: var(--color-bg-nav);
 }
 
 #footer .navigation {
@@ -1404,7 +1419,7 @@ dl.stats dd {
 #footer a, #footer button {
     text-decoration: none;
     color: var(--color-neutral-main);
-    text-shadow: 1px 1px 1px var(--color-grey-170);
+    text-shadow: 1px 1px 1px var(--color-shadow-footer-link);
     font-weight: bold;
 }
 
