@@ -1,7 +1,7 @@
 /* =============================================================================
-	AO3 PALE REVERIE — dark.css
+	AO3 PALE REVERIE — light.css
 	Author: LostQuill
-	Role: Parent skin (dark theme)
+	Role: Parent skin (light theme)
 	============================================================================ */
 
 /* -----------------------------------------------------------------------------
@@ -58,16 +58,6 @@
 	--color-grey-220:            #474747;
 	--color-nearly-black:        #141414;
 	--color-black:               #000000;
-	
-	/* -----------------------------------------------------------------
-		FONTS
-		- add any font in '--font-main' before 'Lucinda Grande' or
-	    - add new var and make sure to update the corresponding semantic mappings below.
-	   ----------------------------------------------------------------- */	
-
-	--font-main:           Lucida Grande, Lucida Sans Unicode, Verdana, Helvetica, sans-serif, GNU Unifont;
-	--font-arial:          Arial, sans-serif;
-	--font-georgia:        Georgia, serif;
 
 	
 	/* =================================================================
@@ -97,23 +87,7 @@
 	/* Neutrals */
 	--color-neutral-main:             var(--color-white);
 	--color-overlay-light:            rgba(255,255,255,0.25);
-
-	/* -----------------------------------------------------------------
-	   FONT MAPPINGS
-	   ----------------------------------------------------------------- */
-
-	/* Fonts */
-	--font-body:                      var(--font-main);                   /* body */
-	--font-nav-greeting:              var(--font-main);                   /* username, post, logout */
-	--font-nav-menu:                  var(--font-main);                   /* left navbar */
-	--font-headings:                  var(--font-georgia);                /* headings */
-	--font-textarea:                  var(--font-main);                   /* input, textarea, select */
-	--font-blockquote:                var(--font-main);                   /* blockquote, pre, addres */
-	--font-tag:                       var(--font-main);                   /* tags */
-	--font-fandoms:                   var(--font-arial);                  /* Fandom tags in work/chapter header: plain text, no pill */
-	--font-reading-badge:             var(--font-arial);                  /* Stats in 'marked for later' works on homepage + USERSCRIPT: 'Reading Time & Quality Score' badge (reading time, word count) */
-	--font-footer:                    var(--font-arial);                  /* Footer links */
-
+	
 	/* -----------------------------------------------------------------
 		UI LAYER
 	   ----------------------------------------------------------------- */
@@ -212,4 +186,60 @@
 	--color-stats-border:             var(--color-accent);               /* border color for stat links underline */
 	--color-stats-tooltip:            var(--color-grey-220);             /* text color inside stat tooltip */
 	--color-stats-bg-tooltip:         var(--color-grey-50);              /* background color for stat tooltip/icon area */
+}
+
+	
+/* -----------------------------------------------------------------
+	FONTS
+	- Font rules can be modified here.
+	- For any other structural or layout modifications, please 
+	  edit the main CSS files.
+   ----------------------------------------------------------------- */	
+
+body {
+	font-size: 100%;
+	line-height: 1.125;
+	font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Helvetica, sans-serif, 'GNU Unifont'
+}
+
+input, textarea, select {
+	font-family: inherit;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6, .heading {
+	font-family: Georgia, serif;
+	font-weight: 400;
+}
+
+blockquote, pre, address {
+	font-family: inherit;
+}
+
+/* Navigation bar (AO3 menu) */
+#header .primary > li a {
+	font-family: inherit;
+}
+
+/* Greeting navigation (username, post, logout) */
+#greeting .user > li, #greeting .user > li > a {
+	font-family: inherit;
+}
+
+/* Tag links / pills */
+a.tag {
+	font-family: inherit;
+}
+
+/* Stats in 'marked for later' works on homepage 
++ USERSCRIPT: 'Reading Time & Quality Score' badge (reading time, word count) */
+.chapter .ao3-chapter-stats-default,
+.work .ao3-chapter-stats-default,
+h4.viewed.heading {
+	font-family: Arial, sans-serif;
+}
+
+/* Footer links */
+#footer {
+	font-family: Arial, sans-serif;
 }
