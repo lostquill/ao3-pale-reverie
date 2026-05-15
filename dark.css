@@ -2,7 +2,7 @@
 	AO3 PALE REVERIE — dark.css
 	Author: LostQuill
 	Role: Parent skin (dark theme)
-	 ============================================================================= */
+	============================================================================ */
 
 /* -----------------------------------------------------------------------------
 	VARIABLES
@@ -11,14 +11,14 @@
 :root {
 	
 	/* =================================================================
-	   THEME
-       - If you modify or add to these variables, make sure to update the
-         corresponding semantic mappings below.
+		THEME
+		 - If you modify or add to these variables, make sure to update the
+		   corresponding semantic mappings below.
 	   ================================================================= */
 	
 	/* -----------------------------------------------------------------
-	   PALETTES
-	   Base color scales (do not use directly in css rules)
+		PALETTES
+		Base color scales (do not use directly in css rules)
 	   ----------------------------------------------------------------- */
 
 	/* COLOR PALETTE 1 - Mauve palette (warm rose tones) */
@@ -32,8 +32,8 @@
 	--color-slate-dark:          #3a5f66;
 	
 	/* -----------------------------------------------------------------
-	   ACCENT COLORS
-	   Highlight / interactive emphasis colors
+		ACCENT COLORS
+		Highlight / interactive emphasis colors
 	   ----------------------------------------------------------------- */
 
 	--color-rose-brown:          #8f6565;
@@ -41,7 +41,7 @@
 	--color-purple:              #9d2d69;
 	
 	/* -----------------------------------------------------------------
-	   NEUTRAL COLORS
+		NEUTRAL COLORS
 	   ----------------------------------------------------------------- */	
 
 	--color-white:               #ffffff;
@@ -60,8 +60,8 @@
 
 	
 	/* =================================================================
-	   SEMANTIC ALIASES
-       - Change these to retheme without touching css rules.
+		SEMANTIC ALIASES
+		- Change these to retheme without touching css rules.
 	   ================================================================= */
 	
 	/* -----------------------------------------------------------------
@@ -88,7 +88,7 @@
 	--color-overlay-light:            rgba(255,255,255,0.25);
 
 	/* -----------------------------------------------------------------
-	   UI LAYER
+		UI LAYER
 	   ----------------------------------------------------------------- */
 
 	/* Color gradient (navbar background, footer background, relationship tag) */
@@ -130,8 +130,8 @@
 	--color-tag-default-bg:           var(--color-accent-soft);    /* default tag background */
 	--color-tag-default-bg-hover:     var(--color-accent);         /* default tag background hover */
 	--color-tag-default-border:       var(--color-light-primary);  /* default tag border */
-	--color-tag-shadow-dark:          var(--color-grey-220);       /* default tag shadow light */
-	--color-tag-shadow-dark-txt:      var(--color-grey-50);        /* default tag shadow dark */
+	--color-tag-shadow-light:         var(--color-grey-50);        /* default tag shadow light */
+	--color-tag-shadow-dark:          var(--color-grey-220);       /* default tag shadow dark */
 
 	/* Tags — ratings */
 	--color-tag-rating-bg:            var(--color-accent);         /* rating tag background */
@@ -150,7 +150,7 @@
 	--color-tag-freeform:             var(--color-dark-secondary); /* freeform tag text color */
 	--color-tag-freeform-bg:          var(--color-light-secondary);/* freeform tag background */
 	--color-tag-freeform-hover:       var(--color-dark-secondary); /* freeform tag hover bg */
-	--color-tag-freeform-shadow:      var(--color-grey-60);        /* character tag shadow */
+	--color-tag-freeform-shadow:      var(--color-grey-60);        /* freeform tag shadow */
 
 	/* Tags — fandoms in header */
 	--color-link-fandom:              var(--color-dark-primary);   /* fandom tag text in header */
