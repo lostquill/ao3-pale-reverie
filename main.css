@@ -138,8 +138,8 @@
 	--color-tag-default-bg:           var(--color-accent-soft);    /* default tag background */
 	--color-tag-default-bg-hover:     var(--color-accent);         /* default tag background hover */
 	--color-tag-default-border:       var(--color-light-primary);  /* default tag border */
-	--color-tag-shadow-dark:          var(--color-grey-220);       /* default tag shadow light */
-	--color-tag-shadow-dark-txt:      var(--color-grey-50);        /* default tag shadow dark */
+	--color-tag-shadow-light:         var(--color-grey-50);        /* default tag shadow light */
+	--color-tag-shadow-dark:          var(--color-grey-220);       /* default tag shadow dark */
 
 	/* Tags — ratings */
 	--color-tag-rating-bg:            var(--color-accent);         /* rating tag background */
@@ -158,7 +158,7 @@
 	--color-tag-freeform:             var(--color-dark-secondary); /* freeform tag text color */
 	--color-tag-freeform-bg:          var(--color-light-secondary);/* freeform tag background */
 	--color-tag-freeform-hover:       var(--color-dark-secondary); /* freeform tag hover bg */
-	--color-tag-freeform-shadow:      var(--color-grey-60);        /* character tag shadow */
+	--color-tag-freeform-shadow:      var(--color-grey-60);        /* freeform tag shadow */
 
 	/* Tags — fandoms in header */
 	--color-link-fandom:              var(--color-dark-primary);   /* fandom tag text in header */
@@ -530,7 +530,7 @@ li.relationships a.tag:hover,
 
 /* Rating: stronger accent background */
 .rating .tag {
-	background: var(--color-tag-default-bg-hover);
+	background: var(--color-tag-rating-bg);
 	border: 1px dashed var(--color-tag-default-border);
 }
 
@@ -573,7 +573,7 @@ ul.tags li.relationships::after {
 li.characters a.tag,
 .character a.tag {
 	color: var(--color-tag-character);
-	text-shadow: 1px 1px 1px var(--color-tag-shadow-dark-txt);
+	text-shadow: 1px 1px 1px var(--color-tag-shadow-light);
 	background: var(--color-tag-character-bg);
 	box-shadow: 3px 3px var(--color-tag-character-shadow);
 }
@@ -589,7 +589,7 @@ li.characters a.tag:hover,
 li.freeforms a.tag,
 .freeform a.tag {
 	color: var(--color-tag-freeform);
-	text-shadow: 1px 1px 1px var(--color-tag-shadow-dark-txt);
+	text-shadow: 1px 1px 1px var(--color-tag-shadow-light);
 	background: var(--color-tag-freeform-bg);
 	box-shadow: 3px 3px var(--color-tag-freeform-shadow);
 }
