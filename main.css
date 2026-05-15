@@ -1381,6 +1381,10 @@ dl.stats dd {
     box-sizing: border-box;
 }
 
+#footer .menu {
+  width: 100%;
+}
+
 #footer .heading {
     font-weight: bold;
     font-style: italic;
