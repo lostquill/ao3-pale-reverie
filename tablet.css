@@ -8,6 +8,7 @@
 /* Remove decorative border-image on chapter meta (too heavy on small screens) */
 .chapters-show.region .meta,
 .works-show.region .meta,
+.wrapper .series.meta,
 .draft.work .meta {
 	border: 1px solid var(--color-border-subtle);
 	border-image: none;
