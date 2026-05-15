@@ -108,6 +108,7 @@
 	--grad-left:                      linear-gradient(-45deg, var(--color-first), var(--color-first), var(--color-sec), var(--color-sec));
 
 	/* Backgrounds, borders, shadows & surfaces */
+	--color-bg-selection:             var(--color-accent);               /* mouse selection background */
 	--color-bg-body:                  var(--color-grey-20);              /* body background */
 	--color-bg-nav:                   var(--grad-right);                 /* footer background */
 	--color-surface:                  var(--color-grey-10);              /* blockquote surfaces */
@@ -117,8 +118,8 @@
 	--color-border-mid:               var(--color-grey-170);             /* home header bottom border */
 	--color-shadow-inset:             var(--color-grey-110);             /* inset shadow */
 	--color-border-filter-label:      var(--color-grey-110);             /* bottom border on filter labels */
-	--color-shadow-footer-link:       var(--color-grey-170);             /* footer link shadow */
 	--color-border-rounded-pic:       var(--color-accent);               /* border around profile pic */
+	--color-bg-question:              var(--color-accent-pop);           /* ? symbol */
 
 	/* Image and icon filters */
 	--filter-logo:                    hue-rotate(50deg) brightness(2.4) saturate(0.3);                                        /* AO3 logo */
@@ -195,6 +196,12 @@
 	--color-stats-border:             var(--color-accent);               /* border color for stat links underline */
 	--color-stats-tooltip:            var(--color-grey-220);             /* text color inside stat tooltip */
 	--color-stats-bg-tooltip:         var(--color-grey-50);              /* background color for stat tooltip/icon area */
+
+	/* Footer */
+	--color-footer-heading:           var(--color-accent);               /* footer heading text color */
+	--color-footer-heading-shadow:    var(--color-light-secondary);      /* footer heading text shadow */
+	--color-footer-link:              var(--color-neutral-main);         /* footer link text color */
+	--color-shadow-footer-link:       var(--color-grey-170);             /* footer link text shadow */
 }
 
 
@@ -203,7 +210,7 @@
 	============================================================================= */
 
 *::selection {
-    background-color: var(--color-accent);
+    background-color: var(--color-bg-selection);
     color: var(--color-neutral-main);
 }
 
@@ -886,7 +893,7 @@ form.filters dl dl {
 
 span.question {
   box-shadow: none;
-  background-color: var(--color-accent-pop);
+  background-color: var(--color-bg-question);
   font-size: 10px;
 }
 
@@ -1385,7 +1392,7 @@ dl.stats dd {
 
 #footer {
 	font-family: Arial, sans-serif;
-	color: var(--color-neutral-main);
+	color: var(--color-footer-link);
 	font-size: .9em;
 	background: var(--color-bg-nav);
 }
@@ -1411,14 +1418,14 @@ dl.stats dd {
     text-align: center;
     font-weight: bold;
     font-style: italic;
-    color: var(--color-accent);
-    text-shadow: 1px 1px 1px var(--color-light-secondary);
+    color: var(--color-footer-heading);
+    text-shadow: 1px 1px 1px var(--color-footer-heading-shadow);
     margin-block: 0 1em;
 }
 
 #footer a, #footer button {
     text-decoration: none;
-    color: var(--color-neutral-main);
+    color: var(--color-footer-link);
     text-shadow: 1px 1px 1px var(--color-shadow-footer-link);
     font-weight: bold;
 }
