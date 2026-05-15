@@ -58,6 +58,15 @@
 	--color-grey-220:            #474747;
 	--color-nearly-black:        #141414;
 	--color-black:               #000000;
+	
+	/* -----------------------------------------------------------------
+		FONTS
+		- add any font in '--font-main' before 'Lucinda Grande' or
+	    - add new var and make sure to update the corresponding semantic mappings below.
+	   ----------------------------------------------------------------- */	
+
+	--font-main:           'Lucida Grande', 'Lucida Sans Unicode', Verdana, Helvetica, sans-serif, 'GNU Unifont';
+	--font-arial:          Arial, Verdana, Helvetica, sans-serif;
 
 	
 	/* =================================================================
@@ -185,4 +194,11 @@
 	--filter-required-tags-icon:      contrast(60%) sepia(5%) saturate(90%) brightness(1.3);                                  /* required tags icons */
 	--filter-bookmark-status:         sepia(23%) hue-rotate(28deg) brightness(98%) contrast(87%);                             /* bookmark status icons */
 	--filter-stat-icon:               invert(35%) sepia(8%) saturate(1985%) hue-rotate(319deg) brightness(93%) contrast(92%); /* work stats icons */
+
+	/* Fonts */
+	--font-body:                      var(--font-main);                   /* body */
+	--font-textarea:                  var(--font-main);                   /* input, textarea, select */
+	--font-fandoms:                   var(--font-arial);                  /* Fandom tags in work/chapter header: plain text, no pill */
+	--font-reading-badge:             var(--font-arial);                  /* Stats in 'marked for later' works on homepage + USERSCRIPT: 'Reading Time & Quality Score' badge (reading time, word count) */
+	--font-footer:                    var(--font-arial);                  /* Footer links */
 }
