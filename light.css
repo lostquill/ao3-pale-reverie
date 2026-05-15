@@ -228,6 +228,13 @@ a.tag {
 	font-family: inherit;
 }
 
+/* Fandom links */
+.header .fandoms a.tag, 
+.header .fandoms a.tag:hover,
+.header .fandoms a.tag:visited:hover {
+    font-family: Arial, sans-serif;
+}
+
 /* Stats in 'marked for later' works on homepage 
 + USERSCRIPT: 'Reading Time & Quality Score' badge (reading time, word count) */
 .chapter .ao3-chapter-stats-default,
