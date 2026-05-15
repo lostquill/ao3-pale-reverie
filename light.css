@@ -57,6 +57,7 @@
 	--color-grey-170:            #808080;
 	--color-grey-220:            #474747;
 	--color-nearly-black:        #141414;
+	--color-black:               #000000;
 
 	
 	/* =================================================================
@@ -99,14 +100,16 @@
 
 	/* Backgrounds, borders, shadows & surfaces */
 	--color-bg-body:                  var(--color-grey-20);              /* body background */
-	--color-border-rounded-pic:       var(--color-accent);               /* border around profile pic */
-	--color-bg-blurb:                 var(--color-neutral-main);         /* white card inside blurbs */
-	--color-bg-bookmark-own:          var(--color-grey-40);              /* own bookmark user area */
+	--color-bg-nav:                   var(--gradient-left-to-right);     /* footer background */
 	--color-surface:                  var(--color-grey-10);              /* blockquote surfaces */
+	--color-bg-blurb:                 var(--color-neutral-main);         /* white card inside blurbs */
+	--color-bg-bookmark:              var(--color-grey-40);              /* bookmark user area */
 	--color-border-subtle:            var(--color-grey-70);              /* light borders, action hover bg */
 	--color-border-mid:               var(--color-grey-170);             /* home header bottom border */
 	--color-shadow-inset:             var(--color-grey-110);             /* inset shadow */
-	--color-bg-nav:                   var(--gradient-left-to-right);     /* footer background */
+	--color-border-filter-label:      var(--color-grey-110);             /* bottom border on filter labels */
+	--color-shadow-footer-link:       var(--color-grey-170);             /* footer link shadow */
+	--color-border-rounded-pic:       var(--color-accent);               /* border around profile pic */
 
 	/* Navigation & UI links */
 	--color-link-default:             var(--color-accent);               /* default link color */
@@ -140,7 +143,7 @@
 	--color-tag-rating-bg:            var(--color-accent);               /* rating tag background */
 
 	/* Tags — relationships */
-	--color-tag-relation-bg:           var(--gradient-right-to-left);    /* relationship tag background */
+	--color-tag-relation-bg:          var(--gradient-right-to-left);     /* relationship tag background */
 	--color-tag-relation-border:      var(--color-neutral-main);         /* relationships tag border */
 	--color-heart-relationship:       var(--color-accent-pop);           /* Heart symbol after tags */
 
@@ -165,6 +168,7 @@
 	--color-tag-collection-hover:     var(--color-dark-secondary);       /* collection tags on hover */
 
 	/* USERSCRIPT: 'Reading Time & Quality Score' badge (reading time, word count) */
+	--color-badge:                    var(--color-black);                /* badge text color */
 	--color-bg-badge:                 var(--color-light-secondary);      /* badge background */
 	--color-shadow-badge:             var(--color-grey-90);              /* badge box shadow */
 	--color-shadow-txt-badge:         var(--color-neutral-main);         /* badge text shadow */
