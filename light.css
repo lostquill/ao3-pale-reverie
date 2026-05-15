@@ -65,7 +65,7 @@
 	    - add new var and make sure to update the corresponding semantic mappings below.
 	   ----------------------------------------------------------------- */	
 
-	--font-main:           'Lucida Grande', 'Lucida Sans Unicode', Verdana, Helvetica, sans-serif, 'GNU Unifont';
+	--font-main:           Lucida Grande, Lucida Sans Unicode, Verdana, Helvetica, sans-serif, GNU Unifont;
 	--font-arial:          Arial, sans-serif;
 	--font-georgia:        Georgia, serif;
 
@@ -121,12 +121,12 @@
 	/* Color gradient (navbar background, footer background, relationship tag) */
 	--color-first:                    var(--color-mid-primary);
 	--color-sec:                      var(--color-mid-secondary);
-	--gradient-left-to-right:         linear-gradient(45deg, var(--color-first), var(--color-first), var(--color-sec), var(--color-sec));
-	--gradient-right-to-left:         linear-gradient(-45deg, var(--color-first), var(--color-first), var(--color-sec), var(--color-sec));
+	--grad-right:                     linear-gradient(45deg, var(--color-first), var(--color-first), var(--color-sec), var(--color-sec));
+	--grad-left:                      linear-gradient(-45deg, var(--color-first), var(--color-first), var(--color-sec), var(--color-sec));
 
 	/* Backgrounds, borders, shadows & surfaces */
 	--color-bg-body:                  var(--color-grey-20);              /* body background */
-	--color-bg-nav:                   var(--gradient-left-to-right);     /* footer background */
+	--color-bg-nav:                   var(--grad-right);     /* footer background */
 	--color-surface:                  var(--color-grey-10);              /* blockquote surfaces */
 	--color-bg-blurb:                 var(--color-neutral-main);         /* white card inside blurbs */
 	--color-bg-bookmark:              var(--color-grey-40);              /* bookmark user area */
@@ -176,7 +176,7 @@
 	--color-tag-rating-bg:            var(--color-accent);               /* rating tag background */
 
 	/* Tags — relationships */
-	--color-tag-relation-bg:          var(--gradient-right-to-left);     /* relationship tag background */
+	--color-tag-relation-bg:          var(--grad-left);     /* relationship tag background */
 	--color-tag-relation-border:      var(--color-neutral-main);         /* relationships tag border */
 	--color-heart-relationship:       var(--color-accent-pop);           /* Heart symbol after tags */
 
