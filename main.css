@@ -982,7 +982,7 @@ span.symbol {
 	HOMEPAGE / SPLASH
 	============================================================================= */
 
-.splash>.module h3::before {
+.splash > .module h3::before {
 	display: inline-block;
 	margin-right: 2px;
 	content: "\00a0✦";
