@@ -239,6 +239,11 @@ body, #outer,
 	background: var(--color-bg-body);
 }
 
+
+/* =============================================================================
+	HEADINGS
+	============================================================================= */
+
 h1.heading {
     font-family: Georgia, serif;
 }
@@ -250,6 +255,16 @@ h2 {
 h2, h3, h4, h5, h6, .heading {
     font-family: Arial, sans-serif;
     font-weight: 400;
+}
+
+/* Reset for workskin */
+#workskin h2, 
+#workskin h3, 
+#workskin h4, 
+#workskin h5, 
+#workskin h6, 
+#workskin .heading {
+    font-family: Georgia, serif;
 }
 
 .listbox > .heading, h2.heading {
