@@ -17,8 +17,7 @@
 }
 
 /* Absolute search/filter box */
-form.filters,
-.region:has(ol.pagination.actions) form.filters {
+.javascript form.filters {
 	position: absolute;
 }
 
