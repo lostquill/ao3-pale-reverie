@@ -238,7 +238,7 @@ h1, h2, h3, h4, h5, h6, .heading {
     font-weight: 400;
 }
 
-h2.heading {
+.listbox > .heading, h2.heading {
 	color: var(--color-heading);
 }
 
@@ -470,10 +470,9 @@ a:visited:hover {
 	border: none;
 }
 
-/* Tag links and listbox headings visited links share basic styling */
+/* Tag links and visited links share basic styling */
 a.tag,
 li.added.tag,
-.listbox > .heading,
 a:visited {
 	line-height: 2;
 	border-radius: 10px;
