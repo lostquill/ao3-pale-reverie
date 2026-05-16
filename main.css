@@ -109,7 +109,7 @@
 	--color-sec:                      var(--color-mid-secondary);
 	--grad-right:                     linear-gradient(45deg, var(--color-first), var(--color-first), var(--color-sec), var(--color-sec));
 	--grad-left:                      linear-gradient(-45deg, var(--color-first), var(--color-first), var(--color-sec), var(--color-sec));
-  --grad-bottom:                    linear-gradient(to bottom, var(--color-first), var(--color-sec), var(--color-first));
+    --grad-bottom:                    linear-gradient(to bottom, var(--color-first), var(--color-sec), var(--color-first));
 
 	/* Backgrounds, borders, shadows & surfaces */
 	--color-bg-selection:             var(--color-accent);               /* mouse selection background */
@@ -168,7 +168,7 @@
 	--color-bg-heading-5:             var(--color-neutral-main);         /* h5.tags.heading */
 
 	/* Dashboard */
-  --color-column-border-dashboard:  var(--grad-bottom);                /* dashboard column border right */
+    --color-column-border-dashboard:  var(--grad-bottom);                /* dashboard column border right */
 	--color-bg-link-dashboard-hover:  var(--color-border-subtle);        /* dashboard link background hover */
 	--color-text-dashboard:           var(--color-dark-primary);         /* dashboard span label for current page */
 	--color-bg-dashboard-current:     var(--color-grey-90);              /* dashboard link background current */
@@ -189,7 +189,8 @@
 	/* Tags — relationships */
 	--color-tag-relation-bg:          var(--grad-left);                  /* relationship tag background */
 	--color-tag-relation-border:      var(--color-neutral-main);         /* relationships tag border */
-	--color-heart-relationship:       var(--color-accent-pop);           /* Heart symbol after tags */
+	--color-heart-relationship:       var(--color-accent-pop);           /* Heart symbol color after tag */
+	--color-shadow-heart:             var(--color-light-primary);        /* Heart symbol shadow after tag */
 
 	/* Tags — characters */
 	--color-tag-character:            var(--color-dark-primary);         /* character tag text color */
@@ -800,7 +801,7 @@ ul.tags li.relationships a.tag[href*="*s*"]::after {
     vertical-align: middle;
     display: inline-block;
     margin-left: 0.5em;
-    text-shadow: 1px 1px 4px var(--color-light-primary);
+    text-shadow: 1px 1px 4px var(--color-shadow-heart);
 }
 
 /* Character tags: warm mauve tint */
