@@ -7,6 +7,9 @@
 	Stats icons & hover text system by ZerafinaCSS
 		AO3: https://archiveofourown.org/works/55604875
 
+	Blurb icon layout + button styling adapted from Site Skin Add-Ons by ZerafinaCSS
+		AO3: https://archiveofourown.org/works/76032096
+
 	Sticky dashboard + search/filter structure inspired by: 
 		- Rosé Pine Site Skin by BlackBatCat → https://archiveofourown.org/works/69993411
 		- Neos Skin by ZerafinaCSS → https://archiveofourown.org/works/65849527
@@ -115,8 +118,6 @@
 	--color-bg-blurb:                 var(--color-neutral-main);         /* white card inside blurbs */
 	--color-bg-bookmark:              var(--color-grey-40);              /* bookmark user area */
 	--color-border-subtle:            var(--color-grey-70);              /* light borders, action hover bg */
-	--color-border-mid:               var(--color-grey-170);             /* home header bottom border */
-	--color-shadow-inset:             var(--color-grey-110);             /* inset shadow */
 
 	/* Form */
 	--color-border-input:             var(--color-grey-110);             /* bottom border on filter labels, inputs, select, textarea */
@@ -124,6 +125,15 @@
 	--color-border-form-dt:           var(--color-grey-90);              /* border form dt label */
 	--color-bg-question:              var(--color-accent-pop);           /* help symbol background */
 	--color-required:                 var(--color-accent-pop);           /* required field, important color */
+
+	/* Buttons */
+	--color-bg-button:                var(--color-light-secondary);      /* button background */
+	--color-border-button:            var(--color-mid-secondary);        /* button border */
+	--color-text-button:              var(--color-dark-secondary);       /* button text */
+	--color-bg-button-hover:          var(--color-accent-soft);          /* button background on hover */
+	--color-bg-button-active:         var(--color-light-primary);        /* active/current button background */
+	--color-border-button-active:     var(--color-mid-primary);          /* active/current button border */
+	--color-text-button-active:       var(--color-dark-primary);         /* active/current button text */
 
 	/* Image and icon filters
 	  - --filter-stat-icon and --filter-logo target a specific color via CSS filter.
@@ -143,7 +153,6 @@
 	--color-link-menu:                var(--color-neutral-main);         /* left header links (fandoms, browse, search...) */
 	--color-link-nav-hover:           var(--color-accent-pop);           /* header links on hover */
 	--color-link-nav-active:          var(--color-accent);               /* dropdown menu hover, user focus */
-	--color-border-action-hover:      var(--color-grey-140);             /* border color on hover for interactive elements (buttons, links, actions) */
 
 	/* Content links */
 	--color-link-visited:             var(--color-dark-secondary);       /* h4 headings visited */
@@ -257,16 +266,6 @@ h2, h3, h4, h5, h6, .heading {
     font-weight: 400;
 }
 
-/* Reset for workskin */
-#workskin h2, 
-#workskin h3, 
-#workskin h4, 
-#workskin h5, 
-#workskin h6, 
-#workskin .heading {
-    font-family: Georgia, serif;
-}
-
 .listbox > .heading, h2.heading {
 	color: var(--color-heading);
 }
@@ -328,6 +327,7 @@ h2, h3, h4, h5, h6, .heading {
 	color: var(--color-link-menu);
 	text-transform: uppercase;
 	letter-spacing: 1px;
+	cursor: pointer;
 }
 
 /* Nav link colors */
@@ -493,7 +493,7 @@ h2, h3, h4, h5, h6, .heading {
 
 
 /* =============================================================================
-	LINKS & ACTIONS
+	LINKS
 	============================================================================= */
 
 a,
@@ -535,21 +535,10 @@ h4.heading a:visited:hover,
 	color: var(--color-link-visited-hover);
 }
 
-/* Action hover state */
-.actions a:hover,
-.actions button:hover,
-.actions input:hover,
-.actions a:focus,
-.actions button:focus,
-.actions input:focus,
-label.action:hover,
-.action:hover,
-.action:focus,
-.actions:focus {
-	color: var(--color-link-default);
-	border-top: 1px solid var(--color-border-action-hover);
-	border-left: 1px solid var(--color-border-action-hover);
-}
+
+/* =============================================================================
+	ACTIONS
+	============================================================================= */
 
 /* Pointer cursor for interactive elements */
 #go_to_last_chap,
@@ -565,6 +554,104 @@ a.check_none {
 
 .blurb .download.actions {
     z-index: 1;
+}
+
+/*>========== buttons ==========<*/
+
+.action,
+.action:is(:link, :visited),
+.action a,
+.action a:visited,
+.actions a,
+.actions a:is(:link, :visited),
+.actions:not(#dashboard .actions) .current,
+.actions button,
+.actions input:not([type=text]),
+.actions label,
+label.action,
+label.action:is(:hover, :focus),
+input[type=submit],
+input[type=button],
+input::file-selector-button,
+#header #search .button,
+button {
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--color-border-button);
+    border-radius: 0.25em;
+    box-shadow: none;
+    background-color: var(--color-bg-button);
+    background-image: linear-gradient(216deg, var(--color-border-button), var(--color-bg-button), transparent);
+    background-origin: border-box !important;
+    color: var(--color-text-button);
+}
+
+/* search button + checkbox label exceptions */
+#header #search .button,
+ul.options.index.group.many label.action {
+	background-image: none;
+    background-color: var(--color-bg-button);
+}
+
+/*>========== button subtypes and modes ==========<*/
+
+/* hovered + focused buttons */
+/* hover = when you move the mouse over the button */
+/* focus = when you click or tap on the button or select it with the tab key */
+.action:is(:hover, :focus),
+.action a:is(:hover, :focus),
+.actions a:is(:hover, :focus),
+.actions button:is(:hover, :focus),
+.actions input:not([type=text]):is(:hover, :focus),
+input[type=submit]:is(:hover, :focus),
+input[type=button]:is(:hover, :focus),
+input::file-selector-button:is(:hover, :focus),
+button:is(:hover, :focus) {
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--color-border-button);
+    box-shadow: none;
+    background-image: linear-gradient(216deg, var(--color-bg-button-hover), transparent, transparent);
+    color: var(--color-text-button);
+}
+
+/* currently active/selected buttons */
+/* example: the page you're currently on when browsing works */
+.actions a:active,
+.actions:not(#dashboard .actions) .current,
+a.current,
+a.current:is(:hover, :focus),
+a:link.current {
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--color-border-button-active);
+    box-shadow: none;
+    background-image: linear-gradient(216deg, var(--color-border-button-active), var(--color-bg-button-active), transparent);
+    background-origin: border-box !important;
+    color: var(--color-text-button-active);
+    cursor: default;
+}
+
+/* disabled buttons */
+.actions label.disabled,
+#tos_prompt [disabled] {
+	border-width: 1px;
+    border-style: solid;
+    border-color: var(--color-border-button);
+    box-shadow: none;
+    background-color: var(--color-bg-button);
+    background-image: none;
+    background-origin: border-box !important;
+	opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* select element on disabled buttons */
+/* inherits styling from above element */
+.actions .disabled select,
+.actions .disabled select:hover {
+  background: none;
+  color: inherit; /* text color */
 }
 
 
@@ -615,7 +702,7 @@ li.relationships a.tag:hover,
 
 /* Rating: stronger accent background */
 .rating .tag {
-	background: var(--color-tag-default-bg-hover);
+	background: var(--color-tag-rating-bg);
 	border: 1px dashed var(--color-tag-default-border);
 }
 
@@ -700,6 +787,10 @@ li.freeforms a.tag:hover,
 	font-weight: normal;
 	text-shadow: none;
 	border: none;
+    border-radius: unset;
+    line-height: 1.5;
+    padding: 0;
+    padding-right: 6px;
 }
 
 .header .fandoms a.tag:hover,
@@ -1151,7 +1242,7 @@ li.blurb {
 
 /* Required tags icons: desaturated */
 .blurb ul.required-tags li span {
-	border-radius: 50%;
+    border-radius: 0 20% 0 20%;
 	filter: var(--filter-required-tags-icon);
 }
 
@@ -1162,9 +1253,44 @@ li.blurb {
 }
 
 
+/*============================================================
+	Position Blurb Icons in a Row Under the Fandom Tags
+    ============================================================*/
+
+/* remove the space for the icons on the right side */
+.blurb:has(ul.required-tags) .header .heading {
+  margin-left: 0;
+}
+
+/* this changes the position of the content icons */
+.blurb .header ul.required-tags {
+  position: unset;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 4px;
+  width: auto;
+  margin-block: 0.375em;
+}
+
+/* more positioning */
+.blurb .header ul.required-tags li {
+  position: unset;
+}
+
+
 /* =============================================================================
 	WORK PAGE
 	============================================================================= */
+
+/* Reset headings font for workskin */
+#workskin h2, 
+#workskin h3, 
+#workskin h4, 
+#workskin h5, 
+#workskin h6, 
+#workskin .heading {
+    font-family: Georgia, serif;
+}
 
 /* Work navigation actions: no float */
 ul.work.navigation.actions {

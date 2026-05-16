@@ -27,6 +27,8 @@ See the [AO3 work](https://archiveofourown.org/works/84166896) for full installa
 
 - Stats icons & hover text system by ZerafinaCSS
   - AO3: [Stats Icons with Hover Text](https://archiveofourown.org/works/55604875)
+- Blurb icon layout + button styling adapted from ZerafinaCSS
+  - AO3: [Site Skin Add-Ons](https://archiveofourown.org/works/76032096)
 - Sticky dashboard + search/filter structure inspired by: 
   - BlackBatCat → [Rosé Pine Site Skin](https://archiveofourown.org/works/69993411)  
   - ZerafinaCSS → [neos Skin](https://archiveofourown.org/works/65849527)
