@@ -243,6 +243,10 @@ h1.heading {
     font-family: Georgia, serif;
 }
 
+h2 {
+    font-size: 1.8em;
+}
+
 h2, h3, h4, h5, h6, .heading {
     font-family: Arial, sans-serif;
     font-weight: 400;
@@ -707,6 +711,10 @@ h2.heading a.tag {
 	text-shadow: none;
 	border: none;
 	box-shadow: none;
+    border-radius: unset;
+    line-height: 1.5;
+    padding: 0;
+    padding-right: 6px;
 }
 
 li.collection a.tag:hover,
