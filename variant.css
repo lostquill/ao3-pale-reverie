@@ -1041,7 +1041,7 @@ form.filters {
   overflow-wrap: anywhere;
   box-sizing: border-box;
   width: 25%;
-  max-height: 100vh;
+  max-height: 98vh;
   margin-block: 0.643em !important;
   padding: 0 0.643em 0 2%;
 }
