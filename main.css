@@ -241,31 +241,6 @@ h2.heading {
 	color: var(--color-heading);
 }
 
-fieldset, form dl, fieldset dl dl, fieldset fieldset fieldset, fieldset fieldset dl dl, dd.hideme, form blockquote.userstuff {
-    background: var(--color-bg-fieldset);
-    border: 2px dotted var(--color-border-subtle);
-    box-shadow: none;
-}
-
-input, textarea, select {
-    font-size: 100%;
-    border: 1px solid var(--color-border-filter-label);
-    box-shadow: none;
-}
-
-input:not([type="image" i], [type="range" i], [type="checkbox" i], [type="radio" i]), select:not([multiple]) {
-    min-height: 1.7em;
-    box-sizing: border-box;
-}
-
-.required, .error, .alert.flash {
-    color: var(--color-required);
-}
-
-form dt {
-    border-bottom: 1px solid var(--color-border-form-dt);
-}
-
 
 /* =============================================================================
 	HEADER
@@ -776,6 +751,36 @@ h2.heading a.tag:hover {
 #dashboard a:hover {
   background: var(--color-bg-link-dashboard-hover);
   color: var(--color-link-default);
+}
+
+
+/* =============================================================================
+	FORMS / FIELDSET
+	============================================================================= */
+
+fieldset, form dl, fieldset dl dl, fieldset fieldset fieldset, fieldset fieldset dl dl, dd.hideme, form blockquote.userstuff {
+    background: var(--color-bg-fieldset);
+    border: 2px dotted var(--color-border-subtle);
+    box-shadow: none;
+}
+
+input, textarea, select {
+    font-size: 100%;
+    border: 1px solid var(--color-border-filter-label);
+    box-shadow: none;
+}
+
+input:not([type="image" i], [type="range" i], [type="checkbox" i], [type="radio" i]), select:not([multiple]) {
+    min-height: 1.7em;
+    box-sizing: border-box;
+}
+
+.required, .error, .alert.flash {
+    color: var(--color-required);
+}
+
+form dt {
+    border-bottom: 1px solid var(--color-border-form-dt);
 }
 
 
