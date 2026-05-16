@@ -642,6 +642,7 @@ a:link.current {
     background-color: var(--color-bg-button);
     background-image: none;
     background-origin: border-box !important;
+	opacity: 0.5;
     cursor: not-allowed;
 }
 
