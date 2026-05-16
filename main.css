@@ -117,10 +117,13 @@
 	--color-border-subtle:            var(--color-grey-70);              /* light borders, action hover bg */
 	--color-border-mid:               var(--color-grey-170);             /* home header bottom border */
 	--color-shadow-inset:             var(--color-grey-110);             /* inset shadow */
-	--color-border-filter-label:      var(--color-grey-110);             /* bottom border on filter labels */
-	--color-border-rounded-pic:       var(--color-accent);               /* border around profile pic */
+
+	/* Form */
+	--color-border-filter-label:      var(--color-grey-110);             /* bottom border on filter labels, inputs, select, textarea */
+	--color-bg-fieldset:              var(--color-grey-40);              /* fieldset, form background... */
+	--color-border-form-dt:           var(--color-grey-90);              /* border form dt label */
 	--color-bg-question:              var(--color-accent-pop);           /* help symbol background */
-	--color-shadow-fave-hover:        var(--color-nearly-black);         /* shadow text on fave tags homepage on hover */
+	--color-required:                 var(--color-accent-pop);           /* required field, important color */
 
 	/* Image and icon filters */
 	--filter-logo:                    hue-rotate(50deg) brightness(2.4) saturate(0.3);                                        /* AO3 logo */
@@ -142,6 +145,8 @@
 	--color-link-visited-hover:       var(--color-accent);               /* h4 headings visited:hover */
 
 	/* Headings */
+	--color-line-icon:                var(--color-accent-soft);          /* top line going from rounded icon to heading */
+	--color-border-rounded-pic:       var(--color-accent);               /* border around profile pic */
 	--color-heading:                  var(--color-dark-secondary);       /* h2.heading */
 	--color-bg-heading:               var(--color-accent);               /* h2.collections */
 	--color-bg-heading-5:             var(--color-neutral-main);         /* h5.tags.heading */
@@ -159,6 +164,7 @@
 	--color-tag-default-border:       var(--color-light-primary);        /* default tag border */
 	--color-tag-shadow-light:         var(--color-grey-50);              /* default tag shadow light */
 	--color-tag-shadow-dark:          var(--color-grey-220);             /* default tag shadow dark */
+	--color-shadow-fave-hover:        var(--color-nearly-black);         /* shadow text on fave tags homepage splash on hover */
 
 	/* Tags — ratings */
 	--color-tag-rating-bg:            var(--color-accent);               /* rating tag background */
@@ -228,16 +234,22 @@ body, #outer,
 	background: var(--color-bg-body);
 }
 
-input, textarea, select {
-    font-size: 100%;
-}
-
 h1, h2, h3, h4, h5, h6, .heading {
     font-weight: 400;
 }
 
 h2.heading {
 	color: var(--color-heading);
+}
+
+.home .header h2::before {
+	display: inline-block;
+	margin-right: 2px;
+	content: "\00a0✦";
+}
+
+.home .header h2 {
+	border-bottom: 2px solid var(--color-line-icon);
 }
 
 
@@ -646,6 +658,8 @@ li.freeforms a.tag:hover,
 	background: none;
 	color: var(--color-link-fandom);
     font-family: Arial, sans-serif;
+	font-variant: small-caps;
+	font-weight: normal;
 	text-shadow: none;
 	border: none;
 }
@@ -667,7 +681,9 @@ h5.tags.heading {
 /* Outside of bookmarks, all collection tags are plain mauve-mid links */
 li.collection a.tag,
 h2.heading a.tag {
+	font-family: Arial, sans-serif;
 	color: var(--color-tag-collection);
+	font-variant: small-caps;
 	background: none;
 	font-weight: normal;
 	text-shadow: none;
@@ -750,6 +766,36 @@ h2.heading a.tag:hover {
 #dashboard a:hover {
   background: var(--color-bg-link-dashboard-hover);
   color: var(--color-link-default);
+}
+
+
+/* =============================================================================
+	FORMS / FIELDSET
+	============================================================================= */
+
+fieldset, form dl, fieldset dl dl, fieldset fieldset fieldset, fieldset fieldset dl dl, dd.hideme, form blockquote.userstuff {
+    background: var(--color-bg-fieldset);
+    border: 2px dotted var(--color-border-subtle);
+    box-shadow: none;
+}
+
+input, textarea, select {
+    font-size: 100%;
+    border: 1px solid var(--color-border-filter-label);
+    box-shadow: none;
+}
+
+input:not([type="image" i], [type="range" i], [type="checkbox" i], [type="radio" i]), select:not([multiple]) {
+    min-height: 1.7em;
+    box-sizing: border-box;
+}
+
+.required, .error, .alert.flash {
+    color: var(--color-required);
+}
+
+form dt {
+    border-bottom: 1px solid var(--color-border-form-dt);
 }
 
 
@@ -936,17 +982,7 @@ span.symbol {
 	HOMEPAGE / SPLASH
 	============================================================================= */
 
-.home .header h2::before {
-	display: inline-block;
-	margin-right: 2px;
-	content: "\00a0✦";
-}
-
-.home .header h2 {
-	border-bottom: 2px solid var(--color-border-mid);
-}
-
-.splash>.module h3::before {
+.splash > .module h3::before {
 	display: inline-block;
 	margin-right: 2px;
 	content: "\00a0✦";
@@ -1022,6 +1058,12 @@ div.latest.news.module .userstuff p {
 	BLURBS & CONTENT SECTIONS
 	============================================================================= */
 
+.listbox, fieldset fieldset.listbox {
+    background: var(--color-light-secondary);
+    border: 1px solid var(--color-border-subtle);
+    box-shadow: none;
+}
+
 li.blurb,
 .work.index.group .own.work.blurb.group,
 .browse .note,
@@ -1096,11 +1138,12 @@ ul.work.navigation.actions {
 	border: 1px solid var(--color-border-subtle);
 }
 
-/* Decorative border on chapter/series/statistics meta */
+/* Decorative border on chapter/series/profile/statistics meta */
 .chapters-show.region .meta,
 .works-show.region .meta,
 .wrapper .series.meta,
 .wrapper .statistics.meta,
+.profile .wrapper .meta,
 .draft.work .meta {
 	border: 80px solid transparent;
 	border-image: url(https://raw.githubusercontent.com/lostquill/ao3-pale-reverie/main/assets/border-constellation.png) 35% round;
