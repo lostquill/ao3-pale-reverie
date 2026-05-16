@@ -45,11 +45,9 @@
 }
 
 /* Disable sticky behavior and reset height for filter forms */
-form.filters,
-.region:has(ol.pagination.actions) form.filters {
+.javascript form.filters {
 	position: static;
     max-height: unset;
-    margin-bottom: 7.5em !important;
 }
 
 /* Reset scrollbar color on filter forms when not hovered */
