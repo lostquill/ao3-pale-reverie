@@ -580,8 +580,9 @@ button {
 	color: var(--color-dark-secondary);
 }
 
-/* search button exception */
-#header #search .button {
+/* search button + checkbox label exceptions */
+#header #search .button,
+ul.options.index.group.many label.action {
 	background-image: none;
 	background-color: var(--color-light-secondary);
 }
