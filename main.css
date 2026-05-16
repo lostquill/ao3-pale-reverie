@@ -1048,6 +1048,7 @@ span.symbol {
     font-weight: bold;
     text-align: center;
     letter-spacing: 1px;
+    line-height: 1.5;
     text-shadow: 1px 1px 1px var(--color-neutral-main);
 }
 
