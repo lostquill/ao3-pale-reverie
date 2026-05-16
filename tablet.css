@@ -5,6 +5,59 @@
 	Role: Parent skin (tablet overrides)
 	============================================================================= */
 
+/* Stack inner layout vertically */
+#inner {
+	flex-flow: column;
+}
+
+/* Main content — full width with horizontal padding on mobile */
+#main, #main.dashboard {
+    width: 100%;
+    padding-inline: 2.5%;
+}
+
+/* Switch dashboard border from vertical to horizontal */
+#dashboard::after {
+    background: var(--color-bg-nav);
+    right: auto;
+    top: auto;
+    left: 0;
+    bottom: -0.7em;
+    width: 100%;
+    height: 0.5em;
+}
+
+/* Remove border on dashboard menu links */
+#dashboard ul {
+    border: none;
+}
+
+/* Disable sticky behavior for dashboard, search and filters */
+#dashboard,
+#dashboard.own {
+    padding: 0;
+    margin: 1.5em 2%;
+	text-align: center;
+	position: relative;
+    max-height: none;
+    overflow-y: visible; 
+    scrollbar-color: auto;
+}
+
+/* Disable sticky behavior and reset height for filter forms */
+form.filters,
+.region:has(ol.pagination.actions) form.filters {
+	position: static;
+    max-height: none;
+    overflow-y: visible;
+    margin-bottom: 7.5em !important;
+}
+
+/* Reset scrollbar color on filter forms when not hovered */
+form.filters:not(:hover) {
+    scrollbar-color: auto;
+}
+
 /* Remove decorative border-image on chapter/series/profile/statistics meta (too heavy on small screens) */
 .chapters-show.region .meta,
 .works-show.region .meta,
@@ -18,7 +71,7 @@
 	border-image-width: 0;
 }
 
-/* Splash: single column on mobile + tablet, two columns on desktop */
+/* Splash: single column layout on mobile and tablet */
 .splash {
 	margin: auto;
 	max-width: 78em;
@@ -33,32 +86,6 @@
 	margin: 0 1% 1.571em 1%;
 	width: 48%;
 	float: left !important;
-}
-
-/* Remove border on dashboard menu */
-#dashboard ul {
-    border: none;
-}
-
-/* Disable sticky behavior for dashboard, search and filters */
-#dashboard,
-#dashboard.own {
-	position: static;
-    max-height: none;
-    overflow-y: visible; 
-    scrollbar-color: auto;
-}
-
-form.filters,
-.region:has(ol.pagination.actions) form.filters {
-	position: static;
-    max-height: none;
-    overflow-y: visible;
-    margin-bottom: 1em !important;
-}
-
-form.filters:not(:hover) {
-    scrollbar-color: auto;
 }
 
 /* Footer -> columns */
