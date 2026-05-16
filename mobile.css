@@ -6,6 +6,11 @@
 	============================================================================= */
 
 
+/* Smaller header banner */
+#header::before {
+    height: 50px;
+}
+
 /* Remove text-shadow and border from bold tags on small screens
 	(legibility and rendering performance) */
 .rating .tag,
