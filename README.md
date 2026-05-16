@@ -30,7 +30,7 @@ See the [AO3 work](https://archiveofourown.org/works/84166896) for full installa
 - Sticky dashboard + search/filter structure inspired by: 
   - BlackBatCat → [Rosé Pine Site Skin](https://archiveofourown.org/works/69993411)  
   - ZerafinaCSS → [neos Skin](https://archiveofourown.org/works/65849527)
-- Constellation border image, kudos illustration, and CSS placeholder icon generated with Gemini
+- Header banner image, constellation border image, kudos illustration, and CSS placeholder icon generated with Gemini
 
 ## License
 
