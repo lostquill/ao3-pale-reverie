@@ -1037,11 +1037,11 @@ form.filters {
   position: sticky;
   top: 2vh;
   overflow-x: visible;
-  overflow-y: scroll;
+  overflow-y: auto;
   overflow-wrap: anywhere;
   box-sizing: border-box;
   width: 25%;
-  max-height: 96vh;
+  max-height: 100vh;
   margin-block: 0.643em !important;
   padding: 0 0.643em 0 2%;
 }
