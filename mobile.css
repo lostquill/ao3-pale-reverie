@@ -46,7 +46,7 @@ li.relationships a.tag,
 }
 
 .splash .favorite li:nth-of-type(even) a,
-.splash .favorite li:nth-of-type(even) a:hover;
+.splash .favorite li:nth-of-type(even) a:hover,
 .splash .favorite li:nth-of-type(odd) a,
 .splash .favorite li:nth-of-type(odd) a:hover{
     text-shadow: none;
