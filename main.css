@@ -109,6 +109,7 @@
 	--color-sec:                      var(--color-mid-secondary);
 	--grad-right:                     linear-gradient(45deg, var(--color-first), var(--color-first), var(--color-sec), var(--color-sec));
 	--grad-left:                      linear-gradient(-45deg, var(--color-first), var(--color-first), var(--color-sec), var(--color-sec));
+  --grad-bottom:                    linear-gradient(to bottom, var(--color-first), var(--color-sec), var(--color-first));
 
 	/* Backgrounds, borders, shadows & surfaces */
 	--color-bg-selection:             var(--color-accent);               /* mouse selection background */
@@ -167,6 +168,7 @@
 	--color-bg-heading-5:             var(--color-neutral-main);         /* h5.tags.heading */
 
 	/* Dashboard */
+  --color-column-border-dashboard:  var(--grad-bottom);                /* dashboard column border right */
 	--color-bg-link-dashboard-hover:  var(--color-border-subtle);        /* dashboard link background hover */
 	--color-text-dashboard:           var(--color-dark-primary);         /* dashboard span label for current page */
 	--color-bg-dashboard-current:     var(--color-grey-90);              /* dashboard link background current */
@@ -234,19 +236,38 @@
 	GLOBAL
 	============================================================================= */
 
+/* Text selection highlight */
 *::selection {
     background-color: var(--color-bg-selection);
     color: var(--color-neutral-main);
 }
 
+/* Base font size and line height */
 body {
-	line-height: 1.125;
-	font-size: 100%;
+    line-height: 1.125;
+    font-size: 100%;
 }
 
+/* Global background color */
 body, #outer,
 .javascript {
-	background: var(--color-bg-body);
+    background: var(--color-bg-body);
+}
+
+/* Outer wrapper — full-height vertical flex container */
+#outer {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Inner wrapper — horizontal flex, grows to fill available space */
+#inner {
+    flex-grow: 1;
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    min-height: 70vh;
 }
 
 
@@ -663,11 +684,42 @@ a:link.current {
 
 /* --- 1. Base tag style --- */
 
+/* Remove commas */
+.commas:has(.tag, a[data-remote="true"]) li::after {
+    content: " ";
+}
+
+/* Separate by category */
+li:not(.relationships) + li.relationships::before, 
+li:not(.fandoms) + li.fandoms::before, 
+li:not(.warnings) + li.warnings::before, 
+li:not(.categories) + li.categories::before, 
+li:not(.characters) + li.characters::before, 
+li:not(.freeforms) + li.freeforms::before {
+    content: '';
+    display: block;
+    border-top: 1px dashed var(--color-border-section-dashboard);
+    margin: 0.3em 0;
+}
+
+/* Base tag */
 a.tag,
 .listbox .heading a.tag:visited:hover,
 a.tag:visited:hover {
 	color: var(--color-tag-default);
 	background: var(--color-link-default);
+}
+
+a.tag:not(.fandom.index.group a.tag):not(.fandoms a.tag):not(h2.heading a.tag):not(.splash .favorite a.tag):not(.splash .favorite li:nth-of-type(2n+1) a.tag),
+.tags a[data-remote="true"],
+.unwrangled, .added.tag {
+    display: inline-flex;
+    text-decoration: none;
+    padding: 0.15em 0.5em;
+    margin: 0.2em 0;
+    line-height: 1.25;
+    position: relative;
+    z-index: 1;
 }
 
 /* Base tag hover */
@@ -739,11 +791,16 @@ li.relationships a.tag,
 	border-radius: 5px;
 }
 
-/* Heart symbol after relationship tags */
-ul.tags li.relationships::after {
-	content: " ♥\FE0E";
-	color: var(--color-heart-relationship);
-	vertical-align: middle;
+/* Heart symbol after relationship tags
+   - replace by ul.tags li.relationships::after if you want to onclude friendships  */
+
+ul.tags li.relationships a.tag[href*="*s*"]::after {
+    content: " ♥\FE0E";
+    color: var(--color-heart-relationship);
+    vertical-align: middle;
+    display: inline-block;
+    margin-left: 0.5em;
+    text-shadow: 1px 1px 4px var(--color-light-primary);
 }
 
 /* Character tags: warm mauve tint */
@@ -860,8 +917,61 @@ h2.heading a.tag:hover {
 	DASHBOARD
 	============================================================================= */
 
+#main.dashboard {
+    width: 82%;
+}
+#main, #main.dashboard {
+    flex-grow: 1;
+    box-sizing: border-box;
+    min-height: unset;
+    max-width: 100%;
+    margin: 0;
+    padding: 1.5em 5%;
+    line-height: 1.286;
+}
+
+#dashboard, #dashboard.own {
+    padding-right: 2em;
+    border-top: none;
+    border-bottom: none;
+    border-radius: unset;
+    position: sticky;
+    top: 0;
+    max-height: 100vh;
+    overflow-x: visible;
+    overflow-y: auto;
+    scrollbar-color: transparent transparent;
+}
+
+/* Gradient border on the right */
+#dashboard::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 1em;
+    background: var(--color-column-border-dashboard);
+}
+
+#dashboard ul {
+    position: relative;
+    padding-top: 0.429em;
+    padding-bottom: 0.429em;
+    border-top: 2px solid var(--color-border-section-dashboard);
+}
+
+#dashboard ul:nth-child(2) {
+    border-top: none;
+}
+
+#dashboard a, #dashboard span {
+    line-height: 1.800;
+}
+
 #dashboard span {
     color: var(--color-text-dashboard);
+    white-space: nowrap;
 }
 
 #dashboard .current:before {
@@ -872,28 +982,6 @@ h2.heading a.tag:hover {
 
 #dashboard .current {
     background: var(--color-bg-dashboard-current);
-}
-
-#dashboard, #dashboard.own {
-    border-top: none;
-    border-bottom: none;
-    position: sticky;
-    top: 0;
-    max-height: 96vh;
-    overflow-x: visible;
-    overflow-y: auto;
-    scrollbar-color: transparent transparent;
-}
-
-#dashboard ul {
-    position: relative;
-    padding-top: 0.429em;
-    padding-bottom: 0.429em;
-    border-top: 2px solid var(--color-border-section-dashboard);
-}
-
-#dashboard a, #dashboard span {
-    line-height: 1.800;
 }
 
 #dashboard a:hover {
@@ -949,11 +1037,11 @@ form.filters {
   position: sticky;
   top: 2vh;
   overflow-x: visible;
-  overflow-y: scroll;
+  overflow-y: auto;
   overflow-wrap: anywhere;
   box-sizing: border-box;
   width: 25%;
-  max-height: 96vh;
+  max-height: 98vh;
   margin-block: 0.643em !important;
   padding: 0 0.643em 0 2%;
 }
@@ -1092,11 +1180,6 @@ span.question {
   box-shadow: none;
   background-color: var(--color-bg-question);
   font-size: 10px;
-}
-
-.filters span.question {
-  position: absolute;
-  right: 0;
 }
 
 span.symbol {
