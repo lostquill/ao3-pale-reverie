@@ -38,7 +38,7 @@
 /* Disable sticky behavior for dashboard, search and filters */
 #dashboard,
 #dashboard.own {
-position: static;
+	position: static;
     max-height: none;
     overflow-y: visible; 
     scrollbar-color: auto;
