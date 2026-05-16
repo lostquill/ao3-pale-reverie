@@ -37,7 +37,7 @@
 
 /* Remove border on dashboard menu */
 #dashboard ul {
-    border: none;
+    border-top: none;
 }
 
 /* Disable sticky behavior for dashboard, search and filters */
