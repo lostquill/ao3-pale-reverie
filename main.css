@@ -235,6 +235,7 @@ body, #outer,
 }
 
 h1, h2, h3, h4, h5, h6, .heading {
+    font-family: Arial, sans-serif;
     font-weight: 400;
 }
 
@@ -256,6 +257,17 @@ h1, h2, h3, h4, h5, h6, .heading {
 /* =============================================================================
 	HEADER
 	============================================================================= */
+
+/* Header banner image */
+#header::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100px;
+    background: url(https://raw.githubusercontent.com/lostquill/ao3-pale-reverie/main/assets/header.png) center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 
 #header {
 	margin: 0;
@@ -657,7 +669,6 @@ li.freeforms a.tag:hover,
 	background: none;
 	color: var(--color-link-fandom);
     font-family: Arial, sans-serif;
-	font-variant: small-caps;
 	font-weight: normal;
 	text-shadow: none;
 	border: none;
@@ -682,7 +693,6 @@ li.collection a.tag,
 h2.heading a.tag {
 	font-family: Arial, sans-serif;
 	color: var(--color-tag-collection);
-	font-variant: small-caps;
 	background: none;
 	font-weight: normal;
 	text-shadow: none;
@@ -1212,6 +1222,10 @@ p.kudos {
 	filter: var(--filter-bookmark-status);
 }
 
+.bookmark .user .meta {
+    font-family: Arial, sans-serif;
+}
+
 
 /* =============================================================================
 	READING HISTORY
@@ -1483,6 +1497,7 @@ dl.stats dd {
 }
 
 #footer .heading {
+    font-family: Georgia, serif;
     text-align: center;
     font-weight: bold;
     font-style: italic;
