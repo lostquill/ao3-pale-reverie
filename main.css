@@ -117,8 +117,6 @@
 	--color-border-subtle:            var(--color-grey-70);              /* light borders, action hover bg */
 	--color-border-mid:               var(--color-grey-170);             /* home header bottom border */
 	--color-shadow-inset:             var(--color-grey-110);             /* inset shadow */
-	--color-border-rounded-pic:       var(--color-accent);               /* border around profile pic */
-	--color-shadow-fave-hover:        var(--color-nearly-black);         /* shadow text on fave tags homepage splash on hover */
 
 	/* Form */
 	--color-border-filter-label:      var(--color-grey-110);             /* bottom border on filter labels, inputs, select, textarea */
@@ -147,6 +145,8 @@
 	--color-link-visited-hover:       var(--color-accent);               /* h4 headings visited:hover */
 
 	/* Headings */
+	--color-line-icon:                var(--color-accent-soft);          /* top line going from rounded icon to heading */
+	--color-border-rounded-pic:       var(--color-accent);               /* border around profile pic */
 	--color-heading:                  var(--color-dark-secondary);       /* h2.heading */
 	--color-bg-heading:               var(--color-accent);               /* h2.collections */
 	--color-bg-heading-5:             var(--color-neutral-main);         /* h5.tags.heading */
@@ -164,6 +164,7 @@
 	--color-tag-default-border:       var(--color-light-primary);        /* default tag border */
 	--color-tag-shadow-light:         var(--color-grey-50);              /* default tag shadow light */
 	--color-tag-shadow-dark:          var(--color-grey-220);             /* default tag shadow dark */
+	--color-shadow-fave-hover:        var(--color-nearly-black);         /* shadow text on fave tags homepage splash on hover */
 
 	/* Tags — ratings */
 	--color-tag-rating-bg:            var(--color-accent);               /* rating tag background */
@@ -239,6 +240,16 @@ h1, h2, h3, h4, h5, h6, .heading {
 
 h2.heading {
 	color: var(--color-heading);
+}
+
+.home .header h2::before {
+	display: inline-block;
+	margin-right: 2px;
+	content: "\00a0✦";
+}
+
+.home .header h2 {
+	border-bottom: 2px solid var(--color-line-icon);
 }
 
 
@@ -647,6 +658,8 @@ li.freeforms a.tag:hover,
 	background: none;
 	color: var(--color-link-fandom);
     font-family: Arial, sans-serif;
+	font-variant: small-caps;
+	font-weight: normal;
 	text-shadow: none;
 	border: none;
 }
@@ -668,7 +681,9 @@ h5.tags.heading {
 /* Outside of bookmarks, all collection tags are plain mauve-mid links */
 li.collection a.tag,
 h2.heading a.tag {
+	font-family: Arial, sans-serif;
 	color: var(--color-tag-collection);
+	font-variant: small-caps;
 	background: none;
 	font-weight: normal;
 	text-shadow: none;
@@ -967,16 +982,6 @@ span.symbol {
 	HOMEPAGE / SPLASH
 	============================================================================= */
 
-.home .header h2::before {
-	display: inline-block;
-	margin-right: 2px;
-	content: "\00a0✦";
-}
-
-.home .header h2 {
-	border-bottom: 2px solid var(--color-border-mid);
-}
-
 .splash>.module h3::before {
 	display: inline-block;
 	margin-right: 2px;
@@ -1052,6 +1057,12 @@ div.latest.news.module .userstuff p {
 /* =============================================================================
 	BLURBS & CONTENT SECTIONS
 	============================================================================= */
+
+.listbox, fieldset fieldset.listbox {
+    background: var(--color-light-secondary);
+    border: 1px solid var(--color-border-subtle);
+    box-shadow: none;
+}
 
 li.blurb,
 .work.index.group .own.work.blurb.group,
