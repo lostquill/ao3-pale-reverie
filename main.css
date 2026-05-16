@@ -7,6 +7,9 @@
 	Stats icons & hover text system by ZerafinaCSS
 		AO3: https://archiveofourown.org/works/55604875
 
+	Blurb icon layout + button styling adapted from Site Skin Add-Ons by ZerafinaCSS
+		AO3: https://archiveofourown.org/works/76032096
+
 	Sticky dashboard + search/filter structure inspired by: 
 		- Rosé Pine Site Skin by BlackBatCat → https://archiveofourown.org/works/69993411
 		- Neos Skin by ZerafinaCSS → https://archiveofourown.org/works/65849527
@@ -318,6 +321,7 @@ h2, h3, h4, h5, h6, .heading {
 	color: var(--color-link-menu);
 	text-transform: uppercase;
 	letter-spacing: 1px;
+	cursor: pointer;
 }
 
 /* Nav link colors */
@@ -530,22 +534,6 @@ h4.heading a:visited:hover,
 	ACTIONS
 	============================================================================= */
 
-/* Action hover state */
-.actions a:hover,
-.actions button:hover,
-.actions input:hover,
-.actions a:focus,
-.actions button:focus,
-.actions input:focus,
-label.action:hover,
-.action:hover,
-.action:focus,
-.actions:focus {
-	color: var(--color-link-default);
-	border-top: 1px solid var(--color-border-action-hover);
-	border-left: 1px solid var(--color-border-action-hover);
-}
-
 /* Pointer cursor for interactive elements */
 #go_to_last_chap,
 #go_to_first_chap,
@@ -579,17 +567,23 @@ label.action:is(:hover, :focus),
 input[type=submit],
 input[type=button],
 input::file-selector-button,
+#header #search .button,
 button {
-    border-width: 1px;
-    border-style: solid;
-    border-color: var(--color-mid-secondary);
-    border-radius: 0.25em;
-    box-shadow: none;
-    background-color: var(--color-light-secondary);
-    background-image: linear-gradient(216deg, var(--color-mid-secondary), var(--color-light-secondary), transparent);
-    background-origin: border-box !important;
-    color: var(--color-dark-secondary);
-    cursor: pointer;
+	border-width: 1px;
+	border-style: solid;
+	border-color: var(--color-mid-secondary);
+	border-radius: 0.25em;
+	box-shadow: none;
+	background-color: var(--color-light-secondary);
+	background-image: linear-gradient(216deg, var(--color-mid-secondary), var(--color-light-secondary), transparent);
+	background-origin: border-box !important;
+	color: var(--color-dark-secondary);
+}
+
+/* search button exception */
+#header #search .button {
+	background-image: none;
+	background-color: var(--color-light-secondary);
 }
 
 /*>========== button subtypes and modes ==========<*/
@@ -607,11 +601,11 @@ input[type=button]:is(:hover, :focus),
 input::file-selector-button:is(:hover, :focus),
 button:is(:hover, :focus) {
 	border-width: 1px;
-    border-style: solid;
-    border-color: var(--color-mid-secondary);
-    box-shadow: none;
-    background-color: var(--color-accent-soft);
-    color: var(--color-dark-secondary);
+	border-style: solid;
+	border-color: var(--color-mid-secondary);
+	box-shadow: none;
+	background-image: linear-gradient(216deg, var(--color-accent-soft), transparent, transparent);
+	color: var(--color-dark-secondary);
 }
 
 /* currently active/selected buttons */
@@ -621,14 +615,14 @@ button:is(:hover, :focus) {
 a.current,
 a.current:is(:hover, :focus),
 a:link.current {
-    border-width: 1px;
-    border-style: solid;
-    border-color: var(--color-mid-primary);
-    box-shadow: none;
-    background-image: linear-gradient(216deg, var(--color-mid-primary), var(--color-light-primary), transparent);
-    background-origin: border-box !important;
-    color: var(--color-dark-primary);
-    cursor: default;
+	border-width: 1px;
+	border-style: solid;
+	border-color: var(--color-mid-primary);
+	box-shadow: none;
+	background-image: linear-gradient(216deg, var(--color-mid-primary), var(--color-light-primary), transparent);
+	background-origin: border-box !important;
+	color: var(--color-dark-primary);
+	cursor: default;
 }
 
 /* disabled buttons */
@@ -785,6 +779,10 @@ li.freeforms a.tag:hover,
 	font-weight: normal;
 	text-shadow: none;
 	border: none;
+    border-radius: unset;
+    line-height: 1.5;
+    padding: 0;
+    padding-right: 6px;
 }
 
 .header .fandoms a.tag:hover,
