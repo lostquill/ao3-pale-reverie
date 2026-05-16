@@ -35,6 +35,11 @@
 	float: left !important;
 }
 
+/* Remove border on dashboard menu */
+#dashboard ul {
+    border: none;
+}
+
 /* Disable sticky behavior for dashboard, search and filters */
 #dashboard,
 #dashboard.own {
