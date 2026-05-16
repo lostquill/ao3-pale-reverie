@@ -257,16 +257,6 @@ h2, h3, h4, h5, h6, .heading {
     font-weight: 400;
 }
 
-/* Reset for workskin */
-#workskin h2, 
-#workskin h3, 
-#workskin h4, 
-#workskin h5, 
-#workskin h6, 
-#workskin .heading {
-    font-family: Georgia, serif;
-}
-
 .listbox > .heading, h2.heading {
 	color: var(--color-heading);
 }
@@ -493,7 +483,7 @@ h2, h3, h4, h5, h6, .heading {
 
 
 /* =============================================================================
-	LINKS & ACTIONS
+	LINKS
 	============================================================================= */
 
 a,
@@ -535,6 +525,11 @@ h4.heading a:visited:hover,
 	color: var(--color-link-visited-hover);
 }
 
+
+/* =============================================================================
+	ACTIONS
+	============================================================================= */
+
 /* Action hover state */
 .actions a:hover,
 .actions button:hover,
@@ -565,6 +560,96 @@ a.check_none {
 
 .blurb .download.actions {
     z-index: 1;
+}
+
+/*>========== buttons ==========<*/
+
+.action,
+.action:is(:link, :visited),
+.action a,
+.action a:visited,
+.actions a,
+.actions a:is(:link, :visited),
+.actions:not(#dashboard .actions) .current,
+.actions button,
+.actions input:not([type=text]),
+.actions label,
+label.action,
+label.action:is(:hover, :focus),
+input[type=submit],
+input[type=button],
+input::file-selector-button,
+button {
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--color-mid-secondary);
+    border-radius: 0.25em;
+    box-shadow: none;
+    background-color: var(--color-light-secondary);
+    background-image: linear-gradient(216deg, var(--color-mid-secondary), var(--color-light-secondary), transparent);
+    background-origin: border-box !important;
+    color: var(--color-dark-secondary);
+    cursor: pointer;
+}
+
+/*>========== button subtypes and modes ==========<*/
+
+/* hovered + focused buttons */
+/* hover = when you move the mouse over the button */
+/* focus = when you click or tap on the button or select it with the tab key */
+.action:is(:hover, :focus),
+.action a:is(:hover, :focus),
+.actions a:is(:hover, :focus),
+.actions button:is(:hover, :focus),
+.actions input:not([type=text]):is(:hover, :focus),
+input[type=submit]:is(:hover, :focus),
+input[type=button]:is(:hover, :focus),
+input::file-selector-button:is(:hover, :focus),
+button:is(:hover, :focus) {
+	border-width: 1px;
+    border-style: solid;
+    border-color: var(--color-mid-secondary);
+    box-shadow: none;
+    background-color: var(--color-accent-soft);
+    color: var(--color-dark-secondary);
+}
+
+/* currently active/selected buttons */
+/* example: the page you're currently on when browsing works */
+.actions a:active,
+.actions:not(#dashboard .actions) .current,
+a.current,
+a.current:is(:hover, :focus),
+a:link.current {
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--color-mid-primary);
+    box-shadow: none;
+    background-image: linear-gradient(216deg, var(--color-mid-primary), var(--color-light-primary), transparent);
+    background-origin: border-box !important;
+    color: var(--color-dark-primary);
+    cursor: default;
+}
+
+/* disabled buttons */
+.actions label.disabled,
+#tos_prompt [disabled] {
+	border-width: 1px;
+    border-style: solid;
+    border-color: var(--color-mid-secondary);
+    box-shadow: none;
+    background-color: var(--color-light-secondary);
+    background-image: none;
+    background-origin: border-box !important;
+    cursor: not-allowed;
+}
+
+/* select element on disabled buttons */
+/* inherits styling from above element */
+.actions .disabled select,
+.actions .disabled select:hover {
+  background: none;
+  color: inherit; /* text color */
 }
 
 
@@ -1162,9 +1247,44 @@ li.blurb {
 }
 
 
+/*============================================================
+	Position Blurb Icons in a Row Under the Fandom Tags
+    ============================================================*/
+
+/* remove the space for the icons on the right side */
+.blurb:has(ul.required-tags) .header .heading {
+  margin-left: 0;
+}
+
+/* this changes the position of the content icons */
+.blurb .header ul.required-tags {
+  position: unset;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 4px;
+  width: auto;
+  margin-block: 0.375em;
+}
+
+/* more positioning */
+.blurb .header ul.required-tags li {
+  position: unset;
+}
+
+
 /* =============================================================================
 	WORK PAGE
 	============================================================================= */
+
+/* Reset headings font for workskin */
+#workskin h2, 
+#workskin h3, 
+#workskin h4, 
+#workskin h5, 
+#workskin h6, 
+#workskin .heading {
+    font-family: Georgia, serif;
+}
 
 /* Work navigation actions: no float */
 ul.work.navigation.actions {
