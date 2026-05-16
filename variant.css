@@ -926,7 +926,7 @@ h2.heading a.tag:hover {
     min-height: unset;
     max-width: 100%;
     margin: 0;
-    padding: 1.5em 5%;
+    padding: 1.5em 3%;
     line-height: 1.286;
 }
 
@@ -1180,11 +1180,6 @@ span.question {
   box-shadow: none;
   background-color: var(--color-bg-question);
   font-size: 10px;
-}
-
-.filters span.question {
-  position: absolute;
-  right: 0;
 }
 
 span.symbol {
