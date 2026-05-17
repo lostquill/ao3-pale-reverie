@@ -111,7 +111,7 @@
 
 	/* Backgrounds, borders, shadows & surfaces */
 	--color-bg-selection:             var(--color-accent);               /* mouse selection background */
-	--color-bg-body:                  var(--color-grey-20);              /* body background */
+	--color-bg-body:                  var(--color-nearly-black);         /* body background */
 	--color-bg-nav:                   var(--grad-right);                 /* navbar + footer background */
 	--color-surface:                  var(--color-grey-10);              /* blockquote surfaces */
 	--color-bg-blurb:                 var(--color-neutral-main);         /* white card inside blurbs */
@@ -144,7 +144,7 @@
 	    use https://angel-rs.github.io/css-color-filter-generator/
 	  - --filer-header, --filter-img-icon, --filter-required-tags-icon, and --filter-bookmark-status
 	    use generic adjustments (contrast, sepia, brightness) rather than color targeting. */
-	--filter-header:                  none;      /* header banner */
+	--filter-header:                  invert(1) hue-rotate(45deg);      /* header banner */
 	--filter-logo:                    brightness(0) saturate(100%) invert(45%) sepia(10%) saturate(1214%) hue-rotate(314deg) brightness(92%) contrast(83%); /* AO3 logo */
 	--filter-padlock-icon:            brightness(0) saturate(100%) invert(23%) sepia(55%) saturate(2017%) hue-rotate(296deg) brightness(90%) contrast(90%); /* restricted works padlock icon */
 	--filter-stat-icon:               invert(35%) sepia(8%) saturate(1985%) hue-rotate(319deg) brightness(93%) contrast(92%); /* work stats icons */
