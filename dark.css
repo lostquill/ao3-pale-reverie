@@ -24,24 +24,24 @@
 		Base color scales (do not use directly in css rules)
 	   ----------------------------------------------------------------- */
 
-	/* COLOR PALETTE 1 - Mauve palette (warm rose tones) */
-	--color-mauve-light:         #f6e8eb;
-	--color-mauve-mid:           #cdb3b3;
-	--color-mauve-dark:          #664646;
+	/* COLOR PALETTE 1 - Violet palette (cool purple tones) */
+	--color-violet-light:        #B3AED9;   /* light purple, light surfaces and tags */
+	--color-violet-mid:          #474366;   /* mid purple, nav and UI elements */
+	--color-violet-dark:         #101324;   /* near-black purple, deep backgrounds */
 
-	/* COLOR PALETTE 2 - Slate palette (cool blue-grey tones) */
-	--color-slate-light:         #e3edee;
-	--color-slate-mid:           #b3cbcd;
-	--color-slate-dark:          #3a5f66;
+	/* COLOR PALETTE 2 - Moss palette (muted olive-green tones) */
+	--color-moss-light:          #9DAF77;   /* light olive, character tags and soft surfaces */
+	--color-moss-mid:            #363D1B;   /* dark olive, secondary nav elements */
+	--color-moss-dark:           #121607;   /* near-black green, deepest surfaces */
 	
 	/* -----------------------------------------------------------------
 		ACCENT COLORS
 		Highlight / interactive emphasis colors
 	   ----------------------------------------------------------------- */
 
-	--color-rose-brown:          #8f6565;
-	--color-dusty-pink:          #cdb2b2;
-	--color-purple:              #9d2d69;
+	--color-indigo:              #484468;   /* default accent, links and interactive elements */
+	--color-lavender:            #928CC4;   /* soft accent, hover states and subtle highlights */
+	--color-sky:                 #69C1FF;   /* pop accent, emphasis and call-to-action */
 	
 	/* -----------------------------------------------------------------
 		NEUTRAL COLORS
@@ -62,6 +62,9 @@
 	--color-grey-240:            #2a2a2a;
 	--color-grey-250:            #111111;
 	--color-black:               #000000;
+
+	--color-nearly-black:        #0C0C0C;   /* body background */
+	--color-dark-surface:        #323232;   /* equivalent of mid-dark surface (replaces grey-60 role) */
 	
 	/* -----------------------------------------------------------------
 		COLORS FOR ALERTS, NOTICES, INPUTS
@@ -97,7 +100,7 @@
 	--color-accent-pop:               var(--color-purple);
 
 	/* Neutrals */
-	--color-fg:                       var(--color-white);
+	--color-fg:                       var(--color-black);
 	--color-overlay-light:            rgba(255,255,255,0.25);
 
 	/* Gradient colors for backgrounds */
