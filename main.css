@@ -150,7 +150,8 @@
 	--color-border-block-dropdown:    var(--color-grey-20);              /* dropdown menu border */
 	--color-surface:                  var(--color-grey-10);              /* blockquote surfaces */
 	--color-bg-blockquote:            var(--color-fg);                   /* white card inside blurbs */
-	--color-bg-bookmark:              var(--color-grey-40);              /* bookmark user area */
+	--color-bg-bookmark:              var(--color-grey-40);              /* bookmark user area background */
+	--color-border-bookmark:          var(--color-grey-90);              /* bookmark user area border */
 	--color-border-subtle:            var(--color-grey-70);              /* light borders, action hover bg */
 	--color-bg-notice:                var(--color-blue-grey-light);      /* notice/alert background */
 	--color-border-notice:            var(--color-blue-grey-mid);        /* notice/alert border */
@@ -161,6 +162,7 @@
 	--color-bg-input:                 var(--color-fg);                   /* input, select, textarea */
 	--color-bg-input-focus:           var(--color-mauve-lighter);        /* input, select, textarea focus */
 	--color-border-input:             var(--color-grey-110);             /* bottom border on filter labels, inputs, select, textarea */
+	--color-text-filter-expanders:    var(--color-text-body);            /* expanders text color */
 	--color-bg-fieldset:              var(--color-grey-40);              /* fieldset, form background... */
 	--color-bg-fieldset-block:        var(--color-fg);                   /* blockquote form background... */
 	--color-border-form-dt:           var(--color-grey-90);              /* border form dt label */
@@ -1262,6 +1264,10 @@ form.filters dl dl {
 .filters dt.dates:has(+ dd input[value]) .expander {
   font-weight: bold;
 }
+	
+.filters .expander {
+	color: var(--color-text-body);
+}
 
 .filters .expander,
 .filters .expanded .expander {
@@ -1600,6 +1606,10 @@ p.kudos {
 .bookmark .own.user,
 .bookmark .user {
 	background: var(--color-bg-bookmark);
+}
+
+.bookmark .user {
+    border: 1px solid var(--color-border-bookmark);
 }
 
 .bookmark p.status {
