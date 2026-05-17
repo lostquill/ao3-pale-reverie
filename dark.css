@@ -293,9 +293,9 @@
 	--filter-logo:                    brightness(0) saturate(100%) invert(67%) sepia(44%) saturate(449%) hue-rotate(205deg) brightness(81%) contrast(88%); /* AO3 logo */
 	--filter-padlock-icon:            brightness(0) saturate(100%) invert(75%) sepia(15%) saturate(6238%) hue-rotate(179deg) brightness(103%) contrast(102%); /* restricted works padlock icon */
 	--filter-stat-icon:               brightness(0) saturate(100%) invert(79%) sepia(9%) saturate(966%) hue-rotate(207deg) brightness(91%) contrast(85%); /* work stats icons */
-	--filter-img-icon:                none;                                  /* profile pic, collection illustrations */
+	--filter-img-icon:                brightness(0.9) contrast(1.1) saturate(1.1);                                  /* profile pic, collection illustrations */
 	--filter-required-tags-icon:      invert(1) hue-rotate(77deg) saturate(1.5) brightness(0.6);                                  /* required tags icons */
-	--filter-bookmark-status:         sepia(23%) hue-rotate(28deg) brightness(98%) contrast(87%);                             /* bookmark status icons */
+	--filter-bookmark-status:         invert(1) hue-rotate(42deg) saturate(0.8) contrast(0.9);                             /* bookmark status icons */
 }
 
 	
