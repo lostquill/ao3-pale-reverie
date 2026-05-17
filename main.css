@@ -105,10 +105,11 @@
 	--color-nav-2:                    var(--color-mid-secondary);
 
 	/* Gradient colors for action buttons */
-	--color-btn-1:                    var(--color-mid-primary);
-	--color-btn-2:                    var(--color-light-primary);
-	--color-btn-3:                    var(--color-light-secondary);
-	--color-btn-4:                    var(--color-accent-soft);
+	--color-btn-1:                    var(--color-mid-secondary);
+	--color-btn-2:                    var(--color-light-secondary);
+	--color-btn-3:                    var(--color-accent-soft);
+	--color-btn-4:                    var(--color-mid-primary);
+	--color-btn-5:                    var(--color-light-primary);
 	
 	/* -----------------------------------------------------------------
 		UI LAYER
@@ -136,7 +137,7 @@
 	--color-required:                 var(--color-accent-pop);           /* required field, important color */
 
 	/* buttons */
-	--color-bg-button:                var(--color-btn-3);                /* button background */
+	--color-bg-button:                var(--color-btn-2);                /* button background */
 	--color-border-button:            var(--color-mid-secondary);        /* button border */
 	--color-text-button:              var(--color-dark-secondary);       /* button text */
 	--color-bg-button-hover:          var(--color-accent-soft);          /* button background on hover */
@@ -145,8 +146,8 @@
 	--color-text-button-active:       var(--color-dark-primary);         /* active/current button text */
 	
 	--grad-btn-1:                     linear-gradient(215deg, var(--color-btn-1), var(--color-btn-2), transparent); /* default button */
-	--grad-btn-2:                     linear-gradient(215deg, var(--color-btn-4), transparent, transparent);        /* hover - focus */
-	--grad-btn-3:                     linear-gradient(215deg, var(--color-btn-1), var(--color-btn-2), transparent); /* current */
+	--grad-btn-2:                     linear-gradient(215deg, var(--color-btn-3), transparent, transparent);        /* hover - focus */
+	--grad-btn-3:                     linear-gradient(215deg, var(--color-btn-4), var(--color-btn-5), transparent); /* current */
 
 	/* Image and icon filters
 	  - --filter-logo, --filter-padlock-icon and --filter-stat-icon target a specific color via CSS filter.
