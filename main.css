@@ -993,6 +993,10 @@ span.symbol {
 	HOMEPAGE / SPLASH
 	============================================================================= */
 
+.splash .module h3 {
+    border-bottom: 1px solid var(--color-splah-heading-border);
+}
+
 .splash > .module h3::before {
 	display: inline-block;
 	margin-right: 2px;
