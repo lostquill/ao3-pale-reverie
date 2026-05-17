@@ -71,6 +71,14 @@
 	--color-grey-240:            #2a2a2a;
 	--color-grey-250:            #111111;
 	--color-black:               #000000;
+	
+	/* -----------------------------------------------------------------
+		COLORS FOR ALERTS, NOTICES, INPUTS
+	   ----------------------------------------------------------------- */	
+
+	--color-blue-grey-light:     #d1e1ef;
+	--color-blue-grey-mid:       #c2d2df;
+	--color-mauve-lighter:       #f3efec;
 
 	
 	/* =================================================================
@@ -137,15 +145,24 @@
 
 	/* Backgrounds, borders, shadows & surfaces */
 	--color-bg-nav:                   var(--grad-right);                 /* navbar + footer background */
-	--color-border-nav-dropdown-link: var(--color-grey-170);             /* bottom border on nav links (dropdown menu) */
+	--color-border-nav-dropdown-link: var(--color-grey-110);             /* bottom border on nav links (dropdown menu) */
+	--color-bg-block-dropdown:        var(--color-grey-70);              /* dropdown menu background */
+	--color-border-block-dropdown:    var(--color-grey-20);              /* dropdown menu border */
 	--color-surface:                  var(--color-grey-10);              /* blockquote surfaces */
 	--color-bg-blockquote:            var(--color-fg);                   /* white card inside blurbs */
 	--color-bg-bookmark:              var(--color-grey-40);              /* bookmark user area */
 	--color-border-subtle:            var(--color-grey-70);              /* light borders, action hover bg */
+	--color-bg-notice:                var(--color-blue-grey-light);      /* notice/alert background */
+	--color-border-notice:            var(--color-blue-grey-mid);        /* notice/alert border */
+	--color-bg-legend:                var(--color-bg-body);              /* legend/label background on edit work/form */
+	--color-border-legend:            var(--color-grey-70);              /* legend/label border on edit work/form */
 
 	/* Form */
+	--color-bg-input:                 var(--color-fg);                   /* input, select, textarea */
+	--color-bg-input-focus:           var(--color-mauve-lighter);        /* input, select, textarea focus */
 	--color-border-input:             var(--color-grey-110);             /* bottom border on filter labels, inputs, select, textarea */
 	--color-bg-fieldset:              var(--color-grey-40);              /* fieldset, form background... */
+	--color-bg-fieldset-block:        var(--color-fg);                   /* blockquote form background... */
 	--color-border-form-dt:           var(--color-grey-90);              /* border form dt label */
 	--color-question:                 var(--color-fg);                   /* help symbol text color */
 	--color-bg-question:              var(--color-accent-pop);           /* help symbol background */
@@ -385,7 +402,7 @@ h2, h3, h4, h5, h6, .heading {
 	cursor: pointer;
 }
 
-/* Nav link colors */
+/* Nav links */
 #header a,
 #header a:visited,
 #header .primary .open a,
@@ -393,6 +410,12 @@ h2, h3, h4, h5, h6, .heading {
 #header .primary .dropdown a:focus,
 #dashboard a {
 	color: var(--color-link-nav);
+}
+
+#header .menu, #small_login {
+	background-image: none;
+	background-color: var(--color-bg-block-dropdow);
+	border: outset 1px var(--color-border-block-dropdown);
 }
 
 #header a:hover,
@@ -1068,8 +1091,36 @@ h2.heading a.tag:hover {
 
 
 /* =============================================================================
-	FORMS / FIELDSET
+	ALERTS / FORMS / FIELDSET
 	============================================================================= */
+
+/* Alerts and notices */
+.notice, .comment_notice, .kudos_notice, 
+ul.notes, .caution, .error, .comment_error, 
+.kudos_error, .alert.flash {
+    background: var(--color-bg-notice);
+    border: 1px solid var(--color-border-notice);
+    box-shadow: none;
+    border-radius: 0.25em;
+}
+
+/* Legends/labels on work edits */
+form.verbose legend, .verbose form legend {
+    background: var(--color-bg-legend);
+    border: 2px solid var(--color-border-legend);
+    box-shadow: none;
+}
+
+input, textarea, select {
+	background: var(--color-bg-input);
+    font-size: 100%;
+    border: 1px solid var(--color-border-input);
+    box-shadow: none;
+}
+
+input:focus, select:focus, textarea:focus {
+	background: var(--color-bg-input-focus);
+}
 
 fieldset, form dl, fieldset dl dl, fieldset fieldset fieldset, fieldset fieldset dl dl, dd.hideme, form blockquote.userstuff {
     background: var(--color-bg-fieldset);
@@ -1077,10 +1128,8 @@ fieldset, form dl, fieldset dl dl, fieldset fieldset fieldset, fieldset fieldset
     box-shadow: none;
 }
 
-input, textarea, select {
-    font-size: 100%;
-    border: 1px solid var(--color-border-input);
-    box-shadow: none;
+fieldset fieldset, fieldset dl dl, form blockquote.userstuff {
+    background: var(--color-bg-fieldset-block);
 }
 
 input:not([type="image" i], [type="range" i], [type="checkbox" i], [type="radio" i]), select:not([multiple]) {
