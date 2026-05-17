@@ -223,6 +223,7 @@
 	--color-link-fave-over:           var(--color-fg);                   /* link color on fave tags on hover */
 	--color-shadow-fave:              var(--color-fg);                   /* shadow text on fave tags */
 	--color-shadow-fave-hover:        var(--color-grey-250);             /* shadow text on fave tags on hover */
+	heart:     var(--color-purple);               /* color of symbol before link */
 
 	/* Tags — ratings */
 	--color-tag-rating-bg:            var(--color-accent);               /* rating tag background */
@@ -231,7 +232,9 @@
 	--color-tag-relation-bg:          var(--grad-left);                  /* relationship tag background */
 	--color-tag-relation-border:      var(--color-fg);                   /* relationships tag border */
 	--color-heart-relationship:       var(--color-accent-pop);           /* Heart symbol color after tag */
+	--color-heart-relationship-hover: var(--color-light-primary);        /* heart symbol color hover */
 	--color-shadow-heart:             var(--color-light-primary);        /* Heart symbol shadow after tag */
+	--color-shadow-heart-hover:       var(--color-dark-primary);         /* heart symbol shadow hover */
 
 	/* Tags — characters */
 	--color-tag-character:            var(--color-dark-primary);         /* character tag text color */
@@ -892,6 +895,11 @@ ul.tags li.relationships a.tag[href*="*s*"]::after {
     text-shadow: 1px 1px 4px var(--color-shadow-heart);
 }
 
+ul.tags li.relationships a.tag[href*="*s*"]:hover::after {
+    color: var(--color-heart-relationship-hover);
+    text-shadow: 1px 1px 4px var(--color-heart-relationship-hover);
+}
+
 /* Character tags: warm mauve tint */
 li.characters a.tag,
 .character a.tag {
@@ -1373,6 +1381,10 @@ span.symbol {
 
 .splash .favorite li a {
     margin: .5em auto;
+}
+
+.splash .browse li a:before {
+	color: var(--color-splash-browse-symbol);
 }
 
 .splash .favorite li:nth-of-type(even) a,
