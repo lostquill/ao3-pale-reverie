@@ -158,20 +158,6 @@
 	--grad-btn-2:                     linear-gradient(215deg, var(--color-btn-3), transparent, transparent);        /* hover - focus */
 	--grad-btn-3:                     linear-gradient(215deg, var(--color-btn-4), var(--color-btn-5), transparent); /* current */
 
-	/* Image and icon filters
-	  - --filter-logo, --filter-padlock-icon and --filter-stat-icon target a specific color via CSS filter.
-	    To generate a filter that matches a hex color of your choice,
-	    use https://angel-rs.github.io/css-color-filter-generator/
-	  - --filer-header, --filter-img-icon, --filter-required-tags-icon, and --filter-bookmark-status
-	    use generic adjustments (contrast, sepia, brightness) rather than color targeting. */
-	--filter-header:                  none;      /* header banner */
-	--filter-logo:                    brightness(0) saturate(100%) invert(45%) sepia(10%) saturate(1214%) hue-rotate(314deg) brightness(92%) contrast(83%); /* AO3 logo */
-	--filter-padlock-icon:            brightness(0) saturate(100%) invert(23%) sepia(55%) saturate(2017%) hue-rotate(296deg) brightness(90%) contrast(90%); /* restricted works padlock icon */
-	--filter-stat-icon:               invert(35%) sepia(8%) saturate(1985%) hue-rotate(319deg) brightness(93%) contrast(92%); /* work stats icons */
-	--filter-img-icon:                contrast(60%) sepia(5%) saturate(90%) brightness(1.3);                                  /* profile pic, collection illustrations */
-	--filter-required-tags-icon:      contrast(60%) sepia(5%) saturate(90%) brightness(1.3);                                  /* required tags icons */
-	--filter-bookmark-status:         sepia(23%) hue-rotate(28deg) brightness(98%) contrast(87%);                             /* bookmark status icons */
-
 	/* Navigation & UI links */
 	--color-link-default:             var(--color-accent);               /* default link color */
 	--color-link-nav:                 var(--color-dark-secondary);       /* header links, dashboard links */
@@ -259,6 +245,31 @@
 	--color-footer-heading-shadow:    var(--color-light-secondary);      /* footer heading text shadow */
 	--color-footer-link:              var(--color-accent);               /* footer link text color */
 	--color-shadow-footer-link:       var(--color-grey-10);              /* footer link text shadow */
+
+	/* Layout & spacing */
+	--height-header-banner:           100px;             /* header banner height in #header::before */
+	--width-dashboard:                82%;               /* #main.dashboard width */
+	--padding-main:                   1.5em 5%;          /* #main padding */
+	--padding-dashboard:              1.5em 5%;          /* #dashboard padding — intentionally separate */
+	--radius-user-images:             50%;               /* radius on avatars and collection illustrations */
+	--radius-tag-sm:                  5px;               /* rating, warning, category, fandom, relationship tags */
+	--radius-tag:                     10px;              /* character, freeform tags */
+	--radius-required-tags:           0 20% 0 20%;       /* required tags icons (rating symbols) */
+	--radius-footer-module:           20px 0;            /* footer module corners */
+
+	/* Image and icon filters
+	  - --filter-logo, --filter-padlock-icon and --filter-stat-icon target a specific color via CSS filter.
+	    To generate a filter that matches a hex color of your choice,
+	    use https://angel-rs.github.io/css-color-filter-generator/
+	  - --filer-header, --filter-img-icon, --filter-required-tags-icon, and --filter-bookmark-status
+	    use generic adjustments (contrast, sepia, brightness) rather than color targeting. */
+	--filter-header:                  none;      /* header banner */
+	--filter-logo:                    brightness(0) saturate(100%) invert(45%) sepia(10%) saturate(1214%) hue-rotate(314deg) brightness(92%) contrast(83%); /* AO3 logo */
+	--filter-padlock-icon:            brightness(0) saturate(100%) invert(23%) sepia(55%) saturate(2017%) hue-rotate(296deg) brightness(90%) contrast(90%); /* restricted works padlock icon */
+	--filter-stat-icon:               invert(35%) sepia(8%) saturate(1985%) hue-rotate(319deg) brightness(93%) contrast(92%); /* work stats icons */
+	--filter-img-icon:                contrast(60%) sepia(5%) saturate(90%) brightness(1.3);                                  /* profile pic, collection illustrations */
+	--filter-required-tags-icon:      contrast(60%) sepia(5%) saturate(90%) brightness(1.3);                                  /* required tags icons */
+	--filter-bookmark-status:         sepia(23%) hue-rotate(28deg) brightness(98%) contrast(87%);                             /* bookmark status icons */
 }
 
 
@@ -332,7 +343,7 @@ h2, h3, h4, h5, h6, .heading {
     content: "";
     display: block;
     width: 100%;
-    height: 100px;
+    height: var(--height-header-banner);
     background: url(https://raw.githubusercontent.com/lostquill/ao3-pale-reverie/main/assets/header.png) center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -453,7 +464,7 @@ h2, h3, h4, h5, h6, .heading {
 	height: 2.5em;
 	width: 2.5em;
 	border: 2px solid var(--color-border-rounded-pic);
-	border-radius: 50%;
+	border-radius: var(--radius-user-images);
 	filter: var(--filter-img-icon);
 	transition: 200ms ease-in-out;
 }
@@ -471,7 +482,7 @@ h2, h3, h4, h5, h6, .heading {
 .primary .icon,
 .blurb .header img,
 .comment .icon {
-	border-radius: 50%;
+	border-radius: var(--radius-user-images);
 }
 
 .comment .icon,
@@ -520,7 +531,7 @@ h2, h3, h4, h5, h6, .heading {
 }
 
 .index .skins .icon {
-	border-radius: 50%;
+	border-radius: var(--radius-user-images);
 }
 
 
@@ -547,7 +558,7 @@ a.tag,
 li.added.tag,
 a:visited {
 	line-height: 2;
-	border-radius: 10px;
+	border-radius: var(--radius-tag);
 	padding: 0 6px;
 	font-weight: normal;
 	color: var(--color-link-default);
@@ -773,7 +784,7 @@ li.relationships a.tag:hover,
 .fandom .tag,
 .fandoms .tag {
 	color: var(--color-tag-default);
-	border-radius: 5px;
+	border-radius: var(--radius-tag-sm);
 	background: var(--color-tag-default-bg);
 	border: 1px dashed var(--color-tag-default-border);
 	text-shadow: 1px 1px 1px var(--color-tag-shadow-dark);
@@ -815,7 +826,7 @@ li.relationships a.tag,
 	text-shadow: 1px 1px 1px var(--color-tag-shadow-dark);
   	background: var(--color-tag-relation-bg);
 	border: 1px dashed var(--color-tag-relation-border);
-	border-radius: 5px;
+	border-radius: var(--radius-tag-sm);
 }
 
 /* Heart symbol after relationship tags
@@ -887,7 +898,7 @@ li.freeforms a.tag:hover,
 h5.tags.heading {
 	background: var(--color-bg-collection-tag) !important;
 	padding: 5px;
-	border-radius: 10px;
+	border-radius: var(--radius-tag);
 }
 
 /* --- 3. Collection context: all tags → neutral --- */
@@ -925,7 +936,7 @@ h2.heading a.tag:hover {
 	background: var(--color-tag-default-bg);
 	border: 1px dashed var(--color-tag-default-border);
 	text-shadow: 1px 1px 1px var(--color-tag-shadow-dark);
-	border-radius: 5px;
+	border-radius: var(--radius-tag-sm);
 }
 
 /* Relationship tags inside bookmarks: same as global */
@@ -936,7 +947,7 @@ h2.heading a.tag:hover {
 	text-shadow: 1px 1px 1px var(--color-tag-shadow-dark);
 	background: var(--color-tag-relation-bg);
 	border: 1px dashed var(--color-tag-relation-border);
-	border-radius: 5px;
+	border-radius: var(--radius-tag-sm);
 }
 
 
@@ -945,15 +956,20 @@ h2.heading a.tag:hover {
 	============================================================================= */
 
 #main.dashboard {
-    width: 82%;
+    width: var(--width-dashboard);
+    padding: var(--padding-dashboard);
 }
+
+#main {
+    padding: var(--padding-main);
+}
+
 #main, #main.dashboard {
     flex-grow: 1;
     box-sizing: border-box;
     min-height: unset;
     max-width: 100%;
     margin: 0;
-    padding: 1.5em 5%;
     line-height: 1.286;
 }
 
@@ -979,7 +995,6 @@ h2.heading a.tag:hover {
 .home .header h2 {
   padding: 0.429em 0;
   margin: 0;
-  margin-left: 100px;
   border-bottom: 2px solid var(--color-line-icon);
 }
 
@@ -1370,7 +1385,7 @@ li.blurb {
 
 /* Required tags icons: desaturated */
 .blurb ul.required-tags li span {
-    border-radius: 0 20% 0 20%;
+    border-radius: var(--radius-required-tags);
 	filter: var(--filter-required-tags-icon);
 }
 
@@ -1780,7 +1795,7 @@ dl.stats dd {
 #footer .module {
     background: var(--color-overlay-light);
     padding: 2em;
-    border-radius: 20px 0;
+    border-radius: var(--radius-footer-module);
     box-sizing: border-box;
 }
 
