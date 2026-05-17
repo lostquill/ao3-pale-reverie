@@ -173,6 +173,7 @@
 	--color-heading:                  var(--color-dark-secondary);       /* h2.heading */
 	--color-bg-heading:               var(--color-accent);               /* h2.collections */
 	--color-bg-heading-5:             var(--color-neutral-main);         /* h5.tags.heading */
+	--color-splah-heading-border:     var(--color-grey-90);              /* bottom border on splah headings */
 
 	/* Dashboard */
     --color-column-border-dashboard:  var(--grad-bottom);                /* dashboard column border right */
