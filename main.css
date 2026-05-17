@@ -153,7 +153,7 @@
 	--color-bg-bookmark:              var(--color-grey-40);              /* bookmark user area background */
 	--color-border-bookmark:          var(--color-grey-90);              /* bookmark user area border */
 	--color-border-subtle:            var(--color-grey-70);              /* light borders, action hover bg */
-	--color-shadow-work-meta:         var(--color-grey-140);             /* shadow box constellation */
+	--color-shadow-work-meta:         var(--color-grey-110);             /* shadow box constellation */
 	--color-bg-notice:                var(--color-blue-grey-light);      /* notice/alert background */
 	--color-border-notice:            var(--color-blue-grey-mid);        /* notice/alert border */
 	--color-bg-legend:                var(--color-bg-body);              /* legend/label background on edit work/form */
@@ -1536,7 +1536,7 @@ ul.work.navigation.actions {
 
 /* Shadow around meta box */
 .wrapper {
-    box-shadow: var(--color-shadow-work-meta);
+    box-shadow: 1px 1px 5px var(--color-shadow-work-meta);
 }
 
 /* Decorative border on chapter/series/profile/statistics meta */
