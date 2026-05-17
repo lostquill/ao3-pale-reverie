@@ -1,8 +1,19 @@
 /* =============================================================================
-	AO3 PALE REVERIE — light.css
+	AO3 PALE REVERIE — main.css
 	Author: LostQuill
-	Role: Parent skin (light theme)
-	============================================================================ */
+	Role: Parent skin (base styles)
+
+	Credits:
+	Stats icons & hover text system by ZerafinaCSS
+		AO3: https://archiveofourown.org/works/55604875
+
+	Blurb icon layout + button styling adapted from Site Skin Add-Ons by ZerafinaCSS
+		AO3: https://archiveofourown.org/works/76032096
+
+	Sticky dashboard + search/filter structure inspired by: 
+		- Rosé Pine Site Skin by BlackBatCat → https://archiveofourown.org/works/69993411
+		- Neos Skin by ZerafinaCSS → https://archiveofourown.org/works/65849527
+	============================================================================= */
 
 
 /* -----------------------------------------------------------------------------
@@ -57,7 +68,7 @@
 	--color-grey-140:            #999999;
 	--color-grey-170:            #808080;
 	--color-grey-220:            #474747;
-	--color-nearly-black:        #141414;
+	--color-nearly-black:        #111111;
 	--color-black:               #000000;
 
 	
@@ -88,36 +99,68 @@
 	/* Neutrals */
 	--color-neutral-main:             var(--color-white);
 	--color-overlay-light:            rgba(255,255,255,0.25);
+
+	/* Gradient colors for backgrounds: navbar, footer, relationship tag pill + dashboard border */
+	--color-nav-1:                    var(--color-mid-primary);
+	--color-nav-2:                    var(--color-mid-secondary);
+
+	/* Gradient colors for action buttons */
+	--color-btn-1:                    var(--color-mid-secondary);
+	--color-btn-2:                    var(--color-light-secondary);
+	--color-btn-3:                    var(--color-accent-soft);
+	--color-btn-4:                    var(--color-mid-primary);
+	--color-btn-5:                    var(--color-light-primary);
 	
 	/* -----------------------------------------------------------------
 		UI LAYER
 	   ----------------------------------------------------------------- */
 
-	/* Color gradient (navbar background, footer background, relationship tag) */
-	--color-first:                    var(--color-mid-primary);
-	--color-sec:                      var(--color-mid-secondary);
-	--grad-right:                     linear-gradient(45deg, var(--color-first), var(--color-first), var(--color-sec), var(--color-sec));
-	--grad-left:                      linear-gradient(-45deg, var(--color-first), var(--color-first), var(--color-sec), var(--color-sec));
+	/* Navigation gradients */
+	--grad-right:                     linear-gradient(45deg, var(--color-nav-1), var(--color-nav-1), var(--color-nav-2), var(--color-nav-2));
+	--grad-left:                      linear-gradient(-45deg, var(--color-nav-1), var(--color-nav-1), var(--color-nav-2), var(--color-nav-2));
+    --grad-bottom:                    linear-gradient(to bottom, var(--color-nav-1), var(--color-nav-2), var(--color-nav-1));
 
 	/* Backgrounds, borders, shadows & surfaces */
+	--color-bg-selection:             var(--color-accent);               /* mouse selection background */
 	--color-bg-body:                  var(--color-grey-20);              /* body background */
-	--color-bg-nav:                   var(--grad-right);                 /* footer background */
+	--color-bg-nav:                   var(--grad-right);                 /* navbar + footer background */
 	--color-surface:                  var(--color-grey-10);              /* blockquote surfaces */
 	--color-bg-blurb:                 var(--color-neutral-main);         /* white card inside blurbs */
 	--color-bg-bookmark:              var(--color-grey-40);              /* bookmark user area */
 	--color-border-subtle:            var(--color-grey-70);              /* light borders, action hover bg */
-	--color-border-mid:               var(--color-grey-170);             /* home header bottom border */
-	--color-shadow-inset:             var(--color-grey-110);             /* inset shadow */
-	--color-border-filter-label:      var(--color-grey-110);             /* bottom border on filter labels */
-	--color-shadow-footer-link:       var(--color-grey-170);             /* footer link shadow */
-	--color-border-rounded-pic:       var(--color-accent);               /* border around profile pic */
 
-	/* Image and icon filters */
-	--filter-logo:                    hue-rotate(50deg) brightness(2.4) saturate(0.3);                                        /* AO3 logo */
+	/* Form */
+	--color-border-input:             var(--color-grey-110);             /* bottom border on filter labels, inputs, select, textarea */
+	--color-bg-fieldset:              var(--color-grey-40);              /* fieldset, form background... */
+	--color-border-form-dt:           var(--color-grey-90);              /* border form dt label */
+	--color-bg-question:              var(--color-accent-pop);           /* help symbol background */
+	--color-required:                 var(--color-accent-pop);           /* required field, important color */
+
+	/* buttons */
+	--color-bg-button:                var(--color-btn-2);                /* button background */
+	--color-border-button:            var(--color-mid-secondary);        /* button border */
+	--color-text-button:              var(--color-dark-secondary);       /* button text */
+	--color-bg-button-hover:          var(--color-accent-soft);          /* button background on hover */
+	--color-bg-button-active:         var(--color-light-primary);        /* active/current button background */
+	--color-border-button-active:     var(--color-mid-primary);          /* active/current button border */
+	--color-text-button-active:       var(--color-dark-primary);         /* active/current button text */
+	
+	--grad-btn-1:                     linear-gradient(215deg, var(--color-btn-1), var(--color-btn-2), transparent); /* default button */
+	--grad-btn-2:                     linear-gradient(215deg, var(--color-btn-3), transparent, transparent);        /* hover - focus */
+	--grad-btn-3:                     linear-gradient(215deg, var(--color-btn-4), var(--color-btn-5), transparent); /* current */
+
+	/* Image and icon filters
+	  - --filter-logo, --filter-padlock-icon and --filter-stat-icon target a specific color via CSS filter.
+	    To generate a filter that matches a hex color of your choice,
+	    use https://angel-rs.github.io/css-color-filter-generator/
+	  - --filter-img-icon, --filter-required-tags-icon, and --filter-bookmark-status
+	    use generic adjustments (contrast, sepia, brightness) rather than color targeting. */
+	--filter-logo:                    brightness(0) saturate(100%) invert(45%) sepia(10%) saturate(1214%) hue-rotate(314deg) brightness(92%) contrast(83%); /* AO3 logo */
+	--filter-padlock-icon:            brightness(0) saturate(100%) invert(23%) sepia(55%) saturate(2017%) hue-rotate(296deg) brightness(90%) contrast(90%); /* restricted works padlock icon */
+	--filter-stat-icon:               invert(35%) sepia(8%) saturate(1985%) hue-rotate(319deg) brightness(93%) contrast(92%); /* work stats icons */
 	--filter-img-icon:                contrast(60%) sepia(5%) saturate(90%) brightness(1.3);                                  /* profile pic, collection illustrations */
 	--filter-required-tags-icon:      contrast(60%) sepia(5%) saturate(90%) brightness(1.3);                                  /* required tags icons */
 	--filter-bookmark-status:         sepia(23%) hue-rotate(28deg) brightness(98%) contrast(87%);                             /* bookmark status icons */
-	--filter-stat-icon:               invert(35%) sepia(8%) saturate(1985%) hue-rotate(319deg) brightness(93%) contrast(92%); /* work stats icons */
 
 	/* Navigation & UI links */
 	--color-link-default:             var(--color-accent);               /* default link color */
@@ -125,19 +168,24 @@
 	--color-link-menu:                var(--color-neutral-main);         /* left header links (fandoms, browse, search...) */
 	--color-link-nav-hover:           var(--color-accent-pop);           /* header links on hover */
 	--color-link-nav-active:          var(--color-accent);               /* dropdown menu hover, user focus */
-	--color-border-action-hover:      var(--color-grey-140);             /* border color on hover for interactive elements (buttons, links, actions) */
 
 	/* Content links */
 	--color-link-visited:             var(--color-dark-secondary);       /* h4 headings visited */
 	--color-link-visited-hover:       var(--color-accent);               /* h4 headings visited:hover */
 
 	/* Headings */
+	--color-line-icon:                var(--color-accent-soft);          /* top line going from rounded icon to heading */
+	--color-border-rounded-pic:       var(--color-accent);               /* border around profile pic */
 	--color-heading:                  var(--color-dark-secondary);       /* h2.heading */
 	--color-bg-heading:               var(--color-accent);               /* h2.collections */
 	--color-bg-heading-5:             var(--color-neutral-main);         /* h5.tags.heading */
 
 	/* Dashboard */
-	--color-text-dashboard:           var(--color-dark-primary);         /* dashboard span labels */
+    --color-column-border-dashboard:  var(--grad-bottom);                /* dashboard column border right */
+	--color-bg-link-dashboard-hover:  var(--color-border-subtle);        /* dashboard link background hover */
+	--color-text-dashboard:           var(--color-dark-primary);         /* dashboard span label for current page */
+	--color-bg-dashboard-current:     var(--color-grey-90);              /* dashboard link background current */
+	--color-border-section-dashboard: var(--color-border-subtle);        /* dashboard border above section */
 
 	/* Tags — global */
 	--color-tag-default:              var(--color-neutral-main);         /* default tag text color */
@@ -146,14 +194,16 @@
 	--color-tag-default-border:       var(--color-light-primary);        /* default tag border */
 	--color-tag-shadow-light:         var(--color-grey-50);              /* default tag shadow light */
 	--color-tag-shadow-dark:          var(--color-grey-220);             /* default tag shadow dark */
+	--color-shadow-fave-hover:        var(--color-nearly-black);         /* shadow text on fave tags homepage splash on hover */
 
 	/* Tags — ratings */
 	--color-tag-rating-bg:            var(--color-accent);               /* rating tag background */
 
 	/* Tags — relationships */
-	--color-tag-relation-bg:          var(--grad-left);     /* relationship tag background */
+	--color-tag-relation-bg:          var(--grad-left);                  /* relationship tag background */
 	--color-tag-relation-border:      var(--color-neutral-main);         /* relationships tag border */
-	--color-heart-relationship:       var(--color-accent-pop);           /* Heart symbol after tags */
+	--color-heart-relationship:       var(--color-accent-pop);           /* Heart symbol color after tag */
+	--color-shadow-heart:             var(--color-light-primary);        /* Heart symbol shadow after tag */
 
 	/* Tags — characters */
 	--color-tag-character:            var(--color-dark-primary);         /* character tag text color */
@@ -187,6 +237,12 @@
 	--color-stats-border:             var(--color-accent);               /* border color for stat links underline */
 	--color-stats-tooltip:            var(--color-grey-220);             /* text color inside stat tooltip */
 	--color-stats-bg-tooltip:         var(--color-grey-50);              /* background color for stat tooltip/icon area */
+
+	/* Footer */
+	--color-footer-heading:           var(--color-dark-primary);         /* footer heading text color */
+	--color-footer-heading-shadow:    var(--color-light-secondary);      /* footer heading text shadow */
+	--color-footer-link:              var(--color-accent);               /* footer link text color */
+	--color-shadow-footer-link:       var(--color-grey-10);              /* footer link text shadow */
 }
 
 	
