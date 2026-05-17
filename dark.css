@@ -49,12 +49,12 @@
 
 	--color-white:               #ffffff;
 	--color-grey-20:             #f3f3f3;
-	--color-grey-40:             #ededed;
-	--color-grey-50:             #e6e6e6;
+	--color-grey-40:             #131313;
+	--color-grey-50:             #303030;
 	--color-grey-110:            #bbbbbb;
 	--color-grey-140:            #999999;
 	--color-grey-170:            #808080;
-	--color-grey-220:            #474747;
+	--color-grey-220:            #9a9a9a;
 	--color-grey-240:            #2a2a2a;
 	--color-grey-250:            #111111;
 	--color-black:               #000000;
@@ -147,6 +147,7 @@
 	--color-bg-bookmark:              var(--color-grey-40);              /* bookmark user area background */
 	--color-border-bookmark:          var(--color-taupe);              /* bookmark user area border */
 	--color-border-subtle:            var(--color-muddy-grey);              /* light borders, action hover bg */
+	--color-shadow-work-meta:         var(--color-almost-black);             /* shadow box constellation */
 	--color-bg-notice:                var(--color-blue-grey-light);      /* notice/alert background */
 	--color-border-notice:            var(--color-blue-grey-mid);        /* notice/alert border */
 	--color-bg-legend:                var(--color-bg-body);              /* legend/label background on edit work/form */
@@ -220,7 +221,7 @@
 	--color-link-fave-over:           var(--color-fg);                   /* link color on fave tags on hover */
 	--color-shadow-fave:              var(--color-fg);                   /* shadow text on fave tags */
 	--color-shadow-fave-hover:        var(--color-grey-250);             /* shadow text on fave tags on hover */
-	--color-splash-browse-symbol:     var(--color-purple);               /* color of symbol before link */
+	--color-splash-browse-symbol:     var(--color-sky);               /* color of symbol before link */
 
 	/* Tags — ratings */
 	--color-tag-rating-bg:            var(--color-accent-soft);          /* rating tag background */
@@ -373,3 +374,36 @@ h4.viewed.heading {
 .draft.work .meta {
 	border-image: url(https://raw.githubusercontent.com/lostquill/ao3-pale-reverie/main/assets/border-constellation-dark.png) 35% round !important;
 }
+
+
+
+
+/* -----------------------------------------------------------------
+	OVERRIDES
+   ----------------------------------------------------------------- */	
+
+/* Decorative border on docs pages/chapter/series/profile/statistics meta  */
+
+
+/* Decorative border on docs pages */
+.docs .browse ul,
+.docs .favorite ul {
+	border: 50px solid transparent;
+	border-image: url(https://raw.githubusercontent.com/lostquill/ao3-pale-reverie/modes/assets/border-constellation-dark.png) 35% round;
+	border-image-outset: 10px;
+	border-image-width: 200px;
+}
+
+/* Decorative border on chapter/series/profile/statistics meta */
+.chapters-show.region .meta,
+.works-show.region .meta,
+.wrapper .series.meta,
+.wrapper .statistics.meta,
+.profile .wrapper .meta,
+.draft.work .meta {
+	border: 80px solid transparent;
+	border-image: url(https://raw.githubusercontent.com/lostquill/ao3-pale-reverie/modes/assets/border-constellation-dark.png) 35% round;
+	border-image-outset: 10px;
+	border-image-width: 200px;
+}
+
