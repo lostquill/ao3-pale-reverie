@@ -896,7 +896,7 @@ ul.tags li.relationships a.tag[href*="*s*"]::after {
 
 ul.tags li.relationships a.tag[href*="*s*"]:hover::after {
     color: var(--color-heart-relationship-hover);
-    text-shadow: 1px 1px 4px var(--color-heart-relationship-hover);
+    text-shadow: 1px 1px 4px var(--color-shadow-heart-hover);
 }
 
 /* Character tags: warm mauve tint */
