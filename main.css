@@ -302,20 +302,6 @@ h2, h3, h4, h5, h6, .heading {
     font-weight: 400;
 }
 
-.listbox > .heading, h2.heading {
-	color: var(--color-heading);
-}
-
-.home .header h2::before {
-	display: inline-block;
-	margin-right: 2px;
-	content: "\00a0✦";
-}
-
-.home .header h2 {
-	border-bottom: 2px solid var(--color-line-icon);
-}
-
 
 /* =============================================================================
 	HEADER
@@ -517,16 +503,6 @@ h2, h3, h4, h5, h6, .heading {
 	border-radius: 50%;
 }
 
-/* Vertical positioning tweaks */
-.picture .icon img,
-.index .picture .icon {
-	top: -.2em;
-}
-
-.profile .header .icon img.icon {
-	top: -.9em;
-}
-
 
 /* =============================================================================
 	LINKS
@@ -689,8 +665,6 @@ a:link.current {
   background: none;
   color: inherit; /* text color */
 }
-
-
 
 /*>========== buttons with "to top" arrows and "expand"/"contract" symbols ==========<*/
 
@@ -974,6 +948,23 @@ h2.heading a.tag:hover {
     overflow-x: visible;
     overflow-y: auto;
     scrollbar-color: transparent transparent;
+}
+
+.listbox > .heading, h2.heading {
+	color: var(--color-heading);
+}
+
+.home .header h2::before {
+	display: inline-block;
+	margin-right: 2px;
+	content: "\00a0✦";
+}
+
+.home .header h2 {
+  padding: 0.429em 0;
+  margin: 0;
+  margin-left: 100px;
+  border-bottom: 2px solid var(--color-line-icon);
 }
 
 /* Gradient border on the right */
