@@ -126,7 +126,7 @@
     --grad-bottom:                    linear-gradient(to bottom, var(--color-nav-1), var(--color-nav-2), var(--color-nav-1));
 
 	/* Backgrounds, borders, shadows & surfaces */
-	--color-bg-selection:             var(--color-accent);               /* mouse selection background */
+	--color-bg-selection:             var(--color-accent);               /* Text selection highlight background */
 	--color-bg-nav:                   var(--grad-right);                 /* navbar + footer background */
 	--color-surface:                  var(--color-grey-10);              /* blockquote surfaces */
 	--color-bg-blurb:                 var(--color-neutral-main);         /* white card inside blurbs */
