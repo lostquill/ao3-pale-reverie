@@ -48,13 +48,9 @@
 	   ----------------------------------------------------------------- */	
 
 	--color-white:               #ffffff;
-	--color-grey-10:             #f6f6f6;
 	--color-grey-20:             #f3f3f3;
 	--color-grey-40:             #ededed;
 	--color-grey-50:             #e6e6e6;
-	--color-grey-60:             #dfdfdf;
-	--color-grey-70:             #dddddd;
-	--color-grey-90:             #cdcdcd;
 	--color-grey-110:            #bbbbbb;
 	--color-grey-140:            #999999;
 	--color-grey-170:            #808080;
@@ -63,8 +59,12 @@
 	--color-grey-250:            #111111;
 	--color-black:               #000000;
 
+	--very-light-beige:          #D5D5D5;   /* text body */
+	--color-taupe:               #373737;   /* grey-90 */
+	--color-muddy-grey:          #222222;   /* grey-70 */
 	--color-nearly-black:        #0C0C0C;   /* body background */
 	--color-dark-surface:        #323232;   /* equivalent of mid-dark surface (replaces grey-60 role) */
+	--color-almost-black:        #090909;   /* equivalent of dark surface (replaces grey-10 role) */
 	
 	/* -----------------------------------------------------------------
 		COLORS FOR ALERTS, NOTICES, INPUTS
@@ -123,8 +123,8 @@
 	--color-bg-selection:             var(--color-accent-soft);          /* background */
 
 	/* Body */
-	--color-text-body:                var(--color-grey-240);             /* global text color */
-	--color-bg-body:                  var(--color-grey-20);              /* body background */
+	--color-text-body:                var(--very-light-beige);           /* global text color */
+	--color-bg-body:                  var(--color-nearly-black);         /* body background */
 
 	/* Navigation gradients (navbar, footer, relationship tag pills + dashboard border) */
 	--grad-right:                     linear-gradient(45deg, var(--color-nav-1), var(--color-nav-1), var(--color-nav-2), var(--color-nav-2));
@@ -140,17 +140,17 @@
 	/* Backgrounds, borders, shadows & surfaces */
 	--color-bg-nav:                   var(--grad-right);                 /* navbar + footer background */
 	--color-border-nav-dropdown-link: var(--color-grey-110);             /* bottom border on nav links (dropdown menu) */
-	--color-bg-block-dropdown:        var(--color-grey-70);              /* dropdown menu background */
+	--color-bg-block-dropdown:        var(--color-muddy-grey);              /* dropdown menu background */
 	--color-border-block-dropdown:    var(--color-grey-20);              /* dropdown menu border */
-	--color-surface:                  var(--color-grey-10);              /* blockquote surfaces */
+	--color-surface:                  var(--color-almost-black);              /* blockquote surfaces */
 	--color-bg-blockquote:            var(--color-fg);                   /* white card inside blurbs */
 	--color-bg-bookmark:              var(--color-grey-40);              /* bookmark user area background */
-	--color-border-bookmark:          var(--color-grey-90);              /* bookmark user area border */
-	--color-border-subtle:            var(--color-grey-70);              /* light borders, action hover bg */
+	--color-border-bookmark:          var(--color-taupe);              /* bookmark user area border */
+	--color-border-subtle:            var(--color-muddy-grey);              /* light borders, action hover bg */
 	--color-bg-notice:                var(--color-blue-grey-light);      /* notice/alert background */
 	--color-border-notice:            var(--color-blue-grey-mid);        /* notice/alert border */
 	--color-bg-legend:                var(--color-bg-body);              /* legend/label background on edit work/form */
-	--color-border-legend:            var(--color-grey-70);              /* legend/label border on edit work/form */
+	--color-border-legend:            var(--color-muddy-grey);              /* legend/label border on edit work/form */
 
 	/* Form */	
 	--color-bg-input:                 var(--color-fg);                   /* input, select, textarea */
@@ -159,7 +159,7 @@
 	--color-text-filter-expanders:    var(--color-text-body);            /* expanders text color */
 	--color-bg-fieldset:              var(--color-grey-40);              /* fieldset, form background... */
 	--color-bg-fieldset-block:        var(--color-fg);                   /* blockquote form background... */
-	--color-border-form-dt:           var(--color-grey-90);              /* border form dt label */
+	--color-border-form-dt:           var(--color-taupe);              /* border form dt label */
 	--color-question:                 var(--color-fg);                   /* help symbol text color */
 	--color-bg-question:              var(--color-accent-pop);           /* help symbol background */
 	--color-required:                 var(--color-accent-pop);           /* required field, important color */
@@ -193,13 +193,13 @@
 	--color-border-rounded-pic:       var(--color-accent-soft);          /* border around profile pic */
 	--color-heading:                  var(--color-light-secondary);      /* h2.heading */
 	--color-bg-collection-tag:        var(--color-fg);                   /* h5.tags.heading for collection tags */
-	--color-splah-heading-border:     var(--color-grey-90);              /* bottom border on splah headings */
+	--color-splah-heading-border:     var(--color-taupe);              /* bottom border on splah headings */
 
 	/* Dashboard */
     --color-column-border-dashboard:  var(--grad-bottom);                /* dashboard column border right */
 	--color-bg-link-dashboard-hover:  var(--color-border-subtle);        /* dashboard link background hover */
 	--color-text-dashboard:           var(--color-light-primary);        /* dashboard span label for current page */
-	--color-bg-dashboard-current:     var(--color-grey-90);              /* dashboard link background current */
+	--color-bg-dashboard-current:     var(--color-taupe);              /* dashboard link background current */
 	--color-border-section-dashboard: var(--color-border-subtle);        /* dashboard border above section */
 	--color-bg-section-header:        var(--color-dark-secondary);       /* dashboard section header background */
 
@@ -230,13 +230,13 @@
 	--color-tag-character:            var(--color-light-primary);        /* character tag text color */
 	--color-tag-character-bg:         var(--color-dark-primary);         /* character tag background */
 	--color-tag-character-hover:      var(--color-light-primary);        /* character tag hover bg */
-	--color-tag-character-shadow:     var(--color-grey-60);              /* character tag shadow */
+	--color-tag-character-shadow:     var(--color-dark-surface);              /* character tag shadow */
 
 	/* Tags — freeforms */
 	--color-tag-freeform:             var(--color-light-secondary);      /* freeform tag text color */
 	--color-tag-freeform-bg:          var(--color-dark-secondary);       /* freeform tag background */
 	--color-tag-freeform-hover:       var(--color-light-secondary);      /* freeform tag hover bg */
-	--color-tag-freeform-shadow:      var(--color-grey-60);              /* freeform tag shadow */
+	--color-tag-freeform-shadow:      var(--color-dark-surface);              /* freeform tag shadow */
 
 	/* Tags — fandoms in header */
 	--color-link-fandom:              var(--color-light-primary);        /* fandom tag text in header */
@@ -250,7 +250,7 @@
 	   + USERSCRIPT: 'Reading Time & Quality Score' badge (reading time, word count) */
 	--color-badge:                    var(--color-white);                /* badge text color */
 	--color-bg-badge:                 var(--color-dark-secondary);       /* badge background */
-	--color-shadow-badge:             var(--color-grey-90);              /* badge box shadow */
+	--color-shadow-badge:             var(--color-taupe);              /* badge box shadow */
 	--color-shadow-txt-badge:         var(--color-fg);                   /* badge text shadow */
 
 	/* Work statistics */
@@ -263,7 +263,7 @@
 	--color-footer-heading:           var(--color-light-primary);        /* footer heading text color */
 	--color-footer-heading-shadow:    var(--color-dark-secondary);       /* footer heading text shadow */
 	--color-footer-link:              var(--color-accent-soft);          /* footer link text color */
-	--color-shadow-footer-link:       var(--color-grey-10);              /* footer link text shadow */
+	--color-shadow-footer-link:       var(--color-almost-black);              /* footer link text shadow */
 
 	/* Layout & spacing */
 	--height-header-banner:           100px;             /* header banner height in #header::before */
@@ -287,7 +287,7 @@
 	--filter-padlock-icon:            brightness(0) saturate(100%) invert(75%) sepia(15%) saturate(6238%) hue-rotate(179deg) brightness(103%) contrast(102%); /* restricted works padlock icon */
 	--filter-stat-icon:               brightness(0) saturate(100%) invert(79%) sepia(9%) saturate(966%) hue-rotate(207deg) brightness(91%) contrast(85%); /* work stats icons */
 	--filter-img-icon:                none;                                  /* profile pic, collection illustrations */
-	--filter-required-tags-icon:      invert(1) hue-rotate(76deg) saturate(1.5);                                  /* required tags icons */
+	--filter-required-tags-icon:      invert(1) hue-rotate(77deg) saturate(1.5) brightness(0.6);                                  /* required tags icons */
 	--filter-bookmark-status:         sepia(23%) hue-rotate(28deg) brightness(98%) contrast(87%);                             /* bookmark status icons */
 }
 
