@@ -1139,6 +1139,13 @@ input:focus, select:focus, textarea:focus {
 	background: var(--color-bg-input-focus);
 }
 
+fieldset, form dl, fieldset dl dl, fieldset fieldset fieldset, 
+fieldset fieldset dl dl, dd.hideme, form blockquote.userstuff, dl.index dd {
+    background: var(--color-bg-fieldset);
+    border: 2px dotted var(--color-border-subtle);
+    box-shadow: none;
+}
+
 fieldset, form dl, fieldset dl dl, fieldset fieldset fieldset, fieldset fieldset dl dl, dd.hideme, form blockquote.userstuff {
     background: var(--color-bg-fieldset);
     border: 2px dotted var(--color-border-subtle);
