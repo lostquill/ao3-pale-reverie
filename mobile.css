@@ -5,7 +5,77 @@
 	Role: Parent skin (mobile overrides)
 	============================================================================= */
 
-form.filters,
-.region:has(ol.pagination.actions) form.filters {
-  position: absolute;
+
+/* Smaller header banner */
+#header::before {
+    height: 50px;
+}
+
+/* Dashboard menu — left-align navigation links */
+#dashboard, #dashboard.own {
+	text-align: left;
+}
+
+/* Absolute search/filter box */
+.javascript form.filters {
+	position: absolute;
+}
+
+/* Remove filter box background */
+form.filters dl, 
+form.filters dt, 
+form.filters dl dl {
+    background: none;
+}
+
+/* Thinner border on commenter profile pics */
+.primary .icon img,
+.comment .icon .icon {
+	border: 4px solid var(--color-border-rounded-pic);
+}
+
+/* Remove text-shadow and border from bold tags on small screens
+	(legibility and rendering performance) */
+.rating .tag,
+.warning .tag,
+.warnings .tag,
+.category .tag,
+li.relationships a.tag,
+.relationship a.tag,
+.fandom .tag:not(.fandom .tag.added),
+.fandoms .tag,
+.collection .bookmark .warnings a.tag,
+.collection .bookmark .warning a.tag,
+.collection .bookmark li.relationships a.tag,
+.collection .bookmark .relationship a.tag {
+	text-shadow: none;
+	border: none;
+	box-shadow: 3px 3px var(--color-tag-character-shadow);
+}
+
+.fandoms .tag {
+	box-shadow: none;
+}
+
+:is(.rating .tag,
+.warning .tag,
+.warnings .tag,
+.category .tag,
+li.relationships a.tag,
+.relationship a.tag,
+.fandom .tag:not(.fandom .tag.added),
+.fandoms .tag,
+.collection .bookmark .warnings a.tag,
+.collection .bookmark .warning a.tag,
+.collection .bookmark li.relationships a.tag,
+.collection .bookmark .relationship a.tag):hover {
+	text-shadow: none;
+	border: none;
+}
+
+.splash .favorite li:nth-of-type(even) a,
+.splash .favorite li:nth-of-type(even) a:hover,
+.splash .favorite li:nth-of-type(odd) a,
+.splash .favorite li:nth-of-type(odd) a:hover{
+    text-shadow: none;
 }
