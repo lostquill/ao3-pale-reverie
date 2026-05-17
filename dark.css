@@ -203,6 +203,10 @@
 	--color-border-section-dashboard: var(--color-border-subtle);        /* dashboard border above section */
 	--color-bg-section-header:        var(--color-dark-secondary);       /* dashboard section header background */
 
+	/* Other content / blurb */
+	--color-datetime:                 var(--color-grey-220);             /* text color */
+	--color-border-datetime:          var(--color-grey-110);             /* border color */
+
 	/* Tags — global */
 	--color-tag-default:              var(--color-fg);                   /* default tag text color */
 	--color-tag-default-bg:           var(--color-accent);               /* default tag background */
