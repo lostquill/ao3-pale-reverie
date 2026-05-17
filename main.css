@@ -7,6 +7,9 @@
 	Stats icons & hover text system by ZerafinaCSS
 		AO3: https://archiveofourown.org/works/55604875
 
+	Blurb icon layout + button styling adapted from Site Skin Add-Ons by ZerafinaCSS
+		AO3: https://archiveofourown.org/works/76032096
+
 	Sticky dashboard + search/filter structure inspired by: 
 		- Rosé Pine Site Skin by BlackBatCat → https://archiveofourown.org/works/69993411
 		- Neos Skin by ZerafinaCSS → https://archiveofourown.org/works/65849527
@@ -17,37 +20,73 @@
 	GLOBAL
 	============================================================================= */
 
+/* Text selection highlight */
 *::selection {
-    background-color: var(--color-accent);
+    background-color: var(--color-bg-selection);
     color: var(--color-neutral-main);
 }
 
+/* Base font size and line height */
 body {
-	line-height: 1.125;
-	font-size: 100%;
-}
-
-body, #outer,
-.javascript {
-	background: var(--color-bg-body);
-}
-
-input, textarea, select {
+    line-height: 1.125;
     font-size: 100%;
 }
 
-h1, h2, h3, h4, h5, h6, .heading {
-    font-weight: 400;
+/* Global background color */
+body, #outer,
+.javascript {
+    background: var(--color-bg-body);
 }
 
-h2.heading {
-	color: var(--color-heading);
+/* Outer wrapper — full-height vertical flex container */
+#outer {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Inner wrapper — horizontal flex, grows to fill available space */
+#inner {
+    flex-grow: 1;
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    min-height: 70vh;
+}
+
+
+/* =============================================================================
+	HEADINGS
+	============================================================================= */
+
+h1.heading {
+    font-family: Georgia, serif;
+}
+
+h2 {
+    font-size: 1.8em;
+}
+
+h2, h3, h4, h5, h6, .heading {
+    font-family: Arial, sans-serif;
+    font-weight: 400;
 }
 
 
 /* =============================================================================
 	HEADER
 	============================================================================= */
+
+/* Header banner image */
+#header::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100px;
+    background: url(https://raw.githubusercontent.com/lostquill/ao3-pale-reverie/main/assets/header.png) center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 
 #header {
 	margin: 0;
@@ -80,6 +119,7 @@ h2.heading {
 	color: var(--color-link-menu);
 	text-transform: uppercase;
 	letter-spacing: 1px;
+	cursor: pointer;
 }
 
 /* Nav link colors */
@@ -233,19 +273,9 @@ h2.heading {
 	border-radius: 50%;
 }
 
-/* Vertical positioning tweaks */
-.picture .icon img,
-.index .picture .icon {
-	top: -.2em;
-}
-
-.profile .header .icon img.icon {
-	top: -.9em;
-}
-
 
 /* =============================================================================
-	LINKS & ACTIONS
+	LINKS
 	============================================================================= */
 
 a,
@@ -262,10 +292,9 @@ a:visited:hover {
 	border: none;
 }
 
-/* Tag links and listbox headings visited links share basic styling */
+/* Tag links and visited links share basic styling */
 a.tag,
-.added.tag,
-.listbox > .heading,
+li.added.tag,
 a:visited {
 	line-height: 2;
 	border-radius: 10px;
@@ -288,21 +317,10 @@ h4.heading a:visited:hover,
 	color: var(--color-link-visited-hover);
 }
 
-/* Action hover state */
-.actions a:hover,
-.actions button:hover,
-.actions input:hover,
-.actions a:focus,
-.actions button:focus,
-.actions input:focus,
-label.action:hover,
-.action:hover,
-.action:focus,
-.actions:focus {
-	color: var(--color-link-default);
-	border-top: 1px solid var(--color-border-action-hover);
-	border-left: 1px solid var(--color-border-action-hover);
-}
+
+/* =============================================================================
+	ACTIONS
+	============================================================================= */
 
 /* Pointer cursor for interactive elements */
 #go_to_last_chap,
@@ -320,6 +338,121 @@ a.check_none {
     z-index: 1;
 }
 
+/*>========== buttons ==========<*/
+
+.action,
+.action:is(:link, :visited),
+.action a,
+.action a:visited,
+.actions a,
+.actions a:is(:link, :visited),
+.actions:not(#dashboard .actions) .current,
+.actions button,
+.actions input:not([type=text]),
+.actions label,
+label.action,
+label.action:is(:hover, :focus),
+input[type=submit],
+input[type=button],
+input::file-selector-button,
+#header #search .button,
+button {
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--color-border-button);
+    border-radius: 0.25em;
+    box-shadow: none;
+    background-color: var(--color-bg-button);
+    background-image: var(--grad-btn-1);
+    background-origin: border-box !important;
+    color: var(--color-text-button);
+}
+
+/* search button + checkbox label exceptions */
+#header #search .button,
+ul.options.index.group.many label.action {
+	background-image: none;
+    background-color: var(--color-bg-button);
+}
+
+/*>========== button subtypes and modes ==========<*/
+
+/* hovered + focused buttons */
+/* hover = when you move the mouse over the button */
+/* focus = when you click or tap on the button or select it with the tab key */
+.action:is(:hover, :focus),
+.action a:is(:hover, :focus),
+.actions a:is(:hover, :focus),
+.actions button:is(:hover, :focus),
+.actions input:not([type=text]):is(:hover, :focus),
+input[type=submit]:is(:hover, :focus),
+input[type=button]:is(:hover, :focus),
+input::file-selector-button:is(:hover, :focus),
+button:is(:hover, :focus) {
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--color-border-button);
+    box-shadow: none;
+    background-image: var(--grad-btn-2);
+    color: var(--color-text-button);
+}
+
+/* currently active/selected buttons */
+/* example: the page you're currently on when browsing works */
+.actions a:active,
+.actions:not(#dashboard .actions) .current,
+a.current,
+a.current:is(:hover, :focus),
+a:link.current {
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--color-border-button-active);
+    box-shadow: none;
+    background-image: var(--grad-btn-3);
+    background-origin: border-box !important;
+    color: var(--color-text-button-active);
+    cursor: default;
+}
+
+/* disabled buttons */
+.actions label.disabled,
+#tos_prompt [disabled] {
+	border-width: 1px;
+    border-style: solid;
+    border-color: var(--color-border-button);
+    box-shadow: none;
+    background-color: var(--color-bg-button);
+    background-image: none;
+    background-origin: border-box !important;
+	opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* select element on disabled buttons */
+/* inherits styling from above element */
+.actions .disabled select,
+.actions .disabled select:hover {
+  background: none;
+  color: inherit; /* text color */
+}
+
+/*>========== buttons with "to top" arrows and "expand"/"contract" symbols ==========<*/
+
+/* these get kind of broken and the following code is to repair them again */
+/* in most cases, no changes are required here */
+
+.listbox > .heading .action:has(a) {
+  padding: 0;
+  border: none;
+  box-shadow: none;
+  background: none;
+}
+
+.listbox > .heading .action a {
+  padding-inline: 0.3em;
+  color: inherit;
+}
+
 
 /* =============================================================================
 	TAGS
@@ -328,11 +461,42 @@ a.check_none {
 
 /* --- 1. Base tag style --- */
 
+/* Remove commas */
+.commas:has(.tag, a[data-remote="true"]) li::after {
+    content: " ";
+}
+
+/* Separate by category */
+li:not(.relationships) + li.relationships::before, 
+li:not(.fandoms) + li.fandoms::before, 
+li:not(.warnings) + li.warnings::before, 
+li:not(.categories) + li.categories::before, 
+li:not(.characters) + li.characters::before, 
+li:not(.freeforms) + li.freeforms::before {
+    content: '';
+    display: block;
+    border-top: 1px dashed var(--color-border-section-dashboard);
+    margin: 0.3em 0;
+}
+
+/* Base tag */
 a.tag,
 .listbox .heading a.tag:visited:hover,
 a.tag:visited:hover {
 	color: var(--color-tag-default);
 	background: var(--color-link-default);
+}
+
+a.tag:not(.fandom.index.group a.tag):not(.fandoms a.tag):not(h2.heading a.tag):not(.splash .favorite a.tag):not(.splash .favorite li:nth-of-type(2n+1) a.tag),
+.tags a[data-remote="true"],
+.unwrangled, .added.tag {
+    display: inline-flex;
+    text-decoration: none;
+    padding: 0.15em 0.5em;
+    margin: 0.2em 0;
+    line-height: 1.25;
+    position: relative;
+    z-index: 1;
 }
 
 /* Base tag hover */
@@ -368,7 +532,7 @@ li.relationships a.tag:hover,
 
 /* Rating: stronger accent background */
 .rating .tag {
-	background: var(--color-tag-default-bg-hover);
+	background: var(--color-tag-rating-bg);
 	border: 1px dashed var(--color-tag-default-border);
 }
 
@@ -382,11 +546,15 @@ li.relationships a.tag:hover,
 
 /* Fandom tags added by user (not canonical): reset to plain link */
 .fandom .tag.added {
-	color: inherit;
 	background: none;
 	border: none;
 	text-shadow: none;
 	font-weight: normal;
+}
+
+/* close added tag x */
+.delete a, span.delete {
+  box-shadow: none;
 }
 
 /* Relationship tags: gradient pill */
@@ -400,11 +568,16 @@ li.relationships a.tag,
 	border-radius: 5px;
 }
 
-/* Heart symbol after relationship tags */
-ul.tags li.relationships::after {
-	content: " ♥\FE0E";
-	color: var(--color-heart-relationship);
-	vertical-align: middle;
+/* Heart symbol after relationship tags
+   - replace by ul.tags li.relationships::after if you want to onclude friendships  */
+
+ul.tags li.relationships a.tag[href*="*s*"]::after {
+    content: " ♥\FE0E";
+    color: var(--color-heart-relationship);
+    vertical-align: middle;
+    display: inline-block;
+    margin-left: 0.5em;
+    text-shadow: 1px 1px 4px var(--color-shadow-heart);
 }
 
 /* Character tags: warm mauve tint */
@@ -445,8 +618,14 @@ li.freeforms a.tag:hover,
 .header .fandoms a.tag:visited:hover {
 	background: none;
 	color: var(--color-link-fandom);
+    font-family: Arial, sans-serif;
+	font-weight: normal;
 	text-shadow: none;
 	border: none;
+    border-radius: unset;
+    line-height: 1.5;
+    padding: 0;
+    padding-right: 6px;
 }
 
 .header .fandoms a.tag:hover,
@@ -466,12 +645,17 @@ h5.tags.heading {
 /* Outside of bookmarks, all collection tags are plain mauve-mid links */
 li.collection a.tag,
 h2.heading a.tag {
+	font-family: Arial, sans-serif;
 	color: var(--color-tag-collection);
 	background: none;
 	font-weight: normal;
 	text-shadow: none;
 	border: none;
 	box-shadow: none;
+    border-radius: unset;
+    line-height: 1.5;
+    padding: 0;
+    padding-right: 6px;
 }
 
 li.collection a.tag:hover,
@@ -510,36 +694,123 @@ h2.heading a.tag:hover {
 	DASHBOARD
 	============================================================================= */
 
-#dashboard .current:before {
-  display: inline-block;
-  margin-right: 2px;
-  content: "\00a0✦";
+#main.dashboard {
+    width: 82%;
+}
+#main, #main.dashboard {
+    flex-grow: 1;
+    box-sizing: border-box;
+    min-height: unset;
+    max-width: 100%;
+    margin: 0;
+    padding: 1.5em 5%;
+    line-height: 1.286;
 }
 
 #dashboard, #dashboard.own {
+    padding-right: 2em;
     border-top: none;
     border-bottom: none;
+    border-radius: unset;
     position: sticky;
     top: 0;
-    max-height: 96vh;
+    max-height: 100vh;
     overflow-x: visible;
     overflow-y: auto;
     scrollbar-color: transparent transparent;
+}
+
+.listbox > .heading, h2.heading {
+	color: var(--color-heading);
+}
+
+.home .header h2::before {
+	display: inline-block;
+	margin-right: 2px;
+	content: "\00a0✦";
+}
+
+.home .header h2 {
+  padding: 0.429em 0;
+  margin: 0;
+  margin-left: 100px;
+  border-bottom: 2px solid var(--color-line-icon);
+}
+
+/* Gradient border on the right */
+#dashboard::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 1em;
+    background: var(--color-column-border-dashboard);
 }
 
 #dashboard ul {
     position: relative;
     padding-top: 0.429em;
     padding-bottom: 0.429em;
+    border-top: 2px solid var(--color-border-section-dashboard);
+}
+
+#dashboard ul:nth-child(2) {
+    border-top: none;
 }
 
 #dashboard a, #dashboard span {
     line-height: 1.800;
 }
 
+#dashboard span {
+    color: var(--color-text-dashboard);
+    white-space: nowrap;
+}
+
+#dashboard .current:before {
+  display: inline-block;
+  margin-right: 2px;
+  content: "\00a0✦";
+}
+
+#dashboard .current {
+    background: var(--color-bg-dashboard-current);
+}
+
 #dashboard a:hover {
-  background: var(--color-border-subtle);
+  background: var(--color-bg-link-dashboard-hover);
   color: var(--color-link-default);
+}
+
+
+/* =============================================================================
+	FORMS / FIELDSET
+	============================================================================= */
+
+fieldset, form dl, fieldset dl dl, fieldset fieldset fieldset, fieldset fieldset dl dl, dd.hideme, form blockquote.userstuff {
+    background: var(--color-bg-fieldset);
+    border: 2px dotted var(--color-border-subtle);
+    box-shadow: none;
+}
+
+input, textarea, select {
+    font-size: 100%;
+    border: 1px solid var(--color-border-input);
+    box-shadow: none;
+}
+
+input:not([type="image" i], [type="range" i], [type="checkbox" i], [type="radio" i]), select:not([multiple]) {
+    min-height: 1.7em;
+    box-sizing: border-box;
+}
+
+.required, .error, .alert.flash {
+    color: var(--color-required);
+}
+
+form dt {
+    border-bottom: 1px solid var(--color-border-form-dt);
 }
 
 
@@ -560,11 +831,11 @@ form.filters {
   position: sticky;
   top: 2vh;
   overflow-x: visible;
-  overflow-y: scroll;
+  overflow-y: auto;
   overflow-wrap: anywhere;
   box-sizing: border-box;
   width: 25%;
-  max-height: 96vh;
+  max-height: 98vh;
   margin-block: 0.643em !important;
   padding: 0 0.643em 0 2%;
 }
@@ -629,7 +900,7 @@ form.filters dl dl {
   justify-content: start;
   align-items: start;
   padding: 5px 0;
-  border-bottom: 1px dotted var(--color-border-filter-label);
+  border-bottom: 1px dotted var(--color-border-input);
 }
 
 .filters .submit,
@@ -644,6 +915,7 @@ form.filters dl dl {
 
 .filters .autocomplete input,
 .filters select {
+  height: 1.7em;
   min-width: unset;
 }
 
@@ -700,13 +972,8 @@ form.filters dl dl {
 
 span.question {
   box-shadow: none;
-  background-color: var(--color-accent-pop);
+  background-color: var(--color-bg-question);
   font-size: 10px;
-}
-
-.filters span.question {
-  position: absolute;
-  right: 0;
 }
 
 span.symbol {
@@ -725,17 +992,7 @@ span.symbol {
 	HOMEPAGE / SPLASH
 	============================================================================= */
 
-.home .header h2::before {
-	display: inline-block;
-	margin-right: 2px;
-	content: "\00a0✦";
-}
-
-.home .header h2 {
-	border-bottom: 2px solid var(--color-border-mid);
-}
-
-.splash>.module h3::before {
+.splash > .module h3::before {
 	display: inline-block;
 	margin-right: 2px;
 	content: "\00a0✦";
@@ -775,6 +1032,7 @@ span.symbol {
     font-weight: bold;
     text-align: center;
     letter-spacing: 1px;
+    line-height: 1.5;
     text-shadow: 1px 1px 1px var(--color-neutral-main);
 }
 
@@ -784,7 +1042,7 @@ span.symbol {
 .splash .favorite li:nth-of-type(odd) a:focus {
     background: var(--color-tag-default-bg-hover);
     color: var(--color-neutral-main);
-    text-shadow: 1px 1px 1px var(--color-nearly-black);
+    text-shadow: 1px 1px 1px var(--color-shadow-fave-hover);
 }
 
 div.latest.news.module .userstuff p {
@@ -811,6 +1069,12 @@ div.latest.news.module .userstuff p {
 	BLURBS & CONTENT SECTIONS
 	============================================================================= */
 
+.listbox, fieldset fieldset.listbox {
+    background: var(--color-light-secondary);
+    border: 1px solid var(--color-border-subtle);
+    box-shadow: none;
+}
+
 li.blurb,
 .work.index.group .own.work.blurb.group,
 .browse .note,
@@ -826,6 +1090,11 @@ li.skins.blurb,
 ol.work.index.group li,
 dl.meta {
   background: var(--color-surface);
+}
+
+/* blurb border */
+li.blurb {
+	border: 1px solid var(--color-border-subtle);
 }
 
 /* Blockquotes: white card inside blurbs, surface inside CSS pages */
@@ -851,7 +1120,7 @@ dl.meta {
 
 /* Required tags icons: desaturated */
 .blurb ul.required-tags li span {
-	border-radius: 50%;
+    border-radius: 0 20% 0 20%;
 	filter: var(--filter-required-tags-icon);
 }
 
@@ -862,9 +1131,44 @@ dl.meta {
 }
 
 
+/*============================================================
+	Position Blurb Icons in a Row Under the Fandom Tags
+    ============================================================*/
+
+/* remove the space for the icons on the right side */
+.blurb:has(ul.required-tags) .header .heading {
+  margin-left: 0;
+}
+
+/* this changes the position of the content icons */
+.blurb .header ul.required-tags {
+  position: unset;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 4px;
+  width: auto;
+  margin-block: 0.375em;
+}
+
+/* more positioning */
+.blurb .header ul.required-tags li {
+  position: unset;
+}
+
+
 /* =============================================================================
 	WORK PAGE
 	============================================================================= */
+
+/* Reset headings font for workskin */
+#workskin h2, 
+#workskin h3, 
+#workskin h4, 
+#workskin h5, 
+#workskin h6, 
+#workskin .heading {
+    font-family: Georgia, serif;
+}
 
 /* Work navigation actions: no float */
 ul.work.navigation.actions {
@@ -880,9 +1184,12 @@ ul.work.navigation.actions {
 	border: 1px solid var(--color-border-subtle);
 }
 
-/* Decorative border on chapter meta */
+/* Decorative border on chapter/series/profile/statistics meta */
 .chapters-show.region .meta,
 .works-show.region .meta,
+.wrapper .series.meta,
+.wrapper .statistics.meta,
+.profile .wrapper .meta,
 .draft.work .meta {
 	border: 80px solid transparent;
 	border-image: url(https://raw.githubusercontent.com/lostquill/ao3-pale-reverie/main/assets/border-constellation.png) 35% round;
@@ -906,6 +1213,7 @@ h4.viewed.heading {
 	padding-left: 2px;
 	padding-right: 2px;
 	height: 18px;
+	font-family: Arial, sans-serif;
 	line-height: 20px;
 	text-transform: uppercase;
 	letter-spacing: 1px;
@@ -921,6 +1229,11 @@ h4.viewed.heading {
 
 h4.viewed.heading span {
 	font-weight: bold;
+}
+
+/* Padlock icon */
+img[src$="/images/lockblue.png"] {
+    filter: var(--filter-padlock-icon);
 }
 
 /* Kudos paragraph: heart illustration */
@@ -949,6 +1262,10 @@ p.kudos {
 
 .bookmark p.status {
 	filter: var(--filter-bookmark-status);
+}
+
+.bookmark .user .meta {
+    font-family: Arial, sans-serif;
 }
 
 
@@ -1180,7 +1497,7 @@ dl.stats dd {
 .stats dd.subscriptions::after     { content: "Subscriptions"; }
 
 .series.meta.group .stats dd:nth-of-type(3)::after     { content: "Complete"; }
-.statistics .stats dd.comments::after                   { content: "Comment Threads"; }
+.statistics .stats dd.comments::after                  { content: "Comment Threads"; }
 .stats dd:has(a[href$=fandoms])::after,
 .tagset .stats dd:nth-of-type(1)::after                { content: "Fandoms"; }
 .tagset .stats dd:nth-of-type(2)::after                { content: "Characters"; }
@@ -1197,9 +1514,11 @@ dl.stats dd {
 	============================================================================= */
 
 #footer {
-	color: var(--color-neutral-main);
+	font-family: Arial, sans-serif;
+	color: var(--color-footer-heading);
 	font-size: .9em;
 	background: var(--color-bg-nav);
+    border: none;
 }
 
 #footer .navigation {
@@ -1220,17 +1539,18 @@ dl.stats dd {
 }
 
 #footer .heading {
+    font-family: Georgia, serif;
     text-align: center;
     font-weight: bold;
     font-style: italic;
-    color: var(--color-accent);
-    text-shadow: 1px 1px 1px var(--color-light-secondary);
+    color: var(--color-footer-heading);
+    text-shadow: 1px 1px 1px var(--color-footer-heading-shadow);
     margin-block: 0 1em;
 }
 
 #footer a, #footer button {
     text-decoration: none;
-    color: var(--color-neutral-main);
+    color: var(--color-footer-link);
     text-shadow: 1px 1px 1px var(--color-shadow-footer-link);
     font-weight: bold;
 }
