@@ -129,6 +129,12 @@
 	--grad-left:                      linear-gradient(-45deg, var(--color-nav-1), var(--color-nav-1), var(--color-nav-2), var(--color-nav-2));
     --grad-bottom:                    linear-gradient(to bottom, var(--color-nav-1), var(--color-nav-2), var(--color-nav-1));
 
+	/* Search bar */
+	--color-bg-search-input:          var(--color-bg-body);              /* search input background */
+	--color-text-search-input:        var(--color-grey-220);             /* search input text color */
+	--color-shadow-search-hover:      var(--color-grey-110);             /* search input inset shadow on hover */
+	--color-text-search-focus:        var(--color-grey-240);             /* search input text color on focus */
+
 	/* Backgrounds, borders, shadows & surfaces */
 	--color-bg-nav:                   var(--grad-right);                 /* navbar + footer background */
 	--color-border-nav-dropdown-link: var(--color-grey-170);             /* bottom border on nav links (dropdown menu) */
@@ -471,6 +477,22 @@ h2, h3, h4, h5, h6, .heading {
 
 #greeting img.icon:hover {
 	filter: none;
+}
+
+/* Search bar */
+form.search input[type="text"] {
+    background: var(--color-bg-search-input);
+    color: var(--color-text-search-input);
+    border-top-color: none;
+    background-image: none;
+}
+
+form #search input:hover {
+    box-shadow: inset 2px 2px 2px var(--color-shadow-search-hover);
+}
+
+#header #search input:focus {
+    color: var(--color-text-search-focus);
 }
 
 
