@@ -68,8 +68,17 @@
 	--color-grey-140:            #999999;
 	--color-grey-170:            #808080;
 	--color-grey-220:            #474747;
-	--color-nearly-black:        #111111;
+	--color-grey-240:            #2a2a2a;
+	--color-grey-250:            #111111;
 	--color-black:               #000000;
+	
+	/* -----------------------------------------------------------------
+		COLORS FOR ALERTS, NOTICES, INPUTS
+	   ----------------------------------------------------------------- */	
+
+	--color-blue-grey-light:     #d1e1ef;
+	--color-blue-grey-mid:       #c2d2df;
+	--color-mauve-lighter:       #f3efec;
 
 	
 	/* =================================================================
@@ -97,7 +106,7 @@
 	--color-accent-pop:               var(--color-purple);
 
 	/* Neutrals */
-	--color-neutral-main:             var(--color-white);
+	--color-fg:                       var(--color-white);
 	--color-overlay-light:            rgba(255,255,255,0.25);
 
 	/* Gradient colors for backgrounds */
@@ -115,24 +124,49 @@
 		UI LAYER
 	   ----------------------------------------------------------------- */
 
+	/* Text selection highlight */
+	--color-text-selection:           var(--color-fg);                   /* text  color */
+	--color-bg-selection:             var(--color-accent);               /* background */
+
+	/* Body */
+	--color-text-body:                var(--color-grey-240);             /* global text color */
+	--color-bg-body:                  var(--color-grey-20);              /* body background */
+
 	/* Navigation gradients (navbar, footer, relationship tag pills + dashboard border) */
 	--grad-right:                     linear-gradient(45deg, var(--color-nav-1), var(--color-nav-1), var(--color-nav-2), var(--color-nav-2));
 	--grad-left:                      linear-gradient(-45deg, var(--color-nav-1), var(--color-nav-1), var(--color-nav-2), var(--color-nav-2));
     --grad-bottom:                    linear-gradient(to bottom, var(--color-nav-1), var(--color-nav-2), var(--color-nav-1));
 
+	/* Search bar */
+	--color-bg-search-input:          var(--color-bg-body);              /* search input background */
+	--color-text-search-input:        var(--color-grey-220);             /* search input text color */
+	--color-shadow-search-hover:      var(--color-grey-110);             /* search input inset shadow on hover */
+	--color-text-search-focus:        var(--color-grey-240);             /* search input text color on focus */
+
 	/* Backgrounds, borders, shadows & surfaces */
-	--color-bg-selection:             var(--color-accent);               /* mouse selection background */
-	--color-bg-body:                  var(--color-grey-20);              /* body background */
 	--color-bg-nav:                   var(--grad-right);                 /* navbar + footer background */
+	--color-border-nav-dropdown-link: var(--color-grey-110);             /* bottom border on nav links (dropdown menu) */
+	--color-bg-block-dropdown:        var(--color-grey-70);              /* dropdown menu background */
+	--color-border-block-dropdown:    var(--color-grey-20);              /* dropdown menu border */
 	--color-surface:                  var(--color-grey-10);              /* blockquote surfaces */
-	--color-bg-blurb:                 var(--color-neutral-main);         /* white card inside blurbs */
-	--color-bg-bookmark:              var(--color-grey-40);              /* bookmark user area */
+	--color-bg-blockquote:            var(--color-fg);                   /* white card inside blurbs */
+	--color-bg-bookmark:              var(--color-grey-40);              /* bookmark user area background */
+	--color-border-bookmark:          var(--color-grey-90);              /* bookmark user area border */
 	--color-border-subtle:            var(--color-grey-70);              /* light borders, action hover bg */
+	--color-bg-notice:                var(--color-blue-grey-light);      /* notice/alert background */
+	--color-border-notice:            var(--color-blue-grey-mid);        /* notice/alert border */
+	--color-bg-legend:                var(--color-bg-body);              /* legend/label background on edit work/form */
+	--color-border-legend:            var(--color-grey-70);              /* legend/label border on edit work/form */
 
 	/* Form */
+	--color-bg-input:                 var(--color-fg);                   /* input, select, textarea */
+	--color-bg-input-focus:           var(--color-mauve-lighter);        /* input, select, textarea focus */
 	--color-border-input:             var(--color-grey-110);             /* bottom border on filter labels, inputs, select, textarea */
+	--color-text-filter-expanders:    var(--color-text-body);            /* expanders text color */
 	--color-bg-fieldset:              var(--color-grey-40);              /* fieldset, form background... */
+	--color-bg-fieldset-block:        var(--color-fg);                   /* blockquote form background... */
 	--color-border-form-dt:           var(--color-grey-90);              /* border form dt label */
+	--color-question:                 var(--color-fg);                   /* help symbol text color */
 	--color-bg-question:              var(--color-accent-pop);           /* help symbol background */
 	--color-required:                 var(--color-accent-pop);           /* required field, important color */
 
@@ -149,24 +183,10 @@
 	--grad-btn-2:                     linear-gradient(215deg, var(--color-btn-3), transparent, transparent);        /* hover - focus */
 	--grad-btn-3:                     linear-gradient(215deg, var(--color-btn-4), var(--color-btn-5), transparent); /* current */
 
-	/* Image and icon filters
-	  - --filter-logo, --filter-padlock-icon and --filter-stat-icon target a specific color via CSS filter.
-	    To generate a filter that matches a hex color of your choice,
-	    use https://angel-rs.github.io/css-color-filter-generator/
-	  - --filer-header, --filter-img-icon, --filter-required-tags-icon, and --filter-bookmark-status
-	    use generic adjustments (contrast, sepia, brightness) rather than color targeting. */
-	--filter-header:                  none;      /* header banner */
-	--filter-logo:                    brightness(0) saturate(100%) invert(45%) sepia(10%) saturate(1214%) hue-rotate(314deg) brightness(92%) contrast(83%); /* AO3 logo */
-	--filter-padlock-icon:            brightness(0) saturate(100%) invert(23%) sepia(55%) saturate(2017%) hue-rotate(296deg) brightness(90%) contrast(90%); /* restricted works padlock icon */
-	--filter-stat-icon:               invert(35%) sepia(8%) saturate(1985%) hue-rotate(319deg) brightness(93%) contrast(92%); /* work stats icons */
-	--filter-img-icon:                contrast(60%) sepia(5%) saturate(90%) brightness(1.3);                                  /* profile pic, collection illustrations */
-	--filter-required-tags-icon:      contrast(60%) sepia(5%) saturate(90%) brightness(1.3);                                  /* required tags icons */
-	--filter-bookmark-status:         sepia(23%) hue-rotate(28deg) brightness(98%) contrast(87%);                             /* bookmark status icons */
-
 	/* Navigation & UI links */
 	--color-link-default:             var(--color-accent);               /* default link color */
 	--color-link-nav:                 var(--color-dark-secondary);       /* header links, dashboard links */
-	--color-link-menu:                var(--color-neutral-main);         /* left header links (fandoms, browse, search...) */
+	--color-link-menu:                var(--color-fg);                   /* left header links (fandoms, browse, search...) */
 	--color-link-nav-hover:           var(--color-accent-pop);           /* header links on hover */
 	--color-link-nav-active:          var(--color-accent);               /* dropdown menu hover, user focus */
 
@@ -178,8 +198,8 @@
 	--color-line-icon:                var(--color-accent-soft);          /* top line going from rounded icon to heading */
 	--color-border-rounded-pic:       var(--color-accent);               /* border around profile pic */
 	--color-heading:                  var(--color-dark-secondary);       /* h2.heading */
-	--color-bg-heading:               var(--color-accent);               /* h2.collections */
-	--color-bg-heading-5:             var(--color-neutral-main);         /* h5.tags.heading */
+	--color-bg-collection-tag:        var(--color-fg);                   /* h5.tags.heading for collection tags */
+	--color-splah-heading-border:     var(--color-grey-90);              /* bottom border on splah headings */
 
 	/* Dashboard */
     --color-column-border-dashboard:  var(--grad-bottom);                /* dashboard column border right */
@@ -187,22 +207,28 @@
 	--color-text-dashboard:           var(--color-dark-primary);         /* dashboard span label for current page */
 	--color-bg-dashboard-current:     var(--color-grey-90);              /* dashboard link background current */
 	--color-border-section-dashboard: var(--color-border-subtle);        /* dashboard border above section */
+	--color-bg-section-header:        var(--color-light-secondary);      /* dashboard section header background */
 
 	/* Tags — global */
-	--color-tag-default:              var(--color-neutral-main);         /* default tag text color */
+	--color-tag-default:              var(--color-fg);                   /* default tag text color */
 	--color-tag-default-bg:           var(--color-accent-soft);          /* default tag background */
 	--color-tag-default-bg-hover:     var(--color-accent);               /* default tag background hover */
 	--color-tag-default-border:       var(--color-light-primary);        /* default tag border */
 	--color-tag-shadow-light:         var(--color-grey-50);              /* default tag shadow light */
 	--color-tag-shadow-dark:          var(--color-grey-220);             /* default tag shadow dark */
-	--color-shadow-fave-hover:        var(--color-nearly-black);         /* shadow text on fave tags homepage splash on hover */
+
+	/* Tags - Splash favorite */
+	--color-link-fave:                var(--color-dark-primary);         /* link color on fave tags */
+	--color-link-fave-over:           var(--color-fg);                   /* link color on fave tags on hover */
+	--color-shadow-fave:              var(--color-fg);                   /* shadow text on fave tags */
+	--color-shadow-fave-hover:        var(--color-grey-250);             /* shadow text on fave tags on hover */
 
 	/* Tags — ratings */
 	--color-tag-rating-bg:            var(--color-accent);               /* rating tag background */
 
 	/* Tags — relationships */
 	--color-tag-relation-bg:          var(--grad-left);                  /* relationship tag background */
-	--color-tag-relation-border:      var(--color-neutral-main);         /* relationships tag border */
+	--color-tag-relation-border:      var(--color-fg);                   /* relationships tag border */
 	--color-heart-relationship:       var(--color-accent-pop);           /* Heart symbol color after tag */
 	--color-shadow-heart:             var(--color-light-primary);        /* Heart symbol shadow after tag */
 
@@ -231,7 +257,7 @@
 	--color-badge:                    var(--color-black);                /* badge text color */
 	--color-bg-badge:                 var(--color-light-secondary);      /* badge background */
 	--color-shadow-badge:             var(--color-grey-90);              /* badge box shadow */
-	--color-shadow-txt-badge:         var(--color-neutral-main);         /* badge text shadow */
+	--color-shadow-txt-badge:         var(--color-fg);                   /* badge text shadow */
 
 	/* Work statistics */
 	--color-stats:                    var(--color-accent);               /* main color for stats text/value */
@@ -244,6 +270,31 @@
 	--color-footer-heading-shadow:    var(--color-light-secondary);      /* footer heading text shadow */
 	--color-footer-link:              var(--color-accent);               /* footer link text color */
 	--color-shadow-footer-link:       var(--color-grey-10);              /* footer link text shadow */
+
+	/* Layout & spacing */
+	--height-header-banner:           100px;             /* header banner height in #header::before */
+	--width-dashboard:                82%;               /* #main.dashboard width */
+	--padding-main:                   1.5em 5%;          /* #main padding */
+	--padding-dashboard:              1.5em 5%;          /* #dashboard padding — intentionally separate */
+	--radius-user-images:             50%;               /* radius on avatars and collection illustrations */
+	--radius-tag-sm:                  5px;               /* rating, warning, category, fandom, relationship tags */
+	--radius-tag:                     10px;              /* character, freeform tags */
+	--radius-required-tags:           0 20% 0 20%;       /* required tags icons (rating symbols) */
+	--radius-footer-module:           20px 0;            /* footer module corners */
+
+	/* Image and icon filters
+	  - --filter-logo, --filter-padlock-icon and --filter-stat-icon target a specific color via CSS filter.
+	    To generate a filter that matches a hex color of your choice,
+	    use https://angel-rs.github.io/css-color-filter-generator/
+	  - --filer-header, --filter-img-icon, --filter-required-tags-icon, and --filter-bookmark-status
+	    use generic adjustments (contrast, sepia, brightness) rather than color targeting. */
+	--filter-header:                  none;      /* header banner */
+	--filter-logo:                    brightness(0) saturate(100%) invert(45%) sepia(10%) saturate(1214%) hue-rotate(314deg) brightness(92%) contrast(83%); /* AO3 logo */
+	--filter-padlock-icon:            brightness(0) saturate(100%) invert(23%) sepia(55%) saturate(2017%) hue-rotate(296deg) brightness(90%) contrast(90%); /* restricted works padlock icon */
+	--filter-stat-icon:               invert(35%) sepia(8%) saturate(1985%) hue-rotate(319deg) brightness(93%) contrast(92%); /* work stats icons */
+	--filter-img-icon:                contrast(60%) sepia(5%) saturate(90%) brightness(1.3);                                  /* profile pic, collection illustrations */
+	--filter-required-tags-icon:      contrast(60%) sepia(5%) saturate(90%) brightness(1.3);                                  /* required tags icons */
+	--filter-bookmark-status:         sepia(23%) hue-rotate(28deg) brightness(98%) contrast(87%);                             /* bookmark status icons */
 }
 
 
@@ -254,7 +305,7 @@
 /* Text selection highlight */
 *::selection {
     background-color: var(--color-bg-selection);
-    color: var(--color-neutral-main);
+    color: var(--color-text-selection);
 }
 
 /* Base font size and line height */
@@ -303,6 +354,10 @@ h2, h3, h4, h5, h6, .heading {
     font-weight: 400;
 }
 
+.listbox > .heading, h2.heading {
+	color: var(--color-heading);
+}
+
 
 /* =============================================================================
 	HEADER
@@ -313,7 +368,7 @@ h2, h3, h4, h5, h6, .heading {
     content: "";
     display: block;
     width: 100%;
-    height: 100px;
+    height: var(--height-header-banner);
     background: url(https://raw.githubusercontent.com/lostquill/ao3-pale-reverie/main/assets/header.png) center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -336,11 +391,6 @@ h2, h3, h4, h5, h6, .heading {
 	color: var(--color-link-default);
 }
 
-/* Collections banner */
-#header h2.collections {
-	background: var(--color-bg-heading);
-}
-
 /* Navigation bar */
 #header .primary {
 	background: var(--color-bg-nav);
@@ -354,7 +404,7 @@ h2, h3, h4, h5, h6, .heading {
 	cursor: pointer;
 }
 
-/* Nav link colors */
+/* Nav links */
 #header a,
 #header a:visited,
 #header .primary .open a,
@@ -362,6 +412,14 @@ h2, h3, h4, h5, h6, .heading {
 #header .primary .dropdown a:focus,
 #dashboard a {
 	color: var(--color-link-nav);
+}
+
+#header .menu, #small_login {
+	background-image: none;
+	background-color: var(--color-bg-block-dropdown);
+	border: outset 1px var(--color-border-block-dropdown);
+	border-top: none;
+	box-shadow: none;
 }
 
 #header a:hover,
@@ -391,6 +449,10 @@ h2, h3, h4, h5, h6, .heading {
 #header .dropdown .menu a:hover,
 #header .dropdown .menu a:focus {
 	background: var(--color-overlay-light);
+}
+
+#header .menu li {
+    border-bottom: 1px solid var(--color-border-nav-dropdown-link);
 }
 
 /* User greeting area */
@@ -435,13 +497,29 @@ h2, h3, h4, h5, h6, .heading {
 	height: 2.5em;
 	width: 2.5em;
 	border: 2px solid var(--color-border-rounded-pic);
-	border-radius: 50%;
+	border-radius: var(--radius-user-images);
 	filter: var(--filter-img-icon);
 	transition: 200ms ease-in-out;
 }
 
 #greeting img.icon:hover {
 	filter: none;
+}
+
+/* Search bar */
+form.search input[type="text"] {
+    background: var(--color-bg-search-input);
+    color: var(--color-text-search-input);
+    border-top-color: none;
+    background-image: none;
+}
+
+form #search input:hover {
+    box-shadow: inset 2px 2px 2px var(--color-shadow-search-hover);
+}
+
+#header #search input:focus {
+    color: var(--color-text-search-focus);
 }
 
 
@@ -453,7 +531,7 @@ h2, h3, h4, h5, h6, .heading {
 .primary .icon,
 .blurb .header img,
 .comment .icon {
-	border-radius: 50%;
+	border-radius: var(--radius-user-images);
 }
 
 .comment .icon,
@@ -502,7 +580,7 @@ h2, h3, h4, h5, h6, .heading {
 }
 
 .index .skins .icon {
-	border-radius: 50%;
+	border-radius: var(--radius-user-images);
 }
 
 
@@ -529,7 +607,7 @@ a.tag,
 li.added.tag,
 a:visited {
 	line-height: 2;
-	border-radius: 10px;
+	border-radius: var(--radius-tag);
 	padding: 0 6px;
 	font-weight: normal;
 	color: var(--color-link-default);
@@ -755,7 +833,7 @@ li.relationships a.tag:hover,
 .fandom .tag,
 .fandoms .tag {
 	color: var(--color-tag-default);
-	border-radius: 5px;
+	border-radius: var(--radius-tag-sm);
 	background: var(--color-tag-default-bg);
 	border: 1px dashed var(--color-tag-default-border);
 	text-shadow: 1px 1px 1px var(--color-tag-shadow-dark);
@@ -797,7 +875,7 @@ li.relationships a.tag,
 	text-shadow: 1px 1px 1px var(--color-tag-shadow-dark);
   	background: var(--color-tag-relation-bg);
 	border: 1px dashed var(--color-tag-relation-border);
-	border-radius: 5px;
+	border-radius: var(--radius-tag-sm);
 }
 
 /* Heart symbol after relationship tags
@@ -867,9 +945,9 @@ li.freeforms a.tag:hover,
 
 /* Tag section heading background */
 h5.tags.heading {
-	background: var(--color-bg-heading-5) !important;
+	background: var(--color-bg-collection-tag) !important;
 	padding: 5px;
-	border-radius: 10px;
+	border-radius: var(--radius-tag);
 }
 
 /* --- 3. Collection context: all tags → neutral --- */
@@ -907,7 +985,7 @@ h2.heading a.tag:hover {
 	background: var(--color-tag-default-bg);
 	border: 1px dashed var(--color-tag-default-border);
 	text-shadow: 1px 1px 1px var(--color-tag-shadow-dark);
-	border-radius: 5px;
+	border-radius: var(--radius-tag-sm);
 }
 
 /* Relationship tags inside bookmarks: same as global */
@@ -918,7 +996,7 @@ h2.heading a.tag:hover {
 	text-shadow: 1px 1px 1px var(--color-tag-shadow-dark);
 	background: var(--color-tag-relation-bg);
 	border: 1px dashed var(--color-tag-relation-border);
-	border-radius: 5px;
+	border-radius: var(--radius-tag-sm);
 }
 
 
@@ -927,15 +1005,20 @@ h2.heading a.tag:hover {
 	============================================================================= */
 
 #main.dashboard {
-    width: 82%;
+    width: var(--width-dashboard);
+    padding: var(--padding-dashboard);
 }
+
+#main {
+    padding: var(--padding-main);
+}
+
 #main, #main.dashboard {
     flex-grow: 1;
     box-sizing: border-box;
     min-height: unset;
     max-width: 100%;
     margin: 0;
-    padding: 1.5em 5%;
     line-height: 1.286;
 }
 
@@ -952,10 +1035,6 @@ h2.heading a.tag:hover {
     scrollbar-color: transparent transparent;
 }
 
-.listbox > .heading, h2.heading {
-	color: var(--color-heading);
-}
-
 .home .header h2::before {
 	display: inline-block;
 	margin-right: 2px;
@@ -965,7 +1044,6 @@ h2.heading a.tag:hover {
 .home .header h2 {
   padding: 0.429em 0;
   margin: 0;
-  margin-left: 100px;
   border-bottom: 2px solid var(--color-line-icon);
 }
 
@@ -1017,8 +1095,40 @@ h2.heading a.tag:hover {
 
 
 /* =============================================================================
-	FORMS / FIELDSET
+	ALERTS / FORMS / FIELDSET
 	============================================================================= */
+
+/* Alerts and notices */
+.notice, .comment_notice, .kudos_notice, 
+ul.notes, .caution, .error, .comment_error, 
+.kudos_error, .alert.flash {
+    background: var(--color-bg-notice);
+    border: 1px solid var(--color-border-notice);
+    box-shadow: none;
+    border-radius: 0.25em;
+}
+
+form .notice, form ul.notes {
+	box-shadow: none;
+}
+
+/* Legends/labels on work edits */
+form.verbose legend, .verbose form legend {
+    background: var(--color-bg-legend);
+    border: 2px solid var(--color-border-legend);
+    box-shadow: none;
+}
+
+input, textarea, select {
+	background: var(--color-bg-input);
+    font-size: 100%;
+    border: 1px solid var(--color-border-input);
+    box-shadow: none;
+}
+
+input:focus, select:focus, textarea:focus {
+	background: var(--color-bg-input-focus);
+}
 
 fieldset, form dl, fieldset dl dl, fieldset fieldset fieldset, fieldset fieldset dl dl, dd.hideme, form blockquote.userstuff {
     background: var(--color-bg-fieldset);
@@ -1026,10 +1136,8 @@ fieldset, form dl, fieldset dl dl, fieldset fieldset fieldset, fieldset fieldset
     box-shadow: none;
 }
 
-input, textarea, select {
-    font-size: 100%;
-    border: 1px solid var(--color-border-input);
-    box-shadow: none;
+fieldset fieldset, fieldset dl dl, form blockquote.userstuff {
+    background: var(--color-bg-fieldset-block);
 }
 
 input:not([type="image" i], [type="range" i], [type="checkbox" i], [type="radio" i]), select:not([multiple]) {
@@ -1156,6 +1264,10 @@ form.filters dl dl {
 .filters dt.dates:has(+ dd input[value]) .expander {
   font-weight: bold;
 }
+	
+.filters .expander {
+	color: var(--color-text-body);
+}
 
 .filters .expander,
 .filters .expanded .expander {
@@ -1216,13 +1328,17 @@ span.symbol {
   border-radius: 100%;
   align-items: center;
   justify-content: center;
-  color: var(--color-neutral-main);
+  color: var(--color-question);
 }
 
 
 /* =============================================================================
 	HOMEPAGE / SPLASH
 	============================================================================= */
+
+.splash .module h3 {
+    border-bottom: 1px solid var(--color-splah-heading-border);
+}
 
 .splash > .module h3::before {
 	display: inline-block;
@@ -1260,12 +1376,12 @@ span.symbol {
 .splash .favorite li:nth-of-type(even) a,
 .splash .favorite li:nth-of-type(odd) a {
     background: var(--color-tag-default-bg);
-    color: var(--color-dark-primary);
+    color: var(--color-link-fave);
     font-weight: bold;
     text-align: center;
     letter-spacing: 1px;
     line-height: 1.5;
-    text-shadow: 1px 1px 1px var(--color-neutral-main);
+    text-shadow: 1px 1px 1px var(--color-shadow-fave);
 }
 
 .splash .favorite li a:hover,
@@ -1273,7 +1389,7 @@ span.symbol {
 .splash .favorite li:nth-of-type(odd) a:hover,
 .splash .favorite li:nth-of-type(odd) a:focus {
     background: var(--color-tag-default-bg-hover);
-    color: var(--color-neutral-main);
+    color: var(--color-link-fave-over);
     text-shadow: 1px 1px 1px var(--color-shadow-fave-hover);
 }
 
@@ -1302,7 +1418,7 @@ div.latest.news.module .userstuff p {
 	============================================================================= */
 
 .listbox, fieldset fieldset.listbox {
-    background: var(--color-light-secondary);
+    background: var(--color-bg-section-header);
     border: 1px solid var(--color-border-subtle);
     box-shadow: none;
 }
@@ -1331,7 +1447,7 @@ li.blurb {
 
 /* Blockquotes: white card inside blurbs, surface inside CSS pages */
 .blurb blockquote:not(li.collection .userstuff.summary, ol.bookmark .userstuff.notes) {
-	background: var(--color-bg-blurb);
+	background: var(--color-bg-blockquote);
 	padding: 5px;
 }
 
@@ -1352,7 +1468,7 @@ li.blurb {
 
 /* Required tags icons: desaturated */
 .blurb ul.required-tags li span {
-    border-radius: 0 20% 0 20%;
+    border-radius: var(--radius-required-tags);
 	filter: var(--filter-required-tags-icon);
 }
 
@@ -1490,6 +1606,10 @@ p.kudos {
 .bookmark .own.user,
 .bookmark .user {
 	background: var(--color-bg-bookmark);
+}
+
+.bookmark .user {
+    border: 1px solid var(--color-border-bookmark);
 }
 
 .bookmark p.status {
@@ -1762,7 +1882,7 @@ dl.stats dd {
 #footer .module {
     background: var(--color-overlay-light);
     padding: 2em;
-    border-radius: 20px 0;
+    border-radius: var(--radius-footer-module);
     box-sizing: border-box;
 }
 
