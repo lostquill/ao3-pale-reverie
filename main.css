@@ -1633,7 +1633,7 @@ p.kudos {
 }
 
 .comment h4.byline {
-	color: var(--color-border-subtle);
+	background: var(--color-border-subtle);
 }
 
 li.comment {
