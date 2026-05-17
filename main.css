@@ -1493,7 +1493,6 @@ li.blurb, .picture .header {
 /* Date */
 .blurb .datetime {
     color: var(--color-datetime);
-    font-size: 1.1em;
     padding-bottom: 1px;
     border-bottom: 2px dashed var(--color-border-datetime);
 }
