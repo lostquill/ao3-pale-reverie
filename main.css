@@ -99,17 +99,25 @@
 	/* Neutrals */
 	--color-neutral-main:             var(--color-white);
 	--color-overlay-light:            rgba(255,255,255,0.25);
+
+	/* Gradient colors for backgrounds: navbar, footer, relationship tag pill + dashboard border */
+	--color-nav-1:                    var(--color-mid-primary);
+	--color-nav-2:                    var(--color-mid-secondary);
+
+	/* Gradient colors for action buttons */
+	--color-btn-1:                    var(--color-mid-primary);
+	--color-btn-2:                    var(--color-light-primary);
+	--color-btn-3:                    var(--color-light-secondary);
+	--color-btn-4:                    var(--color-accent-soft);
 	
 	/* -----------------------------------------------------------------
 		UI LAYER
 	   ----------------------------------------------------------------- */
 
-	/* Color gradient (navbar background, footer background, relationship tag) */
-	--color-first:                    var(--color-mid-primary);
-	--color-sec:                      var(--color-mid-secondary);
-	--grad-right:                     linear-gradient(45deg, var(--color-first), var(--color-first), var(--color-sec), var(--color-sec));
-	--grad-left:                      linear-gradient(-45deg, var(--color-first), var(--color-first), var(--color-sec), var(--color-sec));
-    --grad-bottom:                    linear-gradient(to bottom, var(--color-first), var(--color-sec), var(--color-first));
+	/* Navigation gradients */
+	--grad-right:                     linear-gradient(45deg, var(--color-nav-1), var(--color-nav-1), var(--color-nav-2), var(--color-nav-2));
+	--grad-left:                      linear-gradient(-45deg, var(--color-nav-1), var(--color-nav-1), var(--color-nav-2), var(--color-nav-2));
+    --grad-bottom:                    linear-gradient(to bottom, var(--color-nav-1), var(--color-nav-2), var(--color-nav-1));
 
 	/* Backgrounds, borders, shadows & surfaces */
 	--color-bg-selection:             var(--color-accent);               /* mouse selection background */
@@ -127,14 +135,18 @@
 	--color-bg-question:              var(--color-accent-pop);           /* help symbol background */
 	--color-required:                 var(--color-accent-pop);           /* required field, important color */
 
-	/* Buttons */
-	--color-bg-button:                var(--color-light-secondary);      /* button background */
+	/* buttons */
+	--color-bg-button:                var(--color-btn-3);                /* button background */
 	--color-border-button:            var(--color-mid-secondary);        /* button border */
 	--color-text-button:              var(--color-dark-secondary);       /* button text */
 	--color-bg-button-hover:          var(--color-accent-soft);          /* button background on hover */
 	--color-bg-button-active:         var(--color-light-primary);        /* active/current button background */
 	--color-border-button-active:     var(--color-mid-primary);          /* active/current button border */
 	--color-text-button-active:       var(--color-dark-primary);         /* active/current button text */
+	
+	--grad-btn-1:                     linear-gradient(215deg, var(--color-btn-1), var(--color-btn-2), transparent); /* default button */
+	--grad-btn-2:                     linear-gradient(215deg, var(--color-btn-4), transparent, transparent);        /* hover - focus */
+	--grad-btn-3:                     linear-gradient(215deg, var(--color-btn-1), var(--color-btn-2), transparent); /* current */
 
 	/* Image and icon filters
 	  - --filter-logo, --filter-padlock-icon and --filter-stat-icon target a specific color via CSS filter.
@@ -604,7 +616,7 @@ button {
     border-radius: 0.25em;
     box-shadow: none;
     background-color: var(--color-bg-button);
-    background-image: linear-gradient(216deg, var(--color-border-button), var(--color-bg-button), transparent);
+    background-image: var(--grad-btn-1);
     background-origin: border-box !important;
     color: var(--color-text-button);
 }
@@ -634,7 +646,7 @@ button:is(:hover, :focus) {
     border-style: solid;
     border-color: var(--color-border-button);
     box-shadow: none;
-    background-image: linear-gradient(216deg, var(--color-bg-button-hover), transparent, transparent);
+    background-image: var(--grad-btn-2);
     color: var(--color-text-button);
 }
 
@@ -649,7 +661,7 @@ a:link.current {
     border-style: solid;
     border-color: var(--color-border-button-active);
     box-shadow: none;
-    background-image: linear-gradient(216deg, var(--color-border-button-active), var(--color-bg-button-active), transparent);
+    background-image: var(--grad-btn-3);
     background-origin: border-box !important;
     color: var(--color-text-button-active);
     cursor: default;
@@ -675,6 +687,25 @@ a:link.current {
 .actions .disabled select:hover {
   background: none;
   color: inherit; /* text color */
+}
+
+
+
+/*>========== buttons with "to top" arrows and "expand"/"contract" symbols ==========<*/
+
+/* these get kind of broken and the following code is to repair them again */
+/* in most cases, no changes are required here */
+
+.listbox > .heading .action:has(a) {
+  padding: 0;
+  border: none;
+  box-shadow: none;
+  background: none;
+}
+
+.listbox > .heading .action a {
+  padding-inline: 0.3em;
+  color: inherit;
 }
 
 
