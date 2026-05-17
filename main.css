@@ -100,7 +100,7 @@
 	--color-neutral-main:             var(--color-white);
 	--color-overlay-light:            rgba(255,255,255,0.25);
 
-	/* Gradient colors for backgrounds: navbar, footer, relationship tag pill + dashboard border */
+	/* Gradient colors for backgrounds */
 	--color-nav-1:                    var(--color-mid-primary);
 	--color-nav-2:                    var(--color-mid-secondary);
 
@@ -115,7 +115,7 @@
 		UI LAYER
 	   ----------------------------------------------------------------- */
 
-	/* Navigation gradients */
+	/* Navigation gradients (navbar, footer, relationship tag pills + dashboard border) */
 	--grad-right:                     linear-gradient(45deg, var(--color-nav-1), var(--color-nav-1), var(--color-nav-2), var(--color-nav-2));
 	--grad-left:                      linear-gradient(-45deg, var(--color-nav-1), var(--color-nav-1), var(--color-nav-2), var(--color-nav-2));
     --grad-bottom:                    linear-gradient(to bottom, var(--color-nav-1), var(--color-nav-2), var(--color-nav-1));
