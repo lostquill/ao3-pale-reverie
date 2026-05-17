@@ -57,7 +57,8 @@
 	--color-grey-140:            #999999;
 	--color-grey-170:            #808080;
 	--color-grey-220:            #474747;
-	--color-nearly-black:        #111111;
+	--color-grey-240:            #2a2a2a;
+	--color-grey-250:            #111111;
 	--color-black:               #000000;
 
 	
@@ -104,6 +105,10 @@
 		UI LAYER
 	   ----------------------------------------------------------------- */
 
+	/* Body */
+	--color-text-body:                var(--color-grey-240);             /* global text color */
+	--color-bg-body:                  var(--color-grey-20);              /* body background */
+
 	/* Navigation gradients (navbar, footer, relationship tag pills + dashboard border) */
 	--grad-right:                     linear-gradient(45deg, var(--color-nav-1), var(--color-nav-1), var(--color-nav-2), var(--color-nav-2));
 	--grad-left:                      linear-gradient(-45deg, var(--color-nav-1), var(--color-nav-1), var(--color-nav-2), var(--color-nav-2));
@@ -111,7 +116,6 @@
 
 	/* Backgrounds, borders, shadows & surfaces */
 	--color-bg-selection:             var(--color-accent);               /* mouse selection background */
-	--color-bg-body:                  var(--color-grey-20);              /* body background */
 	--color-bg-nav:                   var(--grad-right);                 /* navbar + footer background */
 	--color-surface:                  var(--color-grey-10);              /* blockquote surfaces */
 	--color-bg-blurb:                 var(--color-neutral-main);         /* white card inside blurbs */
@@ -184,7 +188,7 @@
 	--color-tag-default-border:       var(--color-light-primary);        /* default tag border */
 	--color-tag-shadow-light:         var(--color-grey-50);              /* default tag shadow light */
 	--color-tag-shadow-dark:          var(--color-grey-220);             /* default tag shadow dark */
-	--color-shadow-fave-hover:        var(--color-nearly-black);         /* shadow text on fave tags homepage splash on hover */
+	--color-shadow-fave-hover:        var(--color-grey-250);             /* shadow text on fave tags homepage splash on hover */
 
 	/* Tags — ratings */
 	--color-tag-rating-bg:            var(--color-accent);               /* rating tag background */
