@@ -100,7 +100,7 @@
 	--color-neutral-main:             var(--color-white);
 	--color-overlay-light:            rgba(255,255,255,0.25);
 
-	/* Gradient colors for backgrounds: navbar, footer, relationship tag pill + dashboard border */
+	/* Gradient colors for backgrounds */
 	--color-nav-1:                    var(--color-mid-primary);
 	--color-nav-2:                    var(--color-mid-secondary);
 
@@ -115,7 +115,7 @@
 		UI LAYER
 	   ----------------------------------------------------------------- */
 
-	/* Navigation gradients */
+	/* Navigation gradients (navbar, footer, relationship tag pills + dashboard border) */
 	--grad-right:                     linear-gradient(45deg, var(--color-nav-1), var(--color-nav-1), var(--color-nav-2), var(--color-nav-2));
 	--grad-left:                      linear-gradient(-45deg, var(--color-nav-1), var(--color-nav-1), var(--color-nav-2), var(--color-nav-2));
     --grad-bottom:                    linear-gradient(to bottom, var(--color-nav-1), var(--color-nav-2), var(--color-nav-1));
@@ -136,7 +136,7 @@
 	--color-bg-question:              var(--color-accent-pop);           /* help symbol background */
 	--color-required:                 var(--color-accent-pop);           /* required field, important color */
 
-	/* buttons */
+	/* Buttons */
 	--color-bg-button:                var(--color-btn-2);                /* button background */
 	--color-border-button:            var(--color-mid-secondary);        /* button border */
 	--color-text-button:              var(--color-dark-secondary);       /* button text */
@@ -153,8 +153,9 @@
 	  - --filter-logo, --filter-padlock-icon and --filter-stat-icon target a specific color via CSS filter.
 	    To generate a filter that matches a hex color of your choice,
 	    use https://angel-rs.github.io/css-color-filter-generator/
-	  - --filter-img-icon, --filter-required-tags-icon, and --filter-bookmark-status
+	  - --filer-header, --filter-img-icon, --filter-required-tags-icon, and --filter-bookmark-status
 	    use generic adjustments (contrast, sepia, brightness) rather than color targeting. */
+	--filter-header:                  none;      /* header banner */
 	--filter-logo:                    brightness(0) saturate(100%) invert(45%) sepia(10%) saturate(1214%) hue-rotate(314deg) brightness(92%) contrast(83%); /* AO3 logo */
 	--filter-padlock-icon:            brightness(0) saturate(100%) invert(23%) sepia(55%) saturate(2017%) hue-rotate(296deg) brightness(90%) contrast(90%); /* restricted works padlock icon */
 	--filter-stat-icon:               invert(35%) sepia(8%) saturate(1985%) hue-rotate(319deg) brightness(93%) contrast(92%); /* work stats icons */
@@ -316,6 +317,7 @@ h2, h3, h4, h5, h6, .heading {
     background: url(https://raw.githubusercontent.com/lostquill/ao3-pale-reverie/main/assets/header.png) center center;
     background-size: cover;
     background-repeat: no-repeat;
+	filter: var(--filter-header);
 }
 
 #header {
