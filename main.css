@@ -1106,6 +1106,10 @@ ul.notes, .caution, .error, .comment_error,
     border-radius: 0.25em;
 }
 
+form .notice, form ul.notes {
+	box-shadow: none;
+}
+
 /* Legends/labels on work edits */
 form.verbose legend, .verbose form legend {
     background: var(--color-bg-legend);
