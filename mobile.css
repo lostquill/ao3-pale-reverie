@@ -73,6 +73,11 @@ li.relationships a.tag,
 	border: none;
 }
 
+ul.tags li.relationships a.tag[href*="*s*"]::after,
+ul.tags li.relationships a.tag[href*="*s*"]:hover::after {
+  text-shadow: none;
+}
+
 .splash .favorite li:nth-of-type(even) a,
 .splash .favorite li:nth-of-type(even) a:hover,
 .splash .favorite li:nth-of-type(odd) a,
