@@ -216,6 +216,7 @@
 	--color-link-fave-over:           var(--color-fg);                   /* link color on fave tags on hover */
 	--color-shadow-fave:              var(--color-fg);                   /* shadow text on fave tags */
 	--color-shadow-fave-hover:        var(--color-grey-250);             /* shadow text on fave tags on hover */
+	--color-splash-browse-symbol:     var(--color-purple);               /* color of symbol before link */
 
 	/* Tags — ratings */
 	--color-tag-rating-bg:            var(--color-accent-soft);          /* rating tag background */
