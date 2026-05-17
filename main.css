@@ -416,6 +416,7 @@ h2, h3, h4, h5, h6, .heading {
 	background-image: none;
 	background-color: var(--color-bg-block-dropdown);
 	border: outset 1px var(--color-border-block-dropdown);
+	border-top: none;
 }
 
 #header a:hover,
