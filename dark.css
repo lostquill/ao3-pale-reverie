@@ -225,7 +225,9 @@
 	--color-tag-relation-bg:          var(--grad-left);                  /* relationship tag background */
 	--color-tag-relation-border:      var(--color-fg);                   /* relationships tag border */
 	--color-heart-relationship:       var(--color-accent-pop);           /* Heart symbol color after tag */
-	--color-shadow-heart:             var(--color-dark-primary);         /* Heart symbol shadow after tag */
+	--color-heart-relationship-hover: var(--color-light-primary);        /* heart symbol color hover */
+	--color-shadow-heart:             var(--color-light-primary);        /* Heart symbol shadow after tag */
+	--color-shadow-heart-hover:       var(--color-dark-primary);         /* heart symbol shadow hover */
 
 	/* Tags — characters */
 	--color-tag-character:            var(--color-light-primary);        /* character tag text color */
