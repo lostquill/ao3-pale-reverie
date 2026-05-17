@@ -142,8 +142,9 @@
 	  - --filter-logo, --filter-padlock-icon and --filter-stat-icon target a specific color via CSS filter.
 	    To generate a filter that matches a hex color of your choice,
 	    use https://angel-rs.github.io/css-color-filter-generator/
-	  - --filter-img-icon, --filter-required-tags-icon, and --filter-bookmark-status
+	  - --filter-header, --filter-img-icon, --filter-required-tags-icon, and --filter-bookmark-status
 	    use generic adjustments (contrast, sepia, brightness) rather than color targeting. */
+	--filter-header:                  none;      /* header banner */
 	--filter-logo:                    brightness(0) saturate(100%) invert(45%) sepia(10%) saturate(1214%) hue-rotate(314deg) brightness(92%) contrast(83%); /* AO3 logo */
 	--filter-padlock-icon:            brightness(0) saturate(100%) invert(23%) sepia(55%) saturate(2017%) hue-rotate(296deg) brightness(90%) contrast(90%); /* restricted works padlock icon */
 	--filter-stat-icon:               invert(35%) sepia(8%) saturate(1985%) hue-rotate(319deg) brightness(93%) contrast(92%); /* work stats icons */
