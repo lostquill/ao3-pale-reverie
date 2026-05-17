@@ -85,23 +85,23 @@
 	   ----------------------------------------------------------------- */
 	
 	/* Palette 1 */
-	--color-light-primary:            var(--color-mauve-light);
-	--color-mid-primary:              var(--color-mauve-mid);
-	--color-dark-primary:             var(--color-mauve-dark);
+	--color-light-primary:            var(--color-violet-light);
+	--color-mid-primary:              var(--color-violet-mid);
+	--color-dark-primary:             var(--color-violet-dark);
 	
 	/* Palette 2 */
-	--color-light-secondary:          var(--color-slate-light);
-	--color-mid-secondary:            var(--color-slate-mid);
-	--color-dark-secondary:           var(--color-slate-dark);
+	--color-light-secondary:          var(--color-moss-light);
+	--color-mid-secondary:            var(--color-moss-mid);
+	--color-dark-secondary:           var(--color-moss-dark);
 
 	/* Accent colors */
-	--color-accent:                   var(--color-rose-brown);
-	--color-accent-soft:              var(--color-dusty-pink);
-	--color-accent-pop:               var(--color-purple);
+	--color-accent:                   var(--color-indigo);
+	--color-accent-soft:              var(--color-lavender);
+	--color-accent-pop:               var(--color-sky);
 
 	/* Neutrals */
 	--color-fg:                       var(--color-black);
-	--color-overlay-light:            rgba(255,255,255,0.25);
+	--color-overlay-light:            rgba(0,0,0,0.25);
 
 	/* Gradient colors for backgrounds */
 	--color-nav-1:                    var(--color-mid-primary);
@@ -109,10 +109,10 @@
 
 	/* Gradient colors for action buttons */
 	--color-btn-1:                    var(--color-mid-secondary);
-	--color-btn-2:                    var(--color-light-secondary);
-	--color-btn-3:                    var(--color-accent-soft);
+	--color-btn-2:                    var(--color-dark-secondary);
+	--color-btn-3:                    var(--color-accent);
 	--color-btn-4:                    var(--color-mid-primary);
-	--color-btn-5:                    var(--color-light-primary);
+	--color-btn-5:                    var(--color-dark-primary);
 	
 	/* -----------------------------------------------------------------
 		UI LAYER
@@ -120,7 +120,7 @@
 
 	/* Text selection highlight */
 	--color-text-selection:           var(--color-fg);                   /* text  color */
-	--color-bg-selection:             var(--color-accent);               /* background */
+	--color-bg-selection:             var(--color-accent-soft);          /* background */
 
 	/* Body */
 	--color-text-body:                var(--color-grey-240);             /* global text color */
@@ -167,102 +167,102 @@
 	/* Buttons */
 	--color-bg-button:                var(--color-btn-2);                /* button background */
 	--color-border-button:            var(--color-mid-secondary);        /* button border */
-	--color-text-button:              var(--color-dark-secondary);       /* button text */
-	--color-bg-button-hover:          var(--color-accent-soft);          /* button background on hover */
-	--color-bg-button-active:         var(--color-light-primary);        /* active/current button background */
+	--color-text-button:              var(--color-light-secondary);      /* button text */
+	--color-bg-button-hover:          var(--color-accent);               /* button background on hover */
+	--color-bg-button-active:         var(--color-dark-primary);         /* active/current button background */
 	--color-border-button-active:     var(--color-mid-primary);          /* active/current button border */
-	--color-text-button-active:       var(--color-dark-primary);         /* active/current button text */
+	--color-text-button-active:       var(--color-light-primary);        /* active/current button text */
 	
 	--grad-btn-1:                     linear-gradient(215deg, var(--color-btn-1), var(--color-btn-2), transparent); /* default button */
 	--grad-btn-2:                     linear-gradient(215deg, var(--color-btn-3), transparent, transparent);        /* hover - focus */
 	--grad-btn-3:                     linear-gradient(215deg, var(--color-btn-4), var(--color-btn-5), transparent); /* current */
 
 	/* Navigation & UI links */
-	--color-link-default:             var(--color-accent);               /* default link color */
-	--color-link-nav:                 var(--color-dark-secondary);       /* header links, dashboard links */
+	--color-link-default:             var(--color-accent-soft);          /* default link color */
+	--color-link-nav:                 var(--color-light-secondary);      /* header links, dashboard links */
 	--color-link-menu:                var(--color-fg);                   /* left header links (fandoms, browse, search...) */
 	--color-link-nav-hover:           var(--color-accent-pop);           /* header links on hover */
-	--color-link-nav-active:          var(--color-accent);               /* dropdown menu hover, user focus */
+	--color-link-nav-active:          var(--color-accent-soft);          /* dropdown menu hover, user focus */
 
 	/* Content links */
-	--color-link-visited:             var(--color-dark-secondary);       /* h4 headings visited */
-	--color-link-visited-hover:       var(--color-accent);               /* h4 headings visited:hover */
+	--color-link-visited:             var(--color-light-secondary);      /* h4 headings visited */
+	--color-link-visited-hover:       var(--color-accent-soft);          /* h4 headings visited:hover */
 
 	/* Headings */
-	--color-line-icon:                var(--color-accent-soft);          /* top line going from rounded icon to heading */
-	--color-border-rounded-pic:       var(--color-accent);               /* border around profile pic */
-	--color-heading:                  var(--color-dark-secondary);       /* h2.heading */
+	--color-line-icon:                var(--color-accent);               /* top line going from rounded icon to heading */
+	--color-border-rounded-pic:       var(--color-accent-soft);          /* border around profile pic */
+	--color-heading:                  var(--color-light-secondary);      /* h2.heading */
 	--color-bg-collection-tag:        var(--color-fg);                   /* h5.tags.heading for collection tags */
 	--color-splah-heading-border:     var(--color-grey-90);              /* bottom border on splah headings */
 
 	/* Dashboard */
     --color-column-border-dashboard:  var(--grad-bottom);                /* dashboard column border right */
 	--color-bg-link-dashboard-hover:  var(--color-border-subtle);        /* dashboard link background hover */
-	--color-text-dashboard:           var(--color-dark-primary);         /* dashboard span label for current page */
+	--color-text-dashboard:           var(--color-light-primary);        /* dashboard span label for current page */
 	--color-bg-dashboard-current:     var(--color-grey-90);              /* dashboard link background current */
 	--color-border-section-dashboard: var(--color-border-subtle);        /* dashboard border above section */
-	--color-bg-section-header:        var(--color-light-secondary);      /* dashboard section header background */
+	--color-bg-section-header:        var(--color-dark-secondary);       /* dashboard section header background */
 
 	/* Tags — global */
 	--color-tag-default:              var(--color-fg);                   /* default tag text color */
-	--color-tag-default-bg:           var(--color-accent-soft);          /* default tag background */
-	--color-tag-default-bg-hover:     var(--color-accent);               /* default tag background hover */
-	--color-tag-default-border:       var(--color-light-primary);        /* default tag border */
+	--color-tag-default-bg:           var(--color-accent);               /* default tag background */
+	--color-tag-default-bg-hover:     var(--color-accent-soft);          /* default tag background hover */
+	--color-tag-default-border:       var(--color-dark-primary);         /* default tag border */
 	--color-tag-shadow-light:         var(--color-grey-50);              /* default tag shadow light */
 	--color-tag-shadow-dark:          var(--color-grey-220);             /* default tag shadow dark */
 
 	/* Tags - Splash favorite */
-	--color-link-fave:                var(--color-dark-primary);         /* link color on fave tags */
+	--color-link-fave:                var(--color-light-primary);        /* link color on fave tags */
 	--color-link-fave-over:           var(--color-fg);                   /* link color on fave tags on hover */
 	--color-shadow-fave:              var(--color-fg);                   /* shadow text on fave tags */
 	--color-shadow-fave-hover:        var(--color-grey-250);             /* shadow text on fave tags on hover */
 
 	/* Tags — ratings */
-	--color-tag-rating-bg:            var(--color-accent);               /* rating tag background */
+	--color-tag-rating-bg:            var(--color-accent-soft);          /* rating tag background */
 
 	/* Tags — relationships */
 	--color-tag-relation-bg:          var(--grad-left);                  /* relationship tag background */
 	--color-tag-relation-border:      var(--color-fg);                   /* relationships tag border */
 	--color-heart-relationship:       var(--color-accent-pop);           /* Heart symbol color after tag */
-	--color-shadow-heart:             var(--color-light-primary);        /* Heart symbol shadow after tag */
+	--color-shadow-heart:             var(--color-dark-primary);         /* Heart symbol shadow after tag */
 
 	/* Tags — characters */
-	--color-tag-character:            var(--color-dark-primary);         /* character tag text color */
-	--color-tag-character-bg:         var(--color-light-primary);        /* character tag background */
-	--color-tag-character-hover:      var(--color-dark-primary);         /* character tag hover bg */
+	--color-tag-character:            var(--color-light-primary);        /* character tag text color */
+	--color-tag-character-bg:         var(--color-dark-primary);         /* character tag background */
+	--color-tag-character-hover:      var(--color-light-primary);        /* character tag hover bg */
 	--color-tag-character-shadow:     var(--color-grey-60);              /* character tag shadow */
 
 	/* Tags — freeforms */
-	--color-tag-freeform:             var(--color-dark-secondary);       /* freeform tag text color */
-	--color-tag-freeform-bg:          var(--color-light-secondary);      /* freeform tag background */
-	--color-tag-freeform-hover:       var(--color-dark-secondary);       /* freeform tag hover bg */
+	--color-tag-freeform:             var(--color-light-secondary);      /* freeform tag text color */
+	--color-tag-freeform-bg:          var(--color-dark-secondary);       /* freeform tag background */
+	--color-tag-freeform-hover:       var(--color-light-secondary);      /* freeform tag hover bg */
 	--color-tag-freeform-shadow:      var(--color-grey-60);              /* freeform tag shadow */
 
 	/* Tags — fandoms in header */
-	--color-link-fandom:              var(--color-dark-primary);         /* fandom tag text in header */
-	--color-link-fandom-hover:        var(--color-dark-secondary);       /* fandom tag hover in header */
+	--color-link-fandom:              var(--color-light-primary);        /* fandom tag text in header */
+	--color-link-fandom-hover:        var(--color-light-secondary);      /* fandom tag hover in header */
 
 	/* Tags — collection neutral */
-	--color-tag-collection:           var(--color-dark-primary);         /* collection tags at rest */
-	--color-tag-collection-hover:     var(--color-dark-secondary);       /* collection tags on hover */
+	--color-tag-collection:           var(--color-light-primary);        /* collection tags at rest */
+	--color-tag-collection-hover:     var(--color-light-secondary);      /* collection tags on hover */
 
 	/* Stats in 'marked for later' works on homepage
 	   + USERSCRIPT: 'Reading Time & Quality Score' badge (reading time, word count) */
-	--color-badge:                    var(--color-black);                /* badge text color */
-	--color-bg-badge:                 var(--color-light-secondary);      /* badge background */
+	--color-badge:                    var(--color-white);                /* badge text color */
+	--color-bg-badge:                 var(--color-dark-secondary);       /* badge background */
 	--color-shadow-badge:             var(--color-grey-90);              /* badge box shadow */
 	--color-shadow-txt-badge:         var(--color-fg);                   /* badge text shadow */
 
 	/* Work statistics */
-	--color-stats:                    var(--color-accent);               /* main color for stats text/value */
-	--color-stats-border:             var(--color-accent);               /* border color for stat links underline */
+	--color-stats:                    var(--color-accent-soft);          /* main color for stats text/value */
+	--color-stats-border:             var(--color-accent-soft);          /* border color for stat links underline */
 	--color-stats-tooltip:            var(--color-grey-220);             /* text color inside stat tooltip */
 	--color-stats-bg-tooltip:         var(--color-grey-50);              /* background color for stat tooltip/icon area */
 
 	/* Footer */
-	--color-footer-heading:           var(--color-dark-primary);         /* footer heading text color */
-	--color-footer-heading-shadow:    var(--color-light-secondary);      /* footer heading text shadow */
-	--color-footer-link:              var(--color-accent);               /* footer link text color */
+	--color-footer-heading:           var(--color-light-primary);        /* footer heading text color */
+	--color-footer-heading-shadow:    var(--color-dark-secondary);       /* footer heading text shadow */
+	--color-footer-link:              var(--color-accent-soft);          /* footer link text color */
 	--color-shadow-footer-link:       var(--color-grey-10);              /* footer link text shadow */
 
 	/* Layout & spacing */
@@ -282,12 +282,12 @@
 	    use https://angel-rs.github.io/css-color-filter-generator/
 	  - --filer-header, --filter-img-icon, --filter-required-tags-icon, and --filter-bookmark-status
 	    use generic adjustments (contrast, sepia, brightness) rather than color targeting. */
-	--filter-header:                  none;      /* header banner */
-	--filter-logo:                    brightness(0) saturate(100%) invert(45%) sepia(10%) saturate(1214%) hue-rotate(314deg) brightness(92%) contrast(83%); /* AO3 logo */
-	--filter-padlock-icon:            brightness(0) saturate(100%) invert(23%) sepia(55%) saturate(2017%) hue-rotate(296deg) brightness(90%) contrast(90%); /* restricted works padlock icon */
-	--filter-stat-icon:               invert(35%) sepia(8%) saturate(1985%) hue-rotate(319deg) brightness(93%) contrast(92%); /* work stats icons */
-	--filter-img-icon:                contrast(60%) sepia(5%) saturate(90%) brightness(1.3);                                  /* profile pic, collection illustrations */
-	--filter-required-tags-icon:      contrast(60%) sepia(5%) saturate(90%) brightness(1.3);                                  /* required tags icons */
+	--filter-header:                  invert(1) hue-rotate(76deg) saturate(1.5);      /* header banner */
+	--filter-logo:                    brightness(0) saturate(100%) invert(67%) sepia(44%) saturate(449%) hue-rotate(205deg) brightness(81%) contrast(88%); /* AO3 logo */
+	--filter-padlock-icon:            brightness(0) saturate(100%) invert(75%) sepia(15%) saturate(6238%) hue-rotate(179deg) brightness(103%) contrast(102%); /* restricted works padlock icon */
+	--filter-stat-icon:               brightness(0) saturate(100%) invert(79%) sepia(9%) saturate(966%) hue-rotate(207deg) brightness(91%) contrast(85%); /* work stats icons */
+	--filter-img-icon:                none;                                  /* profile pic, collection illustrations */
+	--filter-required-tags-icon:      invert(1) hue-rotate(76deg) saturate(1.5);                                  /* required tags icons */
 	--filter-bookmark-status:         sepia(23%) hue-rotate(28deg) brightness(98%) contrast(87%);                             /* bookmark status icons */
 }
 
