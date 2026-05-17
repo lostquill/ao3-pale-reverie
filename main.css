@@ -210,6 +210,10 @@
 	--color-border-section-dashboard: var(--color-border-subtle);        /* dashboard border above section */
 	--color-bg-section-header:        var(--color-light-secondary);      /* dashboard section header background */
 
+	/* Other content / blurb */
+	--color-datetime:                 var(--color-grey-220);             /* text color */
+	--color-border-datetime:          var(--color-grey-110);             /* border color */
+
 	/* Tags — global */
 	--color-tag-default:              var(--color-fg);                   /* default tag text color */
 	--color-tag-default-bg:           var(--color-accent-soft);          /* default tag background */
@@ -223,6 +227,7 @@
 	--color-link-fave-over:           var(--color-fg);                   /* link color on fave tags on hover */
 	--color-shadow-fave:              var(--color-fg);                   /* shadow text on fave tags */
 	--color-shadow-fave-hover:        var(--color-grey-250);             /* shadow text on fave tags on hover */
+	--color-splash-browse-symbol:     var(--color-purple);               /* color of symbol before link */
 
 	/* Tags — ratings */
 	--color-tag-rating-bg:            var(--color-accent);               /* rating tag background */
@@ -230,8 +235,10 @@
 	/* Tags — relationships */
 	--color-tag-relation-bg:          var(--grad-left);                  /* relationship tag background */
 	--color-tag-relation-border:      var(--color-fg);                   /* relationships tag border */
-	--color-heart-relationship:       var(--color-accent-pop);           /* Heart symbol color after tag */
-	--color-shadow-heart:             var(--color-light-primary);        /* Heart symbol shadow after tag */
+	--color-heart-relationship:       var(--color-accent-pop);           /* heart symbol color after tag */
+	--color-heart-relationship-hover: var(--color-light-primary);        /* heart symbol color hover */
+	--color-shadow-heart:             var(--color-light-primary);        /* heart symbol shadow after tag */
+	--color-shadow-heart-hover:       var(--color-dark-primary);         /* heart symbol shadow hover */
 
 	/* Tags — characters */
 	--color-tag-character:            var(--color-dark-primary);         /* character tag text color */
@@ -538,18 +545,15 @@ form #search input:hover {
 
 .comment .icon,
 .skins p.icon,
-.blurb .header img {
-	box-sizing: border-box;
-}
-
+.blurb .header img,
 .primary .icon {
 	box-sizing: border-box;
 }
 
-/* Nav & comment icons: desaturated with accent border */
+/* Nav & comment icons */
 .primary .icon img,
 .comment .icon .icon {
-	border: 5px solid var(--color-border-rounded-pic);
+	border: 4px solid var(--color-border-rounded-pic);
 	filter: var(--filter-img-icon);
 	transition: 200ms ease-in-out;
 }
@@ -559,11 +563,11 @@ form #search input:hover {
 	filter: none;
 }
 
-/* Header profile icons */
+/* Header profile + collection + skins icons */
 .header .icon img.icon,
 .skins .primary .icon:has(a .icon),
 .skins p.icon {
-	border: 4px solid var(--color-border-rounded-pic);
+	border: 3px solid var(--color-border-rounded-pic);
 	filter: var(--filter-img-icon);
 	transition: 200ms ease-in-out;
 }
@@ -892,6 +896,11 @@ ul.tags li.relationships a.tag[href*="*s*"]::after {
     text-shadow: 1px 1px 4px var(--color-shadow-heart);
 }
 
+ul.tags li.relationships a.tag[href*="*s*"]:hover::after {
+    color: var(--color-heart-relationship-hover);
+    text-shadow: 1px 1px 4px var(--color-shadow-heart-hover);
+}
+
 /* Character tags: warm mauve tint */
 li.characters a.tag,
 .character a.tag {
@@ -1130,6 +1139,13 @@ input, textarea, select {
 
 input:focus, select:focus, textarea:focus {
 	background: var(--color-bg-input-focus);
+}
+
+fieldset, form dl, fieldset dl dl, fieldset fieldset fieldset, 
+fieldset fieldset dl dl, dd.hideme, form blockquote.userstuff, dl.index dd {
+    background: var(--color-bg-fieldset);
+    border: 2px dotted var(--color-border-subtle);
+    box-shadow: none;
 }
 
 fieldset, form dl, fieldset dl dl, fieldset fieldset fieldset, fieldset fieldset dl dl, dd.hideme, form blockquote.userstuff {
@@ -1375,6 +1391,10 @@ span.symbol {
     margin: .5em auto;
 }
 
+.splash .browse li a:before {
+	color: var(--color-splash-browse-symbol);
+}
+
 .splash .favorite li:nth-of-type(even) a,
 .splash .favorite li:nth-of-type(odd) a {
     background: var(--color-tag-default-bg);
@@ -1442,8 +1462,8 @@ dl.meta {
   background: var(--color-surface);
 }
 
-/* blurb border */
-li.blurb {
+/* blurb border and stuff */
+li.blurb, .picture .header {
 	border: 1px solid var(--color-border-subtle);
 }
 
@@ -1466,6 +1486,13 @@ li.blurb {
 .social .note {
 	padding: 0 10px;
 	border: 1px solid var(--color-border-subtle);
+}
+
+/* Date */
+.blurb .datetime {
+    color: var(--color-datetime);
+    padding-bottom: 1px;
+    border-bottom: 2px dashed var(--color-border-datetime);
 }
 
 /* Required tags icons: desaturated */
@@ -1603,6 +1630,14 @@ p.kudos {
 #feedback {
 	display: flex;
 	flex-direction: column;
+}
+
+.comment h4.byline {
+	background: var(--color-border-subtle);
+}
+
+li.comment {
+	border: 1px solid var(--color-border-subtle);
 }
 
 
