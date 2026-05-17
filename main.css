@@ -414,7 +414,7 @@ h2, h3, h4, h5, h6, .heading {
 
 #header .menu, #small_login {
 	background-image: none;
-	background-color: var(--color-bg-block-dropdow);
+	background-color: var(--color-bg-block-dropdown);
 	border: outset 1px var(--color-border-block-dropdown);
 }
 
