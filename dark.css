@@ -349,3 +349,20 @@ h4.viewed.heading {
 #footer {
 	font-family: Arial, sans-serif;
 }
+
+
+/* -----------------------------------------------------------------
+	OVERRIDES
+   ----------------------------------------------------------------- */	
+
+/* Decorative border on docs pages/chapter/series/profile/statistics meta  */
+.docs .browse ul,
+.docs .favorite ul,
+.chapters-show.region .meta,
+.works-show.region .meta,
+.wrapper .series.meta,
+.wrapper .statistics.meta,
+.profile .wrapper .meta,
+.draft.work .meta {
+	border-image: url(https://raw.githubusercontent.com/lostquill/ao3-pale-reverie/main/assets/border-constellation-dark.png) 35% round !important;
+}
