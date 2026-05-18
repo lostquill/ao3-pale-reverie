@@ -296,7 +296,7 @@
 	    use https://angel-rs.github.io/css-color-filter-generator/
 	  - --filer-header, --filter-img-icon, --filter-required-tags-icon, and --filter-bookmark-status
 	    use generic adjustments (contrast, sepia, brightness) rather than color targeting. */
-	--filter-header:                  none;      /* header banner */
+	--filter-header:                  none;      /* header banner (you can play with the hue-rotate property to shift the tint, for example) */
 	--filter-logo:                    brightness(0) saturate(100%) invert(45%) sepia(10%) saturate(1214%) hue-rotate(314deg) brightness(92%) contrast(83%); /* AO3 logo */
 	--filter-padlock-icon:            brightness(0) saturate(100%) invert(23%) sepia(55%) saturate(2017%) hue-rotate(296deg) brightness(90%) contrast(90%); /* restricted works padlock icon */
 	--filter-stat-icon:               invert(35%) sepia(8%) saturate(1985%) hue-rotate(319deg) brightness(93%) contrast(92%); /* work stats icons */
@@ -1504,16 +1504,16 @@ li.blurb, .picture .header {
     border-bottom: 2px dashed var(--color-border-datetime);
 }
 
-/* Required tags icons: desaturated */
-.blurb ul.required-tags li span {
-    border-radius: var(--radius-required-tags);
-	filter: var(--filter-required-tags-icon);
-}
-
 /* Listbox index */
 .listbox .index {
 	background: var(--color-surface);
 	box-shadow: inset 1px 1px 3px var(--color-border-subtle);
+}
+
+/* Required tags icons */
+.blurb ul.required-tags li span {
+    border-radius: var(--radius-required-tags);
+	filter: var(--filter-required-tags-icon);
 }
 
 
