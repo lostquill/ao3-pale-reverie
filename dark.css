@@ -290,7 +290,7 @@
 	    use https://angel-rs.github.io/css-color-filter-generator/
 	  - --filer-header, --filter-img-icon, --filter-required-tags-icon, and --filter-bookmark-status
 	    use generic adjustments (contrast, sepia, brightness) rather than color targeting. */
-	--filter-header:                  invert(1) hue-rotate(76deg) saturate(1.5);      /* header banner */
+	--filter-header:                  none;      /* header banner (you can play with the hue-rotate property to shift the tint, for example) */
 	--filter-logo:                    brightness(0) saturate(100%) invert(67%) sepia(44%) saturate(449%) hue-rotate(205deg) brightness(81%) contrast(88%); /* AO3 logo */
 	--filter-padlock-icon:            brightness(0) saturate(100%) invert(75%) sepia(15%) saturate(6238%) hue-rotate(179deg) brightness(103%) contrast(102%); /* restricted works padlock icon */
 	--filter-stat-icon:               brightness(0) saturate(100%) invert(79%) sepia(9%) saturate(966%) hue-rotate(207deg) brightness(91%) contrast(85%); /* work stats icons */
