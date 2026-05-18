@@ -142,6 +142,7 @@
 	--color-bg-bookmark:              var(--color-grey-40);              /* bookmark user area background */
 	--color-border-bookmark:          var(--color-grey-90);              /* bookmark user area border */
 	--color-border-subtle:            var(--color-grey-70);              /* light borders, action hover bg */
+	--color-shadow-work-meta:         var(--color-grey-110);             /* shadow box constellation */
 	--color-bg-notice:                var(--color-blue-grey-light);      /* notice/alert background */
 	--color-border-notice:            var(--color-blue-grey-mid);        /* notice/alert border */
 	--color-bg-legend:                var(--color-bg-body);              /* legend/label background on edit work/form */
@@ -183,6 +184,7 @@
 	--color-link-visited:             var(--color-dark-secondary);       /* h4 headings visited */
 	--color-link-visited-hover:       var(--color-accent);               /* h4 headings visited:hover */
 
+
 	/* Headings */
 	--color-line-icon:                var(--color-accent-soft);          /* top line going from rounded icon to heading */
 	--color-border-rounded-pic:       var(--color-accent);               /* border around profile pic */
@@ -198,6 +200,10 @@
 	--color-border-section-dashboard: var(--color-border-subtle);        /* dashboard border above section */
 	--color-bg-section-header:        var(--color-light-secondary);      /* dashboard section header background */
 
+	/* Other content / blurb */
+	--color-datetime:                 var(--color-grey-220);             /* text color */
+	--color-border-datetime:          var(--color-grey-110);             /* border color */
+
 	/* Tags — global */
 	--color-tag-default:              var(--color-fg);                   /* default tag text color */
 	--color-tag-default-bg:           var(--color-accent-soft);          /* default tag background */
@@ -211,6 +217,7 @@
 	--color-link-fave-over:           var(--color-fg);                   /* link color on fave tags on hover */
 	--color-shadow-fave:              var(--color-fg);                   /* shadow text on fave tags */
 	--color-shadow-fave-hover:        var(--color-grey-250);             /* shadow text on fave tags on hover */
+	--color-splash-browse-symbol:     var(--color-purple);               /* color of symbol before link */
 
 	/* Tags — ratings */
 	--color-tag-rating-bg:            var(--color-accent);               /* rating tag background */
@@ -218,8 +225,10 @@
 	/* Tags — relationships */
 	--color-tag-relation-bg:          var(--grad-left);                  /* relationship tag background */
 	--color-tag-relation-border:      var(--color-fg);                   /* relationships tag border */
-	--color-heart-relationship:       var(--color-accent-pop);           /* Heart symbol color after tag */
-	--color-shadow-heart:             var(--color-light-primary);        /* Heart symbol shadow after tag */
+	--color-heart-relationship:       var(--color-accent-pop);           /* heart symbol color after tag */
+	--color-heart-relationship-hover: var(--color-light-primary);        /* heart symbol color hover */
+	--color-shadow-heart:             var(--color-light-primary);        /* heart symbol shadow after tag */
+	--color-shadow-heart-hover:       var(--color-dark-primary);         /* heart symbol shadow hover */
 
 	/* Tags — characters */
 	--color-tag-character:            var(--color-dark-primary);         /* character tag text color */
@@ -272,17 +281,17 @@
 	--radius-footer-module:           20px 0;            /* footer module corners */
 
 	/* Image and icon filters
-	  - --filter-logo, --filter-padlock-icon and --filter-stat-icon target a specific color via CSS filter.
+	  - --filter-logo, --filter-padlock-icon, and --filter-stat-icon target a specific color via CSS filter.
 	    To generate a filter that matches a hex color of your choice,
 	    use https://angel-rs.github.io/css-color-filter-generator/
 	  - --filer-header, --filter-img-icon, --filter-required-tags-icon, and --filter-bookmark-status
 	    use generic adjustments (contrast, sepia, brightness) rather than color targeting. */
-	--filter-header:                  none;      /* header banner */
+	--filter-header:                  none;      /* header banner (you can play with the hue-rotate property to shift the tint, for example) */
 	--filter-logo:                    brightness(0) saturate(100%) invert(45%) sepia(10%) saturate(1214%) hue-rotate(314deg) brightness(92%) contrast(83%); /* AO3 logo */
 	--filter-padlock-icon:            brightness(0) saturate(100%) invert(23%) sepia(55%) saturate(2017%) hue-rotate(296deg) brightness(90%) contrast(90%); /* restricted works padlock icon */
 	--filter-stat-icon:               invert(35%) sepia(8%) saturate(1985%) hue-rotate(319deg) brightness(93%) contrast(92%); /* work stats icons */
 	--filter-img-icon:                contrast(60%) sepia(5%) saturate(90%) brightness(1.3);                                  /* profile pic, collection illustrations */
-	--filter-required-tags-icon:      contrast(60%) sepia(5%) saturate(90%) brightness(1.3);                                  /* required tags icons */
+	--filter-required-tags-icon:      contrast(60%) sepia(5%) saturate(90%) brightness(1.4) hue-rotate(225deg) saturate(0.8); /* required tags icons */
 	--filter-bookmark-status:         sepia(23%) hue-rotate(28deg) brightness(98%) contrast(87%);                             /* bookmark status icons */
 }
 
