@@ -6,6 +6,12 @@
 	============================================================================= */
 
 
+/* Uncomment the block below to reduce scroll lag on mobile */
+/* :root {
+	--filter-required-tags-icon: none;
+	--filter-bookmark-status: none;
+} */
+
 /* Smaller header banner */
 #header::before {
     height: 50px;
