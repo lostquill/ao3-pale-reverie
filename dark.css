@@ -285,7 +285,7 @@
 	--radius-footer-module:           20px 0;            /* footer module corners */
 
 	/* Image and icon filters
-	  - --filter-logo, --filter-padlock-icon and --filter-stat-icon target a specific color via CSS filter.
+	  - --filter-logo, --filter-padlock-icon, --filter-stat-icon and --filter-stat-charts target a specific color via CSS filter.
 	    To generate a filter that matches a hex color of your choice,
 	    use https://angel-rs.github.io/css-color-filter-generator/
 	  - --filer-header, --filter-img-icon, --filter-required-tags-icon, and --filter-bookmark-status
@@ -294,6 +294,7 @@
 	--filter-logo:                    brightness(0) saturate(100%) invert(67%) sepia(44%) saturate(449%) hue-rotate(205deg) brightness(81%) contrast(88%); /* AO3 logo */
 	--filter-padlock-icon:            brightness(0) saturate(100%) invert(75%) sepia(15%) saturate(6238%) hue-rotate(179deg) brightness(103%) contrast(102%); /* restricted works padlock icon */
 	--filter-stat-icon:               brightness(0) saturate(100%) invert(79%) sepia(9%) saturate(966%) hue-rotate(207deg) brightness(91%) contrast(85%); /* work stats icons */
+	--filter-stat-charts:             brightness(0) saturate(100%) invert(25%) sepia(5%) saturate(2812%) hue-rotate(314deg) brightness(105%) contrast(83%); /* graph color on statistic page */
 	--filter-img-icon:                brightness(0.9) contrast(1.1) saturate(1.1);                                  /* profile pic, collection illustrations */
 	--filter-required-tags-icon:      invert(1) hue-rotate(77deg) saturate(1.5) brightness(0.6);                                  /* required tags icons */
 	--filter-bookmark-status:         invert(1) hue-rotate(42deg) saturate(0.8) contrast(0.9);                             /* bookmark status icons */
