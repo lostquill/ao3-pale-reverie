@@ -937,6 +937,7 @@ li.freeforms a.tag:hover,
 .header .fandoms a.tag,
 .header .fandoms a.tag:hover,
 .header .fandoms a.tag:visited:hover {
+	display: inline-flex;
 	background: none;
 	color: var(--color-link-fandom);
     font-family: Arial, sans-serif;
@@ -973,8 +974,8 @@ h2.heading a.tag {
 	border: none;
 	box-shadow: none;
     border-radius: unset;
-    line-height: 1.5;
-    padding: 0;
+    line-height: 1.5 !important;
+    padding: 0 !important;
 }
 
 li.collection a.tag:hover,
