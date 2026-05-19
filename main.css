@@ -975,7 +975,6 @@ h2.heading a.tag {
     border-radius: unset;
     line-height: 1.5;
     padding: 0;
-    padding-right: 6px;
 }
 
 li.collection a.tag:hover,
