@@ -501,7 +501,7 @@ h2, h3, h4, h5, h6, .heading {
 /*>========== Dropdown menus ==========<*/
 
 /* Dropdown menus - block styling */
-#header .menu, #small_login {
+#header .dropdown .menu, #small_login {
 	background-image: none;
 	background-color: var(--color-bg-block-dropdown);
 	border: outset 1px var(--color-border-block-dropdown);
@@ -509,49 +509,30 @@ h2, h3, h4, h5, h6, .heading {
 	box-shadow: none;
 }
 
-/* Dropdown menus - links */
-#header .primary .dropdown a,
-#header .primary .open a,
-#header .primary .dropdown a:visited {
-	color: var(--color-link-greeting);
-}
-
-/* Dropdown menus - links on hover */
-#header .primary .dropdown:hover a,
-#header .primary .dropdown a:focus,
-#header .primary .dropdown a:visited:focus {
-	color: var(--color-link-hover);
-}
-
-#header .dropdown .menu a:hover,
-#header .dropdown .menu a:focus,
-#header .user a:focus {
-	color: var(--color-link-nav-hover);
-}
-
-#header .user a:hover,
-#header .user a:focus {
-	color: var(--color-link-header-hover);
-	border-radius: 0.25em;
-}
-
-#header .actions a:hover,
-#header .actions a:focus,
-#header .dropdown:hover a,
-#header .open a {
-	background: var(--color-border-subtle);
-}
-
-#header .dropdown .menu a:hover,
-#header .dropdown .menu a:focus {
-	background: var(--color-overlay-light);
-}
-
-#header .menu li {
+#header .dropdown .menu li {
     border-bottom: 1px solid var(--color-border-nav-dropdown-link);
 }
 
-/* Search bar */
+/* Dropdown menus - links */
+#header .dropdown .menu:hover a,
+#header .dropdown .menu .open a,
+#header .dropdown .menu a:visited {
+	color: var(--color-link-dropdown);
+	background: var(--color-border-subtle);
+}
+
+/* Dropdown menus - links on hover */
+#header .dropdown .menu a:hover,
+#header .dropdown .menu a:focus,
+#header .dropdown .menu a:visited:focus {
+	color: var(--color-link-dropdown-hover);
+	background: var(--color-overlay-light);
+	border-radius: 0;
+}
+
+/*>========== Search bar ==========<*/
+
+/* Input */
 form.search input[type="text"] {
     background: var(--color-bg-search-input);
     color: var(--color-text-search-input);
@@ -559,10 +540,12 @@ form.search input[type="text"] {
     background-image: none;
 }
 
+/* Input on hover */
 form #search input:hover {
     box-shadow: inset 2px 2px 2px var(--color-shadow-search-hover);
 }
 
+/* Text focus */
 #header #search input:focus {
     color: var(--color-text-search-focus);
 }
